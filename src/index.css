@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    font-family: "Onest", sans-serif !important;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.main-container.first-block-img {
+    background-image: url("./assets/bg-image.svg");
+    background-size: cover;
+    z-index: 100;
+    background-repeat: no-repeat;
+}
+
+.main-container.first-block {
+    background-image: url("./assets/video.gif");
+    /*filter: blur(2px);*/
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*.main-container.bg-dark {*/
+/*    background-image: url("./assets/bg-image-back.png");*/
+/*    background-size: cover;*/
+/*    background-repeat: no-repeat;*/
+/*}*/
+
+/*.main-container.bg-light {*/
+/*    background-image: url("./assets/bg-white.png");*/
+/*    background-size: cover;*/
+/*    !*background: transparent;*!*/
+/*    background-repeat: no-repeat;*/
+/*}*/
+
+body {
+    font-family: "Onest", sans-serif !important;
+}
+/*.menu-main ul li {*/
+/*    display: inline-block;*/
+/*    position: relative;*/
+/*}*/
+.menu-main ul li.line-green::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -2px;
+    transition: width 0.5s ease, right 0.5s ease;
+    height: 1px;
+    width: 0;
+    background-color: #34C924;
+}
+.menu-main ul li.line-green:hover::before {
+    width: 100%;
+    right: 0;
+}
+.menu-main ul li.line-green::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    /*transition: width 0.5s ease, right 0.5s ease;*/
+    transition: 0.5s;
+    bottom: -2.5px;
+    transform: translateY(30%) rotate(130deg);
+    border: solid #34C924;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+    opacity: 0;
+}
+.menu-main ul li.line-green:hover::after {
+    opacity: 1;
+}
+.menu-main ul li.line-blue::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -2px;
+    transition: width 0.5s ease, right 0.5s ease;
+    height: 1px;
+    width: 0;
+    background-color: #003ABC;
+}
+.menu-main ul li.line-blue:hover::before {
+    width: 100%;
+    right: 0;
+}
+.menu-main ul li.line-blue::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    /*transition: width 0.5s ease, right 0.5s ease;*/
+    transition: 0.5s;
+    bottom: -2.5px;
+    transform: translateY(30%) rotate(130deg);
+    border: solid #003ABC;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+    opacity: 0;
+}
+.menu-main ul li.line-blue:hover::after {
+    opacity: 1;
+}
+.menu-main ul li.active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    opacity: 1;
+    bottom: -2px;
+    height: 1px;
+    width: 100%;
+    background-color: #34C924;
+}
+.menu-main ul li.active-blue::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    opacity: 1;
+    bottom: -2px;
+    height: 1px;
+    width: 100%;
+    background-color: #003ABC;
+}
+.menu-main ul li.active-blue::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    opacity: 1;
+    bottom: -2.5px;
+    transform: translateY(30%) rotate(130deg);
+    border: solid #003ABC;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+}
+.menu-main ul li.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    opacity: 1;
+    bottom: -2.5px;
+    transform: translateY(30%) rotate(130deg);
+    border: solid #34C924;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+/*@media (max-height: 1100px) {*/
+/*  .image-bank {*/
+/*    width: 90%;*/
+/*  }*/
+/*}*/
+/*@media (max-height: 900px) {*/
+/*  .image-bank {*/
+/*    width: 73.5%;*/
+/*  }*/
+/*  .bank-page h3{*/
+/*    font-size: 32px;*/
+/*  }*/
+/*  .bank-page p, .bank-page ul{*/
+/*    font-size: 18px;*/
+/*  }*/
+/*}*/
