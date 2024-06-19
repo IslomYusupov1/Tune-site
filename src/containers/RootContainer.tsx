@@ -9,7 +9,6 @@ import {useMemo} from "react";
 import Bank from "../pages/Bank";
 import Crm from "../pages/Crm";
 import Equaring from "../pages/Equaring";
-import Portfolio from "../pages/Portfolio";
 import Turkney from "../pages/Turkney";
 import Solutions from "../pages/Solutions";
 import Team from "../pages/Team";
@@ -38,7 +37,7 @@ function RootContainer() {
                     <Route element={<Bank/>} path={RoutesEnum.Bank}/>
                     <Route element={<Crm/>} path={RoutesEnum.Crm}/>
                     <Route element={<Equaring/>} path={RoutesEnum.Equaring}/>
-                    <Route element={<Portfolio/>} path={RoutesEnum.Portfolio}/>
+                    {/*<Route element={<Portfolio/>} path={RoutesEnum.Portfolio}/>*/}
                     <Route element={<Turkney/>} path={RoutesEnum.Turkney}/>
                     <Route element={<Solutions/>} path={RoutesEnum.Solutions}/>
                     <Route element={<Team/>} path={RoutesEnum.Team}/>

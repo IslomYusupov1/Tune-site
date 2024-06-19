@@ -1,6 +1,7 @@
 import {motion} from "framer-motion";
-import videoFile from "../../public/video.mp4";
+import imageBack from "../assets/turkey.png";
 import imageBg from "../assets/bg-image-back.png";
+import {useState} from "react";
 
 const containerVariants = {
     hidden: {
@@ -54,9 +55,29 @@ const textVariants = {
     //     x: -900,
     //     transition: {ease: "easeInOut"}
     // }
+
 }
 
+const textFullVariants = {
+    hidden: {
+        y: 70,
+        opacity: 0,
+    },
+    visible: {
+        y: 20,
+        opacity: 1,
+        transition: {duration: 0.5, type: "spring", stiffness: 200}
+    },
+    exit: {
+        y: 900,
+        transition: {ease: "easeInOut"}
+    }
+}
+
+
 function Turkney() {
+    const [open, setOpen] = useState(false);
+
     return (
         <>
             <motion.img animate={{opacity: 1}} initial={{opacity: 0}} transition={{duration: 0.25, ease: "easeInOut"}}
@@ -69,20 +90,43 @@ function Turkney() {
                     initial="hidden"
                     animate="visible"
                     className=" opacity-30 flex justify-end text-end items-end w-full border border-transparent mt-5 rounded-lg">
-                    <video className="w-10/12" muted={true} loop={true}
-                           autoPlay={true}
-                           preload="auto"
-                           controls={true}
-                    >
-                        <source src={videoFile} type="video/mp4"/>
-                    </video>
+                    <img src={imageBack} alt="" className="w-9/12 h-9/12 object-contain"/>
                 </motion.div>
                 <motion.div variants={textVariants}
                             initial="hidden"
                             animate="visible" className="flex flex-col text-start absolute bottom-[50px] left-[50px]">
-                    <h3 className="text-[40px]">О нас</h3>
-                    <p className="max-w-[775px] text-[20px] leading-24">Созданы в 2009 году в Ташкенте в
-                        качестве «бутика» для комплексных банковских проектов.....</p>
+                    {!open && <h3 className="text-[40px]">Пример разработки под ключ и заказ</h3>}
+                    {!open && <p className="max-w-[775px] text-[20px] leading-24">Созданы в 2009 году в Ташкенте в
+                        качестве «бутика» для комплексных банковских проектов..... <br/> <i
+                            className="text-[16px] text-[#007AFF] cursor-pointer" onClick={() => setOpen(true)}>Читать
+                            дальше</i></p>}
+                    {open && <motion.div variants={textFullVariants}
+                                         initial="hidden"
+                                         animate="visible"
+                                         exit={open ? "exit" : ""}>
+                        <h3 className="text-[40px]">Пример разработки под ключ и заказ</h3>
+                        <p className="max-w-[775px] text-[20px] leading-25">Первый маркетплейс в Узбекистане со
+                            своими пунктами выдачи заказов и службой доставки заказов:</p>
+                        <ul className="max-w-[775px] text-[20px] leading-25 mb-5 list-disc">
+                            <li className="mx-14">Sello Market начало проекта в феврале 2021
+                                года и запуск в сентябре 2021 года</li>
+                        </ul>
+                        <p className="max-w-[775px] text-[20px] leading-25 mb-5">Лучший инновационный BPM проект в 2022
+                            году</p>
+                        <ul className="max-w-[775px] text-[20px] leading-25 mb-5 list-disc">Собственные разработки:
+                            <li className="mx-14">Витрина товаров и кабинет пользователя </li>
+                            <li className="mx-14">Кабинет продавца с заказами и запасами товаров</li>
+                            <li className="mx-14">Система логистики для исполнения заказов</li>
+                        </ul>
+                        <p className="max-w-[775px] text-[20px] leading-25 mb-5">ELMA BPM используется в качестве CRM и
+                            оркестратором всей платформы с 200+ бизнес процессами</p>
+                        <p className="max-w-[775px] text-[20px] leading-25">SuperApp начиная с сентября 2023 года после
+                            запуска Sello Pay (платежи и переводы) и Sello Logistics (доставка товаров от двери до
+                            двери) <br/> <i
+                                className="text-[16px] text-[#007AFF] cursor-pointer"
+                                onClick={() => setOpen(false)}>Свернуть</i></p>
+
+                    </motion.div>}
                 </motion.div>
             </motion.div>
         </>

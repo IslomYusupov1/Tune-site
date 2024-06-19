@@ -1,4 +1,4 @@
-import teamImage from "../assets/team.svg";
+import teamImage from "../assets/team.png";
 import {motion} from "framer-motion";
 import imageBg from "../assets/bg-image-back.png";
 
@@ -27,7 +27,7 @@ function Team() {
             <motion.div variants={containerVariants} initial="hidden" animate="visible" exit="exit"
                         className="flex w-10/12 flex-col text-start bank-page mx-auto mt-16 relative">
                 <div className="flex justify-center">
-                    <img src={teamImage} alt=""/>
+                    <img src={teamImage} alt="" className="w-9/12"/>
                     <div className="flex flex-col absolute bottom-[70px] left-0 w-[700px]">
                         <h3 className="text-[48px]">Наша команда</h3>
                         <p className="text-[20px] leading-6">Созданы в 2009 году в Ташкенте в качестве «бутика» для

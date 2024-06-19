@@ -1,6 +1,7 @@
 import videoFile from "/video.mp4";
 import {motion} from "framer-motion";
 import imageBg from "../assets/bg-image-back.png";
+import {useState} from "react";
 
 const containerVariants = {
     hidden: {
@@ -46,7 +47,25 @@ const textVariants = {
     // }
 }
 
+
+const textFullVariants = {
+    hidden: {
+        y: 70,
+        opacity: 0,
+    },
+    visible: {
+        y: 10,
+        opacity: 1,
+        transition: {duration: 0.5, type: "spring", stiffness: 200}
+    },
+    exit: {
+        y: 900,
+        transition: {ease: "easeInOut"}
+    }
+}
+
 function About() {
+    const [open, setOpen] = useState(false);
     return (
         <>
             <motion.img animate={{opacity: 1}} initial={{opacity: 0}} transition={{duration: 0.25, ease: "easeInOut"}}
@@ -59,7 +78,7 @@ function About() {
                     initial="hidden"
                     animate="visible"
                     className=" opacity-30 flex justify-end text-end items-end w-full border border-transparent mt-5 rounded-lg">
-                    <video className="w-10/12" muted={true} loop={true}
+                    <video className="w-10/12 rounded-lg" muted={true} loop={true}
                            autoPlay={true}
                            preload="auto"
                            controls={true}
@@ -70,9 +89,36 @@ function About() {
                 <motion.div variants={textVariants}
                             initial="hidden"
                             animate="visible" className="flex flex-col text-start absolute bottom-[50px] left-[50px]">
-                    <h3 className="text-[40px]">О нас</h3>
-                    <p className="max-w-[775px] text-[20px] leading-24">Созданы в 2009 году в Ташкенте в
-                        качестве «бутика» для комплексных банковских проектов.....</p>
+                    {!open && <h3 className="text-[40px]">О нас</h3>}
+                    {!open && <p className="max-w-[775px] text-[20px] leading-24">Созданы в 2009 году в Ташкенте в
+                        качестве «бутика» для комплексных банковских проектов..... <br/> <i
+                            className="text-[16px] text-[#007AFF] cursor-pointer" onClick={() => setOpen(true)}>Читать
+                            дальше</i></p>}
+                    {open && <motion.div variants={textFullVariants}
+                                         initial="hidden"
+                                         animate="visible"
+                                         exit={open ? "exit" : "" } >
+                        <h3 className="text-[40px]">О нас</h3>
+                        <p className="max-w-[775px] text-[20px] leading-25 mb-5">Созданы в 2009 году в Ташкенте в
+                            качестве «бутика» для комплексных банковских проектов.</p>
+                        <p className="max-w-[775px] text-[20px] leading-25 mt-5">Начиная с 2017 фокусируемся больше на
+                            цифровых решениях.</p>
+                        <p className="max-w-[775px] text-[20px] leading-25 mb-5">В семье TUNE более 100 сотрудников.Цель
+                            на
+                            2024 год удвоить этот показатель.</p>
+                        <p className="max-w-[775px] text-[20px] leading-25 mb-5">Являемся резидентами ИТ парка и вносим
+                            свой
+                            вклад в программу «миллионпрограммистов к 2030 году». </p>
+                        <p className="max-w-[775px] text-[20px] leading-25 mb-5">Отдельныекоманды по направлениям. <br/>
+                            Цифровые банковские решения и платформы. <br/>
+                            Проекты по внедрению BPM инструментов. <br/>
+                            Разработки под заказ и под ключ. </p>
+                        <p className="max-w-[775px] text-[20px] leading-25">Custom developments, Технологическийпартнер
+                            1го национального маркетплейса Sello. <br/> <i
+                                className="text-[16px] text-[#007AFF] cursor-pointer"
+                                onClick={() => setOpen(false)}>Свернуть</i></p>
+
+                    </motion.div>}
                 </motion.div>
             </motion.div>
         </>

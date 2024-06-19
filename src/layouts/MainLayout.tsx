@@ -96,13 +96,13 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
                             эквайринг
                         </motion.li>
                     </Link>
-                    <Link to={RoutesEnum.Portfolio}>
-                        <motion.li animate={{x: 10, opacity: 1}} initial={{x: 200, opacity: 0}}
-                                   transition={{duration: 0.5, delay: 0.45, ease: "easeInOut"}}
-                                   className={`text-[16px] ${bgImage === 1 ? "hover:text-[#34C924] line-green" : "hover:text-[#003ABC] line-blue"} font-semibold cursor-pointer
-                                    ${location.pathname === RoutesEnum.Portfolio ? ( bgImage === 1 ? "active text-[#34C924]" : "active-blue text-[#003ABC]") : ""}`}>Портфолию
-                        </motion.li>
-                    </Link>
+                    {/*<Link to={RoutesEnum.Portfolio}>*/}
+                    {/*    <motion.li animate={{x: 10, opacity: 1}} initial={{x: 200, opacity: 0}}*/}
+                    {/*               transition={{duration: 0.5, delay: 0.45, ease: "easeInOut"}}*/}
+                    {/*               className={`text-[16px] ${bgImage === 1 ? "hover:text-[#34C924] line-green" : "hover:text-[#003ABC] line-blue"} font-semibold cursor-pointer*/}
+                    {/*                ${location.pathname === RoutesEnum.Portfolio ? ( bgImage === 1 ? "active text-[#34C924]" : "active-blue text-[#003ABC]") : ""}`}>Портфолию*/}
+                    {/*    </motion.li>*/}
+                    {/*</Link>*/}
                     <Link to={RoutesEnum.Turkney}>
                         <motion.li animate={{x: 10, opacity: 1}} initial={{x: 200, opacity: 0}}
                                    transition={{duration: 0.5, delay: 0.5, ease: "easeInOut"}}
@@ -123,7 +123,7 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
                         <motion.li animate={{x: 10, opacity: 1}} initial={{x: 200, opacity: 0}}
                                    transition={{duration: 0.5, delay: 0.6, ease: "easeInOut"}}
                                    className={`text-[16px] ${bgImage === 1 ? "hover:text-[#34C924] line-green" : "hover:text-[#003ABC] line-blue"} font-semibold cursor-pointer
-                                    ${location.pathname === RoutesEnum.Team ? ( bgImage === 1 ? "active text-[#34C924]" : "active-blue text-[#003ABC]") : ""}`}>Наши
+                                    ${location.pathname === RoutesEnum.Team ? ( bgImage === 1 ? "active text-[#34C924]" : "active-blue text-[#003ABC]") : ""}`}>Наша
                             команда
                         </motion.li>
                     </Link>
