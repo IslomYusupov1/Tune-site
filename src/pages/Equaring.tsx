@@ -14,6 +14,7 @@ import masterCard from "../assets/mastercard.svg";
 
 import {motion} from "framer-motion";
 import imageBg from "../assets/bg-dark.png";
+import ContentLayout from "../layouts/ContentLayout";
 
 const headerVariant = {
     hidden: {
@@ -64,43 +65,50 @@ const imageVariant = {
 
 function Equaring() {
     return (
-        <div className="flex flex-col lg:w-9/12 2xl:w-10/12 text-start mx-auto mt-20">
+        <div className="flex flex-col lg:w-9/12 2xl:w-10/12 text-start mx-auto">
             <motion.img animate={{opacity: 1}} initial={{opacity: 0}} transition={{duration: 0.25, ease: "easeInOut"}}
                         alt="" src={imageBg} className="fixed w-screen h-screen top-0 left-0"
                         style={{zIndex: "-1"}}/>
-            <motion.div variants={headerVariant} initial="hidden" animate="visible" exit="exit" className="flex flex-col text-start">
-                <h3 className="2xl:text-[40px] lg:text-[32px] leading-10 mb-3">Платформа онлайн эквайринга</h3>
-                <ul className="list-disc mx-8 2xl:text-[20px] lg:text-[18px]">
-                    <li>6 проектов работающих напрямую с процессинговыми центрами</li>
-                    <li>1 проект на стадии разработки</li>
-                    <li>Доступны для онлайн и оффлайн эквайринга через QR коды</li>
-                    <li>2 проекта раздают эквайринг API для третьих сторон платежным организациям и агентам</li>
-                    <li>Мерчанты и партнеры банка работают через собственные кабинеты</li>
-                </ul>
-            </motion.div>
-            <motion.div variants={footerVariant} initial="hidden" animate="visible" exit="exit" className="mt-16 w-10/12">
-                <motion.div animate={{ width: "100%" }} initial={{ width: 0 }} transition={{ duration: 1, delay: 1.2}} className="border-b border-white" />
-                <div className="flex gap-x-8 gap-y-4 mt-3 flex-wrap">
-                    <img src={mkb} alt=""/>
-                    <img src={davr} alt=""/>
-                    <img src={kapital} alt=""/>
-                    <img src={anorBank} alt=""/>
-                    <img src={joyda} alt=""/>
-                    <img src={asia} alt=""/>
-                    <img src={agat} alt=""/>
-                    <img src={uzum} alt=""/>
-                </div>
-            </motion.div>
-            <motion.div variants={imageVariant} initial="hidden" animate="visible" exit="exit" className="mt-16 w-10/12">
-                <motion.div animate={{ width: "100%" }} initial={{ width: 0 }} transition={{ duration: 1, delay: 1.5}} className="border-b border-white" />
-                <div className="flex gap-x-8 gap-y-4 mt-3 flex-wrap">
-                    <img src={uzacrd} alt=""/>
-                    <img src={union} alt=""/>
-                    <img src={humo} alt=""/>
-                    <img src={visa} alt=""/>
-                    <img src={masterCard} alt=""/>
-                </div>
-            </motion.div>
+            <ContentLayout>
+                <motion.div variants={headerVariant} initial="hidden" animate="visible" exit="exit"
+                            className="flex flex-col text-start">
+                    <h3 className="2xl:text-[40px] lg:text-[32px] 3xl:text-[48px] leading-10 mb-3">Платформа онлайн эквайринга</h3>
+                    <ul className="list-disc mx-8 2xl:text-[20px] 3xl:text-[30px] lg:text-[18px] font-light">
+                        <li>6 проектов работающих напрямую с процессинговыми центрами</li>
+                        <li>1 проект на стадии разработки</li>
+                        <li>Доступны для онлайн и оффлайн эквайринга через QR коды</li>
+                        <li>2 проекта раздают эквайринг API для третьих сторон платежным организациям и агентам</li>
+                        <li>Мерчанты и партнеры банка работают через собственные кабинеты</li>
+                    </ul>
+                </motion.div>
+                <motion.div variants={footerVariant} initial="hidden" animate="visible" exit="exit"
+                            className="mt-16 w-10/12">
+                    <motion.div animate={{width: "100%"}} initial={{width: 0}} transition={{duration: 1, delay: 1.2}}
+                                className="border-b border-white"/>
+                    <div className="flex gap-x-8 gap-y-4 3xl:gap-y-2 mt-2 flex-wrap">
+                        <img src={mkb} alt="" className="3xl:w-[170px] 3xl:h-[100px]"/>
+                        <img src={davr} alt="" className="3xl:w-[170px] 3xl:h-[100px]"/>
+                        <img src={kapital} alt="" className="3xl:w-[170px] 3xl:h-[100px]"/>
+                        <img src={anorBank} alt="" className="3xl:w-[170px] 3xl:h-[100px]"/>
+                        <img src={joyda} alt="" className="3xl:w-[170px] 3xl:h-[100px]"/>
+                        <img src={asia} alt="" className="3xl:w-[170px] 3xl:h-[100px]"/>
+                        <img src={agat} alt="" className="3xl:w-[170px] 3xl:h-[100px]"/>
+                        <img src={uzum} alt="" className="3xl:w-[170px] 3xl:h-[100px]"/>
+                    </div>
+                </motion.div>
+                <motion.div variants={imageVariant} initial="hidden" animate="visible" exit="exit"
+                            className="mt-16 w-10/12">
+                    <motion.div animate={{width: "100%"}} initial={{width: 0}} transition={{duration: 1, delay: 1.5}}
+                                className="border-b border-white"/>
+                    <div className="flex gap-x-8 gap-y-4 mt-3 flex-wrap">
+                        <img src={uzacrd} alt="" className="3xl:w-[150px] 3xl:h-[100px]"/>
+                        <img src={union} alt="" className="3xl:w-[150px] 3xl:h-[100px]"/>
+                        <img src={humo} alt="" className="3xl:w-[150px] 3xl:h-[100px]"/>
+                        <img src={visa} alt="" className="3xl:w-[150px] 3xl:h-[100px]"/>
+                        <img src={masterCard} alt="" className="3xl:w-[150px] 3xl:h-[100px]"/>
+                    </div>
+                </motion.div>
+            </ContentLayout>
         </div>
     );
 }

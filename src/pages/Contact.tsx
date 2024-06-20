@@ -8,6 +8,7 @@ import {Field, Form, Formik, FormikHelpers, FormikValues} from "formik";
 import emailjs from '@emailjs/browser';
 import * as Yup from "yup";
 import {useEffect, useMemo, useState} from "react";
+import ContentLayout from "../layouts/ContentLayout";
 
 const headerVariant = {
     hidden: {
@@ -74,64 +75,67 @@ function Contact() {
             <motion.img animate={{opacity: 1}} initial={{opacity: 0}} transition={{duration: 0.25, ease: "easeInOut"}}
                         alt="" src={imageBgLight} className="fixed w-screen h-screen top-0 left-0"
                         style={{zIndex: "-1"}}/>
-            <motion.div variants={headerVariant} initial="hidden" animate="visible" exit="exit"
-                        className="flex gap-6 flex-col text-[#353535]  lg:w-8/12 2xl:w-9/12 text-start font-light mx-[100px] ">
-                <h3 className="2xl:text-[40px] lg:text-[32px]">Привет. Мы всегда рады Вам.</h3>
-                <h2 className="2xl:text-[32px] lg:text-[26px] font-medium">OOO “TUNE Consulting” </h2>
-                <div className="flex flex-col ">
-                    <p className="2xl:text-[20px] lg:text-[18px]">Телефон:</p>
-                    <h3 className="2xl:text-[28px] lg:text-[26px] font-medium">+998 91 134-53-26</h3>
-                </div>
-                <div className="flex flex-col">
-                    <p className="2xl:text-[20px] lg:text-[18px">Электронная почта:</p>
-                    <h3 className="2xl:text-[28px] lg:text-[26px] font-medium">Info@TuneConsulting.net</h3>
-                </div>
-                <div className="flex flex-col">
-                    <p className="2xl:text-[20px] lg:text-[18px">Адрес:</p>
-                    <h3 className="2xl:text-[28px] lg:text-[26px] font-normal">г. Ташкент, Шайхантахурский район, улица
-                        Зульфияхоним, 12</h3>
-                </div>
-                <Formik initialValues={{name: "", phone: "", email: ""}} validationSchema={validationSchema}
-                        onSubmit={(e, formikHelpers) => sendMessage(e, formikHelpers)}>
-                    {({handleSubmit, errors, touched}) => (
-                        <Form onSubmit={handleSubmit} className="z-50">
-                            <div className="flex flex-col gap-4 w-3/4">
-                                <div>
-                                    <Field type="text"
-                                           name="name"
-                                           className={`${errors.name && touched.name ? "border-red-600 focus:border-red-600" : ""} bg-white outline-0 border text-gray-900 rounded-lg focus:ring-[#003ABC] focus:border-[#003ABC] block w-full p-4`}
-                                           placeholder="Фамилия,имя и отчество"
-                                    />
-                                </div>
-                                <div className="flex  gap-4">
-                                    <div className="w-full">
+            <ContentLayout>
+                <motion.div variants={headerVariant} initial="hidden" animate="visible" exit="exit"
+                            className="flex 2xl:gap-6 xl:gap-4 flex-col text-[#353535] xl:w-8/12 2xl:w-9/12 text-start font-light mx-[100px] xl:mt-[30px] 2xl:mt-[25px] 3xl:mt-0 ">
+                    <h3 className="2xl:text-[36px] xl:text-[32px] 3xl:text-[48px]">Привет. Мы всегда рады Вам.</h3>
+                    <h2 className="2xl:text-[30px] xl:text-[24px] 3xl:text-[36px] font-medium">OOO “TUNE Consulting” </h2>
+                    <div className="flex flex-col ">
+                        <p className="2xl:text-[20px] xl:text-[18px] 3xl:text-[24px]">Телефон:</p>
+                        <h3 className="2xl:text-[28px] xl:text-[26px] 3xl:text-[32px] font-medium">+998 91 134-53-26</h3>
+                    </div>
+                    <div className="flex flex-col">
+                        <p className="2xl:text-[20px] xl:text-[18px] 3xl:text-[24px]">Электронная почта:</p>
+                        <h3 className="2xl:text-[28px] xl:text-[26px] 3xl:text-[32px] font-medium">Info@TuneConsulting.net</h3>
+                    </div>
+                    <div className="flex flex-col">
+                        <p className="2xl:text-[20px] xl:text-[18px] 3xl:text-[24px]">Адрес:</p>
+                        <h3 className="2xl:text-[28px] xl:text-[26px] 3xl:text-[32px] font-normal">г. Ташкент, Шайхантахурский район,
+                            улица
+                            Зульфияхоним, 12</h3>
+                    </div>
+                    <Formik initialValues={{name: "", phone: "", email: ""}} validationSchema={validationSchema}
+                            onSubmit={(e, formikHelpers) => sendMessage(e, formikHelpers)}>
+                        {({handleSubmit, errors, touched}) => (
+                            <Form onSubmit={handleSubmit} className="z-50">
+                                <div className="flex flex-col gap-4 w-3/4">
+                                    <div>
                                         <Field type="text"
-                                               name="email"
-                                               placeholder="Электронная почта"
-                                               className={`${errors.email && touched.email ? "border-red-600 focus:border-red-600" : ""} bg-white outline-0 border text-gray-900 rounded-lg focus:ring-[#003ABC] focus:border-[#003ABC] block w-full p-4 `}/>
+                                               name="name"
+                                               className={`${errors.name && touched.name ? "border-red-600 focus:border-red-600" : ""} bg-white outline-0 border text-gray-900 rounded-lg focus:ring-[#003ABC] focus:border-[#003ABC] block w-full p-4`}
+                                               placeholder="Фамилия,имя и отчество"
+                                        />
                                     </div>
-                                    <div className="w-full">
-                                        <Field type="text"
-                                               name="phone"
-                                               placeholder="Номер телефона"
-                                               className={`${errors.phone && touched.phone ? "border-red-600 focus:border-red-600" : ""} bg-white outline-0 border text-gray-900 rounded-lg focus:ring-[#003ABC] focus:border-[#003ABC] block w-full p-4 `}/>
+                                    <div className="flex  gap-4">
+                                        <div className="w-full">
+                                            <Field type="text"
+                                                   name="email"
+                                                   placeholder="Электронная почта"
+                                                   className={`${errors.email && touched.email ? "border-red-600 focus:border-red-600" : ""} bg-white outline-0 border text-gray-900 rounded-lg focus:ring-[#003ABC] focus:border-[#003ABC] block w-full p-4 `}/>
+                                        </div>
+                                        <div className="w-full">
+                                            <Field type="text"
+                                                   name="phone"
+                                                   placeholder="Номер телефона"
+                                                   className={`${errors.phone && touched.phone ? "border-red-600 focus:border-red-600" : ""} bg-white outline-0 border text-gray-900 rounded-lg focus:ring-[#003ABC] focus:border-[#003ABC] block w-full p-4 `}/>
+                                        </div>
                                     </div>
+                                    <button type="submit" disabled={loading}
+                                            className="text-center bg-[#003ABC] w-[200px] text-white rounded-lg p-3">Отправить
+                                        сообщение
+                                    </button>
                                 </div>
-                                <button type="submit" disabled={loading}
-                                        className="text-center bg-[#003ABC] w-[200px] text-white rounded-lg p-3">Отправить
-                                    сообщение
-                                </button>
-                            </div>
-                        </Form>
-                    )}
-                </Formik>
-                <div className="flex gap-8 2xl:mt-24 lg:mt-10">
-                    <img src={instagram} alt=""/>
-                    <img src={facebook} alt=""/>
-                    <img src={linkedin} alt=""/>
-                    <img src={telegram} alt=""/>
-                </div>
-            </motion.div>
+                            </Form>
+                        )}
+                    </Formik>
+                    <div className="flex gap-8 2xl:mt-24 lg:mt-10">
+                        <img src={instagram} alt=""/>
+                        <img src={facebook} alt=""/>
+                        <img src={linkedin} alt=""/>
+                        <img src={telegram} alt=""/>
+                    </div>
+                </motion.div>
+            </ContentLayout>
             {alert?.length > 0 && <motion.div className="fixed top-5 right-1/2" initial={{y: -100}}
                                               animate={{y: 0}}
                                               exit={{y: -100, transition: {duration: 0.3, ease: "easeInOut"}}}
