@@ -1,5 +1,5 @@
 import {motion} from "framer-motion";
-import imageBgLight from "../assets/bg-white.png";
+import imageBgLight from "../assets/bg-light.jpg";
 
 const headerVariant = {
     hidden: {

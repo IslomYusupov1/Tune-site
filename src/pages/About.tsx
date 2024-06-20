@@ -1,6 +1,6 @@
 import videoFile from "/video.mp4";
 import {motion} from "framer-motion";
-import imageBg from "../assets/bg-image-back.png";
+import imageBg from "../assets/bg-dark.png";
 import {useState} from "react";
 
 const containerVariants = {

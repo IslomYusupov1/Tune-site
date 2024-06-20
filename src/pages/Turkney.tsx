@@ -1,6 +1,6 @@
 import {motion} from "framer-motion";
 import imageBack from "../assets/turkey.png";
-import imageBg from "../assets/bg-image-back.png";
+import imageBg from "../assets/bg-dark.png";
 import {useState} from "react";
 
 const containerVariants = {

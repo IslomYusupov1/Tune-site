@@ -8,7 +8,7 @@ import agat from "../assets/agat.svg";
 import uzum from "../assets/uzum.svg";
 
 import {motion} from "framer-motion";
-import imageBgLight from "../assets/bg-white.png"
+import imageBgLight from "../assets/bg-light.jpg"
 
 const headerVariants = {
     hidden: {
@@ -18,7 +18,7 @@ const headerVariants = {
     visible: {
         y: 0,
         scale: 1,
-        transition: {type: "spring", ease: "easeInOut", stiffness: 30, delay: 0.5}
+        transition: {type: "spring", ease: "easeInOut", stiffness: 30, delay: 0.6}
     },
     exit: {
         y: -1000,

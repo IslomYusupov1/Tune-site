@@ -1,6 +1,6 @@
 import teamImage from "../assets/team.png";
 import {motion} from "framer-motion";
-import imageBg from "../assets/bg-image-back.png";
+import imageBg from "../assets/bg-dark.png";
 
 const containerVariants = {
     hidden: {

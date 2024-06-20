@@ -13,7 +13,7 @@ import visa from "../assets/visa.svg";
 import masterCard from "../assets/mastercard.svg";
 
 import {motion} from "framer-motion";
-import imageBg from "../assets/bg-image-back.png";
+import imageBg from "../assets/bg-dark.png";
 
 const headerVariant = {
     hidden: {

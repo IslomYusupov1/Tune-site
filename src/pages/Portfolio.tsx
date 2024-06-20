@@ -1,6 +1,6 @@
 import videoImg from "../assets/portfolio-video.svg";
 import {motion} from "framer-motion";
-import imageBgLight from "../assets/bg-white.png";
+import imageBgLight from "../assets/bg-light.jpg";
 
 const imageVariant = {
     hidden: {

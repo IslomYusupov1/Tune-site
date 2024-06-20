@@ -7,7 +7,7 @@ import joyda from "../assets/joyda.svg";
 import asia from "../assets/asia.svg";
 import agat from "../assets/agat.svg";
 import uzum from "../assets/uzum.svg";
-import imageBgLight from "../assets/bg-white.png";
+import imageBgLight from "../assets/bg-light.jpg";
 
 const headerVariant = {
     hidden: {

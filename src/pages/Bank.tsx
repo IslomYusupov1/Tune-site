@@ -1,6 +1,6 @@
-import bankPhoneImage from "../assets/bank-phone-img.svg";
+import bankPhoneImage from "../assets/phone.png";
 import {motion} from "framer-motion";
-import imageBg from "../assets/bg-image-back.png";
+import imageBg from "../assets/bg-dark.png";
 
 const headerVariants = {
     hidden: {
@@ -73,7 +73,7 @@ function Bank() {
                     <p className="lg:text-[18px] 2xl:text-[20px]">7. Используем Kubernetes и Doker оркестраторы</p>
                 </div>
                 <div className="2xl:mt-3 lg:mt-2">
-                    <motion.img animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ duration: 0.6 }} className="image-bank md:w-7/12 lg:w-11/12 2xl:w-11/12" src={bankPhoneImage} alt=""/>
+                    <motion.img animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ duration: 0.6 }} className="md:w-[420px] lg:w-[430px] 2xl:w-[460px]" src={bankPhoneImage} alt=""/>
                 </div>
             </motion.div>
         </motion.div>

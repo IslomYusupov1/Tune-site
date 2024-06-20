@@ -3,7 +3,7 @@ import telegram from "../assets/telegram.svg";
 import linkedin from "../assets/linkedin.svg";
 import instagram from "../assets/instagram.svg";
 import {motion} from "framer-motion";
-import imageBgLight from "../assets/bg-white.png";
+import imageBgLight from "../assets/bg-light.jpg";
 import {Field, Form, Formik, FormikHelpers, FormikValues} from "formik";
 import emailjs from '@emailjs/browser';
 import * as Yup from "yup";
