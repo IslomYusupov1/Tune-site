@@ -6,6 +6,7 @@ import logo from "../assets/logo.svg";
 import logoBlack from "../assets/logo-black.svg";
 import cosmoImage from "../assets/cosmo.svg";
 import {useLocation} from "react-router";
+import img from "../assets/video.gif";
 
 interface Props {
     readonly children: ReactNode;
@@ -32,11 +33,12 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
     return (
         <motion.div
             // style={{ backgroundImage: bgImage === 1 ? `url(${imageBg})` : `url(${imageBgLight})`}}
-            className={`overflow-hidden menu-main main-container relative ${bgVideo ? "first-block" : ""}`}>
+            className={`overflow-hidden menu-main main-container relative ${bgVideo ? "" : ""}`}>
+            {bgVideo && <img src={img} alt="" className="fixed w-screen h-screen object-cover"/>}
             {!bgVideo && <motion.img animate={{ scale: [1, 0.7, 0.7, 1], y: [0, 125, 125, 0] }}
                                      transition={{ duration: 40, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop" }} src={cosmoImage} width={1000} alt=""
                                      className="absolute right-36 bottom-0 object-contain"/>}
-            <div className="w-screen container text-center mx-auto h-screen mx-auto">
+            <div className="w-screen container text-center mx-auto h-screen mx-auto z-10">
                 <div className="relative flex flex-col gap-12">
                     <motion.div
                         animate={{x: 0}}
