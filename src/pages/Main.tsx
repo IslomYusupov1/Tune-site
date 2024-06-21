@@ -48,7 +48,7 @@ function Main() {
                                 src={person} alt=""/>
                 </motion.div>
                 <motion.h3 variants={textVariant} animate="visible" initial="hidden" exit="hidden"
-                           className="text-start xl:text-[40px] 2xl:text-[48px] 3xl:text-[58px] mx-[100px]">Taraqqiyot tasodif emas
+                           className="text-start text-white xl:text-[40px] 2xl:text-[48px] 3xl:text-[58px] mx-[100px]">Taraqqiyot tasodif emas
                 </motion.h3>
             </ContentLayout>
         </div>

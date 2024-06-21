@@ -19,7 +19,7 @@ const headerVariants = {
     visible: {
         y: 0,
         scale: 1,
-        transition: {type: "spring", ease: "easeInOut", stiffness: 30, delay: 0.6}
+        transition: {type: "spring", stiffness: 30, delay: 0.6}
     },
     exit: {
         y: -1000,
@@ -56,7 +56,7 @@ function Loan() {
                     initial="hidden"
                     animate="visible"
                     exit="exit"
-                    className="flex flex-col text-start w-10/12">
+                    className="flex text-red-black flex-col text-start w-10/12">
                     <h3 className="text-[40px] 3xl:text-[54px] font-light">Кредитный конвейер и скоринг движок</h3>
                     <p className="text-[20px] 3xl:text-[32px]">1. 8 проектов с использованием BPM системы для автоматизации конвейеров и
                         скоринговых движков</p>

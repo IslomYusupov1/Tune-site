@@ -71,7 +71,7 @@ function Equaring() {
                         style={{zIndex: "-1"}}/>
             <ContentLayout>
                 <motion.div variants={headerVariant} initial="hidden" animate="visible" exit="exit"
-                            className="flex flex-col text-start">
+                            className="flex text-white flex-col text-start">
                     <h3 className="2xl:text-[40px] lg:text-[32px] 3xl:text-[48px] leading-10 mb-3">Платформа онлайн эквайринга</h3>
                     <ul className="list-disc mx-8 2xl:text-[20px] 3xl:text-[30px] lg:text-[18px] font-light">
                         <li>6 проектов работающих напрямую с процессинговыми центрами</li>

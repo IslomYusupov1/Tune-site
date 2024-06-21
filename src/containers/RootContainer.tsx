@@ -5,7 +5,7 @@ import About from "../pages/About";
 import MainLayout from "../layouts/MainLayout";
 import {AnimatePresence} from "framer-motion";
 import Loan from "../pages/Loan";
-import {useMemo} from "react";
+import {Suspense, useMemo} from "react";
 import Bank from "../pages/Bank";
 import Crm from "../pages/Crm";
 import Equaring from "../pages/Equaring";
@@ -28,23 +28,25 @@ function RootContainer() {
                 ? 2 : 0;
     }, [location])
     return (
-        <MainLayout bgVideo={location.pathname === RoutesEnum.Main} bgImage={bgImage}>
-            <AnimatePresence>
-                <Routes location={location} key={location.key}>
-                    <Route element={<Main/>} path={RoutesEnum.Main}/>
-                    <Route element={<About/>} path={RoutesEnum.About}/>
-                    <Route element={<Loan/>} path={RoutesEnum.Loan}/>
-                    <Route element={<Bank/>} path={RoutesEnum.Bank}/>
-                    <Route element={<Crm/>} path={RoutesEnum.Crm}/>
-                    <Route element={<Equaring/>} path={RoutesEnum.Equaring}/>
-                    {/*<Route element={<Portfolio/>} path={RoutesEnum.Portfolio}/>*/}
-                    <Route element={<Turkney/>} path={RoutesEnum.Turkney}/>
-                    <Route element={<Solutions/>} path={RoutesEnum.Solutions}/>
-                    <Route element={<Team/>} path={RoutesEnum.Team}/>
-                    <Route element={<Contact/>} path={RoutesEnum.Contact}/>
-                </Routes>
-            </AnimatePresence>
-        </MainLayout>
+        <Suspense fallback={<h3>Loading...</h3>}>
+            <MainLayout bgVideo={location.pathname === RoutesEnum.Main} bgImage={bgImage}>
+                <AnimatePresence>
+                    <Routes location={location} key={location.key}>
+                        <Route element={<Main/>} path={RoutesEnum.Main}/>
+                        <Route element={<About/>} path={RoutesEnum.About}/>
+                        <Route element={<Loan/>} path={RoutesEnum.Loan}/>
+                        <Route element={<Bank/>} path={RoutesEnum.Bank}/>
+                        <Route element={<Crm/>} path={RoutesEnum.Crm}/>
+                        <Route element={<Equaring/>} path={RoutesEnum.Equaring}/>
+                        {/*<Route element={<Portfolio/>} path={RoutesEnum.Portfolio}/>*/}
+                        <Route element={<Turkney/>} path={RoutesEnum.Turkney}/>
+                        <Route element={<Solutions/>} path={RoutesEnum.Solutions}/>
+                        <Route element={<Team/>} path={RoutesEnum.Team}/>
+                        <Route element={<Contact/>} path={RoutesEnum.Contact}/>
+                    </Routes>
+                </AnimatePresence>
+            </MainLayout>
+        </Suspense>
     );
 }
 

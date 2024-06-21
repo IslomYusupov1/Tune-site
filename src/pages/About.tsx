@@ -91,7 +91,7 @@ function About() {
                     <motion.div variants={textVariants}
                                 initial="hidden"
                                 animate="visible"
-                                className="flex flex-col text-start absolute bottom-[50px] left-[50px]">
+                                className="flex flex-col text-white text-start absolute bottom-[50px] left-[50px]">
                         {!open && <h3 className="text-[40px]">О нас</h3>}
                         {!open && <p className="max-w-[775px] text-[20px] leading-24">Созданы в 2009 году в Ташкенте в
                             качестве «бутика» для комплексных банковских проектов..... <br/> <g

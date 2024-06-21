@@ -44,10 +44,10 @@ function Bank() {
                         style={{zIndex: "-1"}}/>
             <ContentLayout className="relative">
                 <motion.h3 variants={headerVariants} initial="hidden" animate="visible" exit="exit"
-                           className="text-[40px] 3xl:text-[58px] mb-20 mt-20">Цифровые банковские платформы
+                           className="text-[40px] text-white 3xl:text-[58px] mb-20 mt-20">Цифровые банковские платформы
                 </motion.h3>
                 <motion.div variants={footerVariants} initial="hidden" animate="visible" exit="exit"
-                            className="flex 2xl:gap-8 lg:gap-4">
+                            className="flex text-white 2xl:gap-8 lg:gap-4">
                     <div className="xl:w-[65%] 3xl:w-[50%]">
                         <p className="lg:text-[18px] 2xl:text-[20px] 3xl:text-[28px]">1. 12 проектов ДБО физлица</p>
                         <ul className="list-disc mx-10 lg:text-[18px] 2xl:text-[20px] 3xl:text-[28px]">

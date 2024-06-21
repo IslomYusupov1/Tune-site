@@ -97,7 +97,7 @@ function Turkney() {
                     <motion.div variants={textVariants}
                                 initial="hidden"
                                 animate="visible"
-                                className="flex flex-col text-start absolute bottom-[50px] left-[50px]">
+                                className="flex flex-col text-white text-start absolute bottom-[50px] left-[50px]">
                         {!open && <h3 className="xl:text-[32px] 2xl:text-[40px] 3xl:text-[48px]">Пример разработки под ключ и заказ</h3>}
                         {!open && <p className="max-w-[775px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[28px] font-light leading-25">Созданы в 2009 году в Ташкенте в
                             качестве «бутика» для комплексных банковских проектов..... <br/> <b
