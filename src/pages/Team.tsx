@@ -46,7 +46,7 @@ function Team() {
                             className="flex w-11/12 flex-col text-start bank-page mt-16 relative">
                     <div className="flex justify-center">
                         <img src={teamImage} alt="" className="w-9/12"/>
-                        <div className="flex flex-col absolute bottom-[70px] left-0 w-[700px]">
+                        <div className="flex text-white flex-col absolute bottom-[70px] left-0 w-[700px]">
                             {!open && <h3 className="text-[40px]">Наша команда</h3>}
                             {!open && <p className="max-w-[775px] text-[20px] leading-24">Наши разработчики обладают глубокими знаниями и многолетним опытом в создании надежных и высококачественных решений. <br/> <g
                                     className="text-[16px] text-[#007AFF] cursor-pointer" onClick={() => setOpen(true)}>Читать
