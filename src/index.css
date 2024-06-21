@@ -10,7 +10,9 @@
     color-scheme: light dark;
     text-rendering: optimizeLegibility;
 }
-
+body {
+    overflow: hidden !important;
+}
 .main-container.first-block-img {
     background-image: url("./assets/bg-image.svg");
     background-size: cover;
