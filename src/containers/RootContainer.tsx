@@ -1,31 +1,32 @@
 import {Route, Routes, useLocation, useNavigate} from "react-router";
-// import Main from "../pages/Main";
 import {RoutesEnum} from "../constants/Routes";
-// import About from "../pages/About";
+import About from "../pages/About";
 import MainLayout from "../layouts/MainLayout";
 import {AnimatePresence} from "framer-motion";
-// import Loan from "../pages/Loan";
+import Loan from "../pages/Loan";
 import {lazy, Suspense, useEffect, useMemo} from "react";
-// import Bank from "../pages/Bank";
-// import Crm from "../pages/Crm";
-// import Equaring from "../pages/Equaring";
-// import Turkney from "../pages/Turkney";
-// import Solutions from "../pages/Solutions";
-// import Team from "../pages/Team";
-// import Contact from "../pages/Contact";
+import Bank from "../pages/Bank";
+import Crm from "../pages/Crm";
+import Equaring from "../pages/Equaring";
+import Turkney from "../pages/Turkney";
+import Solutions from "../pages/Solutions";
+import Team from "../pages/Team";
+import Contact from "../pages/Contact";
+import {motion} from "framer-motion";
 import bgWhite from "../assets/bg-light.jpg";
 import bgDark from "../assets/bg-dark.png";
+import logo from "../assets/logo.svg";
 
 const MainLazy = lazy(() => import('../pages/Main'));
-const AboutLazy = lazy(() => import('../pages/About'));
-const LoanLazy = lazy(() => import('../pages/Loan'));
-const BankLazy = lazy(() => import('../pages/Bank'));
-const CrmLazy = lazy(() => import('../pages/Crm'));
-const EquiringLazy = lazy(() => import('../pages/Equaring'));
-const TurnkeyLazy = lazy(() => import('../pages/Turkney'));
-const SolutionLazy = lazy(() => import('../pages/Solutions'));
-const TeamLazy = lazy(() => import('../pages/Team'));
-const ContactLazy = lazy(() => import('../pages/Contact'));
+// const AboutLazy = lazy(() => import('../pages/About'));
+// const LoanLazy = lazy(() => import('../pages/Loan'));
+// const BankLazy = lazy(() => import('../pages/Bank'));
+// const CrmLazy = lazy(() => import('../pages/Crm'));
+// const EquiringLazy = lazy(() => import('../pages/Equaring'));
+// const TurnkeyLazy = lazy(() => import('../pages/Turkney'));
+// const SolutionLazy = lazy(() => import('../pages/Solutions'));
+// const TeamLazy = lazy(() => import('../pages/Team'));
+// const ContactLazy = lazy(() => import('../pages/Contact'));
 
 function RootContainer() {
     const location = useLocation();
@@ -99,21 +100,25 @@ function RootContainer() {
         });
     }, [])
     return (
-        <Suspense fallback={<h3>Loading...</h3>}>
+        <Suspense fallback={
+            <motion.div animate={{opacity: 1}} initial={{opacity: 0}} transition={{duration: "0.3"}}
+                        className="bg-black w-screen h-screen">
+                <div className="w-full h-full justify-center flex items-center mx-auto"><img src={logo} alt=""/></div>
+            </motion.div>}>
             <MainLayout bgVideo={location.pathname === RoutesEnum.Main} bgImage={bgImage}>
                 <AnimatePresence>
                     <Routes location={location} key={location.key}>
                         <Route element={<MainLazy/>} path={RoutesEnum.Main}/>
-                        <Route element={<AboutLazy/>} path={RoutesEnum.About}/>
-                        <Route element={<LoanLazy/>} path={RoutesEnum.Loan}/>
-                        <Route element={<BankLazy/>} path={RoutesEnum.Bank}/>
-                        <Route element={<CrmLazy/>} path={RoutesEnum.Crm}/>
-                        <Route element={<EquiringLazy/>} path={RoutesEnum.Equaring}/>
+                        <Route element={<About/>} path={RoutesEnum.About}/>
+                        <Route element={<Loan/>} path={RoutesEnum.Loan}/>
+                        <Route element={<Bank/>} path={RoutesEnum.Bank}/>
+                        <Route element={<Crm/>} path={RoutesEnum.Crm}/>
+                        <Route element={<Equaring/>} path={RoutesEnum.Equaring}/>
                         {/*<Route element={<Portfolio/>} path={RoutesEnum.Portfolio}/>*/}
-                        <Route element={<TurnkeyLazy/>} path={RoutesEnum.Turkney}/>
-                        <Route element={<SolutionLazy/>} path={RoutesEnum.Solutions}/>
-                        <Route element={<TeamLazy/>} path={RoutesEnum.Team}/>
-                        <Route element={<ContactLazy/>} path={RoutesEnum.Contact}/>
+                        <Route element={<Turkney/>} path={RoutesEnum.Turkney}/>
+                        <Route element={<Solutions/>} path={RoutesEnum.Solutions}/>
+                        <Route element={<Team/>} path={RoutesEnum.Team}/>
+                        <Route element={<Contact/>} path={RoutesEnum.Contact}/>
                     </Routes>
                 </AnimatePresence>
             </MainLayout>
