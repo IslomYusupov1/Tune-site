@@ -7,7 +7,7 @@ import joyda from "../assets/joyda.svg";
 import asia from "../assets/asia.svg";
 import agat from "../assets/agat.svg";
 import uzum from "../assets/uzum.svg";
-import imageBgLight from "../assets/bg-image-back.png";
+import imageBgLight from "../assets/bg-light.jpg";
 import ContentLayout from "../layouts/ContentLayout";
 
 const headerVariant = {
@@ -72,7 +72,6 @@ function Crm() {
             <motion.img animate={{opacity: 1}} initial={{opacity: 0}} transition={{duration: 0.25, ease: "easeInOut"}}
                         alt="" src={imageBgLight} className="fixed w-screen h-screen top-0 left-0"
                         style={{zIndex: "-2"}}/>
-            <div className="bg-white fixed w-screen h-screen top-0 left-0"  style={{zIndex: "-1"}}/>
             <ContentLayout>
                 <motion.div variants={headerVariant} initial="hidden" animate="visible" exit="exit"
                             className="flex flex-col text-start">
