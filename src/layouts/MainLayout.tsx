@@ -37,7 +37,7 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
     return (
         <motion.div
             // style={{ backgroundImage: bgImage === 1 ? `url(${imageBg})` : `url(${imageBgLight})`}}
-            className={`h-full my-auto menu-main main-container relative ${bgVideo ? "" : ""}`}>
+            className={`h-screen my-auto menu-main main-container relative ${bgVideo ? "" : ""}`}>
             {bgVideo && <div className="fixed w-full h-full">
                 <video className="w-full" src={videoBg} autoPlay={true} loop={true} muted={true} />
             </div>}
@@ -46,7 +46,7 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
                                      transition={{duration: 40, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}
                                      src={cosmoImage} width={1000} alt=""
                                      className="absolute right-36 bottom-0 object-contain"/>}
-            <div className="w-full container mx-auto z-40">
+            <div className="w-screen container mx-auto z-40">
                 <motion.div
                     animate={{x: 1}}
                     initial={{x: -600}}
