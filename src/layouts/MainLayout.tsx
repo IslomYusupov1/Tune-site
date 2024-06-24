@@ -7,7 +7,8 @@ import logoBlack from "../assets/logo-black.svg";
 import cosmoImage from "../assets/cosmo.svg";
 import {useLocation} from "react-router";
 // import img from "../assets/video.gif";
-import img from "../assets/bg-dark.png";
+// import img from "../assets/bg-dark.png";
+import videoBg from "../assets/video-bg.mp4";
 // @ts-ignore
 import GifPlayer from "react-gif-player";
 
@@ -33,18 +34,19 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
             }
         }
     }, [location])
-
     return (
         <motion.div
             // style={{ backgroundImage: bgImage === 1 ? `url(${imageBg})` : `url(${imageBgLight})`}}
-            className={`h-screen my-auto menu-main main-container relative ${bgVideo ? "" : ""}`}>
-            {bgVideo && <img src={img} alt="" className="fixed w-screen h-screen object-cover"/>}
+            className={`h-full my-auto menu-main main-container relative ${bgVideo ? "" : ""}`}>
+            {bgVideo && <div className="fixed w-full h-full">
+                <video className="w-full" src={videoBg} autoPlay={true} loop={true} muted={true} />
+            </div>}
             {/*{bgVideo && <GifPlayer gif={img} className="fixed w-screen h-screen object-cover"/>}*/}
             {!bgVideo && <motion.img animate={{scale: [1, 0.7, 0.7, 1], y: [0, 125, 125, 0]}}
                                      transition={{duration: 40, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}
                                      src={cosmoImage} width={1000} alt=""
                                      className="absolute right-36 bottom-0 object-contain"/>}
-            <div className="w-screen container mx-auto z-40">
+            <div className="w-full container mx-auto z-40">
                 <motion.div
                     animate={{x: 1}}
                     initial={{x: -600}}
