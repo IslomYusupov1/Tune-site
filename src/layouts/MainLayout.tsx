@@ -42,7 +42,7 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
             {/*    <video className="w-full" src={videoBg} autoPlay={true} loop={true} muted={true} />*/}
             {/*</div>}*/}
             {/*{bgVideo && <GifPlayer gif={img} className="fixed w-screen h-screen object-cover"/>}*/}
-            <div className="fixed w-full h-full bg-black" />
+            {/*<div className="fixed w-full h-full bg-black" />*/}
             {!bgVideo && <motion.img animate={{scale: [1, 0.7, 0.7, 1], y: [0, 125, 125, 0]}}
                                      transition={{duration: 40, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}
                                      src={cosmoImage} width={1000} alt=""
