@@ -43,8 +43,8 @@ function Main() {
                     initial="hidden"
                     animate="visible"
                     exit="exit"
-                    className="flex justify-center z-50">
-                    <motion.img className="z-50 xl:w-[600px] 2xl:w-[700px] 3xl:w-[1000px]"
+                    className="flex justify-center z-30">
+                    <motion.img className="xl:w-[600px] 2xl:w-[700px] 3xl:w-[1000px]"
                                 src={person} alt=""/>
                 </motion.div>
                 <motion.h3 variants={textVariant} animate="visible" initial="hidden" exit="hidden"

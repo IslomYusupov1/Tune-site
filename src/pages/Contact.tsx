@@ -73,7 +73,7 @@ function Contact() {
     return (
         <>
             <motion.img animate={{opacity: 1}} initial={{opacity: 0}} transition={{duration: 0.25, ease: "easeInOut"}}
-                        alt="" src={imageBgLight} className="fixed w-screen h-screen top-0 left-0"
+                        alt="" src={imageBgLight} className="fixed z-50 w-screen h-screen top-0 left-0"
                         style={{zIndex: "-1"}}/>
             <ContentLayout>
                 <motion.div variants={headerVariant} initial="hidden" animate="visible" exit="exit"

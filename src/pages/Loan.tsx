@@ -44,6 +44,7 @@ const footerVariants = {
     }
 }
 
+
 function Loan() {
     return (
         <motion.div className="text-[#353535] flex flex-col justify-center w-11/12 mt-10 mx-[100px]">

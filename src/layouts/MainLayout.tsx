@@ -44,7 +44,7 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
                                      transition={{duration: 40, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}
                                      src={cosmoImage} width={1000} alt=""
                                      className="absolute right-36 bottom-0 object-contain"/>}
-            <div className="w-screen container mx-auto z-50">
+            <div className="w-screen container mx-auto z-40">
                 <motion.div
                     animate={{x: 1}}
                     initial={{x: -600}}
@@ -54,7 +54,7 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
                 </motion.div>
                 {children}
                 <motion.ul
-                    className={`${bgImage === 1 ? "text-white" : "text-black"} text-end flex flex-col text-[14px] z-50 xl:gap-4 xl:text-[16px] 2xl:gap-5 2xl:text-[19px] 3xl:text-[28px] 3xl:gap-8 items-end absolute container top-1/4 font-light ${bgImage === 2 ? "text-[#353535] font-light" : ""}`}>
+                    className={`${bgImage === 1 ? "text-white" : "text-black"} z-40 text-end flex flex-col text-[14px] xl:gap-4 xl:text-[16px] 2xl:gap-5 2xl:text-[19px] 3xl:text-[28px] 3xl:gap-8 items-end absolute container top-1/4 font-light ${bgImage === 2 ? "text-[#353535] font-light" : ""}`}>
                     <Link to={RoutesEnum.Main}>
                         <motion.li animate={{x: 10, opacity: 1}} initial={{x: 200, opacity: 0}}
                                    transition={{duration: 0.5, delay: 0.1, ease: "easeInOut"}}
@@ -138,7 +138,7 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
                                    transition={{duration: 0.5, delay: 0.65, ease: "easeInOut"}}
                                    className={`${bgImage === 1 ? "hover:text-[#34C924] line-green" : "hover:text-[#003ABC] line-blue"}
                                    cursor-pointer
-                                     ${location.pathname === RoutesEnum.Contact ? (bgImage === 1 ? "active text-[#34C924]" : "active-blue text-[#003ABC]") : ""}`}>Контакт
+                                     ${location.pathname === RoutesEnum.Contact ? (bgImage === 1 ? "active text-[#34C924]" : "active-blue text-[#003ABC]") : ""}`}>Контакты
                         </motion.li>
                     </Link>
                 </motion.ul>

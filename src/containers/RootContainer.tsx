@@ -1,11 +1,11 @@
-import {Route, Routes, useLocation} from "react-router";
+import {Route, Routes, useLocation, useNavigate} from "react-router";
 import Main from "../pages/Main";
 import {RoutesEnum} from "../constants/Routes";
 import About from "../pages/About";
 import MainLayout from "../layouts/MainLayout";
 import {AnimatePresence} from "framer-motion";
 import Loan from "../pages/Loan";
-import {Suspense, useMemo} from "react";
+import {Suspense, useEffect, useMemo} from "react";
 import Bank from "../pages/Bank";
 import Crm from "../pages/Crm";
 import Equaring from "../pages/Equaring";
@@ -27,6 +27,57 @@ function RootContainer() {
             || (location.pathname === RoutesEnum.Contact)
                 ? 2 : 0;
     }, [location])
+
+    const navigate = useNavigate();
+    const scrollCheck = (event: any) => {
+        if (event.key === "ArrowUp") {
+            if (location.pathname === RoutesEnum.About) {
+                navigate(RoutesEnum.Main)
+            } else if (location.pathname === RoutesEnum.Loan) {
+                navigate(RoutesEnum.About)
+            } else if (location.pathname === RoutesEnum.Bank) {
+                navigate(RoutesEnum.Loan)
+            } else if (location.pathname === RoutesEnum.Crm) {
+                navigate(RoutesEnum.Bank)
+            } else if (location.pathname === RoutesEnum.Equaring) {
+                navigate(RoutesEnum.Crm)
+            } else if (location.pathname === RoutesEnum.Turkney) {
+                navigate(RoutesEnum.Equaring)
+            } else if (location.pathname === RoutesEnum.Solutions) {
+                navigate(RoutesEnum.Turkney)
+            } else if (location.pathname === RoutesEnum.Team) {
+                navigate(RoutesEnum.Solutions)
+            } else if (location.pathname === RoutesEnum.Contact) {
+                navigate(RoutesEnum.Team)
+            }
+        } else if (event.key === "ArrowDown") {
+            if (location.pathname === RoutesEnum.Main) {
+                navigate(RoutesEnum.About)
+            } else if (location.pathname === RoutesEnum.About) {
+                navigate(RoutesEnum.Loan)
+            } else if (location.pathname === RoutesEnum.Loan) {
+                navigate(RoutesEnum.Bank)
+            } else if (location.pathname === RoutesEnum.Bank) {
+                navigate(RoutesEnum.Crm)
+            } else if (location.pathname === RoutesEnum.Crm) {
+                navigate(RoutesEnum.Equaring)
+            } else if (location.pathname === RoutesEnum.Equaring) {
+                navigate(RoutesEnum.Turkney)
+            } else if (location.pathname === RoutesEnum.Turkney) {
+                navigate(RoutesEnum.Solutions)
+            } else if (location.pathname === RoutesEnum.Solutions) {
+                navigate(RoutesEnum.Team)
+            } else if (location.pathname === RoutesEnum.Team) {
+                navigate(RoutesEnum.Contact)
+            }
+        }
+    }
+    useEffect(() => {
+        window.addEventListener("keydown", scrollCheck)
+        return () => {
+            window.removeEventListener("keydown", scrollCheck)
+        }
+    })
     return (
         <Suspense fallback={<h3>Loading...</h3>}>
             <MainLayout bgVideo={location.pathname === RoutesEnum.Main} bgImage={bgImage}>
