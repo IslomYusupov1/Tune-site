@@ -1,4 +1,4 @@
-import videoFile from "/video.mp4";
+import videoFile from "../assets/video.mp4";
 import {motion} from "framer-motion";
 import imageBg from "../assets/bg-dark.png";
 import {useState} from "react";
