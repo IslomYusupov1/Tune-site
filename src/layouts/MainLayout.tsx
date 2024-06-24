@@ -6,11 +6,7 @@ import logo from "../assets/logo.svg";
 import logoBlack from "../assets/logo-black.svg";
 import cosmoImage from "../assets/cosmo.svg";
 import {useLocation} from "react-router";
-// import img from "../assets/video.gif";
-// import img from "../assets/bg-dark.png";
-import videoBg from "../assets/video-bg.mp4";
-// @ts-ignore
-import GifPlayer from "react-gif-player";
+import bgMain from "../assets/bg-main.jpg";
 
 interface Props {
     readonly children: ReactNode;
@@ -39,7 +35,7 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
             // style={{ backgroundImage: bgImage === 1 ? `url(${imageBg})` : `url(${imageBgLight})`}}
             className={`h-screen my-auto menu-main main-container relative ${bgVideo ? "" : ""}`}>
             {bgVideo && <div className="fixed w-full h-full">
-                <video className="w-full" src={videoBg} autoPlay={true} loop={true} muted={true} />
+                <motion.img src={bgMain} alt="" animate={{ scale: [ 1, 1.06, 1 ] }} transition={{duration: 35, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}} />
             </div>}
             {/*{bgVideo && <GifPlayer gif={img} className="fixed w-screen h-screen object-cover"/>}*/}
             {/*<div className="fixed w-full h-full bg-black" />*/}
