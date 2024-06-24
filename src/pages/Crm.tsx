@@ -7,7 +7,7 @@ import joyda from "../assets/joyda.svg";
 import asia from "../assets/asia.svg";
 import agat from "../assets/agat.svg";
 import uzum from "../assets/uzum.svg";
-import imageBgLight from "../assets/bg-light.jpg";
+import imageBgLight from "../assets/bg-image-back.png";
 import ContentLayout from "../layouts/ContentLayout";
 
 const headerVariant = {
@@ -71,13 +71,14 @@ function Crm() {
         <motion.div className="flex flex-col text-[#353535] xl:mt-4 2xl:mt-0 3xl:mt-0 xl:w-9/12 2xl:w-10/12 text-start font-light mx-[100px]">
             <motion.img animate={{opacity: 1}} initial={{opacity: 0}} transition={{duration: 0.25, ease: "easeInOut"}}
                         alt="" src={imageBgLight} className="fixed w-screen h-screen top-0 left-0"
-                        style={{zIndex: "-1"}}/>
+                        style={{zIndex: "-2"}}/>
+            <div className="bg-white fixed w-screen h-screen top-0 left-0"  style={{zIndex: "-1"}}/>
             <ContentLayout>
                 <motion.div variants={headerVariant} initial="hidden" animate="visible" exit="exit"
                             className="flex flex-col text-start">
                     <h3 className="2xl:text-[40px] lg:text-[32px] 3xl:text-[48px] leading-10 mb-3">CRM и полная автоматизация процессов
                         фронт офиса</h3>
-                    <ul className="list-disc mx-8 2xl:text-[20px] 3xl:text-[26px] lg:text-[18px]">
+                    <ul className="list-disc  mx-8 2xl:text-[20px] 3xl:text-[26px] lg:text-[18px]">
                         <li>7 БПМ проектов для автоматизации процессов CRM ифронт офиса</li>
                         <li>Включаетавтоматизацию как розничных продуктов так и корпоративных</li>
                         <li>Обработкаонлайн и офлайн заявок в режиме реального времени</li>

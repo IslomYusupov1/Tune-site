@@ -13,18 +13,6 @@
 body {
     overflow: hidden !important;
 }
-.main-container.first-block-img {
-    background-image: url("./assets/bg-image.svg");
-    background-size: cover;
-    z-index: 100;
-    background-repeat: no-repeat;
-}
-.main-container.first-block {
-    background-image: url("./assets/video.gif");
-    /*filter: blur(2px);*/
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 
 /*.main-container.bg-dark {*/
 /*    background-image: url("./assets/bg-image-back.png");*/
