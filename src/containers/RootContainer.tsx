@@ -101,9 +101,12 @@ function RootContainer() {
     }, [])
     return (
         <Suspense fallback={
-            <motion.div animate={{opacity: 1}} initial={{opacity: 0}} transition={{duration: "0.3"}}
-                        className="bg-black w-screen h-screen">
-                <div className="w-full h-full justify-center flex items-center mx-auto"><img src={logo} alt=""/></div>
+            <motion.div
+                className="bg-black w-screen h-screen">
+                <div className="w-full h-full justify-center flex items-center mx-auto">
+                    <motion.img animate={{y: [10, -10, 10]}}
+                                transition={{duration: 2, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}
+                                src={logo} alt=""/></div>
             </motion.div>}>
             <MainLayout bgVideo={location.pathname === RoutesEnum.Main} bgImage={bgImage}>
                 <AnimatePresence>
