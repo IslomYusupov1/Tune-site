@@ -11,10 +11,6 @@ import {useLocation} from "react-router";
 // import videoBg from "../assets/video-bg.mp4";
 // @ts-ignore
 import GifPlayer from "react-gif-player";
-// @ts-ignore
-import bgWhite from "../assets/bg-light.jpg";
-// @ts-ignore
-import bgDark from "../assets/bg-dark.png";
 
 interface Props {
     readonly children: ReactNode;

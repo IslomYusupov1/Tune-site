@@ -13,6 +13,8 @@ import Turkney from "../pages/Turkney";
 import Solutions from "../pages/Solutions";
 import Team from "../pages/Team";
 import Contact from "../pages/Contact";
+import bgWhite from "../assets/bg-light.jpg";
+import bgDark from "../assets/bg-dark.png";
 
 function RootContainer() {
     const location = useLocation();
@@ -78,6 +80,13 @@ function RootContainer() {
             window.removeEventListener("keydown", scrollCheck)
         }
     })
+
+    useEffect(() => {
+        const imageList = [bgWhite, bgDark]
+        imageList.forEach((image) => {
+            new Image().src = image
+        });
+    }, [])
     return (
         <Suspense fallback={<h3>Loading...</h3>}>
             <MainLayout bgVideo={location.pathname === RoutesEnum.Main} bgImage={bgImage}>
