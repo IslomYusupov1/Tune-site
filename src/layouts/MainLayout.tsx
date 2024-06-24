@@ -8,7 +8,7 @@ import cosmoImage from "../assets/cosmo.svg";
 import {useLocation} from "react-router";
 // import img from "../assets/video.gif";
 // import img from "../assets/bg-dark.png";
-// import videoBg from "../assets/video-bg.mp4";
+import videoBg from "../assets/video-bg.mp4";
 // @ts-ignore
 import GifPlayer from "react-gif-player";
 
@@ -38,9 +38,9 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
         <motion.div
             // style={{ backgroundImage: bgImage === 1 ? `url(${imageBg})` : `url(${imageBgLight})`}}
             className={`h-screen my-auto menu-main main-container relative ${bgVideo ? "" : ""}`}>
-            {/*{bgVideo && <div className="fixed w-full h-full">*/}
-            {/*    <video className="w-full" src={videoBg} autoPlay={true} loop={true} muted={true} />*/}
-            {/*</div>}*/}
+            {bgVideo && <div className="fixed w-full h-full">
+                <video className="w-full" src={videoBg} autoPlay={true} loop={true} muted={true} />
+            </div>}
             {/*{bgVideo && <GifPlayer gif={img} className="fixed w-screen h-screen object-cover"/>}*/}
             {/*<div className="fixed w-full h-full bg-black" />*/}
             {!bgVideo && <motion.img animate={{scale: [1, 0.7, 0.7, 1], y: [0, 125, 125, 0]}}

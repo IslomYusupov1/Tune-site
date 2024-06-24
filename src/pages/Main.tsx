@@ -34,7 +34,7 @@ const textVariant = {
 function Main() {
     return (
         <div className="justify-center items-center text-center my-auto">
-            <motion.img animate={{opacity: 1}} initial={{opacity: 0}}  transition={{duration: 0.25, ease: "easeInOut"}}
+            <motion.img animate={{opacity: 1}} initial={{opacity: 0}} transition={{duration: 0.25, ease: "easeInOut"}}
                         alt="" src={imageBg} className="fixed w-screen h-screen top-0 left-0"
                         style={{zIndex: "-1"}}/>
             <ContentLayout className="justify-evenly">
@@ -44,11 +44,14 @@ function Main() {
                     animate="visible"
                     exit="exit"
                     className="flex justify-center z-30">
-                    <motion.img className="xl:w-[600px] 2xl:w-[700px] 3xl:w-[1000px]"
+                    <motion.img className="xl:w-[600px] 2xl:w-[700px] 3xl:w-[1000px]" width={700}
+                                animate={{y: [5, -5, 5]}}
+                                transition={{duration: 5, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}
                                 src={person} alt=""/>
                 </motion.div>
                 <motion.h3 variants={textVariant} animate="visible" initial="hidden" exit="hidden"
-                           className="text-start text-white xl:text-[40px] 2xl:text-[48px] 3xl:text-[58px] mx-[100px]">Taraqqiyot tasodif emas
+                           className="text-start text-white xl:text-[40px] 2xl:text-[48px] 3xl:text-[58px] mx-[100px]">Taraqqiyot
+                    tasodif emas
                 </motion.h3>
             </ContentLayout>
         </div>
