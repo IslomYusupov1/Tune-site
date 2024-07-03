@@ -1,5 +1,6 @@
 import ReactDOM from 'react-dom/client'
-import './index.css'
+import './styles/index.css'
+// import './styles/tailwind.css';
 import AppContainer from "./containers/AppContainer";
 
 

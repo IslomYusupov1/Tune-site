@@ -12,6 +12,7 @@
 }
 body {
     overflow: hidden !important;
+    touch-action: none
 }
 
 /*.main-container.bg-dark {*/
@@ -20,15 +21,9 @@ body {
 /*    background-repeat: no-repeat;*/
 /*}*/
 
-/*.main-container.bg-light {*/
-/*    background-image: url("./assets/bg-white.png");*/
-/*    background-size: cover;*/
-/*    !*background: transparent;*!*/
-/*    background-repeat: no-repeat;*/
-/*}*/
-
 body {
     font-family: "Onest", sans-serif !important;
+    touch-action: none
 }
 /*.menu-main ul li {*/
 /*    display: inline-block;*/

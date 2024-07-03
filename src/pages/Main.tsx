@@ -40,13 +40,13 @@ function Main() {
                     animate="visible"
                     exit="exit"
                     className="flex justify-center z-30">
-                    <motion.img className="xl:w-[600px] 2xl:w-[700px] 3xl:w-[1000px]" width={700}
+                    <motion.img className=" 2xl:w-[800px] xl:w-[600px] lg:w-[500px] md:w-[400px]"
                                 animate={{y: [5, -5, 5]}}
-                                transition={{duration: 5, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}
+                                // transition={{duration: 5, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}
                                 src={person} alt=""/>
                 </motion.div>
                 <motion.h3 variants={textVariant} animate="visible" initial="hidden" exit="hidden"
-                           className="text-start text-white xl:text-[40px] 2xl:text-[48px] 3xl:text-[58px] mx-[100px]">Taraqqiyot
+                           className="text-start text-white xl:text-[40px] 2xl:text-[48px] lg:text-[36px] mx-[100px]">Taraqqiyot
                     tasodif emas
                 </motion.h3>
             </ContentLayout>

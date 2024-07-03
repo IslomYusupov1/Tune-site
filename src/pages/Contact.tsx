@@ -18,7 +18,7 @@ const headerVariant = {
     visible: {
         y: 0,
         scale: 1,
-        transition: {type: "spring", stiffness: 40, delay: 0.5}
+        transition: {duration: .8, type: "spring", stiffness: "25", delay: 0.5}
     },
     exit: {
         y: 900,
@@ -77,20 +77,20 @@ function Contact() {
                         style={{zIndex: "-1"}}/>
             <ContentLayout>
                 <motion.div variants={headerVariant} initial="hidden" animate="visible" exit="exit"
-                            className="flex 2xl:gap-6 xl:gap-4 flex-col text-[#353535] xl:w-8/12 2xl:w-9/12 text-start font-light mx-[100px] xl:mt-[30px] 2xl:mt-[25px] 3xl:mt-0 ">
-                    <h3 className="2xl:text-[36px] xl:text-[32px] 3xl:text-[48px]">Привет. Мы всегда рады Вам.</h3>
-                    <h2 className="2xl:text-[30px] xl:text-[24px] 3xl:text-[36px] font-medium">OOO “TUNE Consulting” </h2>
+                            className="flex 2xl:gap-6 xl:gap-4 lg:gap-3 flex-col text-[#353535] xl:w-8/12 2xl:w-9/12 lg:w-8/12 text-start font-light mx-[100px] xl:mt-[30px] 2xl:mt-[25px] lg:mt-[30px] ">
+                    <h3 className="2xl:text-[36px] xl:text-[32px] lg:text-[24px]">Привет. Мы всегда рады Вам.</h3>
+                    <h2 className="2xl:text-[30px] xl:text-[24px] lg:text-[18px] font-medium">OOO “TUNE Consulting” </h2>
                     <div className="flex flex-col ">
-                        <p className="2xl:text-[20px] xl:text-[18px] 3xl:text-[24px]">Телефон:</p>
-                        <h3 className="2xl:text-[28px] xl:text-[26px] 3xl:text-[32px] font-medium">+998 91 134-53-26</h3>
+                        <p className="2xl:text-[20px] xl:text-[18px] lg:text-[14px]">Телефон:</p>
+                        <h3 className="2xl:text-[28px] xl:text-[26px] lg:text-[20px] font-medium">+998 91 134-53-26</h3>
                     </div>
                     <div className="flex flex-col">
-                        <p className="2xl:text-[20px] xl:text-[18px] 3xl:text-[24px]">Электронная почта:</p>
-                        <h3 className="2xl:text-[28px] xl:text-[26px] 3xl:text-[32px] font-medium">Info@TuneConsulting.net</h3>
+                        <p className="2xl:text-[20px] xl:text-[18px] lg:text-[14px]">Электронная почта:</p>
+                        <h3 className="2xl:text-[28px] xl:text-[26px] lg:text-[20px] font-medium">Info@TuneConsulting.net</h3>
                     </div>
                     <div className="flex flex-col">
-                        <p className="2xl:text-[20px] xl:text-[18px] 3xl:text-[24px]">Адрес:</p>
-                        <h3 className="2xl:text-[28px] xl:text-[26px] 3xl:text-[32px] font-normal">г. Ташкент, Шайхантахурский район,
+                        <p className="2xl:text-[20px] xl:text-[18px] lg:text-[14px]">Адрес:</p>
+                        <h3 className="2xl:text-[28px] xl:text-[26px] lg:text-[20px] font-normal">г. Ташкент, Шайхантахурский район,
                             улица
                             Зульфияхоним, 12</h3>
                     </div>
@@ -128,7 +128,7 @@ function Contact() {
                             </Form>
                         )}
                     </Formik>
-                    <div className="flex gap-8 2xl:mt-24 lg:mt-10">
+                    <div className="flex gap-8 2xl:mt-24 xl:mt-16 lg:mt-10">
                         <img src={instagram} alt=""/>
                         <img src={facebook} alt=""/>
                         <img src={linkedin} alt=""/>

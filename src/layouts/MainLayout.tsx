@@ -31,29 +31,33 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
         }
     }, [location])
     return (
-        <motion.div
-            // style={{ backgroundImage: bgImage === 1 ? `url(${imageBg})` : `url(${imageBgLight})`}}
-            className={`h-screen my-auto menu-main main-container relative ${bgVideo ? "" : ""}`}>
+        <motion.div className={`h-screen menu-main ${bgVideo ? "" : ""}`}>
             {bgVideo && <div className="fixed w-full h-full">
-                <motion.img src={bgMain} alt="" animate={{ scale: [ 1, 1.06, 1 ] }} transition={{duration: 35, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}} />
+                <motion.img src={bgMain} alt="" className="w-full h-full" animate={{scale: [1, 1.06, 1]}}
+                            transition={{duration: 35, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}
+                />
             </div>}
-            {/*{bgVideo && <GifPlayer gif={img} className="fixed w-screen h-screen object-cover"/>}*/}
-            {/*<div className="fixed w-full h-full bg-black" />*/}
             {!bgVideo && <motion.img animate={{scale: [1, 0.7, 0.7, 1], y: [0, 125, 125, 0]}}
                                      transition={{duration: 40, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}
                                      src={cosmoImage} width={1000} alt=""
                                      className="absolute right-36 bottom-0 object-contain"/>}
-            <div className="w-screen container mx-auto z-40">
+            <div className="w-full h-full container mx-auto z-40">
                 <motion.div
                     animate={{x: 1}}
                     initial={{x: -600}}
                     transition={{ease: "easeInOut", type: "spring", stiffness: 50}}
                     className="pt-[25px]">
-                    <img src={bgImage === 1 ? logo : logoBlack} alt="" className="3xl:w-[300px] xl:w-[180px] 2xl:w-[220px]"/>
+                    <img src={bgImage === 1 ? logo : logoBlack} alt="" className="xl:w-[180px] 2xl:w-[280px]"/>
                 </motion.div>
                 {children}
                 <motion.ul
-                    className={`${bgImage === 1 ? "text-white" : "text-black"} z-40 text-end flex flex-col text-[14px] xl:gap-4 xl:text-[16px] 2xl:gap-5 2xl:text-[19px] 3xl:text-[28px] 3xl:gap-8 items-end absolute container top-1/4 font-light ${bgImage === 2 ? "text-[#353535] font-light" : ""}`}>
+                    className={`${bgImage === 1 ? "text-white" : "text-black"}
+                     z-40 text-end flex flex-col
+                     w-11/12
+                     xl:gap-4 xl:text-[16px]
+                       2xl:gap-6 2xl:text-[19px] items-end absolute container
+                       lg:gap-3 lg:text-[15px]
+                         top-1/4 font-light ${bgImage === 2 ? "text-[#353535] font-light" : ""}`}>
                     <Link to={RoutesEnum.Main}>
                         <motion.li animate={{x: 10, opacity: 1}} initial={{x: 200, opacity: 0}}
                                    transition={{duration: 0.5, delay: 0.1, ease: "easeInOut"}}
