@@ -106,10 +106,11 @@ function RootContainer() {
                 <div className="w-full h-full justify-center flex items-center mx-auto">
                     <motion.img animate={{y: [10, -10, 10]}}
                                 transition={{duration: 2, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}
-                                src={logo} alt=""/></div>
+                                src={logo} alt=""/>
+                </div>
             </motion.div>}>
-            <MainLayout bgVideo={location.pathname === RoutesEnum.Main} bgImage={bgImage}>
-                <AnimatePresence>
+                <MainLayout bgVideo={location.pathname === RoutesEnum.Main} bgImage={bgImage}>
+                    <AnimatePresence initial={true} mode="wait">
                     <Routes location={location} key={location.key}>
                         <Route element={<MainLazy/>} path={RoutesEnum.Main}/>
                         <Route element={<About/>} path={RoutesEnum.About}/>
@@ -123,8 +124,8 @@ function RootContainer() {
                         <Route element={<Team/>} path={RoutesEnum.Team}/>
                         <Route element={<Contact/>} path={RoutesEnum.Contact}/>
                     </Routes>
-                </AnimatePresence>
-            </MainLayout>
+                    </AnimatePresence>
+                </MainLayout>
         </Suspense>
     );
 }

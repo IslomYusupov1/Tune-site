@@ -14,7 +14,7 @@ const containerVariants = {
         y: 0,
         scale: 1,
         // opacity: 1,
-        transition: {type: "spring", ease: "easeIn", stiffness: 45, delay: 0.3}
+        transition: {type: "spring", ease: "easeIn", stiffness: 45}
     },
     exit: {
         scale: 0,

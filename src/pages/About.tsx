@@ -12,7 +12,7 @@ const containerVariants = {
     visible: {
         x: 0,
         scale: 1,
-        transition: {type: "spring", stiffness: 20, delay: 0.3}
+        transition: {type: "spring", stiffness: 30}
     },
     exit: {
         scale: 0,
@@ -26,7 +26,7 @@ const videoVariants = {
     },
     visible: {
         x: 0,
-        transition: {duration: 0.4, type: "spring", stiffness: 20}
+        transition: {duration: 0.3, type: "spring", stiffness: 30}
     },
     // exit: {
     //     x: -900,

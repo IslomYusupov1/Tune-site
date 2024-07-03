@@ -19,7 +19,7 @@ const headerVariants = {
     visible: {
         y: 0,
         scale: 1,
-        transition: {type: "spring", stiffness: 30, delay: 0.6}
+        transition: {type: "spring", stiffness: 30}
     },
     exit: {
         y: -1000,
@@ -35,7 +35,7 @@ const footerVariants = {
     visible: {
         y: 0,
         scale: 1,
-        transition: {type: "spring", stiffness: 30, delay: 0.5}
+        transition: {type: "spring", stiffness: 30}
     },
     exit: {
         y: 1000,

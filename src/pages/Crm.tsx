@@ -20,7 +20,7 @@ const headerVariant = {
         y: 0,
         opacity: 1,
         scale: 1,
-        transition: {type: "spring", stiffness: 40, delay: 0.5}
+        transition: {type: "spring", stiffness: 40}
     },
     exit: {
         y: -900,
@@ -39,7 +39,7 @@ const footerVariant = {
         y: 0,
         opacity: 1,
         scale: 1,
-        transition: {type: "spring", stiffness: 40, delay: 0.5}
+        transition: {type: "spring", stiffness: 40}
     },
     exit: {
         y: -900,
@@ -57,7 +57,7 @@ const imageVariant = {
         y: 0,
         opacity: 1,
         scale: 1,
-        transition: {type: "spring", stiffness: 40, delay: 0.5}
+        transition: {type: "spring", stiffness: 40}
     },
     exit: {
         y: -900,

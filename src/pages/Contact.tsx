@@ -18,7 +18,7 @@ const headerVariant = {
     visible: {
         y: 0,
         scale: 1,
-        transition: {duration: .8, type: "spring", stiffness: "25", delay: 0.5}
+        transition: {duration: .8, type: "spring", stiffness: "25"}
     },
     exit: {
         y: 900,

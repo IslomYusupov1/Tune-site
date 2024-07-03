@@ -12,7 +12,7 @@ const imageVariant = {
     visible: {
         x: 0,
         opacity: 1,
-        transition: {type: "spring", stiffness: 40, delay: 0.5}
+        transition: {type: "spring", stiffness: 40}
     },
     exit: {
         x: -9000,
@@ -30,7 +30,7 @@ const contentVariant = {
     visible: {
         x: 0,
         opacity: 1,
-        transition: {type: "spring", stiffness: 40, delay: 0.5}
+        transition: {type: "spring", stiffness: 40}
     },
     exit: {
         x: -9000,
@@ -48,7 +48,7 @@ const content2Variant = {
     visible: {
         x: 0,
         opacity: 1,
-        transition: {type: "spring", stiffness: 40, delay: 0.55}
+        transition: {type: "spring", stiffness: 40, delay: 0.05}
     },
     exit: {
         x: -9000,
@@ -66,7 +66,7 @@ const content3Variant = {
     visible: {
         x: 0,
         opacity: 1,
-        transition: {type: "spring", stiffness: 40, delay: 0.6}
+        transition: {type: "spring", stiffness: 40, delay: 0.1}
     },
     exit: {
         x: -9000,
@@ -84,7 +84,7 @@ const content4Variant = {
     visible: {
         x: 0,
         opacity: 1,
-        transition: {type: "spring", stiffness: 40, delay: 0.65}
+        transition: {type: "spring", stiffness: 40, delay: 0.15}
     },
     exit: {
         x: -9000,

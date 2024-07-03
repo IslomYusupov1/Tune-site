@@ -11,7 +11,7 @@ const headerVariants = {
     visible: {
         y: 0,
         scale: 1,
-        transition: {duration: 0.5, type: "spring", stiffness: 30, ease: "easeInOut", delay: 0.5}
+        transition: {duration: 0.5, type: "spring", stiffness: 30, ease: "easeInOut"}
     },
     exit: {
         y: -1000,
@@ -27,7 +27,7 @@ const footerVariants = {
     visible: {
         y: 0,
         scale: 1,
-        transition: {duration: 0.5, type: "spring", stiffness: 30, ease: "easeInOut", delay: 0.5}
+        transition: {duration: 0.5, type: "spring", stiffness: 30, ease: "easeInOut"}
     },
     exit: {
         y: 1000,

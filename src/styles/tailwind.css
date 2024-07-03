@@ -1433,6 +1433,10 @@ body {
     margin-top: 4rem;
   }
 
+  .xl\:mt-3 {
+    margin-top: 0.75rem;
+  }
+
   .xl\:mt-4 {
     margin-top: 1rem;
   }
@@ -1592,6 +1596,10 @@ body {
     margin-top: 4rem;
   }
 
+  .\32xl\:mt-2 {
+    margin-top: 0.5rem;
+  }
+
   .\32xl\:mt-20 {
     margin-top: 5rem;
   }
@@ -1630,6 +1638,10 @@ body {
 
   .\32xl\:w-9\/12 {
     width: 75%;
+  }
+
+  .\32xl\:w-\[130px\] {
+    width: 130px;
   }
 
   .\32xl\:w-\[140px\] {

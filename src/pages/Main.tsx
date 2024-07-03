@@ -8,7 +8,7 @@ const imageVariants = {
     },
     visible: {
         y: 0,
-        transition: {type: "spring", stiffness: 40, delay: 0.3}
+        transition: {type: "spring", stiffness: 40}
     },
     exit: {
         y: -2000,
@@ -22,7 +22,7 @@ const textVariant = {
     },
     visible: {
         y: 10,
-        transition: {duration: 0.3, delay: 0.3}
+        transition: {duration: 0.3}
     },
     exit: {
         opacity: 0,
