@@ -22,7 +22,7 @@ const textVariant = {
     },
     visible: {
         y: 10,
-        transition: {duration: 0.3}
+        transition: {duration: 0.3, delay: 0.2}
     },
     exit: {
         opacity: 0,
