@@ -110,7 +110,7 @@ function RootContainer() {
                 </div>
             </motion.div>}>
                 <MainLayout bgVideo={location.pathname === RoutesEnum.Main} bgImage={bgImage}>
-                    <AnimatePresence initial={true} mode="wait">
+                    <AnimatePresence mode="wait">
                     <Routes location={location} key={location.key}>
                         <Route element={<MainLazy/>} path={RoutesEnum.Main}/>
                         <Route element={<About/>} path={RoutesEnum.About}/>
