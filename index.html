@@ -8,6 +8,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
     <title>Tune consulting</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.6.0/umd/react-dom.production.min.js">
+      if("serviceWorker" in navigator){
+        window.addEventListener("load",()=>{
+          navigator.serviceWorker.register("%PUBLIC_URL%/serviceworker.js")
+                  .then((reg)=>{
+                    console.log("Success",reg.scope)
+                  }).catch((err)=>{
+            console.log("Error",err)
+          })
+        })
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
