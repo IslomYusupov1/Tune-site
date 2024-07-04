@@ -1,6 +1,6 @@
 import videoFile from "../assets/video.mp4";
 import {motion} from "framer-motion";
-// import imageBg from "../assets/bg-dark.png";
+import imageBg from "../assets/bg-dark.png";
 import {useState} from "react";
 import ContentLayout from "../layouts/ContentLayout";
 
@@ -69,10 +69,9 @@ function About() {
     const [open, setOpen] = useState(false);
     return (
         <>
-            <div className="bg-black fixed top-0 left-0 w-full h-full" style={{ zIndex: -1 }} />
-            {/*<motion.img animate={{opacity: 1}} initial={{opacity: 0}} transition={{duration: 0.25, ease: "easeInOut"}}*/}
-            {/*            alt="" src={imageBg} className="fixed w-screen h-screen top-0 left-0"*/}
-            {/*            style={{zIndex: "-1"}}/>*/}
+            <motion.img animate={{opacity: 1}} initial={{opacity: 0}} transition={{duration: 0.25, ease: "easeInOut"}}
+                        alt="" src={imageBg} className="fixed w-screen h-screen top-0 left-0"
+                        style={{zIndex: "-1"}}/>
             <ContentLayout className="">
                 <motion.div variants={containerVariants} initial="hidden" animate="visible" exit="exit"
                             className="w-9/12 z-50 xl:mx-[80px] 2xl:mx-[120px] 3xl:mx-[120px] 2xl:h-[550px] 3xl:h-[800px] xl:h-[470px] bg-black rounded-lg mt-10 relative px-2">

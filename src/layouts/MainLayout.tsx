@@ -6,7 +6,7 @@ import logo from "../assets/logo.svg";
 import logoBlack from "../assets/logo-black.svg";
 import cosmoImage from "../assets/cosmo.svg";
 import {useLocation} from "react-router";
-// import bgMain from "../assets/bg-main.jpg";
+import bgMain from "../assets/bg-main.jpg";
 
 interface Props {
     readonly children: ReactNode;
@@ -36,9 +36,9 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
                     exit={{opacity: 0}}
                     className={`h-screen menu-main ${bgVideo ? "" : ""}`}>
             {bgVideo && <div className="fixed w-full h-full bg-black">
-                {/*<motion.img src={bgMain} alt="" className="w-full h-full" animate={{scale: [1, 1.06, 1]}}*/}
-                {/*            transition={{duration: 35, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}*/}
-                {/*/>*/}
+                <motion.img src={bgMain} alt="" className="w-full h-full" animate={{scale: [1, 1.06, 1]}}
+                            transition={{duration: 35, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}
+                />
             </div>}
             {!bgVideo && <motion.img animate={{scale: [1, 0.7, 0.7, 1], y: [0, 125, 125, 0]}}
                                      transition={{duration: 40, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}

@@ -8,7 +8,7 @@ import agat from "../assets/agat.svg";
 import uzum from "../assets/uzum.svg";
 
 import {motion} from "framer-motion";
-// import imageBgLight from "../assets/bg-light.jpg"
+import imageBgLight from "../assets/bg-light.jpg"
 import ContentLayout from "../layouts/ContentLayout";
 
 const headerVariants = {
@@ -48,10 +48,9 @@ const footerVariants = {
 function Loan() {
     return (
         <motion.div className="text-[#353535] w-11/12 mx-auto mx-[100px]">
-            <div className="w-full h-full fixed bg-white top-0 left-0" style={{ zIndex: "-1" }} />
-            {/*<motion.img animate={{opacity: 1}} initial={{opacity: 0}} transition={{duration: 0.8, ease: "easeInOut"}}*/}
-            {/*            alt="" src={imageBgLight} className="fixed w-full h-full top-0 left-0"*/}
-            {/*            style={{zIndex: "-1"}}/>*/}
+            <motion.img animate={{opacity: 1}} initial={{opacity: 0}} transition={{duration: 0.8, ease: "easeInOut"}}
+                        alt="" src={imageBgLight} className="fixed w-full h-full top-0 left-0"
+                        style={{zIndex: "-1"}}/>
             <ContentLayout>
                 <motion.div
                     variants={headerVariants}

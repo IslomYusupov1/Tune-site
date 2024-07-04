@@ -38,7 +38,7 @@ const footerVariants = {
 
 function Bank() {
     return (
-        <motion.div className="flex 2xl:w-10/12 xl:w-9/12 lg:w-9/12 flex-col text-start bank-page mx-[100px] bg-white">
+        <motion.div className="flex 2xl:w-10/12 xl:w-9/12 lg:w-9/12 flex-col text-start bank-page mx-[100px]">
             <motion.img animate={{opacity: 1}} initial={{opacity: 0}} transition={{duration: 0.1, ease: "backInOut"}}
                         alt="" src={imageBg} className="fixed w-screen h-screen top-0 left-0"
                         style={{zIndex: "-1"}}/>
