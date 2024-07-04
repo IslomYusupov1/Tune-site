@@ -13,8 +13,8 @@ import Solutions from "../pages/Solutions";
 import Team from "../pages/Team";
 import Contact from "../pages/Contact";
 import {motion} from "framer-motion";
-import bgWhite from "../assets/bg-light.jpg";
-import bgDark from "../assets/bg-dark.png";
+// import bgWhite from "../assets/bg-light.jpg";
+// import bgDark from "../assets/bg-dark.png";
 import logo from "../assets/logo.svg";
 
 const MainLazy = lazy(() => import('../pages/Main'));
@@ -93,12 +93,12 @@ function RootContainer() {
         }
     })
 
-    useEffect(() => {
-        const imageList = [bgWhite, bgDark]
-        imageList.forEach((image) => {
-            new Image().src = image
-        });
-    }, [])
+    // useEffect(() => {
+    //     const imageList = [bgWhite, bgDark]
+    //     imageList.forEach((image) => {
+    //         new Image().src = image
+    //     });
+    // }, [])
     return (
         <Suspense fallback={
             <motion.div
