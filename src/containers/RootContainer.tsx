@@ -66,7 +66,7 @@ function RootContainer() {
             navigate(pages[currentIndex + 1])
         }
     }, [location.pathname])
-    const handleScroll = _.throttle((e) => {
+    const handleScroll = _.throttle((e: any) => {
         if (scrolling) return;
         setScrolling(true);
         const currentIndex = pages.indexOf(location.pathname);
