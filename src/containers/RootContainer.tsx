@@ -15,7 +15,6 @@ import Contact from "../pages/Contact";
 // import bgWhite from "../assets/bg-light.jpg";
 // import bgDark from "../assets/bg-dark.png";
 import logo from "../assets/logo.svg";
-import ScrollDirection from "../helpers/ScrollDirection";
 import _ from "lodash";
 
 const MainLazy = lazy(() => import('../pages/Main'));
@@ -103,7 +102,6 @@ function RootContainer() {
                                 src={logo} alt=""/>
                 </div>
             </motion.div>}>
-            <ScrollDirection/>
             <MainLayout bgVideo={location.pathname === RoutesEnum.Main} bgImage={bgImage}>
                 <AnimatePresence mode="wait">
                     <Routes location={location} key={location.key}>
