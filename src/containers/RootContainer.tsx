@@ -31,6 +31,7 @@ const MainLazy = lazy(() => import('../pages/Main'));
 function RootContainer() {
     const location = useLocation();
     const [scrolling, setScrolling] = useState(false);
+    const [loading, setLoading] = useState(true);
     const bgImage = useMemo(() => {
         return (location.pathname === RoutesEnum.Main) || (location.pathname === RoutesEnum.About)
         || (location.pathname === RoutesEnum?.Bank)
@@ -92,34 +93,55 @@ function RootContainer() {
             window.removeEventListener("wheel", handleScroll)
         }
     }, [location, handleScroll])
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setLoading(false);
+        }, 3000)
+        return () => {
+            clearTimeout(timer)
+        }
+    }, [])
     return (
-        <Suspense fallback={
-            <motion.div
+        <>
+            {loading ?  <motion.div
                 className="bg-black w-screen h-screen">
                 <div className="w-full h-full justify-center flex items-center mx-auto">
                     <motion.img animate={{y: [10, -10, 10]}}
+                                exit={{ opacity: 0 }}
+                                width={200}
+                                height={200}
                                 transition={{duration: 2, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}
                                 src={logo} alt=""/>
                 </div>
-            </motion.div>}>
-            <MainLayout bgVideo={location.pathname === RoutesEnum.Main} bgImage={bgImage}>
-                <AnimatePresence mode="wait">
-                    <Routes location={location} key={location.key}>
-                        <Route element={<MainLazy/>} path={RoutesEnum.Main}/>
-                        <Route element={<About/>} path={RoutesEnum.About}/>
-                        <Route element={<Loan/>} path={RoutesEnum.Loan}/>
-                        <Route element={<Bank/>} path={RoutesEnum.Bank}/>
-                        <Route element={<Crm/>} path={RoutesEnum.Crm}/>
-                        <Route element={<Equaring/>} path={RoutesEnum.Equaring}/>
-                        {/*<Route element={<Portfolio/>} path={RoutesEnum.Portfolio}/>*/}
-                        <Route element={<Turkney/>} path={RoutesEnum.Turkney}/>
-                        <Route element={<Solutions/>} path={RoutesEnum.Solutions}/>
-                        <Route element={<Team/>} path={RoutesEnum.Team}/>
-                        <Route element={<Contact/>} path={RoutesEnum.Contact}/>
-                    </Routes>
-                </AnimatePresence>
-            </MainLayout>
-        </Suspense>
+            </motion.div> :
+                <Suspense fallback={
+                    <motion.div
+                        className="bg-black w-screen h-screen">
+                        <div className="w-full h-full justify-center flex items-center mx-auto">
+                            <motion.img animate={{y: [10, -10, 10]}}
+                                        transition={{duration: 2, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}
+                                        src={logo} alt=""/>
+                        </div>
+                    </motion.div>}>
+                    <MainLayout bgVideo={location.pathname === RoutesEnum.Main} bgImage={bgImage}>
+                        <AnimatePresence mode="wait">
+                            <Routes location={location} key={location.key}>
+                                <Route element={<MainLazy/>} path={RoutesEnum.Main}/>
+                                <Route element={<About/>} path={RoutesEnum.About}/>
+                                <Route element={<Loan/>} path={RoutesEnum.Loan}/>
+                                <Route element={<Bank/>} path={RoutesEnum.Bank}/>
+                                <Route element={<Crm/>} path={RoutesEnum.Crm}/>
+                                <Route element={<Equaring/>} path={RoutesEnum.Equaring}/>
+                                {/*<Route element={<Portfolio/>} path={RoutesEnum.Portfolio}/>*/}
+                                <Route element={<Turkney/>} path={RoutesEnum.Turkney}/>
+                                <Route element={<Solutions/>} path={RoutesEnum.Solutions}/>
+                                <Route element={<Team/>} path={RoutesEnum.Team}/>
+                                <Route element={<Contact/>} path={RoutesEnum.Contact}/>
+                            </Routes>
+                        </AnimatePresence>
+                    </MainLayout>
+                </Suspense>}
+       </>
     );
 }
 

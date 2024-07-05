@@ -36,7 +36,9 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
                     exit={{opacity: 0}}
                     className={`h-screen menu-main ${bgVideo ? "" : ""}`}>
             {bgVideo && <div className="fixed w-full h-full bg-black">
-                <motion.img src={bgMain} alt="" className="w-full h-full" animate={{scale: [1, 1.06, 1]}}
+                <motion.img src={bgMain} alt="" className="w-full h-full"
+                            animate={{ scale: [1, 1.06, 1]}}
+                            exit={{opacity: 0, transition: {ease: "easeInOut"}}}
                             transition={{duration: 35, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}
                 />
             </div>}
@@ -51,7 +53,8 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
                     exit={{transition: {duration: 0.5, ease: "easeInOut"}}}
                     transition={{ease: "easeInOut", type: "tween", duration: 0.8}}
                     className="pt-[25px]">
-                    <img src={bgImage === 1 ? logo : logoBlack} alt="" className="lg:w-[140px] xl:w-[180px] xl:mx-[40px] 2xl:w-[280px]"/>
+                    <img src={bgImage === 1 ? logo : logoBlack} alt=""
+                         className="lg:w-[140px] xl:w-[180px] xl:mx-[40px] 2xl:w-[280px]"/>
                 </motion.div>
                 {children}
                 <motion.ul
