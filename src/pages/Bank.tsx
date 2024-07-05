@@ -44,28 +44,28 @@ function Bank() {
                         style={{zIndex: "-1"}}/>
             <ContentLayout className="relative">
                 <motion.h3 variants={headerVariants} initial="hidden" animate="visible" exit="exit"
-                           className="xl:text-[36px] 2xl:text-[48px] text-white lg:text-[22px] 2xl:mb-20 2xl:mt-20 xl:mb-6 xl:mt-6 lg:mt-10 lg:mb-4">Цифровые банковские платформы
+                           className="xl:text-[36px] 2xl:text-[44px] text-white lg:text-[22px] 2xl:mb-16 2xl:mt-10 xl:mb-6 xl:mt-6 lg:mt-10 lg:mb-4">Цифровые банковские платформы
                 </motion.h3>
                 <motion.div variants={footerVariants} initial="hidden" animate="visible" exit="exit"
                             className="flex text-white xl:gap-4 2xl:gap-8 lg:gap-4">
                     <div className="xl:w-[64%] 2xl:w-[50%] lg:w-[58%]">
-                        <p className="lg:text-[15px] xl:text-[18px] 2xl:text-[22px]">1. 12 проектов ДБО физлица</p>
-                        <ul className="list-disc mx-10 lg:text-[16px] xl:text-[20px] 2xl:text-[22px]">
+                        <p className="lg:text-[15px] xl:text-[18px] 2xl:text-[21px]">1. 12 проектов ДБО физлица</p>
+                        <ul className="list-disc mx-10 lg:text-[16px] xl:text-[20px] 2xl:text-[21px]">
                             <li>2 проекта на стадии внедрения</li>
                         </ul>
                         <img src="" alt=""/>
-                        <p className="lg:text-[15px] xl:text-[18px] 2xl:text-[22px]">2. 3 проекта ДБО юрлица</p>
-                        <ul className="list-disc mx-10 lg:text-[16px] xl:text-[20px] 2xl:text-[22px]">
+                        <p className="lg:text-[15px] xl:text-[18px] 2xl:text-[21px]">2. 3 проекта ДБО юрлица</p>
+                        <ul className="list-disc mx-10 lg:text-[16px] xl:text-[20px] 2xl:text-[21px]">
                             <li>1 проект на стадии внедрения</li>
                             <li>12 live and 2 in process retail mobile banking platforms</li>
                         </ul>
-                        <p className="lg:text-[15px] xl:text-[18px] 2xl:text-[22px]">3. Более 7 млн пользователей</p>
-                        <p className="lg:text-[15px] xl:text-[18px] 2xl:text-[22px]">4. Настоящие униканальные платформы с интерфейсами
+                        <p className="lg:text-[15px] xl:text-[18px] 2xl:text-[21px]">3. Более 7 млн пользователей</p>
+                        <p className="lg:text-[15px] xl:text-[18px] 2xl:text-[21px]">4. Настоящие униканальные платформы с интерфейсами
                             iOs, Android и Web</p>
-                        <p className="lg:text-[15px] xl:text-[18px] 2xl:text-[22px]">5. Микросервисная архитектура с минимальной
+                        <p className="lg:text-[15px] xl:text-[18px] 2xl:text-[21px]">5. Микросервисная архитектура с минимальной
                             зависимостью от АБС</p>
-                        <p className="lg:text-[15px] xl:text-[18px] 2xl:text-[22px]">6. Успешные интеграции с 6 АБС:</p>
-                        <ul className="list-disc mx-10 lg:text-[15px] xl:text-[18px] 2xl:text-[22px]">
+                        <p className="lg:text-[15px] xl:text-[18px] 2xl:text-[21px]">6. Успешные интеграции с 6 АБС:</p>
+                        <ul className="list-disc mx-10 lg:text-[15px] xl:text-[18px] 2xl:text-[21px]">
                             <li>Temenos</li>
                             <li>iABS</li>
                             <li>NCI</li>
@@ -73,12 +73,12 @@ function Bank() {
                             <li>Korean system</li>
                             <li>CS</li>
                         </ul>
-                        <p className="lg:text-[15px] xl:text-[18px] 2xl:text-[22px]">7. Используем Kubernetes и Doker оркестраторы</p>
+                        <p className="lg:text-[15px] xl:text-[18px] 2xl:text-[21px]">7. Используем Kubernetes и Doker оркестраторы</p>
                     </div>
                 </motion.div>
-                <div className="2xl:mt-3 lg:mt-2 absolute xl:right-[5px] 2xl:right-[80px] lg:right-[60px] 2xl:bottom-[-35px] lg:bottom-[-44px] xl:bottom-[-50px]">
+                <div className="2xl:mt-3 lg:mt-2 absolute xl:right-[5px] 2xl:right-[100px] lg:right-[60px] 2xl:bottom-[-35px] lg:bottom-[-44px] xl:bottom-[-50px]">
                     <motion.img variants={footerVariants} initial="hidden" animate="visible" exit="exit"
-                                className="lg:w-[250px] xl:w-[280px] 2xl:w-[380px]" src={bankPhoneImage} alt=""/>
+                                className="lg:w-[250px] xl:w-[280px] 2xl:w-[370px]" src={bankPhoneImage} alt=""/>
                 </div>
             </ContentLayout>
         </motion.div>

@@ -58,27 +58,27 @@ function Loan() {
                     animate="visible"
                     exit="exit"
                     className="flex text-red-black flex-col text-start w-9/12">
-                    <h3 className="xl:text-[30px] lg:text-[26px] 2xl:text-[54px] font-light">Кредитный конвейер и скоринг движок</h3>
-                    <p className="xl:text-[18px] lg:text-[15px] 2xl:text-[24px]">1. 8 проектов с использованием BPM системы для автоматизации конвейеров и
+                    <h3 className="xl:text-[30px] lg:text-[26px] 2xl:text-[48px] font-light">Кредитный конвейер и скоринг движок</h3>
+                    <p className="xl:text-[18px] lg:text-[15px] 2xl:text-[22px]">1. 8 проектов с использованием BPM системы для автоматизации конвейеров и
                         скоринговых движков</p>
-                    <ul className="list-disc mx-10 xl:text-[18px] lg:text-[14px] 2xl:text-[24px]">
+                    <ul className="list-disc mx-10 xl:text-[18px] lg:text-[14px] 2xl:text-[22px]">
                         <li>Быстрые и онлайн процессы в течение 1-2 минут</li>
                         <li>Длинные процессы для сложных кредитных продуктов</li>
                     </ul>
-                    <p className="xl:text-[18px] lg:text-[15px] 2xl:text-[24px]">2. Конвейеры для розничного и корпоративного кредитования</p>
-                    <p className="xl:text-[18px] lg:text-[15px] 2xl:text-[24px]">3. Омниканальность обеспечивается бизнес процессами как для онлайн
+                    <p className="xl:text-[18px] lg:text-[15px] 2xl:text-[22px]">2. Конвейеры для розничного и корпоративного кредитования</p>
+                    <p className="xl:text-[18px] lg:text-[15px] 2xl:text-[22px]">3. Омниканальность обеспечивается бизнес процессами как для онлайн
                         обращений
                         так и для офлайн клиентов</p>
-                    <ul className="list-disc mx-10 xl:text-[18px] lg:text-[15px] 2xl:text-[24px]">
+                    <ul className="list-disc mx-10 xl:text-[18px] lg:text-[15px] 2xl:text-[22px]">
                         <li>5 проектов с конвейерами успешно синтегрированы с мобильными банками от TUNE</li>
                         <li>Для онлайн заявок используем фейс идентификацию через MYID</li>
                     </ul>
-                    <p className="xl:text-[18px] lg:text-[15px] 2xl:text-[24px]">4. Скор карты продуктов полностью параметризируемые и управляются риск
+                    <p className="xl:text-[18px] lg:text-[15px] 2xl:text-[22px]">4. Скор карты продуктов полностью параметризируемые и управляются риск
                         департаментом без участия ИТ департамента или разработчиков</p>
-                    <p className="xl:text-[18px] lg:text-[15px] 2xl:text-[24px]">5. Связь со всеми внешними системами поддерживается через шину обмена
+                    <p className="xl:text-[18px] lg:text-[15px] 2xl:text-[22px]">5. Связь со всеми внешними системами поддерживается через шину обмена
                         данных
                         TUNE BELT</p>
-                    <ul className="list-disc mx-10 xl:text-[18px] lg:text-[15px] 2xl:text-[24px]">
+                    <ul className="list-disc mx-10 xl:text-[18px] lg:text-[15px] 2xl:text-[22px]">
                         <li>Обычно участвуют 10 и более систем для сбора данных о заявителях</li>
                     </ul>
                 </motion.div>

@@ -128,7 +128,7 @@ function Contact() {
                             </Form>
                         )}
                     </Formik>
-                    <div className="flex gap-8 2xl:mt-24 xl:mt-10 lg:mt-10">
+                    <div className="flex gap-8 2xl:mt-18 xl:mt-10 lg:mt-10">
                         <img src={instagram} alt=""/>
                         <img src={facebook} alt=""/>
                         <img src={linkedin} alt=""/>

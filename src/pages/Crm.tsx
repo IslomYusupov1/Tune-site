@@ -75,9 +75,9 @@ function Crm() {
             <ContentLayout>
                 <motion.div variants={headerVariant} initial="hidden" animate="visible" exit="exit"
                             className="flex flex-col text-start">
-                    <h3 className="2xl:text-[36px] xl:text-[25px] lg:text-[22px] leading-10 mb-2">CRM и полная автоматизация процессов
+                    <h3 className="2xl:text-[34px] xl:text-[25px] lg:text-[22px] leading-10 mb-2">CRM и полная автоматизация процессов
                         фронт офиса</h3>
-                    <ul className="list-disc mx-8 2xl:text-[22px] xl:text-[18px] lg:text-[16px]">
+                    <ul className="list-disc mx-8 2xl:text-[20px] xl:text-[18px] lg:text-[16px]">
                         <li>7 БПМ проектов для автоматизации процессов CRM ифронт офиса</li>
                         <li>Включаетавтоматизацию как розничных продуктов так и корпоративных</li>
                         <li>Обработкаонлайн и офлайн заявок в режиме реального времени</li>
@@ -85,9 +85,9 @@ function Crm() {
                 </motion.div>
                 <motion.div variants={footerVariant} initial="hidden" animate="visible" exit="exit"
                             className="flex flex-col text-start">
-                    <h3 className="2xl:text-[32px] lg:text-[20px] xl:text-[22px] xl:mt-2 2xl:mt-5 lg:mt-2">Улучшение процессов в одном проекте ДО и
+                    <h3 className="2xl:text-[28px] lg:text-[20px] xl:text-[22px] xl:mt-2 2xl:mt-5 lg:mt-2">Улучшение процессов в одном проекте ДО и
                         ПОСЛЕ</h3>
-                    <div className="flex flex-col 2xl:text-[22px] xl:text-[18px] lg:text-[14px]">
+                    <div className="flex flex-col 2xl:text-[20px] xl:text-[18px] lg:text-[14px]">
                         <div
                             className="flex justify-between text-center items-center w-3/4 2xl:py-3 xl:py-1 lg:py-1 ">
                             <p className="opacity-0">Выдача карт</p>
@@ -116,7 +116,7 @@ function Crm() {
                         </div>
                         <motion.div animate={{width: "75%"}} initial={{width: 0}}
                                     transition={{duration: 1, delay: 1.06}} className="border-b border-black"/>
-                        <div className="flex justify-between w-3/4 2xl:py-3 xl:py-1 lg:py-1 ">
+                        <div className="flex justify-between w-3/4 2xl:py-2 xl:py-1 lg:py-1 ">
                             <p>Авто кредиты для юр лиц</p>
                             <div className="flex gap-8">
                                 <span>90 min</span>
