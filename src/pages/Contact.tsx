@@ -58,7 +58,6 @@ function Contact() {
                 },
             );
     }
-
     useEffect(() => {
         if (alert.length > 0) {
             const timer = setTimeout(() => {
