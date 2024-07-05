@@ -37,11 +37,11 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
                     className={`h-screen menu-main ${bgVideo ? "" : ""}`}>
             {bgVideo && <div className="fixed w-full h-full bg-black">
                 <motion.img src={bgMain} alt="" className="w-full h-full" animate={{scale: [1, 1.06, 1]}}
-                            // transition={{duration: 35, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}
+                            transition={{duration: 35, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}
                 />
             </div>}
             {!bgVideo && <motion.img animate={{scale: [1, 0.7, 0.7, 1], y: [0, 125, 125, 0]}}
-                                     // transition={{duration: 40, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}
+                                     transition={{duration: 40, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}
                                      src={cosmoImage} alt=""
                                      className="absolute 2xl:w-[1000px] lg:w-[700px] xl:w-[800px] right-36 bottom-0 object-contain"/>}
             <div className="w-full h-full container mx-auto z-40">
