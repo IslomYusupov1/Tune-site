@@ -38,7 +38,7 @@ function Team() {
     const [open, setOpen] = useState(false);
     return (
         <>
-            <motion.img animate={{opacity: 1}} initial={{opacity: 0}} transition={{duration: 0.25, ease: "easeInOut"}}
+            <motion.img animate={{opacity: 1}} exit={{ opacity: 0 }} initial={{opacity: 0}} transition={{duration: 0.25, ease: "easeInOut"}}
                         alt="" src={imageBg} className="fixed w-screen h-screen top-0 left-0"
                         style={{zIndex: "-1"}}/>
             <ContentLayout>
