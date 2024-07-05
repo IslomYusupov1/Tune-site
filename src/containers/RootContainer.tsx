@@ -2,9 +2,9 @@ import {Route, Routes, useLocation, useNavigate} from "react-router";
 import {RoutesEnum} from "../constants/Routes";
 import About from "../pages/About";
 import MainLayout from "../layouts/MainLayout";
-import {AnimatePresence} from "framer-motion";
+import {AnimatePresence, motion} from "framer-motion";
 import Loan from "../pages/Loan";
-import {lazy, Suspense, useEffect, useMemo} from "react";
+import {lazy, Suspense, useCallback, useEffect, useMemo, useState} from "react";
 import Bank from "../pages/Bank";
 import Crm from "../pages/Crm";
 import Equaring from "../pages/Equaring";
@@ -12,10 +12,11 @@ import Turkney from "../pages/Turkney";
 import Solutions from "../pages/Solutions";
 import Team from "../pages/Team";
 import Contact from "../pages/Contact";
-import {motion} from "framer-motion";
 // import bgWhite from "../assets/bg-light.jpg";
 // import bgDark from "../assets/bg-dark.png";
 import logo from "../assets/logo.svg";
+import ScrollDirection from "../helpers/ScrollDirection";
+import _ from "lodash";
 
 const MainLazy = lazy(() => import('../pages/Main'));
 // const AboutLazy = lazy(() => import('../pages/About'));
@@ -30,6 +31,7 @@ const MainLazy = lazy(() => import('../pages/Main'));
 
 function RootContainer() {
     const location = useLocation();
+    const [scrolling, setScrolling] = useState(false);
     const bgImage = useMemo(() => {
         return (location.pathname === RoutesEnum.Main) || (location.pathname === RoutesEnum.About)
         || (location.pathname === RoutesEnum?.Bank)
@@ -42,63 +44,55 @@ function RootContainer() {
                 ? 2 : 0;
     }, [location])
 
+    const pages: string[] = [
+        RoutesEnum?.Main,
+        RoutesEnum.About,
+        RoutesEnum.Loan,
+        RoutesEnum.Bank,
+        RoutesEnum.Crm,
+        RoutesEnum.Equaring,
+        RoutesEnum.Turkney,
+        RoutesEnum.Solutions,
+        RoutesEnum.Team,
+        RoutesEnum.Contact
+    ]
+
     const navigate = useNavigate();
-    const scrollCheck = (event: any) => {
-        if (event.key === "ArrowUp") {
-            if (location.pathname === RoutesEnum.About) {
-                navigate(RoutesEnum.Main)
-            } else if (location.pathname === RoutesEnum.Loan) {
-                navigate(RoutesEnum.About)
-            } else if (location.pathname === RoutesEnum.Bank) {
-                navigate(RoutesEnum.Loan)
-            } else if (location.pathname === RoutesEnum.Crm) {
-                navigate(RoutesEnum.Bank)
-            } else if (location.pathname === RoutesEnum.Equaring) {
-                navigate(RoutesEnum.Crm)
-            } else if (location.pathname === RoutesEnum.Turkney) {
-                navigate(RoutesEnum.Equaring)
-            } else if (location.pathname === RoutesEnum.Solutions) {
-                navigate(RoutesEnum.Turkney)
-            } else if (location.pathname === RoutesEnum.Team) {
-                navigate(RoutesEnum.Solutions)
-            } else if (location.pathname === RoutesEnum.Contact) {
-                navigate(RoutesEnum.Team)
-            }
-        } else if (event.key === "ArrowDown") {
-            if (location.pathname === RoutesEnum.Main) {
-                navigate(RoutesEnum.About)
-            } else if (location.pathname === RoutesEnum.About) {
-                navigate(RoutesEnum.Loan)
-            } else if (location.pathname === RoutesEnum.Loan) {
-                navigate(RoutesEnum.Bank)
-            } else if (location.pathname === RoutesEnum.Bank) {
-                navigate(RoutesEnum.Crm)
-            } else if (location.pathname === RoutesEnum.Crm) {
-                navigate(RoutesEnum.Equaring)
-            } else if (location.pathname === RoutesEnum.Equaring) {
-                navigate(RoutesEnum.Turkney)
-            } else if (location.pathname === RoutesEnum.Turkney) {
-                navigate(RoutesEnum.Solutions)
-            } else if (location.pathname === RoutesEnum.Solutions) {
-                navigate(RoutesEnum.Team)
-            } else if (location.pathname === RoutesEnum.Team) {
-                navigate(RoutesEnum.Contact)
-            }
+    const scrollCheck = useCallback((event: any) => {
+        const currentIndex = pages.indexOf(location.pathname);
+
+        if (event.key === "ArrowUp" && currentIndex > 0) {
+                navigate(pages[currentIndex - 1])
+        } else if (event.key === "ArrowDown" && currentIndex < pages.length - 1) {
+            navigate(pages[currentIndex + 1])
         }
-    }
+    }, [location.pathname])
+    const handleScroll = _.throttle((e) => {
+        if (scrolling) return;
+        setScrolling(true);
+        const currentIndex = pages.indexOf(location.pathname);
+        if (e.deltaY > 0 && currentIndex < pages.length - 1) {
+            navigate(pages[currentIndex + 1])
+        } else if (e.deltaY < 0 && currentIndex > 0) {
+            navigate(pages[currentIndex - 1])
+        }
+        const timer = setTimeout(() => setScrolling(false), 2000);
+        return () => {
+            clearTimeout(timer)
+        }
+    }, 500)
     useEffect(() => {
         window.addEventListener("keydown", scrollCheck)
         return () => {
             window.removeEventListener("keydown", scrollCheck)
         }
-    })
-
-    // useEffect(() => {
-    //     const imageList = [bgWhite, bgDark]
-    //     imageList.forEach((image) => {
-    //         new Image().src = image
-    //     });
-    // }, [])
+    }, [scrollCheck])
+    useEffect(() => {
+        window.addEventListener('wheel', handleScroll)
+        return () => {
+            window.removeEventListener("wheel", handleScroll)
+        }
+    }, [location, handleScroll])
     return (
         <Suspense fallback={
             <motion.div
@@ -109,8 +103,9 @@ function RootContainer() {
                                 src={logo} alt=""/>
                 </div>
             </motion.div>}>
-                <MainLayout bgVideo={location.pathname === RoutesEnum.Main} bgImage={bgImage}>
-                    <AnimatePresence mode="wait">
+            <ScrollDirection/>
+            <MainLayout bgVideo={location.pathname === RoutesEnum.Main} bgImage={bgImage}>
+                <AnimatePresence mode="wait">
                     <Routes location={location} key={location.key}>
                         <Route element={<MainLazy/>} path={RoutesEnum.Main}/>
                         <Route element={<About/>} path={RoutesEnum.About}/>
@@ -124,8 +119,8 @@ function RootContainer() {
                         <Route element={<Team/>} path={RoutesEnum.Team}/>
                         <Route element={<Contact/>} path={RoutesEnum.Contact}/>
                     </Routes>
-                    </AnimatePresence>
-                </MainLayout>
+                </AnimatePresence>
+            </MainLayout>
         </Suspense>
     );
 }

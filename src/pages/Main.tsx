@@ -31,6 +31,7 @@ const textVariant = {
 }
 
 function Main() {
+
     return (
         <div className="justify-center items-center text-center my-auto">
             <ContentLayout className="relative">
@@ -40,11 +41,12 @@ function Main() {
                     // animate="visible"
                     // exit="exit"
                     className="flex justify-center z-30">
-                    <motion.img  variants={imageVariants}
-                                 initial="hidden"
-                                 animate="visible"
-                                 exit="exit" className=" 2xl:w-[800px] xl:w-[600px] lg:w-[500px] md:w-[400px]"
-                                // transition={{duration: 5, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}
+                    <motion.img variants={imageVariants}
+                                initial="hidden"
+                                loading="lazy"
+                                animate="visible"
+                                exit="exit" className=" 2xl:w-[800px] xl:w-[600px] lg:w-[500px] md:w-[400px]"
+                        // transition={{duration: 5, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}
                                 src={person} alt=""/>
                 </motion.div>
                 <motion.h3 variants={textVariant} animate="visible" initial="hidden" exit="hidden"

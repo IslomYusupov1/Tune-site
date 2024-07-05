@@ -827,10 +827,6 @@ video {
   justify-content: space-between;
 }
 
-.justify-evenly {
-  justify-content: space-evenly;
-}
-
 .gap-16 {
   gap: 4rem;
 }
@@ -1058,13 +1054,14 @@ video {
   font-family: "Onest", sans-serif !important;
   line-height: 1.5;
   font-weight: 300;
-  color-scheme: light dark;
+  /*color-scheme: light dark;*/
   text-rendering: optimizeLegibility;
 }
 
 body {
   overflow: hidden !important;
-  touch-action: none
+  touch-action: none;
+  background: black;
 }
 
 /*.main-container.bg-dark {*/
