@@ -79,7 +79,7 @@ function RootContainer() {
         return () => {
             clearTimeout(timer)
         }
-    }, 500)
+    }, 1000)
     useEffect(() => {
         window.addEventListener("keydown", scrollCheck)
         return () => {

@@ -37,13 +37,13 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
                     className={`h-screen menu-main ${bgVideo ? "" : ""}`}>
             {bgVideo && <div className="fixed w-full h-full bg-black">
                 <motion.img src={bgMain} alt="" className="w-full h-full" animate={{scale: [1, 1.06, 1]}}
-                            transition={{duration: 35, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}
+                            // transition={{duration: 35, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}
                 />
             </div>}
             {!bgVideo && <motion.img animate={{scale: [1, 0.7, 0.7, 1], y: [0, 125, 125, 0]}}
-                                     transition={{duration: 40, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}
-                                     src={cosmoImage} width={1000} alt=""
-                                     className="absolute right-36 bottom-0 object-contain"/>}
+                                     // transition={{duration: 40, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}
+                                     src={cosmoImage} alt=""
+                                     className="absolute 2xl:w-[1000px] lg:w-[700px] xl:w-[800px] right-36 bottom-0 object-contain"/>}
             <div className="w-full h-full container mx-auto z-40">
                 <motion.div
                     animate={{x: 1}}
@@ -51,7 +51,7 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
                     exit={{transition: {duration: 0.5, ease: "easeInOut"}}}
                     transition={{ease: "easeInOut", type: "tween", duration: 0.8}}
                     className="pt-[25px]">
-                    <img src={bgImage === 1 ? logo : logoBlack} alt="" className="xl:w-[180px] 2xl:w-[280px]"/>
+                    <img src={bgImage === 1 ? logo : logoBlack} alt="" className="lg:w-[140px] xl:w-[180px] xl:mx-[40px] 2xl:w-[280px]"/>
                 </motion.div>
                 {children}
                 <motion.ul
