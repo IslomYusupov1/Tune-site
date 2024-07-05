@@ -4,7 +4,7 @@ import ContentLayout from "../layouts/ContentLayout";
 
 const imageVariants = {
     hidden: {
-        y: -800,
+        y: -1000,
     },
     visible: {
         y: -50,

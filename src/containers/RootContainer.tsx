@@ -12,10 +12,12 @@ import Turkney from "../pages/Turkney";
 import Solutions from "../pages/Solutions";
 import Team from "../pages/Team";
 import Contact from "../pages/Contact";
-// import bgWhite from "../assets/bg-light.jpg";
-// import bgDark from "../assets/bg-dark.png";
+import bgWhite from "../assets/bg-light.jpg";
+import bgDark from "../assets/bg-dark.png";
 import logo from "../assets/logo.svg";
 import _ from "lodash";
+import {preloadImages} from "../helpers/preloadImages";
+import bgMain from "../assets/bg-main.jpg";
 
 const MainLazy = lazy(() => import('../pages/Main'));
 // const AboutLazy = lazy(() => import('../pages/About'));
@@ -93,24 +95,30 @@ function RootContainer() {
             window.removeEventListener("wheel", handleScroll)
         }
     }, [location, handleScroll])
+
     useEffect(() => {
-        const timer = setTimeout(() => {
-            setLoading(false);
-        }, 3000)
+        preloadImages([bgWhite, bgDark, bgMain]).then((res) => res)
+        const timer1 = setTimeout(() => {
+            setLoading(false)
+        }, 2000)
         return () => {
-            clearTimeout(timer)
+            clearTimeout(timer1);
+            setLoading(false)
         }
     }, [])
     return (
         <>
-            {loading ?  <motion.div
+            {loading ? <motion.div animate={{ opacity: 1 }}
+                                   initial={{ opacity: 0 }}
+                                   exit={{ opacity: 0 }}
+                                   transition={{ duration: 0.5, ease: "easeInOut" }}
                 className="bg-black w-screen h-screen">
                 <div className="w-full h-full justify-center flex items-center mx-auto">
                     <motion.img animate={{y: [10, -10, 10]}}
                                 exit={{ opacity: 0 }}
                                 width={200}
                                 height={200}
-                                transition={{duration: 2, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}
+                                transition={{duration: 3, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}
                                 src={logo} alt=""/>
                 </div>
             </motion.div> :
