@@ -48,7 +48,7 @@ const footerVariants = {
 function Loan() {
     return (
         <motion.div className="text-[#353535] w-11/12 mx-auto mx-[100px] lg:mt-5 xl:mt-5">
-            <motion.img loading="lazy" animate={{opacity: 1}} exit={{ opacity: 0 }} initial={{opacity: 0}} transition={{duration: 0.8, ease: "easeInOut"}}
+            <motion.img loading="lazy" animate={{opacity: 1}} exit={{ opacity: 0, transition: {ease: "easeInOut"} }} initial={{opacity: 0}} transition={{duration: 0.8, ease: "easeInOut"}}
                         alt="" src={imageBgLight} className="fixed w-full h-full top-0 left-0"
                         style={{zIndex: "-1"}}/>
             <ContentLayout>

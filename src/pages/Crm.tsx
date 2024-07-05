@@ -69,7 +69,7 @@ const imageVariant = {
 function Crm() {
     return (
         <motion.div className="flex flex-col text-[#353535] xl:mt-5 2xl:mt-5 xl:w-9/12 2xl:w-10/12 text-start font-light mx-[100px]">
-            <motion.img animate={{opacity: 1}} exit={{ opacity: 0 }} initial={{opacity: 0}} transition={{duration: 0.25, ease: "easeInOut"}}
+            <motion.img animate={{opacity: 1}} exit={{ opacity: 0, transition: {ease: "easeInOut"} }} initial={{opacity: 0}} transition={{duration: 0.25, ease: "easeInOut"}}
                         alt="" src={imageBgLight} className="fixed w-screen h-screen top-0 left-0"
                         style={{zIndex: "-2"}}/>
             <ContentLayout>

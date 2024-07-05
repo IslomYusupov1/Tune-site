@@ -97,7 +97,7 @@ function Portfolio() {
     return (
         <div
             className="flex flex-col 2xl:mt-[50px] lg:mt-[20px] gap-4 text-[#353535] lg:w-8/12 2xl:w-8/12 text-start font-light mx-[100px]">
-            <motion.img animate={{opacity: 1}} exit={{ opacity: 0 }} initial={{opacity: 0}} transition={{duration: 0.25, ease: "easeInOut"}}
+            <motion.img animate={{opacity: 1}} exit={{ opacity: 0, transition: {ease: "easeInOut"} }} initial={{opacity: 0}} transition={{duration: 0.25, ease: "easeInOut"}}
                         alt="" src={imageBgLight} className="fixed w-screen h-screen top-0 left-0"
                         style={{zIndex: "-1"}}/>
             <ContentLayout>
