@@ -137,8 +137,8 @@ function About() {
                         variants={videoVariants}
                         initial="hidden"
                         animate="visible"
-                        className="opacity-30 flex justify-end md:bg-transparent bg-white border-none text-end h-3/4 md:h-auto items-end w-full border border-transparent mt-5 rounded-2xl md:rounded-xl">
-                        <video className="md:w-10/12 z-10 w-full h-full rounded-lg" muted={true} loop={true}
+                        className="opacity-30 flex justify-end md:bg-transparent bg-white border-none text-end md:h-auto items-end w-full border border-transparent mt-5 rounded-2xl md:rounded-xl">
+                        <video className="md:w-10/12 z-10 rounded-lg" muted={true} loop={true}
                                autoPlay={true}
                                preload="auto"
                                controls={true}
