@@ -79,7 +79,7 @@ function About() {
                             className="md:w-9/12 mx-2 lg:mx-[20px] lg:h-[400px] overflow-hidden
                              xl:mx-[80px] 2xl:mx-[120px] md:mx-[10px]  md:h-[300px]
                               2xl:h-[600px] xl:h-[480px] bg-black rounded-lg
-                               mt-10 relative px-2 flex flex-col h-full">
+                               mt-10 relative px-2 flex flex-col h-3/4">
                     <motion.div variants={textVariants}
                                 initial="hidden"
                                 animate="visible"
@@ -137,8 +137,8 @@ function About() {
                         variants={videoVariants}
                         initial="hidden"
                         animate="visible"
-                        className="opacity-30 flex justify-end md:bg-transparent bg-white border-none text-end md:h-auto items-end w-full border border-transparent mt-5 rounded-2xl md:rounded-xl">
-                        <video className="md:w-10/12 z-10 rounded-lg" muted={true} loop={true}
+                        className="opacity-30 flex justify-end h-full md:bg-transparent bg-white border-none text-end md:h-auto items-end w-full border border-transparent mt-5 rounded-2xl md:rounded-xl">
+                        <video className="md:w-10/12 z-10 h-full rounded-lg" muted={true} loop={true}
                                autoPlay={true}
                                preload="auto"
                                controls={true}
