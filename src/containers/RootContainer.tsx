@@ -32,8 +32,12 @@ const MainLazy = lazy(() => import('../pages/Main'));
 
 function RootContainer() {
     const location = useLocation();
+    const navigate = useNavigate();
     const [scrolling, setScrolling] = useState(false);
     const [loading, setLoading] = useState(true);
+    const [touchStartY, setTouchStartY] = useState<number | null>(null);
+    const [touchEndY, setTouchEndY] = useState<number | null>(null);
+
     const bgImage = useMemo(() => {
         return (location.pathname === RoutesEnum.Main) || (location.pathname === RoutesEnum.About)
         || (location.pathname === RoutesEnum?.Bank)
@@ -59,7 +63,6 @@ function RootContainer() {
         RoutesEnum.Contact
     ]
 
-    const navigate = useNavigate();
     const scrollCheck = useCallback((event: any) => {
         const currentIndex = pages.indexOf(location.pathname);
 
@@ -106,9 +109,6 @@ function RootContainer() {
             setLoading(false)
         }
     }, [])
-
-    const [touchStartY, setTouchStartY] = useState<number | null>(null);
-    const [touchEndY, setTouchEndY] = useState<number | null>(null);
 
     useEffect(() => {
         const handleTouchStart = (e: TouchEvent) => {

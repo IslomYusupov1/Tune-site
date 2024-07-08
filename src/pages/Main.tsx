@@ -45,12 +45,12 @@ function Main() {
                                 initial="hidden"
                                 loading="lazy"
                                 animate="visible"
-                                exit="exit" className=" 2xl:w-[800px] xl:w-[600px] lg:w-[500px] md:w-[400px]"
+                                exit="exit" className="2xl:w-[800px] xl:w-[600px] lg:w-[500px] md:w-[400px] w-full"
                         // transition={{duration: 5, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}
                                 src={person} alt=""/>
                 </motion.div>
                 <motion.h3 variants={textVariant} animate="visible" initial="hidden" exit="hidden"
-                           className="text-start text-white absolute bottom-0 xl:text-[40px] 2xl:text-[48px] lg:text-[36px] mx-[100px]">Прогресс не случайность
+                           className="text-start text-[22px] md:text-[30px] text-white w-full absolute bottom-0 xl:text-[40px] 2xl:text-[48px] lg:text-[36px] mx-[50px] md:mx-[100px]">Прогресс не случайность
                 </motion.h3>
             </ContentLayout>
         </div>

@@ -36,17 +36,17 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
                     exit={{opacity: 0}}
                     className={`h-screen menu-main ${bgVideo ? "" : ""}`}>
             {bgVideo && <div className="fixed w-full h-full bg-black">
-                <motion.img src={bgMain} alt="" className="w-full h-full"
+                <motion.img src={bgMain} alt="" className="w-full h-full object-cover md:object-center"
                             animate={{ scale: [1, 1.06, 1]}}
                             exit={{opacity: 0, transition: {ease: "easeInOut"}}}
-                            transition={{duration: 35, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}
+                            // transition={{duration: 35, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}
                 />
             </div>}
             {!bgVideo && <motion.img animate={{scale: [1, 0.7, 0.7, 1], y: [0, 125, 125, 0]}}
-                                     transition={{duration: 40, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}
+                                     // transition={{duration: 40, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}
                                      src={cosmoImage} alt=""
                                      className="absolute 2xl:w-[1000px] lg:w-[700px] xl:w-[800px] right-36 bottom-0 object-contain"/>}
-            <div className="w-full h-full container mx-auto z-40">
+            <div className="w-full h-full container mx-auto z-40 overflow-hidden">
                 <motion.div
                     animate={{x: 1}}
                     initial={{x: -600}}
@@ -54,12 +54,13 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
                     transition={{ease: "easeInOut", type: "tween", duration: 0.8}}
                     className="pt-[25px]">
                     <img src={bgImage === 1 ? logo : logoBlack} alt=""
-                         className="lg:w-[140px] xl:w-[180px] xl:mx-[40px] 2xl:w-[280px]"/>
+                         className="lg:w-[140px] xl:w-[180px] xl:mx-[40px] 2xl:w-[280px] mx-10 md:mx-2"/>
                 </motion.div>
                 {children}
                 <motion.ul
                     className={`${bgImage === 1 ? "text-white" : "text-black"}
                      z-40 text-end flex flex-col
+                     hidden md:flex
                      w-11/12
                      xl:gap-4 xl:text-[16px]
                        2xl:gap-6 2xl:text-[19px] items-end absolute container
