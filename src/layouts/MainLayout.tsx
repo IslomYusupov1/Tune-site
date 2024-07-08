@@ -54,7 +54,7 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
                     transition={{ease: "easeInOut", type: "tween", duration: 0.8}}
                     className="pt-[25px]">
                     <img src={bgImage === 1 ? logo : logoBlack} alt=""
-                         className="lg:w-[140px] xl:w-[180px] xl:mx-[40px] 2xl:w-[280px] mx-10 md:mx-2"/>
+                         className="lg:w-[200px] xl:w-[180px] xl:mx-[40px] 2xl:w-[280px] w-[140px] md:w-[180px] mx-6 md:mx-2"/>
                 </motion.div>
                 {children}
                 <motion.ul

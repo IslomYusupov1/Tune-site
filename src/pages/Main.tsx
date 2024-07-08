@@ -1,6 +1,7 @@
 import {motion} from "framer-motion";
-import person from "../assets/person.svg";
 import ContentLayout from "../layouts/ContentLayout";
+import person from "../assets/person.svg";
+import down from "../assets/down.svg";
 
 const imageVariants = {
     hidden: {
@@ -21,7 +22,7 @@ const textVariant = {
         y: 550
     },
     visible: {
-        y: -50,
+        y: 0,
         transition: {duration: 0.2, delay: 0.2, type: "spring", ease: "easeInOut", stiffness: 40}
     },
     exit: {
@@ -45,13 +46,19 @@ function Main() {
                                 initial="hidden"
                                 loading="lazy"
                                 animate="visible"
-                                exit="exit" className="2xl:w-[800px] xl:w-[600px] lg:w-[500px] md:w-[400px] w-full"
+                                exit="exit" className="2xl:w-[800px] xl:w-[600px] lg:w-[500px] md:w-[400px]"
                         // transition={{duration: 5, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}
                                 src={person} alt=""/>
                 </motion.div>
-                <motion.h3 variants={textVariant} animate="visible" initial="hidden" exit="hidden"
-                           className="text-start text-[22px] md:text-[30px] text-white w-full absolute bottom-0 xl:text-[40px] 2xl:text-[48px] lg:text-[36px] mx-[50px] md:mx-[100px]">Прогресс не случайность
-                </motion.h3>
+                <div
+                    className="fixed md:absolute md:bottom-0 bottom-[30px] w-full md:mx-[100px] flex flex-col items-center">
+                    <motion.h3 variants={textVariant} animate="visible" initial="hidden" exit="hidden"
+                               className="text-start text-[22px] md:text-[30px] px-[30px] text-white w-full xl:text-[40px] 2xl:text-[48px] lg:text-[36px] ">Прогресс
+                        не случайность
+                    </motion.h3>
+                    <motion.img variants={textVariant} className="text-center md:hidden item-center mt-10" animate="visible"
+                                initial="hidden" exit="hidden" src={down} width={32} alt=""/>
+                </div>
             </ContentLayout>
         </div>
     );
