@@ -45,7 +45,7 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
             {!bgVideo && <motion.img animate={{scale: [1, 0.7, 0.7, 1], y: [0, 125, 125, 0]}}
                                      // transition={{duration: 40, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}
                                      src={cosmoImage} alt=""
-                                     className="absolute 2xl:w-[1000px] lg:w-[700px] xl:w-[800px] right-36 bottom-0 object-contain"/>}
+                                     className="absolute 2xl:w-[1000px] lg:w-[700px] xl:w-[800px] md:right-36 md:bottom-0 object-contain"/>}
             <div className="w-full h-full container mx-auto z-40 overflow-hidden">
                 <motion.div
                     animate={{x: 1}}
@@ -54,7 +54,7 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
                     transition={{ease: "easeInOut", type: "tween", duration: 0.8}}
                     className="pt-[25px]">
                     <img src={bgImage === 1 ? logo : logoBlack} alt=""
-                         className="lg:w-[200px] xl:w-[180px] xl:mx-[40px] 2xl:w-[280px] w-[140px] md:w-[180px] mx-6 md:mx-2"/>
+                         className="lg:w-[200px] xl:w-[180px] xl:mx-[40px] 2xl:w-[280px] w-[160px] md:w-[180px] mx-6 md:mx-2"/>
                 </motion.div>
                 {children}
                 <motion.ul
