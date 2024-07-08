@@ -79,7 +79,7 @@ function About() {
                             className="md:w-9/12 mx-5  lg:mx-[20px] lg:h-[400px]
                              xl:mx-[80px] 2xl:mx-[120px] md:mx-[10px] md:h-[300px]
                               h-full 2xl:h-[600px] xl:h-[470px] bg-black rounded-lg
-                               mt-10 relative px-2 flex flex-col h-screen">
+                               mt-10 relative px-2 flex flex-col h-full">
                     <motion.div variants={textVariants}
                                 initial="hidden"
                                 animate="visible"
