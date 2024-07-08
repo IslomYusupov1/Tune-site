@@ -18,7 +18,7 @@ const imageVariants = {
 
 const textVariant = {
     hidden: {
-        y: 450
+        y: 550
     },
     visible: {
         y: -50,
@@ -50,8 +50,7 @@ function Main() {
                                 src={person} alt=""/>
                 </motion.div>
                 <motion.h3 variants={textVariant} animate="visible" initial="hidden" exit="hidden"
-                           className="text-start text-white absolute bottom-0 xl:text-[40px] 2xl:text-[48px] lg:text-[36px] mx-[100px]">Taraqqiyot
-                    tasodif emas
+                           className="text-start text-white absolute bottom-0 xl:text-[40px] 2xl:text-[48px] lg:text-[36px] mx-[100px]">Прогресс не случайность
                 </motion.h3>
             </ContentLayout>
         </div>

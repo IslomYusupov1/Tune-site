@@ -106,6 +106,48 @@ function RootContainer() {
             setLoading(false)
         }
     }, [])
+
+    const [touchStartY, setTouchStartY] = useState<number | null>(null);
+    const [touchEndY, setTouchEndY] = useState<number | null>(null);
+
+    useEffect(() => {
+        const handleTouchStart = (e: TouchEvent) => {
+            setTouchStartY(e.targetTouches[0].clientY);
+        };
+
+        const handleTouchMove = (e: TouchEvent) => {
+            setTouchEndY(e.targetTouches[0].clientY);
+        };
+
+        const handleTouchEnd = () => {
+            if (!touchStartY || !touchEndY) return;
+            const currentIndex = pages.indexOf(location.pathname);
+            const distance = touchStartY - touchEndY;
+            const isSwipe = Math.abs(distance) > 50;
+
+            if (isSwipe) {
+                if (distance > 0) {
+                    navigate(pages[currentIndex + 1])
+                } else {
+                    navigate(pages[currentIndex - 1])
+                }
+            }
+
+            setTouchStartY(null);
+            setTouchEndY(null);
+        };
+
+        window.addEventListener('touchstart', handleTouchStart);
+        window.addEventListener('touchmove', handleTouchMove);
+        window.addEventListener('touchend', handleTouchEnd);
+
+        return () => {
+            window.removeEventListener('touchstart', handleTouchStart);
+            window.removeEventListener('touchmove', handleTouchMove);
+            window.removeEventListener('touchend', handleTouchEnd);
+        };
+    }, [touchStartY, touchEndY])
+
     return (
         <>
             {loading ? <motion.div animate={{ opacity: 1 }}
