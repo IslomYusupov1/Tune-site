@@ -55,7 +55,7 @@ const textFullVariants = {
         opacity: 0,
     },
     visible: {
-        y: 40,
+        y: 10,
         opacity: 1,
         transition: {duration: 0.5, type: "spring", stiffness: 200}
     },
@@ -83,7 +83,7 @@ function About() {
                     <motion.div variants={textVariants}
                                 initial="hidden"
                                 animate="visible"
-                                className={`flex flex-col mx-3 text-white text-start z-50 ${open ? "absolute" : "block"} md:absolute md:bottom-[50px] md:left-[50px]`}>
+                                className={`flex flex-col mx-3 text-white text-start z-50 ${open ? "absolute top-0" : "block"} md:absolute md:bottom-[50px] md:left-[50px]`}>
                         {!open && <h3 className="text-[24px] md:text-[40px]">О нас</h3>}
                         {!open && <p className="max-w-[775px] md:text-[20px] text-[16px] leading-24">Созданы в 2009 году в Ташкенте в
                             качестве «бутика» для комплексных банковских проектов..... <br/>
