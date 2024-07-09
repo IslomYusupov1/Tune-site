@@ -61,7 +61,7 @@ function Loan() {
                     animate="visible"
                     exit="exit"
                     className="flex text-red-black h-screen leading-5 md:leading-normal flex-col text-start w-full 2xl:w-8/12 md:w-9/12">
-                    <h3 className="xl:text-[30px] lg:text-[26px] 2xl:text-[48px] text-[17px] md:[24px] mb-2 mt-5 md:mb-0 md:mt-0 font-light">Кредитный конвейер и скоринг движок</h3>
+                    <h3 className="xl:text-[30px] lg:text-[26px] 2xl:text-[48px] text-[17px] md:[24px] md:mb-0 md:mt-0 font-light">Кредитный конвейер и скоринг движок</h3>
                     <p className="xl:text-[18px] lg:text-[15px] 2xl:text-[22px] md:text-[20px] text-[12px]">1. 8 проектов с использованием BPM системы для автоматизации конвейеров и
                         скоринговых движков</p>
                     <ul className="list-disc mx-10 xl:text-[18px] lg:text-[14px] 2xl:text-[22px] md:text-[20px] text-[12px]">
