@@ -42,7 +42,7 @@ function MobileContainer() {
     const [open, setOpen] = useState(false);
 
     return (
-        <div className="flex flex-col overflow-hidden relative">
+        <div className="flex flex-col relative">
             <div className="pt-[25px] fixed top-0 z-50">
                 <img src={logo} alt=""
                      className="w-[160px] md:w-[180px] mx-6 md:mx-2"/>

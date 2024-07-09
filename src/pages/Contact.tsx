@@ -1,7 +1,4 @@
-import facebook from "../assets/facebook.svg";
-import telegram from "../assets/telegram.svg";
 import linkedin from "../assets/linkedin.svg";
-import instagram from "../assets/instagram.svg";
 import {motion} from "framer-motion";
 import imageBgLight from "../assets/bg-light.jpg";
 import {Field, Form, Formik, FormikHelpers, FormikValues} from "formik";
@@ -77,7 +74,7 @@ function Contact() {
             <ContentLayout>
                 <motion.div variants={headerVariant} initial="hidden" animate="visible" exit="exit"
                             className="flex 2xl:gap-6 xl:gap-3 lg:gap-3 flex-col text-[#353535] xl:w-8/12 2xl:w-9/12 lg:w-8/12 text-start font-light mx-[100px] xl:mt-[50px] 2xl:mt-[25px] lg:mt-[50px] ">
-                    <h3 className="2xl:text-[36px] xl:text-[28px] lg:text-[24px]">Привет. Мы всегда рады Вам.</h3>
+                    <h3 className="2xl:text-[36px] xl:text-[28px] lg:text-[24px]">Мы всегда рады Вам.</h3>
                     <h2 className="2xl:text-[30px] xl:text-[22px] lg:text-[18px] font-medium">OOO “TUNE Consulting” </h2>
                     <div className="flex flex-col ">
                         <p className="2xl:text-[20px] xl:text-[16px] lg:text-[14px]">Телефон:</p>
@@ -128,10 +125,7 @@ function Contact() {
                         )}
                     </Formik>
                     <div className="flex gap-8 2xl:mt-18 xl:mt-10 lg:mt-10">
-                        <img src={instagram} alt=""/>
-                        <img src={facebook} alt=""/>
                         <img src={linkedin} alt=""/>
-                        <img src={telegram} alt=""/>
                     </div>
                 </motion.div>
             </ContentLayout>
