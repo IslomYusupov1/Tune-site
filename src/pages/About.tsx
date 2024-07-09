@@ -76,7 +76,7 @@ function About() {
                         style={{zIndex: "-1"}}/>
             <ContentLayout className="relative">
                 <motion.div variants={containerVariants} initial="hidden" animate="visible" exit="exit"
-                            className="md:w-9/12 mx-2 lg:mx-[20px] lg:h-[400px] overflow-hidden
+                            className="md:w-9/12 mx-2 lg:mx-[20px] py-3 lg:h-[400px] overflow-hidden
                              xl:mx-[80px] 2xl:mx-[120px] md:mx-[10px]  md:h-[300px]
                               2xl:h-[600px] xl:h-[480px] bg-black rounded-lg
                                mt-10 relative px-2 flex flex-col h-screen">
