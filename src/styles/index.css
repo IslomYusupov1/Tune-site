@@ -142,14 +142,8 @@ body {
 /*    width: 90%;*/
 /*  }*/
 /*}*/
-/*@media (max-height: 900px) {*/
-/*  .image-bank {*/
-/*    width: 73.5%;*/
-/*  }*/
-/*  .bank-page h3{*/
-/*    font-size: 32px;*/
-/*  }*/
-/*  .bank-page p, .bank-page ul{*/
-/*    font-size: 18px;*/
-/*  }*/
-/*}*/
+@media (max-width: 728px) {
+  body {
+      overflow: scroll !important;
+  }
+}
