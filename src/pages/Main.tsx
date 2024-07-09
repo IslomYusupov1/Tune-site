@@ -1,7 +1,6 @@
 import {motion} from "framer-motion";
 import ContentLayout from "../layouts/ContentLayout";
 import person from "../assets/person.svg";
-import down from "../assets/down.svg";
 
 const imageVariants = {
     hidden: {
@@ -56,8 +55,6 @@ function Main() {
                                className="text-start text-[22px] md:text-[30px] px-[30px] text-white w-full xl:text-[40px] 2xl:text-[48px] lg:text-[36px] ">Прогресс
                         не случайность
                     </motion.h3>
-                    <motion.img variants={textVariant} className="text-center md:hidden item-center mt-10" animate="visible"
-                                initial="hidden" exit="hidden" src={down} width={32} alt=""/>
                 </div>
             </ContentLayout>
         </div>
