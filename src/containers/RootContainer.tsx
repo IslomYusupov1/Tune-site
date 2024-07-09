@@ -151,7 +151,7 @@ function RootContainer() {
     const isMobile = useMobileDetect();
 
     return (
-        <>{isMobile ?
+        <>{!isMobile ?
             <>
             {loading ? <motion.div animate={{ opacity: 1 }}
                                    initial={{ opacity: 0 }}
