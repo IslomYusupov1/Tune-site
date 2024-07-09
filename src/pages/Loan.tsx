@@ -10,7 +10,6 @@ import uzum from "../assets/uzum.svg";
 import {motion} from "framer-motion";
 import imageBgLight from "../assets/bg-light.jpg"
 import ContentLayout from "../layouts/ContentLayout";
-import {useMobileDetect} from "../helpers/useIsMobileDetect";
 
 const headerVariants = {
     hidden: {
@@ -47,11 +46,6 @@ const footerVariants = {
 
 
 function Loan() {
-    const isMobile = useMobileDetect();
-    console.log(isMobile, "123")
-    if (isMobile) {
-        alert("MObile")
-    }
     return (
         <motion.div className="text-[#353535] w-11/12 mx-auto mx-[100px] lg:mt-5 xl:mt-5">
             <motion.img loading="lazy" animate={{opacity: 1}} exit={{ opacity: 0, transition: {ease: "easeInOut"} }} initial={{opacity: 0}} transition={{duration: 0.8, ease: "easeInOut"}}
