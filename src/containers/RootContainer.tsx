@@ -18,7 +18,6 @@ import logo from "../assets/logo.svg";
 import _ from "lodash";
 import {preloadImages} from "../helpers/preloadImages";
 import bgMain from "../assets/bg-main.jpg";
-import {useMobileDetect} from "../helpers/useIsMobileDetect";
 
 const MainLazy = lazy(() => import('../pages/Main'));
 // const AboutLazy = lazy(() => import('../pages/About'));
@@ -148,10 +147,8 @@ function RootContainer() {
             window.removeEventListener('touchend', handleTouchEnd);
         };
     }, [touchStartY, touchEndY])
-    const isMobile = useMobileDetect();
 
     return (
-        <>{!isMobile ?
             <>
             {loading ? <motion.div animate={{ opacity: 1 }}
                                    initial={{ opacity: 0 }}
@@ -194,8 +191,7 @@ function RootContainer() {
                         </AnimatePresence>
                     </MainLayout>
                 </Suspense>}
-       </> : <>MObile</>
-        }</>
+       </>
     );
 }
 
