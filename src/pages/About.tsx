@@ -74,7 +74,7 @@ function About() {
                         transition={{duration: 0.25, ease: "easeInOut"}}
                         alt="" src={imageBg} className="fixed w-screen h-screen top-0 left-0"
                         style={{zIndex: "-1"}}/>
-            <ContentLayout className="h-full">
+            <ContentLayout className="relative">
                 <motion.div variants={containerVariants} initial="hidden" animate="visible" exit="exit"
                             className="md:w-9/12 mx-2 lg:mx-[20px] lg:h-[400px] overflow-hidden
                              xl:mx-[80px] 2xl:mx-[120px] md:mx-[10px]  md:h-[300px]
