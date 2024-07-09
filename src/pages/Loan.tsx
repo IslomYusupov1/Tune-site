@@ -47,7 +47,6 @@ const footerVariants = {
     }
 }
 
-
 function Loan() {
     return (
         <motion.div className="text-[#353535] w-11/12 mx-auto mx-[100px] lg:mt-5 xl:mt-5">
@@ -60,7 +59,7 @@ function Loan() {
                     initial="hidden"
                     animate="visible"
                     exit="exit"
-                    className="flex text-red-black h-screen leading-5 md:leading-normal flex-col text-start w-full 2xl:w-8/12 md:w-9/12">
+                    className="flex text-red-black leading-5 md:leading-normal flex-col text-start w-full 2xl:w-8/12 md:w-9/12">
                     <h3 className="xl:text-[30px] lg:text-[26px] 2xl:text-[48px] text-[17px] md:[24px] md:mb-0 md:mt-0 font-light">Кредитный конвейер и скоринг движок</h3>
                     <p className="xl:text-[18px] lg:text-[15px] 2xl:text-[22px] md:text-[20px] text-[12px]">1. 8 проектов с использованием BPM системы для автоматизации конвейеров и
                         скоринговых движков</p>
@@ -90,21 +89,21 @@ function Loan() {
                     initial="hidden"
                     animate="visible"
                     exit="exit"
-                    className="2xl:mt-16 xl:mt-5 lg:mt-8 w-full md:w-9/12">
+                    className="2xl:mt-16 xl:mt-5 lg:mt-8 md:w-9/12">
                     <motion.div animate={{width: "100%"}} initial={{width: 0}} transition={{duration: 1, delay: 1.5}}
                                 className="border-b border-black"/>
                     <div className="flex gap-x-8 gap-y-4 mt-3 flex-wrap">
-                        <img src={mkb} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px] w-[60px]"/>
-                        <img src={davr} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px] w-[70px]"/>
-                        <img src={kapital} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px] w-[100px]"/>
-                        <img src={anorBank} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px] w-[70px]"/>
-                        <img src={joyda} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px] w-[60px]"/>
-                        <img src={asia} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px] w-[100px]"/>
-                        <img src={agat} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px] w-[80px]"/>
-                        <img src={uzum} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px] w-[50px]"/>
-                        <img src={tenge} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px] w-[60px]"/>
-                        <img src={orient} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px] w-[130px]"/>
-                        <img src={milliy} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px] w-[110px]"/>
+                        <img src={mkb} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px]"/>
+                        <img src={davr} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px]"/>
+                        <img src={kapital} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px]"/>
+                        <img src={anorBank} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px]"/>
+                        <img src={joyda} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px]"/>
+                        <img src={asia} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px]"/>
+                        <img src={agat} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px]"/>
+                        <img src={uzum} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px]"/>
+                        <img src={tenge} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px]"/>
+                        <img src={orient} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px]"/>
+                        <img src={milliy} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px]"/>
                     </div>
                 </motion.div>
             </ContentLayout>

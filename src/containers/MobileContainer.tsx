@@ -2,7 +2,7 @@ import logo from "../assets/logo.svg";
 import person from "../assets/person.svg";
 import down from "../assets/down.svg";
 import videoFile from "../assets/video.mp4";
-import {useState} from "react";
+import {useRef, useState} from "react";
 import mkb from "../assets/mkb.svg";
 import davr from "../assets/davr.svg";
 import kapital from "../assets/kapital.svg";
@@ -36,31 +36,42 @@ import imageBack from "../assets/turkey.png";
 import teamImage1 from "../assets/team.svg";
 import {Field, Form, Formik} from "formik";
 import linkedin from "../assets/linkedin-white.svg";
+import {useScroll, useTransform, motion} from "framer-motion";
 
 
 function MobileContainer() {
     const [open, setOpen] = useState(false);
+    const ref = useRef<HTMLDivElement>(null);
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["end end", "end start"]
+    })
+
+    const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0.4]);
+    const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.7])
 
     return (
         <div className="flex flex-col relative">
-            <div className="pt-[25px] fixed top-0 z-50">
+            <div className="pt-[25px] fixed top-0 z-50 w-full">
                 <img src={logo} alt=""
                      className="w-[160px] md:w-[180px] mx-6 md:mx-2"/>
             </div>
-            <div
-                className="h-screen relative bg-[url('../assets/bg-main.jpg')] flex flex-col justify-center object-cover bg-no-repeat bg-center w-full">
-                <img
-                    className="2xl:w-[800px] xl:w-[600px] lg:w-[500px] md:w-[400px]"
-                    src={person} alt=""/>
-                <div
-                    className="absolute md:absolute md:bottom-0 bottom-[30px] w-full md:mx-[100px] flex flex-col items-center">
-                    <h3
-                        className="text-start text-[22px] md:text-[30px] px-[30px] text-white w-full xl:text-[40px] 2xl:text-[48px] lg:text-[36px] ">Прогресс
-                        не случайность
-                    </h3>
-                    <img className="text-center md:hidden item-center mt-10" src={down} width={32} alt=""/>
-                </div>
-            </div>
+            <motion.div ref={ref} style={{ opacity }}
+                className="bg-[url('../assets/bg-main.jpg')] object-cover bg-no-repeat bg-center w-full">
+               <motion.div style={{scale}} className="h-screen relative flex flex-col justify-center">
+                   <img
+                       className="2xl:w-[800px] xl:w-[600px] lg:w-[500px] md:w-[400px]"
+                       src={person} alt=""/>
+                   <div
+                       className="absolute md:absolute md:bottom-0 bottom-[30px] w-full md:mx-[100px] flex flex-col items-center">
+                       <h3
+                           className="text-start text-[22px] md:text-[30px] px-[30px] text-white w-full xl:text-[40px] 2xl:text-[48px] lg:text-[36px] ">Прогресс
+                           не случайность
+                       </h3>
+                       <img className="text-center md:hidden item-center mt-10" src={down} width={32} alt=""/>
+                   </div>
+               </motion.div>
+            </motion.div>
             <div
                 className="h-screen bg-[url('../assets/bg-dark.png')] flex flex-col justify-center object-cover bg-no-repeat bg-center w-full">
                 <div
