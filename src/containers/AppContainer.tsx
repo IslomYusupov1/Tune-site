@@ -1,10 +1,9 @@
 import {BrowserRouter} from "react-router-dom";
 import RootContainer from "./RootContainer";
-import {useMobileDetect} from "../helpers/useIsMobileDetect";
 import MobileContainer from "./MobileContainer";
+import {isMobile} from 'react-device-detect';
 
 function AppContainer() {
-    const isMobile = useMobileDetect();
     return (
         <BrowserRouter>
             {isMobile ? <MobileContainer/> : <RootContainer/>}
