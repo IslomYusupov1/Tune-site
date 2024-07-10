@@ -16,7 +16,7 @@ function CrmMobile() {
     const ref = useRef<HTMLDivElement>(null);
     const {scrollYProgress} = useScroll({
         target: ref,
-        offset: ["0 1", "1 1"],
+        offset: ["0 1", "0.5 1"],
         smooth: 1,
     })
     return (
