@@ -19,13 +19,13 @@ function BankMobile() {
                     <div className="xl:w-[64%] 2xl:w-[50%] lg:w-[58%] w-full">
                         <p className="lg:text-[15px] xl:text-[18px] 2xl:text-[21px] text-[15px]">1. 12 проектов ДБО
                             физлица</p>
-                        <ul className="list-disc mx-10 lg:text-[16px] xl:text-[20px] 2xl:text-[21px] text-[15px]">
+                        <ul className="list-disc mx-5 lg:text-[16px] xl:text-[20px] 2xl:text-[21px] text-[15px]">
                             <li>2 проекта на стадии внедрения</li>
                         </ul>
                         <img src="" alt=""/>
                         <p className="lg:text-[15px] xl:text-[18px] 2xl:text-[21px] text-[15px]">2. 3 проекта ДБО
                             юрлица</p>
-                        <ul className="list-disc mx-10 lg:text-[16px] xl:text-[20px] 2xl:text-[21px] text-[15px]">
+                        <ul className="list-disc mx-5 lg:text-[16px] xl:text-[20px] 2xl:text-[21px] text-[15px]">
                             <li>1 проект на стадии внедрения</li>
                             <li>12 live and 2 in process retail mobile banking platforms</li>
                         </ul>
@@ -39,7 +39,7 @@ function BankMobile() {
                             зависимостью от АБС</p>
                         <p className="lg:text-[15px] xl:text-[18px] 2xl:text-[21px] text-[15px]">6. Успешные
                             интеграции с 6 АБС:</p>
-                        <ul className="list-disc mx-10 lg:text-[15px] xl:text-[18px] 2xl:text-[21px] text-[15px]">
+                        <ul className="list-disc mx-5 lg:text-[15px] xl:text-[18px] 2xl:text-[21px] text-[15px]">
                             <li>Temenos</li>
                             <li>iABS</li>
                             <li>NCI</li>

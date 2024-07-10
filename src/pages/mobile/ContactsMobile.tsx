@@ -1,7 +1,9 @@
-import {Field, Form, Formik} from "formik";
+import {Field, Form, Formik, FormikHelpers, FormikValues} from "formik";
 import linkedin from "../../assets/linkedin-white.svg";
-import {useRef} from "react";
+import {useEffect, useMemo, useRef, useState} from "react";
 import {useScroll, motion} from "framer-motion";
+import * as Yup from "yup";
+import emailjs from "@emailjs/browser";
 
 function ContactsMobile() {
     const ref = useRef<HTMLDivElement>(null);
@@ -10,6 +12,47 @@ function ContactsMobile() {
         offset: ["0 1", "0.8 1"],
         smooth: 1,
     })
+
+    const [loading, setLoading] = useState(false);
+    const [alert, setAlert] = useState("");
+
+    const validationSchema = useMemo(
+        () => () =>
+            Yup.object().shape({
+                name: Yup.string().nullable().required("Поле обязательно к заполнению"),
+                email: Yup.string().email().nullable().required("Поле обязательно к заполнению"),
+                phone: Yup.string().nullable().required("Поле обязательно к заполнению"),
+            }),
+        [],
+    );
+    const sendMessage = (e: FormikValues, formikHelpers: FormikHelpers<any>) => {
+        setLoading(true);
+        emailjs
+            .send('service_sba5jol', 'template_4juwanb', e, {
+                publicKey: 'p_BAGVk_9HKUf80U2',
+            })
+            .then(
+                () => {
+                    setAlert("Сообщение успешно отправлена!");
+                    setLoading(false);
+                    formikHelpers.resetForm();
+                },
+                (error: { text: string }) => {
+                    setLoading(false);
+                    setAlert(error.text);
+                },
+            );
+    }
+    useEffect(() => {
+        if (alert.length > 0) {
+            const timer = setTimeout(() => {
+                setAlert("");
+            }, 2000);
+            return () => {
+                clearTimeout(timer)
+            }
+        }
+    }, [alert])
     return (
         <motion.div ref={ref} style={{ opacity: scrollYProgress }} className="bg-[url('../assets/bg-dark.png')] p-5 object-cover bg-no-repeat bg-center w-full">
             <motion.div style={{ scale: scrollYProgress }} className="flex 2xl:gap-6 xl:gap-3 lg:gap-3 flex-col text-white xl:w-8/12 2xl:w-9/12 lg:w-8/12 w-full text-start font-light lg:mx-[100px] xl:mt-[50px] 2xl:mt-[25px] lg:mt-[50px] ">
@@ -29,8 +72,8 @@ function ContactsMobile() {
                         улица
                         Зульфияхоним, 12</h3>
                 </div>
-                <Formik initialValues={{name: "", phone: "", email: ""}}
-                        onSubmit={(e, formikHelpers) => console.log(e, formikHelpers)}>
+                <Formik initialValues={{name: "", phone: "", email: ""}} validationSchema={validationSchema}
+                        onSubmit={(e, formikHelpers) => sendMessage(e, formikHelpers)}>
                     {({handleSubmit, errors, touched}) => (
                         <Form onSubmit={handleSubmit} className="z-50 mt-24">
                             <div className="flex flex-col gap-4 w-full">
@@ -55,7 +98,7 @@ function ContactsMobile() {
                                                className={`${errors.phone && touched.phone ? "border-red-600 focus:border-red-600" : ""} bg-white outline-0 border text-gray-900 rounded-lg focus:ring-[#003ABC] focus:border-[#003ABC] block w-full p-4 `}/>
                                     </div>
                                 </div>
-                                <button type="submit" disabled={true}
+                                <button type="submit" disabled={loading}
                                         className="text-center bg-[#003ABC] w-full text-white rounded-lg p-3">Отправить
                                     сообщение
                                 </button>
@@ -64,7 +107,7 @@ function ContactsMobile() {
                     )}
                 </Formik>
                 <div className="flex gap-8 2xl:mt-18 xl:mt-10 lg:mt-10 mt-10">
-                    <img src={linkedin} alt=""/>
+                    <a href="https://www.linkedin.com/company/tune-consulting/" className="cursor-pointer" target="_blank"><img src={linkedin}  alt=""/></a>
                 </div>
             </motion.div>
         </motion.div>
