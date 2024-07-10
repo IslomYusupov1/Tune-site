@@ -125,7 +125,7 @@ function Contact() {
                         )}
                     </Formik>
                     <div className="flex gap-8 2xl:mt-18 xl:mt-10 lg:mt-10">
-                        <img src={linkedin} alt=""/>
+                        <a href="https://www.linkedin.com/company/tune-consulting/" className="cursor-pointer" target="_blank"><img src={linkedin}  alt=""/></a>
                     </div>
                 </motion.div>
             </ContentLayout>

@@ -9,6 +9,9 @@ import agat from "../assets/agat.svg";
 import uzum from "../assets/uzum.svg";
 import imageBgLight from "../assets/bg-light.jpg";
 import ContentLayout from "../layouts/ContentLayout";
+import tenge from "../assets/tenge.svg";
+import orient from "../assets/orient.svg";
+import milliy from "../assets/milliy.svg";
 
 const headerVariant = {
     hidden: {
@@ -166,14 +169,17 @@ function Crm() {
                     <motion.div animate={{width: "100%"}} initial={{width: 0}} transition={{duration: 1, delay: 1.25}}
                                 className="border-b border-black"/>
                     <div className="flex gap-x-8 gap-y-4 2xl:mt-2 xl:mt-3 flex-wrap">
-                        <img src={mkb} alt="" className="2xl:w-[130px] xl:w-[100px] lg:w-[80px]"/>
-                        <img src={davr} alt="" className="2xl:w-[130px] xl:w-[100px] lg:w-[80px]"/>
-                        <img src={kapital} alt="" className="2xl:w-[130px] xl:w-[100px] lg:w-[80px]"/>
-                        <img src={anorBank} alt="" className="2xl:w-[130px] xl:w-[100px] lg:w-[80px]"/>
-                        <img src={joyda} alt="" className="2xl:w-[130px] xl:w-[100px] lg:w-[80px]"/>
-                        <img src={asia} alt="" className="2xl:w-[130px] xl:w-[100px] lg:w-[80px]"/>
-                        <img src={agat} alt="" className="2xl:w-[130px] xl:w-[100px] lg:w-[80px]"/>
-                        <img src={uzum} alt="" className="2xl:w-[130px] xl:w-[100px] lg:w-[80px]"/>
+                        <img src={mkb} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px]"/>
+                        <img src={davr} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px]"/>
+                        <img src={kapital} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px]"/>
+                        <img src={anorBank} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px]"/>
+                        <img src={joyda} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px]"/>
+                        <img src={asia} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px]"/>
+                        <img src={agat} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px]"/>
+                        <img src={uzum} alt="" className="2xl:w-[120px] xl:w-[100px] lg:w-[80px]"/>
+                        <img src={tenge} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px]"/>
+                        <img src={orient} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px]"/>
+                        <img src={milliy} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px]"/>
                     </div>
                 </motion.div>
             </ContentLayout>

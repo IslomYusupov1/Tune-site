@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 import {RoutesEnum} from "../constants/Routes";
 import logo from "../assets/logo.svg";
 import logoBlack from "../assets/logo-black.svg";
-import cosmoImage from "../assets/cosmo.svg";
+import cosmoImage from "../assets/cosmo-web.svg";
 import {useLocation} from "react-router";
 import bgMain from "../assets/bg-main.jpg";
 

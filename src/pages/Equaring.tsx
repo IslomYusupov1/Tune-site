@@ -1,16 +1,14 @@
-import mkb from "../assets/mkb-light.svg";
-import davr from "../assets/davr-light.svg";
-import kapital from "../assets/kapital-light.svg";
-import anorBank from "../assets/anor-light.svg";
-import joyda from "../assets/joyda-light.svg";
+import sello from "../assets/sello.svg";
 import asia from "../assets/asia-light.svg";
-import agat from "../assets/agat-light.svg";
 import uzum from "../assets/uzum-light.svg";
 import uzacrd from "../assets/uzcard.svg";
 import humo from "../assets/humo.svg";
 import union from "../assets/union.svg";
 import visa from "../assets/visa.svg";
 import masterCard from "../assets/mastercard.svg";
+import tenge from "../assets/tenge-light.svg";
+import orient from "../assets/orient-light.svg";
+import milliy from "../assets/milliy-light.svg";
 
 import {motion} from "framer-motion";
 import imageBg from "../assets/bg-dark.png";
@@ -85,22 +83,20 @@ function Equaring() {
                             className="lg:mt-8 xl:mt-12 2xl:mt-16 w-10/12">
                     <motion.div animate={{width: "100%"}} initial={{width: 0}} transition={{duration: 1, delay: 1.2}}
                                 className="border-b border-white"/>
-                    <div className="flex gap-x-8 2xl:gap-y-3 xl:gap-y-3 mt-2 flex-wrap">
-                        <img src={mkb} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px]"/>
-                        <img src={davr} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px]"/>
-                        <img src={kapital} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px]"/>
-                        <img src={anorBank} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px]"/>
-                        <img src={joyda} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px]"/>
+                    <div className="flex gap-x-8 2xl:gap-y-3 xl:gap-y-3 mt-10 flex-wrap">
+                        <img src={sello} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px]"/>
                         <img src={asia} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px]"/>
-                        <img src={agat} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px]"/>
-                        <img src={uzum} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px]"/>
+                        <img src={uzum} alt="" className="2xl:w-[120px] xl:w-[100px] lg:w-[80px]"/>
+                        <img src={tenge} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px]"/>
+                        <img src={orient} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px]"/>
+                        <img src={milliy} alt="" className="2xl:w-[140px] xl:w-[100px] lg:w-[80px]"/>
                     </div>
                 </motion.div>
                 <motion.div variants={imageVariant} initial="hidden" animate="visible" exit="exit"
                             className="lg:mt-8 xl:mt-12 2xl:mt-16 w-10/12">
                     <motion.div animate={{width: "100%"}} initial={{width: 0}} transition={{duration: 1, delay: 1.5}}
                                 className="border-b border-white"/>
-                    <div className="flex gap-x-8 gap-y-4 mt-2 flex-wrap">
+                    <div className="flex gap-x-8 gap-y-4 mt-10 flex-wrap">
                         <img src={uzacrd} alt="" className="2xl:w-[80px] xl:w-[60px] lg:w-[40px]"/>
                         <img src={union} alt="" className="2xl:w-[80px] xl:w-[60px] lg:w-[40px]"/>
                         <img src={humo} alt="" className="2xl:w-[80px] xl:w-[60px] lg:w-[40px]"/>
