@@ -16,12 +16,13 @@ function LoanMobile() {
     const ref = useRef<HTMLDivElement>(null);
     const {scrollYProgress} = useScroll({
         target: ref,
-        offset: ["0 1", "0.5 1"],
-        // smooth: 1,
+        offset: ["0 1", "0.8 1"],
+        smooth: 1,
+
     })
     return (
         <motion.div ref={ref} style={{ opacity:  scrollYProgress}}
-            className="bg-[url('../assets/bg-light.jpg')] flex flex-col p-5 justify-center object-cover bg-no-repeat bg-center w-full">
+            className="bg-[url('../assets/bg-light.png')] flex flex-col p-5 justify-center object-cover bg-no-repeat bg-center w-full">
             <motion.div  style={{ scale: scrollYProgress }} className="h-full overflow-hidden">
                 <div
                     className="flex text-red-black leading-5 md:leading-normal flex-col text-start w-full 2xl:w-8/12 md:w-9/12">

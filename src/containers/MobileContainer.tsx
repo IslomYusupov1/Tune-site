@@ -1,4 +1,5 @@
-import logo from "../assets/logo.svg";
+import logo from "../assets/logo-black.svg";
+import logoWhite from "../assets/logo.svg";
 import MainMobile from "../pages/mobile/MainMobile";
 import AboutMobile from "../pages/mobile/AboutMobile";
 import LoanMobile from "../pages/mobile/LoanMobile";
@@ -9,14 +10,31 @@ import TurkneyMobile from "../pages/mobile/TurkneyMobile";
 import SolutionsMobile from "../pages/mobile/SolutionsMobile";
 import TeamMobile from "../pages/mobile/TeamMobile";
 import ContactsMobile from "../pages/mobile/ContactsMobile";
+import {useEffect, useState} from "react";
 
 
 function MobileContainer() {
+    const [scroll, setScroll] = useState(false);
+
+    const addClass = () => {
+        if (window.scrollY === 0) {
+            setScroll(false)
+        } else {
+            setScroll(true)
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', addClass);
+        return () => {
+            window.removeEventListener("scroll", addClass)
+        }
+    }, [])
     return (
         <div className="flex flex-col relative">
-            <div className="pt-[25px] fixed top-0 z-50 w-full">
-                <img src={logo} alt=""
-                     className="w-[160px] md:w-[180px] mx-6 md:mx-2 top-0"/>
+            <div id="header" className={`fixed header top-0 w-full left-0 h-[55px] ${scroll ? "hide" : ""} flex`} style={{ zIndex: 100 }}>
+                <img src={scroll ? logo : logoWhite} alt=""
+                     className="w-[140px] md:w-[120px] items-center text-center mx-6 md:mx-2 top-0"/>
             </div>
             <MainMobile/>
             <AboutMobile/>

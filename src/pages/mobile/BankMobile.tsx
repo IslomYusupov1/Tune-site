@@ -6,7 +6,7 @@ function BankMobile() {
     const ref = useRef<HTMLDivElement>(null);
     const {scrollYProgress} = useScroll({
         target: ref,
-        offset: ["0 1", "0.5 1"],
+        offset: ["0 1", "0.8 1"],
         smooth: 1,
     })
     return (
@@ -53,7 +53,7 @@ function BankMobile() {
                 </div>
                 <div
                     className="2xl:mt-3 lg:mt-2 mt-4 md:absolute xl:right-[5px] 2xl:right-[100px] lg:right-[60px] 2xl:bottom-[-35px] lg:bottom-[-44px] xl:bottom-[-50px]">
-                    <img className="lg:w-[250px] xl:w-[280px] 2xl:w-[370px] w-[280px]" src={bankPhoneImage} alt=""/>
+                    <img className="lg:w-[250px] xl:w-[280px] 2xl:w-[370px] w-[280px] mx-auto" src={bankPhoneImage} alt=""/>
                 </div>
             </motion.div>
         </motion.div>

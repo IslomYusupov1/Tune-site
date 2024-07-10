@@ -6,14 +6,14 @@ function TeamMobile() {
     const ref = useRef<HTMLDivElement>(null);
     const {scrollYProgress} = useScroll({
         target: ref,
-        offset: ["0 1", "0.5 1"],
+        offset: ["0 1", "0.8 1"],
         smooth: 1,
     })
     return (
-        <motion.div style={{ opacity: scrollYProgress }}
-            className="h-screen bg-[url('../assets/bg-light.jpg')] flex flex-col p-4 justify-center object-cover bg-no-repeat bg-center w-full">
+        <motion.div ref={ref} style={{ opacity: scrollYProgress }}
+            className="bg-[url('../assets/bg-light.png')] flex flex-col p-4 justify-center object-cover bg-no-repeat bg-center w-full">
             <motion.div style={{ scale: scrollYProgress }} className="justify-center flex">
-                <div className="flex bg-black rounded-[30px] w-full flex-col text-start bank-page mt-16 relative">
+                <div className="flex bg-black rounded-[30px] w-full flex-col text-start bank-page my-16 relative">
                     <div className="flex p-5 text-white flex-col">
                         <h3 className="text-[40px]">Наша команда</h3>
                         <p className="max-w-[775px] text-[20px] leading-24 mb-3">Созданы в 2009 году в Ташкенте в
@@ -42,7 +42,7 @@ function TeamMobile() {
                         {/*    </p>*/}
 
                         {/*</div>}*/}
-                        <img src={teamImage1} alt="" className="w-full mt-3 mb-2 object-cover"/>
+                        <img src={teamImage1} alt="" className="w-full mt-3 mb-2 object-contain"/>
                     </div>
                 </div>
             </motion.div>

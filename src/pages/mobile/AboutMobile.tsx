@@ -7,7 +7,7 @@ function AboutMobile() {
     const ref = useRef<HTMLDivElement>(null);
     const {scrollYProgress} = useScroll({
         target: ref,
-        offset: ["0 1", "0.5 1"],
+        offset: ["0 1", "0.8 1"],
         smooth: 1,
     })
 
@@ -19,7 +19,7 @@ function AboutMobile() {
             <motion.div style={{ scale: scrollYProgress }}
                 className="md:w-9/12 mx-2 lg:mx-[20px] py-3 lg:h-[400px]
                              xl:mx-[80px] 2xl:mx-[120px] md:mx-[10px]  md:h-[300px]
-                              2xl:h-[600px] xl:h-[480px] bg-black rounded-lg
+                              2xl:h-[600px] xl:h-[480px] rounded-lg
                                mt-10 relative px-2 flex flex-col h-full">
                 <div
                     className={`flex flex-col mx-3 text-white text-start z-50 ${open ? "absolute top-0" : "block"} md:absolute md:bottom-[50px] md:left-[50px]`}>
@@ -71,16 +71,19 @@ function AboutMobile() {
 
                     </div>}
                 </div>
-                <div
-                    className={`${open ? "opacity-10" : "opacity-30"} flex justify-end h-full md:bg-transparent bg-white border-none text-end md:h-auto items-end w-full border border-transparent mt-5 rounded-2xl md:rounded-xl`}>
-                    <video className="md:w-10/12 z-10 h-full rounded-lg" muted={true} loop={true}
-                           autoPlay={false}
-                           preload="auto"
-                           controls={true}
-                    >
-                        <source src={videoFile} type="video/mp4"/>
-                    </video>
+                <div className="h-full">
+                    <div style={{ height: "90%" }}
+                        className={`${open ? "opacity-10" : "opacity-100"} flex justify-center md:bg-transparent bg-white border-none text-center md:h-auto items-end w-full border border-transparent mt-5 rounded-2xl md:rounded-xl`}>
+                        <video className="md:w-10/12 z-10 py-3 h-full rounded-2xl" muted={true} loop={true}
+                               autoPlay={false}
+                               preload="auto"
+                               controls={true}
+                        >
+                            <source src={videoFile} type="video/mp4"/>
+                        </video>
+                    </div>
                 </div>
+
             </motion.div>
         </motion.div>
     );

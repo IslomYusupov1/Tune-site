@@ -7,15 +7,15 @@ function TurkneyMobile() {
     const ref = useRef<HTMLDivElement>(null);
     const {scrollYProgress} = useScroll({
         target: ref,
-        offset: ["0 1", "0.5 1"],
+        offset: ["0 1", "0.8 1"],
         smooth: 1,
     })
     return (
         <motion.div ref={ref} style={{ opacity: scrollYProgress }}
-            className="bg-[url('../assets/bg-light.jpg')] flex flex-col p-4 justify-center object-cover bg-no-repeat bg-center w-full">
+            className="bg-[url('../assets/bg-light.png')] flex flex-col p-4 justify-center object-cover bg-no-repeat bg-center w-full">
             <motion.div style={{ scale: scrollYProgress }} className="h-full">
                 <div
-                    className="md:w-9/12 w-full flex flex-col justify-between h-full h-[700px] z-50 xl:mx-[80px] 2xl:mx-[120px] 3xl:mx-[120px] 2xl:h-[550px] 3xl:h-[800px] xl:h-[490px] bg-black rounded-2xl mt-10 relative px-2">
+                    className="md:w-9/12 w-full flex flex-col justify-between h-full h-[700px] z-50 xl:mx-[80px] 2xl:mx-[120px] 3xl:mx-[120px] 2xl:h-[550px] 3xl:h-[800px] xl:h-[490px] bg-black rounded-2xl my-10 relative px-2">
                     <div
                         className="flex flex-col bg-opacity-20 px-3 pt-5 text-white text-start bottom-[50px] left-[50px]">
                         {!open &&

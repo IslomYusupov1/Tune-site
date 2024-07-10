@@ -136,7 +136,10 @@ body {
     display: inline-block;
     padding: 3px;
 }
-
+.header.hide {
+    background: white;
+    transition: 0.2s ease-in;
+}
 /*@media (max-height: 1100px) {*/
 /*  .image-bank {*/
 /*    width: 90%;*/
@@ -144,6 +147,7 @@ body {
 /*}*/
 @media (max-width: 728px) {
   body, #root {
-      overflow: scroll !important;
+      overflow-y: scroll !important;
+      overflow-x: hidden !important;
   }
 }
