@@ -9,6 +9,7 @@ import humo from "../../assets/humo.svg";
 import visa from "../../assets/visa.svg";
 import sello from "../../assets/sello.svg";
 import masterCard from "../../assets/mastercard.svg";
+import bgCosmo from "../../assets/cosmo-mobile.svg";
 import {useRef} from "react";
 import {useScroll, motion} from "framer-motion";
 
@@ -20,7 +21,8 @@ function EquaringMobile() {
         smooth: 1,
     })
     return (
-        <motion.div ref={ref} style={{ opacity: scrollYProgress }}  className="bg-[url('../assets/bg-dark.png')] p-5 object-cover bg-no-repeat bg-center w-full">
+        <motion.div ref={ref} style={{ opacity: scrollYProgress }}  className="bg-[url('../assets/bg-dark.png')] relative p-5 object-cover bg-no-repeat bg-center w-full">
+            <img src={bgCosmo} alt="" className="absolute bottom-0 right-0" width={300}/>
             <motion.div style={{ scale: scrollYProgress }}>
                 <div className="flex text-white flex-col text-start">
                     <h3 className="2xl:text-[40px] lg:text-[24px] xl:text-[28px] leading-10 text-[22px] font-normal mb-3">Платформа

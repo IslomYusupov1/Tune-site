@@ -1,6 +1,7 @@
 import imageBack from "../../assets/turkey.png";
 import {useRef, useState} from "react";
 import {useScroll, motion} from "framer-motion";
+import bgCosmo from "../../assets/cosmo-mobile.svg";
 
 function TurkneyMobile() {
     const [open, setOpen] = useState(false);
@@ -12,7 +13,8 @@ function TurkneyMobile() {
     })
     return (
         <motion.div ref={ref} style={{ opacity: scrollYProgress }}
-            className="bg-[url('../assets/bg-light.png')] flex flex-col p-4 justify-center object-cover bg-no-repeat bg-center w-full">
+            className="bg-[url('../assets/bg-light.png')] flex flex-col relative p-4 justify-center object-cover bg-no-repeat bg-center w-full">
+            <img src={bgCosmo} alt="" className="absolute bottom-0 right-0"/>
             <motion.div style={{ scale: scrollYProgress }} className="h-full">
                 <div
                     className="md:w-9/12 w-full flex flex-col justify-between h-full h-[700px] z-50 xl:mx-[80px] 2xl:mx-[120px] 3xl:mx-[120px] 2xl:h-[550px] 3xl:h-[800px] xl:h-[490px] bg-black rounded-2xl my-10 relative px-2">

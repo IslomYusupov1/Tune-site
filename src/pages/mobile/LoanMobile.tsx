@@ -11,6 +11,7 @@ import orient from "../../assets/orient.svg";
 import milliy from "../../assets/milliy.svg";
 import {useRef} from "react";
 import {useScroll, motion} from "framer-motion";
+import bgCosmo from "../../assets/cosmo-mobile.svg";
 
 function LoanMobile() {
     const ref = useRef<HTMLDivElement>(null);
@@ -22,7 +23,8 @@ function LoanMobile() {
     })
     return (
         <motion.div ref={ref} style={{ opacity:  scrollYProgress}}
-            className="bg-[url('../assets/bg-light.png')] flex flex-col p-5 justify-center object-cover bg-no-repeat bg-center w-full">
+            className="bg-[url('../assets/bg-light.png')] flex flex-col p-5 relative justify-center object-cover bg-no-repeat bg-center w-full">
+            <img src={bgCosmo} alt="" className="absolute bottom-0 right-0"/>
             <motion.div  style={{ scale: scrollYProgress }} className="h-full overflow-hidden">
                 <div
                     className="flex text-red-black leading-5 md:leading-normal flex-col text-start w-full 2xl:w-8/12 md:w-9/12">

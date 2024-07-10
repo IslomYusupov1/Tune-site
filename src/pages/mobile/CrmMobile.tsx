@@ -11,6 +11,7 @@ import orient from "../../assets/orient.svg";
 import milliy from "../../assets/milliy.svg";
 import {useRef} from "react";
 import {useScroll, motion} from "framer-motion";
+import bgCosmo from "../../assets/cosmo-bg1.svg";
 
 function CrmMobile() {
     const ref = useRef<HTMLDivElement>(null);
@@ -21,7 +22,8 @@ function CrmMobile() {
     })
     return (
         <motion.div ref={ref} style={{ opacity: scrollYProgress }}
-            className="bg-[url('../assets/bg-light.png')] flex flex-col p-5 justify-center object-cover bg-no-repeat bg-center w-full">
+            className="bg-[url('../assets/bg-light.png')] flex relative flex-col p-5 justify-center object-cover bg-no-repeat bg-center w-full">
+            <img src={bgCosmo} alt="" className="absolute bottom-0 right-0"/>
             <motion.div style={{ scale: scrollYProgress }} className="h-full">
                 <div className="flex flex-col text-start">
                     <h3 className="2xl:text-[34px] xl:text-[25px] lg:text-[22px] text-[22px] lg:leading-10 leading-7 font-medium  mb-2">CRM

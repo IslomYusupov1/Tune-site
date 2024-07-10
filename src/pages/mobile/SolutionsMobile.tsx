@@ -1,5 +1,6 @@
 import {useRef} from "react";
 import {useScroll, motion} from "framer-motion";
+import bgCosmo from "../../assets/cosmo-bg1.svg";
 
 function SolutionsMobile() {
     const ref = useRef<HTMLDivElement>(null);
@@ -9,7 +10,8 @@ function SolutionsMobile() {
         smooth: 1,
     })
     return (
-        <motion.div ref={ref} style={{ opacity: scrollYProgress }} className="bg-[url('../assets/bg-dark.png')] p-5 object-cover bg-no-repeat bg-center w-full">
+        <motion.div ref={ref} style={{ opacity: scrollYProgress }} className="bg-[url('../assets/bg-dark.png')] relative p-5 object-cover bg-no-repeat bg-center w-full">
+            <img src={bgCosmo} alt="" className="absolute bottom-0 right-0"/>
             <motion.div style={{ scale: scrollYProgress }}
                 className="h-full w-full flex flex-col gap-4 xl:mt-10 lg:mt-10 2xl:mt-0 3xl:mt-0 text-white lg:w-8/12 2xl:w-9/12 w-full text-start font-light lg:mx-[100px]">
                 <h3 className="2xl:text-[40px] lg:text-[22px] xl:text-[26px] text-[24px] leading-tight xl:mb-4 2xl:mb-10 lg:mb-4">Наше

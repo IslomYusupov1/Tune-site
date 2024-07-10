@@ -4,6 +4,7 @@ import {useEffect, useMemo, useRef, useState} from "react";
 import {useScroll, motion} from "framer-motion";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
+import bgCosmo from "../../assets/cosmo-mobile.svg";
 
 function ContactsMobile() {
     const ref = useRef<HTMLDivElement>(null);
@@ -54,7 +55,8 @@ function ContactsMobile() {
         }
     }, [alert])
     return (
-        <motion.div ref={ref} style={{ opacity: scrollYProgress }} className="bg-[url('../assets/bg-dark.png')] p-5 object-cover bg-no-repeat bg-center w-full">
+        <motion.div ref={ref} style={{ opacity: scrollYProgress }} className="bg-[url('../assets/bg-dark.png')] relative p-5 object-cover bg-no-repeat bg-center w-full">
+            <img src={bgCosmo} alt="" className="absolute bottom-0 right-0" width={300}/>
             <motion.div style={{ scale: scrollYProgress }} className="flex 2xl:gap-6 xl:gap-3 lg:gap-3 flex-col text-white xl:w-8/12 2xl:w-9/12 lg:w-8/12 w-full text-start font-light lg:mx-[100px] xl:mt-[50px] 2xl:mt-[25px] lg:mt-[50px] ">
                 <h3 className="2xl:text-[36px] xl:text-[28px] lg:text-[24px] text-[24px] mt-5">Мы всегда рады Вам.</h3>
                 <h2 className="2xl:text-[30px] xl:text-[22px] lg:text-[18px] text-[23px] mt-5 font-medium">OOO “TUNE Consulting” </h2>

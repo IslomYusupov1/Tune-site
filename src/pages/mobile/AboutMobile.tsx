@@ -1,6 +1,7 @@
 import videoFile from "../../assets/video.mp4";
 import {useRef, useState} from "react";
 import {useScroll, motion} from "framer-motion";
+import bgCosmo from "../../assets/cosmo-mobile.svg";
 
 function AboutMobile() {
     const [open, setOpen] = useState(false);
@@ -15,7 +16,8 @@ function AboutMobile() {
     // const scale = useTransform(scrollYProgress, [0, 0.5, 0.8, 1], [1, 0.8, 0.5, 0.1])
     return (
         <motion.div ref={ref} style={{ opacity: scrollYProgress }}
-            className="h-screen bg-[url('../assets/bg-dark.png')] flex flex-col justify-center object-cover bg-no-repeat bg-center w-full">
+            className="h-screen bg-[url('../assets/bg-dark.png')] flex flex-col relative justify-center object-cover bg-no-repeat bg-center w-full">
+            <img src={bgCosmo} alt="" className="absolute bottom-0 right-0"/>
             <motion.div style={{ scale: scrollYProgress }}
                 className="md:w-9/12 mx-2 lg:mx-[20px] py-3 lg:h-[400px]
                              xl:mx-[80px] 2xl:mx-[120px] md:mx-[10px]  md:h-[300px]

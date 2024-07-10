@@ -1,6 +1,8 @@
 import bankPhoneImage from "../../assets/phone.png";
 import {useRef} from "react";
 import {useScroll, motion} from "framer-motion";
+// import bgCosmo from "../../assets/cosmo-mobile.svg";
+import bgCosmo from "../../assets/cosmo-bg1.svg";
 
 function BankMobile() {
     const ref = useRef<HTMLDivElement>(null);
@@ -10,7 +12,8 @@ function BankMobile() {
         smooth: 1,
     })
     return (
-        <motion.div ref={ref} style={{ opacity:  scrollYProgress}} className="bg-[url('../assets/bg-dark.png')] p-5 object-cover bg-no-repeat bg-center w-full">
+        <motion.div ref={ref} style={{ opacity:  scrollYProgress}} className="bg-[url('../assets/bg-dark.png')] relative p-5 object-cover bg-no-repeat bg-center w-full">
+            <img src={bgCosmo} alt="" className="absolute bottom-0 right-0"/>
             <motion.div style={{ scale: scrollYProgress }} className="flex flex-col justify-between h-full">
                 <h3 className="xl:text-[36px] 2xl:text-[44px] text-[22px] mb-3 mt-3 leading-7 md:leading-normal text-white lg:text-[22px] 2xl:mb-16 2xl:mt-10 xl:mb-6 xl:mt-6 lg:mt-10 lg:mb-4">Цифровые
                     банковские платформы
@@ -52,7 +55,7 @@ function BankMobile() {
                     </div>
                 </div>
                 <div
-                    className="2xl:mt-3 lg:mt-2 mt-4 md:absolute xl:right-[5px] 2xl:right-[100px] lg:right-[60px] 2xl:bottom-[-35px] lg:bottom-[-44px] xl:bottom-[-50px]">
+                    className="2xl:mt-3 lg:mt-2 mt-4 z-50 md:absolute xl:right-[5px] 2xl:right-[100px] lg:right-[60px] 2xl:bottom-[-35px] lg:bottom-[-44px] xl:bottom-[-50px]">
                     <img className="lg:w-[250px] xl:w-[280px] 2xl:w-[370px] w-[280px] mx-auto" src={bankPhoneImage} alt=""/>
                 </div>
             </motion.div>
