@@ -23,6 +23,7 @@ function ContactsMobile() {
                 name: Yup.string().nullable().required("Поле обязательно к заполнению"),
                 email: Yup.string().email().nullable().required("Поле обязательно к заполнению"),
                 phone: Yup.string().nullable().required("Поле обязательно к заполнению"),
+                desc: Yup.string().nullable().required("Поле обязательно к заполнению"),
             }),
         [],
     );
