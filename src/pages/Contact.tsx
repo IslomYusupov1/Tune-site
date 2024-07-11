@@ -134,7 +134,7 @@ function Contact() {
                                                     {...field}
                                                     value={values.desc}
                                                     onChange={(e) => setFieldValue("desc", e.target.value)}
-                                                    placeholder="Введите текст обращение"
+                                                    placeholder="Введите текст обращении"
                                                     className={`${errors.desc && touched.desc ? "border-red-600 focus:border-red-600" : ""} bg-white outline-0 border text-gray-900 rounded-lg focus:ring-[#003ABC] focus:border-[#003ABC] block w-full p-4`}
                                                 />
                                             )}
