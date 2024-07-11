@@ -74,15 +74,15 @@ function ContactsMobile() {
                         улица
                         Зульфияхоним, 12</h3>
                 </div>
-                <Formik initialValues={{name: "", phone: "", email: ""}} validationSchema={validationSchema}
+                <Formik initialValues={{name: "", phone: "", email: "", desc: ""}} validationSchema={validationSchema}
                         onSubmit={(e, formikHelpers) => sendMessage(e, formikHelpers)}>
-                    {({handleSubmit, errors, touched}) => (
-                        <Form onSubmit={handleSubmit} className="z-50 mt-24">
+                    {({handleSubmit, errors, touched, values, setFieldValue}) => (
+                        <Form onSubmit={handleSubmit} className="z-50 mt-14">
                             <div className="flex flex-col gap-4 w-full">
                                 <div>
                                     <Field type="text"
                                            name="name"
-                                           className={`${errors.name && touched.name ? "border-red-600 focus:border-red-600" : ""} bg-white outline-0 border text-gray-900 rounded-lg focus:ring-[#003ABC] focus:border-[#003ABC] block w-full p-4`}
+                                           className={`${errors.name && touched.name ? "border-red-600 focus:border-red-600" : ""} text-[14px] bg-white outline-0 border text-gray-900 rounded-lg focus:ring-[#003ABC] focus:border-[#003ABC] block w-full p-4`}
                                            placeholder="Фамилия,имя и отчество"
                                     />
                                 </div>
@@ -91,14 +91,29 @@ function ContactsMobile() {
                                         <Field type="text"
                                                name="email"
                                                placeholder="Электронная почта"
-                                               className={`${errors.email && touched.email ? "border-red-600 focus:border-red-600" : ""} bg-white outline-0 border text-gray-900 rounded-lg focus:ring-[#003ABC] focus:border-[#003ABC] block w-full p-4 `}/>
+                                               className={`${errors.email && touched.email ? "border-red-600 focus:border-red-600" : ""} text-[14px] bg-white outline-0 border text-gray-900 rounded-lg focus:ring-[#003ABC] focus:border-[#003ABC] block w-full p-4 `}/>
                                     </div>
                                     <div className="w-full">
                                         <Field type="text"
                                                name="phone"
                                                placeholder="Номер телефона"
-                                               className={`${errors.phone && touched.phone ? "border-red-600 focus:border-red-600" : ""} bg-white outline-0 border text-gray-900 rounded-lg focus:ring-[#003ABC] focus:border-[#003ABC] block w-full p-4 `}/>
+                                               className={`${errors.phone && touched.phone ? "border-red-600 focus:border-red-600" : ""} text-[14px] bg-white outline-0 border text-gray-900 rounded-lg focus:ring-[#003ABC] focus:border-[#003ABC] block w-full p-4 `}/>
                                     </div>
+                                </div>
+                                <div>
+                                    <Field type="text"
+                                           name="desc"
+                                    >
+                                        {({field}: any) => (
+                                            <textarea
+                                                {...field}
+                                                value={values.desc}
+                                                onChange={(e) => setFieldValue("desc", e.target.value)}
+                                                placeholder="Введите текст обращение"
+                                                className={`${errors.desc && touched.desc ? "border-red-600 focus:border-red-600" : ""} text-[14px] bg-white outline-0 border text-gray-900 rounded-lg focus:ring-[#003ABC] focus:border-[#003ABC] block w-full p-4`}
+                                            />
+                                        )}
+                                    </Field>
                                 </div>
                                 <button type="submit" disabled={loading}
                                         className="text-center bg-[#003ABC] w-full text-white rounded-lg p-3">Отправить
@@ -108,7 +123,7 @@ function ContactsMobile() {
                         </Form>
                     )}
                 </Formik>
-                <div className="flex gap-8 2xl:mt-18 xl:mt-10 lg:mt-10 mt-10">
+                <div className="flex gap-8 2xl:mt-18 xl:mt-10 lg:mt-10 mt-5">
                     <a href="https://www.linkedin.com/company/tune-consulting/" className="cursor-pointer" target="_blank"><img src={linkedin}  alt=""/></a>
                 </div>
             </motion.div>

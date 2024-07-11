@@ -68,34 +68,41 @@ function Contact() {
 
     return (
         <>
-            <motion.img animate={{opacity: 1}} initial={{opacity: 0}} exit={{ opacity: 0, transition: {ease: "easeInOut"} }} transition={{duration: 0.25, ease: "easeInOut"}}
+            <motion.img animate={{opacity: 1}} initial={{opacity: 0}}
+                        exit={{opacity: 0, transition: {ease: "easeInOut"}}}
+                        transition={{duration: 0.25, ease: "easeInOut"}}
                         alt="" src={imageBgLight} className="fixed z-50 w-screen h-screen top-0 left-0"
                         style={{zIndex: "-1"}}/>
-            <ContentLayout>
-                <motion.div variants={headerVariant} initial="hidden" animate="visible" exit="exit" style={{ zIndex: 100 }}
-                            className="flex 2xl:gap-6 xl:gap-3 lg:gap-3 flex-col text-[#353535] xl:w-8/12 2xl:w-9/12 lg:w-8/12 text-start font-light mx-[100px] xl:mt-[50px] 2xl:mt-[25px] lg:mt-[50px] ">
+            <ContentLayout className="relative">
+                <motion.div variants={headerVariant} initial="hidden" animate="visible" exit="exit"
+                            style={{zIndex: 100}}
+                            className="flex 2xl:gap-3 xl:gap-2 lg:gap-1 flex-col text-[#353535] xl:w-8/12 2xl:w-9/12 lg:w-8/12 text-start font-light mx-[100px] xl:mt-[50px] 2xl:mt-[25px] lg:mt-[50px] ">
                     <h3 className="2xl:text-[36px] xl:text-[28px] lg:text-[24px]">Мы всегда рады Вам.</h3>
-                    <h2 className="2xl:text-[30px] xl:text-[22px] lg:text-[18px] font-medium cursor-pointer">OOO “TUNE Consulting” </h2>
+                    <h2 className="2xl:text-[30px] xl:text-[22px] lg:text-[18px] font-medium cursor-pointer">OOO “TUNE
+                        Consulting” </h2>
                     <div className="flex flex-col ">
                         <p className="2xl:text-[20px] xl:text-[16px] lg:text-[14px]">Телефон:</p>
-                        <a className="2xl:text-[28px] xl:text-[22px] lg:text-[20px] font-medium cursor-pointer" href="tel:+998911345326">+998 91 134-53-26</a>
+                        <a className="2xl:text-[28px] xl:text-[22px] lg:text-[20px] font-medium cursor-pointer"
+                           href="tel:+998911345326">+998 91 134-53-26</a>
                     </div>
                     <div className="flex flex-col">
                         <p className="2xl:text-[20px] xl:text-[18px] lg:text-[14px]">Электронная почта:</p>
                         {/*<h3 className="2xl:text-[28px] xl:text-[22px] lg:text-[20px] font-medium">Info@TuneConsulting.net</h3>*/}
-                        <a href="mailto:Info@TuneConsulting.net" className="2xl:text-[28px] xl:text-[22px] lg:text-[20px] font-medium">Info@TuneConsulting.net</a>
+                        <a href="mailto:Info@TuneConsulting.net"
+                           className="2xl:text-[28px] xl:text-[22px] lg:text-[20px] font-medium">Info@TuneConsulting.net</a>
                     </div>
                     <div className="flex flex-col">
                         <p className="2xl:text-[20px] xl:text-[16px] lg:text-[14px]">Адрес:</p>
-                        <h3 className="2xl:text-[28px] xl:text-[22px] lg:text-[20px] font-normal">г. Ташкент, Шайхантахурский район,
+                        <h3 className="2xl:text-[28px] xl:text-[22px] lg:text-[20px] font-normal">г. Ташкент,
+                            Шайхантахурский район,
                             улица
                             Зульфияхоним, 12</h3>
                     </div>
-                    <Formik initialValues={{name: "", phone: "", email: ""}} validationSchema={validationSchema}
+                    <Formik initialValues={{name: "", phone: "", email: "", desc: ""}} validationSchema={validationSchema}
                             onSubmit={(e, formikHelpers) => sendMessage(e, formikHelpers)}>
-                        {({handleSubmit, errors, touched}) => (
+                        {({handleSubmit, errors, touched, values, setFieldValue}) => (
                             <Form onSubmit={handleSubmit} className="z-50">
-                                <div className="flex flex-col gap-4 w-3/4">
+                                <div className="flex flex-col 2xl:gap-4 md:gap-3 2xl:mt-10 w-3/4">
                                     <div>
                                         <Field type="text"
                                                name="name"
@@ -117,6 +124,21 @@ function Contact() {
                                                    className={`${errors.phone && touched.phone ? "border-red-600 focus:border-red-600" : ""} bg-white outline-0 border text-gray-900 rounded-lg focus:ring-[#003ABC] focus:border-[#003ABC] block w-full p-4 `}/>
                                         </div>
                                     </div>
+                                    <div>
+                                        <Field type="text"
+                                               name="desc"
+                                        >
+                                            {({field}: any) => (
+                                                <textarea
+                                                    {...field}
+                                                    value={values.desc}
+                                                    onChange={(e) => setFieldValue("desc", e.target.value)}
+                                                    placeholder="Введите текст обращение"
+                                                    className={`${errors.desc && touched.desc ? "border-red-600 focus:border-red-600" : ""} bg-white outline-0 border text-gray-900 rounded-lg focus:ring-[#003ABC] focus:border-[#003ABC] block w-full p-4`}
+                                                />
+                                            )}
+                                        </Field>
+                                    </div>
                                     <button type="submit" disabled={loading}
                                             className="text-center bg-[#003ABC] w-[200px] text-white rounded-lg p-3">Отправить
                                         сообщение
@@ -125,8 +147,9 @@ function Contact() {
                             </Form>
                         )}
                     </Formik>
-                    <div className="flex gap-8 2xl:mt-18 xl:mt-10 lg:mt-10">
-                        <a href="https://www.linkedin.com/company/tune-consulting/" className="cursor-pointer" target="_blank"><img src={linkedin}  alt=""/></a>
+                    <div className="flex gap-8 mt-2">
+                        <a href="https://www.linkedin.com/company/tune-consulting/" className="cursor-pointer"
+                           target="_blank"><img src={linkedin} alt=""/></a>
                     </div>
                 </motion.div>
             </ContentLayout>
