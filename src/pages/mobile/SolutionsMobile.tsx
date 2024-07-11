@@ -16,7 +16,7 @@ function SolutionsMobile() {
                 className="h-full w-full flex flex-col gap-4 xl:mt-10 lg:mt-10 2xl:mt-0 3xl:mt-0 text-white lg:w-8/12 2xl:w-9/12 w-full text-start font-light lg:mx-[100px]">
                 <h3 className="2xl:text-[40px] lg:text-[22px] xl:text-[26px] text-[24px] leading-tight xl:mb-4 2xl:mb-10 lg:mb-4">Наше
                     решение для обеспечения
-                    омниканальности
+                    униканальности
                     банковских услуг</h3>
                 <h3 className="2xl:text-[32px] lg:text-[18px] xl:text-[22px] text-[20px] mb-1">Униканальная
                     платформа на базе ELMA BPMS</h3>

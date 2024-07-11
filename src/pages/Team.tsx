@@ -12,7 +12,7 @@ const containerVariants = {
     visible: {
         // x: 0,
         scale: 1,
-        transition: {type: "spring", stiffness: 40, ease: "easeIn"}
+        transition: {type: "spring", stiffness: 30, ease: "easeIn"}
     },
     exit: {
         scale: 0,
@@ -27,7 +27,7 @@ const textFullVariants = {
     visible: {
         y: 40,
         opacity: 1,
-        transition: {duration: 0.5, type: "spring", stiffness: 200}
+        transition: {duration: 0.5, type: "spring", stiffness: 100}
     },
     exit: {
         y: 900,

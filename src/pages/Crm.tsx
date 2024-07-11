@@ -23,7 +23,7 @@ const headerVariant = {
         y: 0,
         opacity: 1,
         scale: 1,
-        transition: {type: "spring", stiffness: 40}
+        transition: {type: "spring", stiffness: 30, duration: 0.5}
     },
     exit: {
         y: -900,
@@ -42,7 +42,7 @@ const footerVariant = {
         y: 0,
         opacity: 1,
         scale: 1,
-        transition: {type: "spring", stiffness: 40}
+        transition: {type: "spring", stiffness: 30}
     },
     exit: {
         y: -900,
@@ -60,7 +60,7 @@ const imageVariant = {
         y: 0,
         opacity: 1,
         scale: 1,
-        transition: {type: "spring", stiffness: 40}
+        transition: {type: "spring", stiffness: 30}
     },
     exit: {
         y: -900,
@@ -165,7 +165,7 @@ function Crm() {
                     </div>
                 </motion.div>
                 <motion.div variants={imageVariant} initial="hidden" animate="visible" exit="exit"
-                            className="2xl:mt-10 xl:mt-8 lg:mt-7 w-10/12">
+                            className="2xl:mt-10 xl:mt-8 lg:mt-7 w-9/12">
                     <motion.div animate={{width: "100%"}} initial={{width: 0}} transition={{duration: 1, delay: 1.25}}
                                 className="border-b border-black"/>
                     <div className="flex gap-x-8 gap-y-4 2xl:mt-2 xl:mt-3 flex-wrap">

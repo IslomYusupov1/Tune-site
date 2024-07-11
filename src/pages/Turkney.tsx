@@ -14,7 +14,7 @@ const containerVariants = {
         y: 0,
         scale: 1,
         // opacity: 1,
-        transition: {type: "spring", ease: "easeIn", stiffness: 45}
+        transition: {type: "spring", ease: "easeIn", stiffness: 35}
     },
     exit: {
         scale: 0,
@@ -32,7 +32,7 @@ const videoVariants = {
         y: 0,
         scale: 1,
         // opacity: 1,
-        transition: {ease: "easeIn", stiffness: 50}
+        transition: {ease: "easeIn", stiffness: 40}
     },
     // exit: {
     //     x: -900,
@@ -50,7 +50,7 @@ const textVariants = {
         y: 0,
         scale: 1,
         // opacity: 1,
-        transition: {ease: "easeIn", stiffness: 50}
+        transition: {ease: "easeIn", stiffness: 40}
     },
     // exit: {
     //     x: -900,
@@ -67,7 +67,7 @@ const textFullVariants = {
     visible: {
         y: 50,
         opacity: 1,
-        transition: {duration: 0.5, type: "spring", stiffness: 200}
+        transition: {duration: 0.5, type: "spring", stiffness: 100}
     },
     exit: {
         y: 900,

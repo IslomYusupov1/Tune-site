@@ -15,10 +15,10 @@ function TeamMobile() {
             className="bg-[url('../assets/bg-light.png')] flex flex-col p-4 relative justify-center object-cover bg-no-repeat bg-center w-full">
             <img src={bgCosmo} alt="" className="absolute bottom-0 right-0"/>
             <motion.div style={{ scale: scrollYProgress }} className="justify-center flex">
-                <div className="flex bg-black rounded-[30px] w-full flex-col text-start bank-page my-16 relative">
+                <div className="flex bg-black rounded-[30px] w-full flex-col text-start bank-page my-20 relative">
                     <div className="flex p-5 text-white flex-col">
                         <h3 className="text-[40px]">Наша команда</h3>
-                        <p className="max-w-[775px] text-[20px] leading-24 mb-3">Созданы в 2009 году в Ташкенте в
+                        <p className="max-w-[775px] text-[17px] leading-24 mb-3">Созданы в 2009 году в Ташкенте в
                             качестве «бутика» для комплексных банковских проектов. Начиная с 2017 фокусируемся
                             больше на цифровых решениях.
                         </p>
