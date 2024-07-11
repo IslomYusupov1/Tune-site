@@ -62,11 +62,11 @@ function ContactsMobile() {
                 <h2 className="2xl:text-[30px] xl:text-[22px] lg:text-[18px] text-[23px] mt-5 font-medium">OOO “TUNE Consulting” </h2>
                 <div className="flex flex-col mt-3">
                     <p className="2xl:text-[20px] xl:text-[16px] lg:text-[14px] text-[14px]">Телефон:</p>
-                    <a className="2xl:text-[28px] xl:text-[22px] lg:text-[20px] text-[18px] font-medium" href="tel:+998 91 134-53-26">+998 91 134-53-26</a>
+                    <a className="2xl:text-[28px] xl:text-[22px] lg:text-[20px] text-[18px] font-medium cursor-pointer" href="tel:+998911345326">+998 91 134-53-26</a>
                 </div>
                 <div className="flex flex-col mt-3">
                     <p className="2xl:text-[20px] xl:text-[18px] lg:text-[14px] text-[14px]">Электронная почта:</p>
-                    <a href="mailto:Info@TuneConsulting.net" className="2xl:text-[28px] xl:text-[22px] lg:text-[20px] text-[18px] font-medium">Info@TuneConsulting.net</a>
+                    <a href="mailto:Info@TuneConsulting.net" className="2xl:text-[28px] xl:text-[22px] cursor-pointer lg:text-[20px] text-[18px] font-medium">Info@TuneConsulting.net</a>
                 </div>
                 <div className="flex flex-col mt-3">
                     <p className="2xl:text-[20px] xl:text-[16px] lg:text-[14px] text-[14px]">Адрес:</p>

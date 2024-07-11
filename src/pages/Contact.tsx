@@ -72,17 +72,18 @@ function Contact() {
                         alt="" src={imageBgLight} className="fixed z-50 w-screen h-screen top-0 left-0"
                         style={{zIndex: "-1"}}/>
             <ContentLayout>
-                <motion.div variants={headerVariant} initial="hidden" animate="visible" exit="exit"
+                <motion.div variants={headerVariant} initial="hidden" animate="visible" exit="exit" style={{ zIndex: 100 }}
                             className="flex 2xl:gap-6 xl:gap-3 lg:gap-3 flex-col text-[#353535] xl:w-8/12 2xl:w-9/12 lg:w-8/12 text-start font-light mx-[100px] xl:mt-[50px] 2xl:mt-[25px] lg:mt-[50px] ">
                     <h3 className="2xl:text-[36px] xl:text-[28px] lg:text-[24px]">Мы всегда рады Вам.</h3>
-                    <h2 className="2xl:text-[30px] xl:text-[22px] lg:text-[18px] font-medium">OOO “TUNE Consulting” </h2>
+                    <h2 className="2xl:text-[30px] xl:text-[22px] lg:text-[18px] font-medium cursor-pointer">OOO “TUNE Consulting” </h2>
                     <div className="flex flex-col ">
                         <p className="2xl:text-[20px] xl:text-[16px] lg:text-[14px]">Телефон:</p>
-                        <h3 className="2xl:text-[28px] xl:text-[22px] lg:text-[20px] font-medium">+998 91 134-53-26</h3>
+                        <a className="2xl:text-[28px] xl:text-[22px] lg:text-[20px] font-medium cursor-pointer" href="tel:+998911345326">+998 91 134-53-26</a>
                     </div>
                     <div className="flex flex-col">
                         <p className="2xl:text-[20px] xl:text-[18px] lg:text-[14px]">Электронная почта:</p>
-                        <h3 className="2xl:text-[28px] xl:text-[22px] lg:text-[20px] font-medium">Info@TuneConsulting.net</h3>
+                        {/*<h3 className="2xl:text-[28px] xl:text-[22px] lg:text-[20px] font-medium">Info@TuneConsulting.net</h3>*/}
+                        <a href="mailto:Info@TuneConsulting.net" className="2xl:text-[28px] xl:text-[22px] lg:text-[20px] font-medium">Info@TuneConsulting.net</a>
                     </div>
                     <div className="flex flex-col">
                         <p className="2xl:text-[20px] xl:text-[16px] lg:text-[14px]">Адрес:</p>
