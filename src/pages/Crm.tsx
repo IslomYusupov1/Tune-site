@@ -12,6 +12,7 @@ import ContentLayout from "../layouts/ContentLayout";
 import tenge from "../assets/tenge.svg";
 import orient from "../assets/orient.svg";
 import milliy from "../assets/milliy.svg";
+import {useI18n} from "../i18n/I18nContext";
 
 const headerVariant = {
     hidden: {
@@ -70,6 +71,7 @@ const imageVariant = {
 }
 
 function Crm() {
+    const { translate } = useI18n();
     return (
         <motion.div className="flex flex-col text-[#353535] xl:mt-5 2xl:mt-5 xl:w-9/12 2xl:w-10/12 text-start font-light mx-[100px]">
             <motion.img animate={{opacity: 1}} exit={{ opacity: 0, transition: {ease: "easeInOut"} }} initial={{opacity: 0}} transition={{duration: 0.25, ease: "easeInOut"}}
@@ -78,88 +80,86 @@ function Crm() {
             <ContentLayout>
                 <motion.div variants={headerVariant} initial="hidden" animate="visible" exit="exit"
                             className="flex flex-col text-start">
-                    <h3 className="2xl:text-[34px] xl:text-[25px] lg:text-[22px] leading-10 mb-2">CRM и полная автоматизация процессов
-                        фронт офиса</h3>
+                    <h3 className="2xl:text-[34px] xl:text-[25px] lg:text-[22px] leading-10 mb-2">{translate("TITLE_CRM_PAGE_MAIN_TITLE")}</h3>
                     <ul className="list-disc mx-8 2xl:text-[20px] xl:text-[18px] lg:text-[16px]">
-                        <li>7 БПМ проектов для автоматизации процессов CRM ифронт офиса</li>
-                        <li>Включаетавтоматизацию как розничных продуктов так и корпоративных</li>
-                        <li>Обработкаонлайн и офлайн заявок в режиме реального времени</li>
+                        <li>{translate("TITLE_CRM_PAGE_MAIN_TITLE_1")}</li>
+                        <li>{translate("TITLE_CRM_PAGE_MAIN_TITLE_2")}</li>
+                        <li>{translate("TITLE_CRM_PAGE_MAIN_TITLE_3")}</li>
                     </ul>
                 </motion.div>
                 <motion.div variants={footerVariant} initial="hidden" animate="visible" exit="exit"
                             className="flex flex-col text-start">
-                    <h3 className="2xl:text-[28px] lg:text-[20px] xl:text-[22px] xl:mt-2 2xl:mt-5 lg:mt-2">Улучшение процессов в одном проекте ДО и
-                        ПОСЛЕ</h3>
+                    <h3 className="2xl:text-[28px] lg:text-[20px] xl:text-[22px] xl:mt-2 2xl:mt-5 lg:mt-2">{translate("TITLE_CRM_PAGE_MAIN_TITLE2")}</h3>
                     <div className="flex flex-col 2xl:text-[20px] xl:text-[18px] lg:text-[14px]">
                         <div
                             className="flex justify-between text-center items-center w-3/4 2xl:py-3 xl:py-1 lg:py-1 ">
-                            <p className="opacity-0">Выдача карт</p>
+                            <p className="opacity-0">{translate("TITLE_CRM_PAGE_TABLE_TITLE1")}</p>
                             <div className="flex gap-8">
-                                <span>До</span>
-                                <span>После</span>
+                                <span>{translate("TITLE_CRM_PAGE_TABLE_TITLE_BEFORE")}</span>
+                                <span>{translate("TITLE_CRM_PAGE_TABLE_TITLE_AFTER")}</span>
                             </div>
                         </div>
                         <motion.div animate={{width: "75%"}} initial={{width: 0}}
                                     transition={{duration: 1, delay: 1.02}} className="border-b border-black"/>
                         <div className="flex justify-between w-3/4 2xl:py-2 xl:py-1 lg:py-1 ">
-                            <p>Выдача карт</p>
+                            <p>{translate("TITLE_CRM_PAGE_TABLE_TITLE1")}</p>
                             <div className="flex gap-8">
-                                <span>20 min</span>
-                                <span>3 min</span>
+                                <span>20 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                <span>3 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
                             </div>
                         </div>
                         <motion.div animate={{width: "75%"}} initial={{width: 0}}
                                     transition={{duration: 1, delay: 1.04}} className="border-b border-black"/>
                         <div className="flex justify-between w-3/4 2xl:py-2 xl:py-1 lg:py-1 ">
-                            <p>Выдача кредитных карт</p>
+                            <p>{translate("TITLE_CRM_PAGE_TABLE_TITLE2")}</p>
                             <div className="flex gap-8">
-                                <span>60 min</span>
-                                <span>5 min</span>
+                                <span>60 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                <span>5 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
                             </div>
                         </div>
                         <motion.div animate={{width: "75%"}} initial={{width: 0}}
                                     transition={{duration: 1, delay: 1.06}} className="border-b border-black"/>
                         <div className="flex justify-between w-3/4 2xl:py-2 xl:py-1 lg:py-1 ">
-                            <p>Авто кредиты для юр лиц</p>
+                            <p>{translate("TITLE_CRM_PAGE_TABLE_TITLE3")}</p>
                             <div className="flex gap-8">
-                                <span>90 min</span>
-                                <span>20 min</span>
+                                <span>90 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                <span>20 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
                             </div>
                         </div>
                         <motion.div animate={{width: "75%"}} initial={{width: 0}}
                                     transition={{duration: 1, delay: 1.08}} className="border-b border-black"/>
                         <div className="flex justify-between w-3/4 2xl:py-2 xl:py-1 lg:py-1 ">
-                            <p>Авто кредиты для физ лиц</p>
+                            <p>{translate("TITLE_CRM_PAGE_TABLE_TITLE4")}</p>
                             <div className="flex gap-8">
-                                <span>90 min</span>
-                                <span>10 min</span>
+                                <span>90 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                <span>10 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
                             </div>
                         </div>
                         <motion.div animate={{width: "75%"}} initial={{width: 0}} transition={{duration: 1, delay: 1.1}}
                                     className="border-b border-black"/>
                         <div className="flex justify-between w-3/4 2xl:py-2 xl:py-1 lg:py-1 ">
-                            <p>Офлайн депозиты</p>
+                            <p>{translate("TITLE_CRM_PAGE_TABLE_TITLE5")}</p>
                             <div className="flex gap-8">
-                                <span>20 min</span>
-                                <span>5 min</span>
+                                <span>20 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                <span>5 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
                             </div>
                         </div>
                         <motion.div animate={{width: "75%"}} initial={{width: 0}}
                                     transition={{duration: 1, delay: 1.12}} className="border-b border-black"/>
                         <div className="flex justify-between w-3/4 2xl:py-2 xl:py-1 lg:py-1 ">
-                            <p>Мониторинг выданных кредитов</p>
+                            <p>{translate("TITLE_CRM_PAGE_TABLE_TITLE6")}</p>
                             <div className="flex gap-8">
-                                <span>120 min</span>
-                                <span>5 min</span>
+                                <span>120 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                <span>5 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
                             </div>
                         </div>
                         <motion.div animate={{width: "75%"}} initial={{width: 0}}
                                     transition={{duration: 1, delay: 1.14}} className="border-b border-black"/>
                         <div className="flex justify-between w-3/4 2xl:py-2 xl:py-1 lg:py-1">
-                            <p>Сбор данных для корп кредитов</p>
+                            <p>{translate("TITLE_CRM_PAGE_TABLE_TITLE7")}</p>
                             <div className="flex gap-8">
-                                <span>60 min</span>
-                                <span>2 min</span>
+                                <span>60 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                <span>2 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
                             </div>
                         </div>
                     </div>

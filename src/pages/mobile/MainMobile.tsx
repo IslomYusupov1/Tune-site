@@ -2,8 +2,11 @@ import {useRef} from 'react';
 import {motion, useScroll, useTransform} from "framer-motion";
 import person from "../../assets/person.svg";
 import down from "../../assets/down.svg";
+import {useI18n} from "../../i18n/I18nContext";
 
 function MainMobile() {
+    const { translate } = useI18n();
+
     const ref = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
         target: ref,
@@ -23,8 +26,7 @@ function MainMobile() {
                 <div
                     className="absolute md:absolute md:bottom-0 bottom-[30px] w-full md:mx-[100px] flex flex-col items-center">
                     <h3
-                        className="text-start text-[22px] mb-5 md:text-[30px] px-[30px] text-white w-full xl:text-[40px] 2xl:text-[48px] lg:text-[36px] ">Прогресс
-                        не случайность
+                        className="text-start text-[22px] mb-5 md:text-[30px] px-[30px] text-white w-full xl:text-[40px] 2xl:text-[48px] lg:text-[36px] ">{translate("TITLE_MAIN_PAGE_TEXT")}
                     </h3>
                     <img className="text-center md:hidden item-center" src={down} width={32} alt=""/>
                 </div>

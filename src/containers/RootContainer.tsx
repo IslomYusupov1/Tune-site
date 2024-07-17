@@ -18,17 +18,9 @@ import logo from "../assets/logo.svg";
 import _ from "lodash";
 import {preloadImages} from "../helpers/preloadImages";
 import bgMain from "../assets/bg-main.jpg";
+import teamImage from "../assets/team.png";
 
 const MainLazy = lazy(() => import('../pages/Main'));
-// const AboutLazy = lazy(() => import('../pages/About'));
-// const LoanLazy = lazy(() => import('../pages/Loan'));
-// const BankLazy = lazy(() => import('../pages/Bank'));
-// const CrmLazy = lazy(() => import('../pages/Crm'));
-// const EquiringLazy = lazy(() => import('../pages/Equaring'));
-// const TurnkeyLazy = lazy(() => import('../pages/Turkney'));
-// const SolutionLazy = lazy(() => import('../pages/Solutions'));
-// const TeamLazy = lazy(() => import('../pages/Team'));
-// const ContactLazy = lazy(() => import('../pages/Contact'));
 
 function RootContainer() {
     const location = useLocation();
@@ -100,7 +92,7 @@ function RootContainer() {
     }, [location, handleScroll])
 
     useEffect(() => {
-        preloadImages([bgWhite, bgDark, bgMain]).then((res) => res)
+        preloadImages([bgWhite, bgDark, bgMain, teamImage]).then((res) => res)
         const timer1 = setTimeout(() => {
             setLoading(false)
         }, 2000)

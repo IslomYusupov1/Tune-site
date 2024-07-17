@@ -13,6 +13,7 @@ import orient from "../assets/orient.svg";
 import {motion} from "framer-motion";
 import imageBgLight from "../assets/bg-light.jpg"
 import ContentLayout from "../layouts/ContentLayout";
+import {useI18n} from "../i18n/I18nContext";
 
 const headerVariants = {
     hidden: {
@@ -48,6 +49,7 @@ const footerVariants = {
 }
 
 function Loan() {
+    const { translate } = useI18n();
     return (
         <motion.div className="text-[#353535] w-11/12 mx-auto mx-[100px] lg:mt-5 xl:mt-5">
             <motion.img loading="lazy" animate={{opacity: 1}} exit={{ opacity: 0, transition: {ease: "easeInOut"} }} initial={{opacity: 0}} transition={{duration: 0.8, ease: "easeInOut"}}
@@ -60,28 +62,22 @@ function Loan() {
                     animate="visible"
                     exit="exit"
                     className="flex text-red-black leading-5 md:leading-normal flex-col text-start w-full 2xl:w-8/12 md:w-9/12">
-                    <h3 className="xl:text-[30px] lg:text-[26px] 2xl:text-[48px] text-[17px] md:[24px] md:mb-0 md:mt-0 font-light">Кредитный конвейер и скоринг движок</h3>
-                    <p className="xl:text-[18px] lg:text-[15px] 2xl:text-[22px] md:text-[20px] text-[12px]">1. 8 проектов с использованием BPM системы для автоматизации конвейеров и
-                        скоринговых движков</p>
+                    <h3 className="xl:text-[30px] lg:text-[26px] 2xl:text-[48px] text-[17px] md:[24px] md:mb-0 md:mt-0 font-light">{translate("TITLE_LOAN_PAGE_MAIN_TITLE")}</h3>
+                    <p className="xl:text-[18px] lg:text-[15px] 2xl:text-[22px] md:text-[20px] text-[12px]">1. {translate("TITLE_ABOUT_PAGE_LIST_TITLE1")}</p>
                     <ul className="list-disc mx-10 xl:text-[18px] lg:text-[14px] 2xl:text-[22px] md:text-[20px] text-[12px]">
-                        <li>Быстрые и онлайн процессы в течение 1-2 минут</li>
-                        <li>Длинные процессы для сложных кредитных продуктов</li>
+                        <li>{translate("TITLE_ABOUT_PAGE_LIST_TITLE1_1")}</li>
+                        <li>{translate("TITLE_ABOUT_PAGE_LIST_TITLE1_2")}</li>
                     </ul>
-                    <p className="xl:text-[18px] lg:text-[15px] 2xl:text-[22px] md:text-[20px] text-[12px]">2. Конвейеры для розничного и корпоративного кредитования</p>
-                    <p className="xl:text-[18px] lg:text-[15px] 2xl:text-[22px] md:text-[20px] text-[12px]">3. Омниканальность обеспечивается бизнес процессами как для онлайн
-                        обращений
-                        так и для офлайн клиентов</p>
+                    <p className="xl:text-[18px] lg:text-[15px] 2xl:text-[22px] md:text-[20px] text-[12px]">2. {translate("TITLE_ABOUT_PAGE_LIST_TITLE2")}</p>
+                    <p className="xl:text-[18px] lg:text-[15px] 2xl:text-[22px] md:text-[20px] text-[12px]">3. {translate("TITLE_ABOUT_PAGE_LIST_TITLE3")}</p>
                     <ul className="list-disc mx-10 xl:text-[18px] lg:text-[15px] 2xl:text-[22px] md:text-[20px] text-[12px]">
-                        <li>5 проектов с конвейерами успешно синтегрированы с мобильными банками от TUNE</li>
-                        <li>Для онлайн заявок используем фейс идентификацию через MYID</li>
+                        <li>{translate("TITLE_ABOUT_PAGE_LIST_TITLE3_1")}</li>
+                        <li>{translate("TITLE_ABOUT_PAGE_LIST_TITLE1_2")}</li>
                     </ul>
-                    <p className="xl:text-[18px] lg:text-[15px] 2xl:text-[22px] md:text-[20px] text-[12px]">4. Скор карты продуктов полностью параметризируемые и управляются риск
-                        департаментом без участия ИТ департамента или разработчиков</p>
-                    <p className="xl:text-[18px] lg:text-[15px] 2xl:text-[22px] md:text-[20px] text-[12px]">5. Связь со всеми внешними системами поддерживается через шину обмена
-                        данных
-                        TUNE BELT</p>
+                    <p className="xl:text-[18px] lg:text-[15px] 2xl:text-[22px] md:text-[20px] text-[12px]">4. {translate("TITLE_ABOUT_PAGE_LIST_TITLE4")}</p>
+                    <p className="xl:text-[18px] lg:text-[15px] 2xl:text-[22px] md:text-[20px] text-[12px]">5. {translate("TITLE_ABOUT_PAGE_LIST_TITLE5")}</p>
                     <ul className="list-disc mx-10 xl:text-[18px] lg:text-[15px] 2xl:text-[22px] md:text-[20px] text-[12px]">
-                        <li>Обычно участвуют 10 и более систем для сбора данных о заявителях</li>
+                        <li>{translate("TITLE_ABOUT_PAGE_LIST_TITLE5_1")}</li>
                     </ul>
                 </motion.div>
                 <motion.div

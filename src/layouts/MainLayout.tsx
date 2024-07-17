@@ -7,6 +7,7 @@ import logoBlack from "../assets/logo-black.svg";
 import cosmoImage from "../assets/cosmo-web.svg";
 import {useLocation} from "react-router";
 import bgMain from "../assets/bg-main.jpg";
+import LanguageSwitcher from "../helpers/LanguageSwitcher";
 
 interface Props {
     readonly children: ReactNode;
@@ -37,7 +38,7 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
                     className={`h-screen menu-main ${bgVideo ? "" : ""}`}>
             {bgVideo && <div className="fixed w-full h-full bg-black">
                 <motion.img src={bgMain} alt="" className="w-full h-full object-cover md:object-center"
-                            animate={{ scale: [1, 1.06, 1]}}
+                            animate={{scale: [1, 1.06, 1]}}
                             exit={{opacity: 0, transition: {ease: "easeInOut"}}}
                             transition={{duration: 35, repeat: Infinity, repeatDelay: 0.1, repeatType: "loop"}}
                 />
@@ -47,15 +48,18 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
                                      src={cosmoImage} alt=""
                                      className="absolute 2xl:w-[1000px] lg:w-[700px] xl:w-[800px] md:right-36 md:bottom-0 object-contain"/>}
             <div className="w-full h-full container mx-auto z-40 overflow-hidden">
-                <motion.div
-                    animate={{x: 1}}
-                    initial={{x: -600}}
-                    exit={{transition: {duration: 0.5, ease: "easeInOut"}}}
-                    transition={{ease: "easeInOut", type: "tween", duration: 0.8}}
-                    className="pt-[25px]">
-                    <img src={bgImage === 1 ? logo : logoBlack} alt=""
-                         className="lg:w-[200px] xl:w-[180px] xl:mx-[40px] 2xl:w-[280px] w-[160px] md:w-[180px] mx-6 md:mx-2"/>
-                </motion.div>
+                <div className="flex text-center items-center justify-between pt-[25px]">
+                    <motion.div
+                        animate={{x: 1}}
+                        initial={{x: -600}}
+                        exit={{transition: {duration: 0.5, ease: "easeInOut"}}}
+                        transition={{ease: "easeInOut", type: "tween", duration: 0.8}}
+                    >
+                        <img src={bgImage === 1 ? logo : logoBlack} alt=""
+                             className="lg:w-[200px] xl:w-[180px] xl:mx-[40px] 2xl:w-[280px] w-[160px] md:w-[180px] mx-6 md:mx-2"/>
+                    </motion.div>
+                    <LanguageSwitcher bgImage={bgImage} />
+                </div>
                 {children}
                 <motion.ul
                     className={`${bgImage === 1 ? "text-white" : "text-black"}

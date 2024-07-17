@@ -1,13 +1,18 @@
-import {BrowserRouter} from "react-router-dom";
-import RootContainer from "./RootContainer";
-import MobileContainer from "./MobileContainer";
-import {isMobile} from 'react-device-detect';
+import {Provider} from "react-redux";
+import {useMemo} from "react";
+import {configureStore} from "../store/configureStore";
+import ResponsiveContainer from "./ResponsiveContainer";
 
 function AppContainer() {
+    const store = useMemo(() => configureStore(), []);
+
+    if (!store) {
+        return null;
+    }
     return (
-        <BrowserRouter>
-            {isMobile ? <MobileContainer/> : <RootContainer/>}
-        </BrowserRouter>
+        <Provider store={store.store}>
+            <ResponsiveContainer/>
+        </Provider>
     );
 }
 

@@ -2,8 +2,11 @@ import teamImage1 from "../../assets/team.svg";
 import {useRef} from "react";
 import {useScroll, motion} from "framer-motion";
 import bgCosmo from "../../assets/cosmo-mobile.svg";
+import {useI18n} from "../../i18n/I18nContext";
 
 function TeamMobile() {
+    const { translate } = useI18n();
+
     const ref = useRef<HTMLDivElement>(null);
     const {scrollYProgress} = useScroll({
         target: ref,
@@ -17,10 +20,8 @@ function TeamMobile() {
             <motion.div style={{ scale: scrollYProgress }} className="justify-center flex">
                 <div className="flex bg-black rounded-[30px] w-full flex-col text-start bank-page my-20 relative">
                     <div className="flex p-5 text-white flex-col">
-                        <h3 className="text-[40px]">Наша команда</h3>
-                        <p className="max-w-[775px] text-[17px] leading-24 mb-3">Созданы в 2009 году в Ташкенте в
-                            качестве «бутика» для комплексных банковских проектов. Начиная с 2017 фокусируемся
-                            больше на цифровых решениях.
+                        <h3 className="text-[40px]">{translate("TITLE_TEAM_PAGE_TEAM_TITLE")}</h3>
+                        <p className="max-w-[775px] text-[17px] leading-24 mb-3">{translate("TITLE_TEAM_PAGE_MAIN_TITLE")}
                         </p>
                         {/*{open && <div className=>*/}
                         {/*    <h3 className="text-[40px] xl:text-[32px] 2xl:text-[40px] 3xl:text-[48px]">Наша*/}

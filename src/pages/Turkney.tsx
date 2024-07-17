@@ -3,6 +3,7 @@ import imageBack from "../assets/turkey.png";
 import imageBg from "../assets/bg-dark.png";
 import {useState} from "react";
 import ContentLayout from "../layouts/ContentLayout";
+import {useI18n} from "../i18n/I18nContext";
 
 const containerVariants = {
     hidden: {
@@ -78,6 +79,7 @@ const textFullVariants = {
 
 function Turkney() {
     const [open, setOpen] = useState(false);
+    const { translate } = useI18n();
 
     return (
         <>
@@ -98,38 +100,28 @@ function Turkney() {
                                 initial="hidden"
                                 animate="visible"
                                 className="flex flex-col bg-opacity-20 text-white text-start absolute bottom-[50px] left-[50px]">
-                        {!open && <h3 className="xl:text-[32px] 2xl:text-[40px] 3xl:text-[48px]">Пример разработки под ключ и заказ</h3>}
-                        {!open && <p className="max-w-[775px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[28px] font-light leading-25">Созданы в 2009 году в Ташкенте в
-                            качестве «бутика» для комплексных банковских проектов..... <br/> <b
+                        {!open && <h3 className="xl:text-[32px] 2xl:text-[40px] 3xl:text-[48px]">{translate("TITLE_TURNKEY_PAGE_TITLE1")}</h3>}
+                        {!open && <p className="max-w-[775px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[28px] font-light leading-25">{translate("TITLE_TURNKEY_PAGE_TITLE2")}.. <br/> <b
                                 className="xl:text-[18px] 2xl:text-[20px] 3xl:text-[28px] text-[#007AFF] cursor-pointer" onClick={() => setOpen(true)}>Читать
                                 дальше</b></p>}
                         {open && <motion.div variants={textFullVariants}
                                              initial="hidden"
                                              animate="visible"
                                              exit={open ? "exit" : ""}>
-                            <h3 className="xl:text-[32px] 2xl:text-[40px] 3xl:text-[48px]">Пример разработки под ключ и заказ</h3>
-                            <p className="max-w-[775px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[28px] leading-25">Первый маркетплейс в Узбекистане со
-                                своими пунктами выдачи заказов и службой доставки заказов:</p>
+                            <h3 className="xl:text-[32px] 2xl:text-[40px] 3xl:text-[48px]">{translate("TITLE_TURNKEY_PAGE_TITLE1")}</h3>
+                            <p className="max-w-[775px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[28px] leading-25">{translate("TITLE_TURNKEY_PAGE_TITLE2")}</p>
                             <ul className="max-w-[775px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[26px] leading-25 mb-5 list-disc">
-                                <li className="mx-14">Sello Market начало проекта в феврале 2021
-                                    года и запуск в сентябре 2021 года
+                                <li className="mx-14">{translate("TITLE_TURNKEY_PAGE_TITLE3")}
                                 </li>
                             </ul>
-                            <p className="max-w-[775px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[28px] leading-25 mb-5">Лучший инновационный BPM проект в
-                                2022
-                                году</p>
-                            <ul className="max-w-[775px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[28px] leading-25 mb-5 list-disc">Собственные разработки:
-                                <li className="mx-14">Витрина товаров и кабинет пользователя </li>
-                                <li className="mx-14">Кабинет продавца с заказами и запасами товаров</li>
-                                <li className="mx-14">Система логистики для исполнения заказов</li>
+                            <p className="max-w-[775px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[28px] leading-25 mb-5">{translate("TITLE_TURNKEY_PAGE_TITLE4")}</p>
+                            <ul className="max-w-[775px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[28px] leading-25 mb-5 list-disc">{translate("TITLE_TURNKEY_PAGE_TITLE5")}
+                                <li className="mx-14">{translate("TITLE_TURNKEY_PAGE_TITLE5_1")}</li>
+                                <li className="mx-14">{translate("TITLE_TURNKEY_PAGE_TITLE5_2")}</li>
+                                <li className="mx-14">{translate("TITLE_TURNKEY_PAGE_TITLE5_3")}</li>
                             </ul>
-                            <p className="max-w-[775px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[28px] leading-25 mb-5">ELMA BPM используется в качестве
-                                CRM и
-                                оркестратором всей платформы с 200+ бизнес процессами</p>
-                            <p className="max-w-[775px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[28px] leading-25">SuperApp начиная с сентября 2023 года
-                                после
-                                запуска Sello Pay (платежи и переводы) и Sello Logistics (доставка товаров от двери до
-                                двери) <br/> <b
+                            <p className="max-w-[775px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[28px] leading-25 mb-5">{translate("TITLE_TURNKEY_PAGE_TITLE56")}</p>
+                            <p className="max-w-[775px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[28px] leading-25">{translate("TITLE_TURNKEY_PAGE_TITLE7")}<br/> <b
                                     className="xl:text-[18px] 2xl:text-[20px] 3xl:text-[28px] text-[#007AFF] cursor-pointer"
                                     onClick={() => setOpen(false)}>Свернуть</b></p>
 

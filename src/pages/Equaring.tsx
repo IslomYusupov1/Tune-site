@@ -13,6 +13,7 @@ import milliy from "../assets/milliy-light.svg";
 import {motion} from "framer-motion";
 import imageBg from "../assets/bg-dark.png";
 import ContentLayout from "../layouts/ContentLayout";
+import {useI18n} from "../i18n/I18nContext";
 
 const headerVariant = {
     hidden: {
@@ -62,6 +63,8 @@ const imageVariant = {
 }
 
 function Equaring() {
+    const { translate } = useI18n();
+
     return (
         <div className="flex flex-col lg:w-9/12 xl:w9/12 2xl:w-10/12 text-start mx-[100px] 2xl:mx-[150px]">
             <motion.img animate={{opacity: 1}} exit={{ opacity: 0, transition: {ease: "easeInOut"} }} initial={{opacity: 0}} transition={{duration: 0.25, ease: "easeInOut"}}
@@ -70,13 +73,13 @@ function Equaring() {
             <ContentLayout>
                 <motion.div variants={headerVariant} initial="hidden" animate="visible" exit="exit"
                             className="flex text-white flex-col text-start">
-                    <h3 className="2xl:text-[40px] lg:text-[24px] xl:text-[28px] leading-10 mb-3">Платформа онлайн эквайринга</h3>
+                    <h3 className="2xl:text-[40px] lg:text-[24px] xl:text-[28px] leading-10 mb-3">{translate("TITLE_EQUARING_PAGE_MAIN_TITLE")}</h3>
                     <ul className="list-disc mx-8 2xl:text-[22px] xl:text-[18px] lg:text-[16px] font-light">
-                        <li>6 проектов работающих напрямую с процессинговыми центрами</li>
-                        <li>1 проект на стадии разработки</li>
-                        <li>Доступны для онлайн и оффлайн эквайринга через QR коды</li>
-                        <li>2 проекта раздают эквайринг API для третьих сторон платежным организациям и агентам</li>
-                        <li>Мерчанты и партнеры банка работают через собственные кабинеты</li>
+                        <li>{translate("TITLE_EQUARING_PAGE_SUBTITLE_1")}</li>
+                        <li>{translate("TITLE_EQUARING_PAGE_SUBTITLE_2")}</li>
+                        <li>{translate("TITLE_EQUARING_PAGE_SUBTITLE_3")}</li>
+                        <li>{translate("TITLE_EQUARING_PAGE_SUBTITLE_4")}</li>
+                        <li>{translate("TITLE_EQUARING_PAGE_SUBTITLE_5")}</li>
                     </ul>
                 </motion.div>
                 <motion.div variants={footerVariant} initial="hidden" animate="visible" exit="exit"

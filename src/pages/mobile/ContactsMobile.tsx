@@ -5,9 +5,11 @@ import {useScroll, motion} from "framer-motion";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
 import bgCosmo from "../../assets/cosmo-mobile.svg";
+import {useI18n} from "../../i18n/I18nContext";
 
 function ContactsMobile() {
     const ref = useRef<HTMLDivElement>(null);
+    const { translate } = useI18n();
     const {scrollYProgress} = useScroll({
         target: ref,
         offset: ["0 1", "0.8 1"],
@@ -59,21 +61,19 @@ function ContactsMobile() {
         <motion.div ref={ref} style={{ opacity: scrollYProgress }} className="bg-[url('../assets/bg-dark.png')] relative p-5 object-cover bg-no-repeat bg-center w-full">
             <img src={bgCosmo} alt="" className="absolute bottom-0 right-0" width={300}/>
             <motion.div style={{ scale: scrollYProgress }} className="flex 2xl:gap-6 xl:gap-3 lg:gap-3 flex-col text-white xl:w-8/12 2xl:w-9/12 lg:w-8/12 w-full text-start font-light lg:mx-[100px] xl:mt-[50px] 2xl:mt-[25px] lg:mt-[50px] ">
-                <h3 className="2xl:text-[36px] xl:text-[28px] lg:text-[24px] text-[24px] mt-5">Мы всегда рады Вам.</h3>
-                <h2 className="2xl:text-[30px] xl:text-[22px] lg:text-[18px] text-[23px] mt-5 font-medium">OOO “TUNE Consulting” </h2>
+                <h3 className="2xl:text-[36px] xl:text-[28px] lg:text-[24px] text-[24px] mt-5">{translate("TITLE_CONTACT_PAGE_MAIN_TITLE")}</h3>
+                <h2 className="2xl:text-[30px] xl:text-[22px] lg:text-[18px] text-[23px] mt-5 font-medium">{translate("TITLE_CONTACT_PAGE_MAIN_TITLE_1")}</h2>
                 <div className="flex flex-col mt-3">
-                    <p className="2xl:text-[20px] xl:text-[16px] lg:text-[14px] text-[14px]">Телефон:</p>
+                    <p className="2xl:text-[20px] xl:text-[16px] lg:text-[14px] text-[14px]">{translate("TITLE_CONTACT_PAGE_MAIN_TITLE_2")}:</p>
                     <a className="2xl:text-[28px] xl:text-[22px] lg:text-[20px] text-[18px] font-medium cursor-pointer" href="tel:+998911345326">+998 91 134-53-26</a>
                 </div>
                 <div className="flex flex-col mt-3">
-                    <p className="2xl:text-[20px] xl:text-[18px] lg:text-[14px] text-[14px]">Электронная почта:</p>
+                    <p className="2xl:text-[20px] xl:text-[18px] lg:text-[14px] text-[14px]">{translate("TITLE_CONTACT_PAGE_MAIN_TITLE_3")}:</p>
                     <a href="mailto:Info@TuneConsulting.net" className="2xl:text-[28px] xl:text-[22px] cursor-pointer lg:text-[20px] text-[18px] font-medium">Info@TuneConsulting.net</a>
                 </div>
                 <div className="flex flex-col mt-3">
-                    <p className="2xl:text-[20px] xl:text-[16px] lg:text-[14px] text-[14px]">Адрес:</p>
-                    <h3 className="2xl:text-[28px] xl:text-[22px] lg:text-[20px] text-[18px] font-normal">г. Ташкент, Шайхантахурский район,
-                        улица
-                        Зульфияхоним, 12</h3>
+                    <p className="2xl:text-[20px] xl:text-[16px] lg:text-[14px] text-[14px]">{translate("TITLE_CONTACT_PAGE_MAIN_TITLE_4")}:</p>
+                    <h3 className="2xl:text-[28px] xl:text-[22px] lg:text-[20px] text-[18px] font-normal">{translate("TITLE_CONTACT_PAGE_MAIN_TITLE_5")}</h3>
                 </div>
                 <Formik initialValues={{name: "", phone: "", email: "", desc: ""}} validationSchema={validationSchema}
                         onSubmit={(e, formikHelpers) => sendMessage(e, formikHelpers)}>
@@ -84,20 +84,20 @@ function ContactsMobile() {
                                     <Field type="text"
                                            name="name"
                                            className={`${errors.name && touched.name ? "border-red-600 focus:border-red-600" : ""} text-[14px] bg-white outline-0 border text-gray-900 rounded-lg focus:ring-[#003ABC] focus:border-[#003ABC] block w-full p-4`}
-                                           placeholder="Фамилия,имя и отчество"
+                                           placeholder={translate("TITLE_CONTACT_PAGE_MAIN_TITLE_7")}
                                     />
                                 </div>
                                 <div className="flex flex-col gap-4">
                                     <div className="w-full">
                                         <Field type="text"
                                                name="email"
-                                               placeholder="Электронная почта"
+                                               placeholder={translate("TITLE_CONTACT_PAGE_MAIN_TITLE_3")}
                                                className={`${errors.email && touched.email ? "border-red-600 focus:border-red-600" : ""} text-[14px] bg-white outline-0 border text-gray-900 rounded-lg focus:ring-[#003ABC] focus:border-[#003ABC] block w-full p-4 `}/>
                                     </div>
                                     <div className="w-full">
                                         <Field type="text"
                                                name="phone"
-                                               placeholder="Номер телефона"
+                                               placeholder={translate("TITLE_CONTACT_PAGE_MAIN_TITLE_8")}
                                                className={`${errors.phone && touched.phone ? "border-red-600 focus:border-red-600" : ""} text-[14px] bg-white outline-0 border text-gray-900 rounded-lg focus:ring-[#003ABC] focus:border-[#003ABC] block w-full p-4 `}/>
                                     </div>
                                 </div>
@@ -110,15 +110,14 @@ function ContactsMobile() {
                                                 {...field}
                                                 value={values.desc}
                                                 onChange={(e) => setFieldValue("desc", e.target.value)}
-                                                placeholder="Введите текст обращении"
+                                                placeholder={translate("TITLE_CONTACT_PAGE_MAIN_TITLE_9")}
                                                 className={`${errors.desc && touched.desc ? "border-red-600 focus:border-red-600" : ""} text-[14px] bg-white outline-0 border text-gray-900 rounded-lg focus:ring-[#003ABC] focus:border-[#003ABC] block w-full p-4`}
                                             />
                                         )}
                                     </Field>
                                 </div>
                                 <button type="submit" disabled={loading}
-                                        className="text-center bg-[#003ABC] w-full text-white rounded-lg p-3">Отправить
-                                    сообщение
+                                        className="text-center bg-[#003ABC] w-full text-white rounded-lg p-3">{translate("TITLE_CONTACT_PAGE_MAIN_TITLE_6")}
                                 </button>
                             </div>
                         </Form>

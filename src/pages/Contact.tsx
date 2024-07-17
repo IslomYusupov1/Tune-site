@@ -6,6 +6,7 @@ import emailjs from '@emailjs/browser';
 import * as Yup from "yup";
 import {useEffect, useMemo, useState} from "react";
 import ContentLayout from "../layouts/ContentLayout";
+import {useI18n} from "../i18n/I18nContext";
 
 const headerVariant = {
     hidden: {
@@ -27,6 +28,7 @@ const headerVariant = {
 function Contact() {
     const [loading, setLoading] = useState(false);
     const [alert, setAlert] = useState("");
+    const { translate } = useI18n();
 
     const validationSchema = useMemo(
         () => () =>
@@ -78,26 +80,22 @@ function Contact() {
                 <motion.div variants={headerVariant} initial="hidden" animate="visible" exit="exit"
                             style={{zIndex: 100}}
                             className="flex 2xl:gap-3 xl:gap-2 lg:gap-1 flex-col text-[#353535] xl:w-8/12 2xl:w-9/12 lg:w-8/12 text-start font-light mx-[100px] xl:mt-[50px] 2xl:mt-[25px] lg:mt-[50px] ">
-                    <h3 className="2xl:text-[36px] xl:text-[28px] lg:text-[24px]">Мы всегда рады Вам.</h3>
-                    <h2 className="2xl:text-[30px] xl:text-[22px] lg:text-[18px] font-medium cursor-pointer">OOO “TUNE
-                        Consulting” </h2>
+                    <h3 className="2xl:text-[36px] xl:text-[28px] lg:text-[24px]">{translate("TITLE_CONTACT_PAGE_MAIN_TITLE")}</h3>
+                    <h2 className="2xl:text-[30px] xl:text-[22px] lg:text-[18px] font-medium cursor-pointer">{translate("TITLE_CONTACT_PAGE_MAIN_TITLE_1")}</h2>
                     <div className="flex flex-col ">
-                        <p className="2xl:text-[20px] xl:text-[16px] lg:text-[14px]">Телефон:</p>
+                        <p className="2xl:text-[20px] xl:text-[16px] lg:text-[14px]">{translate("TITLE_CONTACT_PAGE_MAIN_TITLE_2")}:</p>
                         <a className="2xl:text-[28px] xl:text-[22px] lg:text-[20px] font-medium cursor-pointer"
                            href="tel:+998911345326">+998 91 134-53-26</a>
                     </div>
                     <div className="flex flex-col">
-                        <p className="2xl:text-[20px] xl:text-[18px] lg:text-[14px]">Электронная почта:</p>
+                        <p className="2xl:text-[20px] xl:text-[18px] lg:text-[14px]">{translate("TITLE_CONTACT_PAGE_MAIN_TITLE_3")}:</p>
                         {/*<h3 className="2xl:text-[28px] xl:text-[22px] lg:text-[20px] font-medium">Info@TuneConsulting.net</h3>*/}
                         <a href="mailto:Info@TuneConsulting.net"
                            className="2xl:text-[28px] xl:text-[22px] lg:text-[20px] font-medium">Info@TuneConsulting.net</a>
                     </div>
                     <div className="flex flex-col">
-                        <p className="2xl:text-[20px] xl:text-[16px] lg:text-[14px]">Адрес:</p>
-                        <h3 className="2xl:text-[28px] xl:text-[22px] lg:text-[20px] font-normal">г. Ташкент,
-                            Шайхантахурский район,
-                            улица
-                            Зульфияхоним, 12</h3>
+                        <p className="2xl:text-[20px] xl:text-[16px] lg:text-[14px]">{translate("TITLE_CONTACT_PAGE_MAIN_TITLE_4")}:</p>
+                        <h3 className="2xl:text-[28px] xl:text-[22px] lg:text-[20px] font-normal">{translate("TITLE_CONTACT_PAGE_MAIN_TITLE_5")}</h3>
                     </div>
                     <Formik initialValues={{name: "", phone: "", email: "", desc: ""}} validationSchema={validationSchema}
                             onSubmit={(e, formikHelpers) => sendMessage(e, formikHelpers)}>
@@ -108,20 +106,20 @@ function Contact() {
                                         <Field type="text"
                                                name="name"
                                                className={`${errors.name && touched.name ? "border-red-600 focus:border-red-600" : ""} bg-white outline-0 border text-gray-900 rounded-lg focus:ring-[#003ABC] focus:border-[#003ABC] block w-full p-4`}
-                                               placeholder="Фамилия,имя и отчество"
+                                               placeholder={translate("TITLE_CONTACT_PAGE_MAIN_TITLE_7")}
                                         />
                                     </div>
                                     <div className="flex  gap-4">
                                         <div className="w-full">
                                             <Field type="text"
                                                    name="email"
-                                                   placeholder="Электронная почта"
+                                                   placeholder={translate("TITLE_CONTACT_PAGE_MAIN_TITLE_3")}
                                                    className={`${errors.email && touched.email ? "border-red-600 focus:border-red-600" : ""} bg-white outline-0 border text-gray-900 rounded-lg focus:ring-[#003ABC] focus:border-[#003ABC] block w-full p-4 `}/>
                                         </div>
                                         <div className="w-full">
                                             <Field type="text"
                                                    name="phone"
-                                                   placeholder="Номер телефона"
+                                                   placeholder={translate("TITLE_CONTACT_PAGE_MAIN_TITLE_8")}
                                                    className={`${errors.phone && touched.phone ? "border-red-600 focus:border-red-600" : ""} bg-white outline-0 border text-gray-900 rounded-lg focus:ring-[#003ABC] focus:border-[#003ABC] block w-full p-4 `}/>
                                         </div>
                                     </div>
@@ -134,15 +132,14 @@ function Contact() {
                                                     {...field}
                                                     value={values.desc}
                                                     onChange={(e) => setFieldValue("desc", e.target.value)}
-                                                    placeholder="Введите текст обращении"
+                                                    placeholder={translate("TITLE_CONTACT_PAGE_MAIN_TITLE_9")}
                                                     className={`${errors.desc && touched.desc ? "border-red-600 focus:border-red-600" : ""} bg-white outline-0 border text-gray-900 rounded-lg focus:ring-[#003ABC] focus:border-[#003ABC] block w-full p-4`}
                                                 />
                                             )}
                                         </Field>
                                     </div>
                                     <button type="submit" disabled={loading}
-                                            className="text-center bg-[#003ABC] w-[200px] text-white rounded-lg p-3">Отправить
-                                        сообщение
+                                            className="text-center bg-[#003ABC] w-[200px] text-white rounded-lg p-3">{translate("TITLE_CONTACT_PAGE_MAIN_TITLE_6")}
                                     </button>
                                 </div>
                             </Form>

@@ -11,6 +11,7 @@ import SolutionsMobile from "../pages/mobile/SolutionsMobile";
 import TeamMobile from "../pages/mobile/TeamMobile";
 import ContactsMobile from "../pages/mobile/ContactsMobile";
 import {useEffect, useState} from "react";
+import LanguageSwitcher from "../helpers/LanguageSwitcher";
 
 
 function MobileContainer() {
@@ -32,9 +33,12 @@ function MobileContainer() {
     }, [])
     return (
         <div className="flex flex-col relative">
-            <div id="header" className={`fixed header top-0 w-full left-0 h-[65px] ${scroll ? "hide" : ""} flex`} style={{ zIndex: 100 }}>
+            <div id="header" className={`fixed header flex justify-between text-center items-center top-0 w-full left-0 h-[65px] ${scroll ? "hide" : ""} flex`} style={{ zIndex: 100 }}>
                 <img src={scroll ? logo : logoWhite} alt=""
                      className="w-[140px] md:w-[120px] items-center text-center mx-6 md:mx-2 top-0"/>
+                <div className="mx-4">
+                    <LanguageSwitcher bgImage={scroll ? 0 : 1} />
+                </div>
             </div>
             <MainMobile/>
             <AboutMobile/>

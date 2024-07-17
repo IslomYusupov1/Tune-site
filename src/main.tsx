@@ -5,7 +5,5 @@ import AppContainer from "./containers/AppContainer";
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <>
     <AppContainer />
-  </>,
 )
