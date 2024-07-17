@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
 import path from "path";
 
 // https://vitejs.dev/config/
