@@ -7,9 +7,10 @@ import {useShallowEqualSelector} from "./useShallowSelector";
 
 interface Props {
     bgImage: number
+    readonly mobile: boolean;
 }
 
-const LanguageSwitcher = ({ bgImage }: Props) => {
+const LanguageSwitcher = ({ bgImage, mobile = false }: Props) => {
     const [isOpen, setIsOpen] = useState(false);
     const dispatch = useDispatch();
     const language = useShallowEqualSelector(appLanguageSelector);
@@ -21,7 +22,7 @@ const LanguageSwitcher = ({ bgImage }: Props) => {
             onMouseLeave={() => setIsOpen(false)}
             style={{position: 'relative', display: 'inline-block'}}>
             <div
-                className={`border-2 px-2 py-2 font-normal text-[16px] 2xl:text-[20px] ${bgImage === 1 ? "border-white text-white" : "border-black text-black"} 
+                className={`border-2 ${mobile ? "px-2 py-1 text-[13px]" : "px-2 py-2 text-[16px]"} font-normal text-[16px] 2xl:text-[20px] ${bgImage === 1 ? "border-white text-white" : "border-black text-black"} 
                 relative cursor-pointer text-center items-center flex justify-center rounded-xl
                  ${isOpen ? "border-b-0" : ""} `} style={{ borderBottomLeftRadius: isOpen ? 0 : "0.75rem",
                 borderBottomRightRadius: isOpen ? 0 : "0.75rem", }}>
@@ -52,7 +53,7 @@ const LanguageSwitcher = ({ bgImage }: Props) => {
                         }}
                     >
                         {list?.map((lang, index) => (
-                            <div onClick={() => onSelect(lang)} key={index} className="px-2 first:py-2.5 pt-0 pb-2 font-normal" style={{
+                            <div onClick={() => onSelect(lang)} key={index} className={`${mobile ? "px-2 first:py-1.5 pt-0 pb-1 text-[13px]" : "px-2 first:py-2.5 pt-0 pb-2"} font-normal`} style={{
                                 color: bgImage === 1 ? 'white' : 'black',
                                 cursor: 'pointer',
                                 textAlign: 'center'

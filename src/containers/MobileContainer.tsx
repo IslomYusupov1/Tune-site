@@ -37,7 +37,7 @@ function MobileContainer() {
                 <img src={scroll ? logo : logoWhite} alt=""
                      className="w-[140px] md:w-[120px] items-center text-center mx-6 md:mx-2 top-0"/>
                 <div className="mx-4">
-                    <LanguageSwitcher bgImage={scroll ? 0 : 1} />
+                    <LanguageSwitcher bgImage={scroll ? 0 : 1} mobile={true} />
                 </div>
             </div>
             <MainMobile/>
