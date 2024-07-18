@@ -6,7 +6,7 @@ import {useDispatch} from "react-redux";
 import {useShallowEqualSelector} from "./useShallowSelector";
 
 interface Props {
-    bgImage: number
+    readonly bgImage: number
     readonly mobile?: boolean;
 }
 
@@ -53,7 +53,7 @@ const LanguageSwitcher = ({ bgImage, mobile = false }: Props) => {
                         }}
                     >
                         {list?.map((lang, index) => (
-                            <div onClick={() => onSelect(lang)} key={index} className={`${mobile ? "px-2 first:py-1.5 pt-0 pb-1 text-[13px]" : "px-2 first:py-2.5 pt-0 pb-2"} font-normal`} style={{
+                            <div onClick={() => onSelect(lang)} key={index} className={`${mobile ? "px-2 first:py-1.5 pt-0 pb-1" : "px-2 first:py-2.5 pt-0 pb-2"} font-normal`} style={{
                                 color: bgImage === 1 ? 'white' : 'black',
                                 cursor: 'pointer',
                                 textAlign: 'center'
