@@ -148,4 +148,8 @@ export const I18nUzbek: I18nSchema = {
   TITLE_MENU_PAGE_TITLE_8: "Bizning yechimlar",
   TITLE_MENU_PAGE_TITLE_9: "Bizning jamoa",
   TITLE_MENU_PAGE_TITLE_10: "Kontaktlar",
+
+  //OTHER
+  TITLE_OPEN_DIALOG_OPEN_TITLE: "ko'proq o'qish",
+  TITLE_OPEN_DIALOG_CLOSE_TITLE: "yopish",
 };

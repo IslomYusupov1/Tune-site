@@ -102,8 +102,7 @@ function Turkney() {
                                 className="flex flex-col bg-opacity-20 text-white text-start absolute bottom-[50px] left-[50px]">
                         {!open && <h3 className="xl:text-[32px] 2xl:text-[40px] 3xl:text-[48px]">{translate("TITLE_TURNKEY_PAGE_TITLE1")}</h3>}
                         {!open && <p className="max-w-[775px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[28px] font-light leading-25">{translate("TITLE_TURNKEY_PAGE_TITLE2")}.. <br/> <b
-                                className="xl:text-[18px] 2xl:text-[20px] 3xl:text-[28px] text-[#007AFF] cursor-pointer" onClick={() => setOpen(true)}>Читать
-                                дальше</b></p>}
+                                className="xl:text-[18px] 2xl:text-[20px] 3xl:text-[28px] text-[#007AFF] cursor-pointer" onClick={() => setOpen(true)}>{translate("TITLE_OPEN_DIALOG_OPEN_TITLE")}</b></p>}
                         {open && <motion.div variants={textFullVariants}
                                              initial="hidden"
                                              animate="visible"
@@ -123,7 +122,7 @@ function Turkney() {
                             <p className="max-w-[775px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[28px] leading-25 mb-5">{translate("TITLE_TURNKEY_PAGE_TITLE56")}</p>
                             <p className="max-w-[775px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[28px] leading-25">{translate("TITLE_TURNKEY_PAGE_TITLE7")}<br/> <b
                                     className="xl:text-[18px] 2xl:text-[20px] 3xl:text-[28px] text-[#007AFF] cursor-pointer"
-                                    onClick={() => setOpen(false)}>Свернуть</b></p>
+                                    onClick={() => setOpen(false)}>{translate("TITLE_OPEN_DIALOG_CLOSE_TITLE")}</b></p>
 
                         </motion.div>}
                     </motion.div>

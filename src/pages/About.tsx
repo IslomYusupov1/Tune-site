@@ -92,8 +92,7 @@ function About() {
                         {!open && <p className="max-w-[775px] md:text-[20px] text-[16px] leading-24">{translate("TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE")}..<br/>
                             <g
                                 className="text-[16px] z-50 text-[#007AFF] cursor-pointer"
-                                onClick={() => setOpen(true)}>Читать
-                                дальше
+                                onClick={() => setOpen(true)}>{translate("TITLE_OPEN_DIALOG_OPEN_TITLE")}
                             </g>
                         </p>}
                         {open && <motion.div variants={textFullVariants}
@@ -112,7 +111,7 @@ function About() {
                             <p className="max-w-[775px] text-[16px] md:text-[18px] 2xl:text-[24px] leading-25">{translate("TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE8")}<br/>
                                 <g
                                     className="text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[28px] text-[#007AFF] cursor-pointer"
-                                    onClick={() => setOpen(false)}>Свернуть
+                                    onClick={() => setOpen(false)}>{translate("TITLE_OPEN_DIALOG_CLOSE_TITLE")}
                                 </g>
                             </p>
 

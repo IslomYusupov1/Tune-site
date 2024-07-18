@@ -146,4 +146,8 @@ export const I18nEnglish: I18nSchema = {
     TITLE_MENU_PAGE_TITLE_8: "Our solutions",
     TITLE_MENU_PAGE_TITLE_9: "Our team",
     TITLE_MENU_PAGE_TITLE_10: "Contacts",
+
+    //OTHER
+    TITLE_OPEN_DIALOG_OPEN_TITLE: "read more",
+    TITLE_OPEN_DIALOG_CLOSE_TITLE: "collapse",
 };

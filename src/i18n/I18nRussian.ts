@@ -148,4 +148,8 @@ export const I18nRussian: I18nSchema = {
   TITLE_MENU_PAGE_TITLE_8: "Наши решения",
   TITLE_MENU_PAGE_TITLE_9: "Наша команда",
   TITLE_MENU_PAGE_TITLE_10: "Контакты",
+
+  //OTHER
+  TITLE_OPEN_DIALOG_OPEN_TITLE: "читать дальше",
+  TITLE_OPEN_DIALOG_CLOSE_TITLE: "свернуть",
 };

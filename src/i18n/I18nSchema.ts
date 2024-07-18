@@ -146,4 +146,8 @@ export interface I18nSchema {
   readonly TITLE_MENU_PAGE_TITLE_8: string
   readonly TITLE_MENU_PAGE_TITLE_9: string
   readonly TITLE_MENU_PAGE_TITLE_10: string
+
+  //OTHER
+  readonly TITLE_OPEN_DIALOG_OPEN_TITLE: string;
+  readonly TITLE_OPEN_DIALOG_CLOSE_TITLE: string;
 }
