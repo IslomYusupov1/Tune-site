@@ -7,7 +7,7 @@ import {useShallowEqualSelector} from "./useShallowSelector";
 
 interface Props {
     bgImage: number
-    readonly mobile: boolean;
+    readonly mobile?: boolean;
 }
 
 const LanguageSwitcher = ({ bgImage, mobile = false }: Props) => {
