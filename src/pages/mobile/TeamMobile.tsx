@@ -1,4 +1,9 @@
-import teamImage1 from "../../assets/team.svg";
+import teamImage from "../../assets/team.svg";
+import teamImage1 from "../../assets/team.jpg";
+import teamImage2 from "../../assets/team-1.jpg";
+import teamImage3 from "../../assets/team-2.jpg";
+import teamImage4 from "../../assets/team-3.jpg";
+import teamImage5 from "../../assets/team-4.jpg";
 import {useRef} from "react";
 import {useScroll, motion} from "framer-motion";
 import bgCosmo from "../../assets/cosmo-mobile.svg";
@@ -7,11 +12,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import teamImage from "../../assets/team.svg";
-import teamImage2 from "../../assets/team-1.jpg";
-import teamImage3 from "../../assets/team-2.jpg";
-import teamImage4 from "../../assets/team-3.jpg";
-import teamImage5 from "../../assets/team-4.jpg";
 
 function TeamMobile() {
     const { translate } = useI18n();
