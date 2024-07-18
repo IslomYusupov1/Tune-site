@@ -3,6 +3,15 @@ import {useRef} from "react";
 import {useScroll, motion} from "framer-motion";
 import bgCosmo from "../../assets/cosmo-mobile.svg";
 import {useI18n} from "../../i18n/I18nContext";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import teamImage from "../../assets/team.svg";
+import teamImage2 from "../../assets/team-1.jpg";
+import teamImage3 from "../../assets/team-2.jpg";
+import teamImage4 from "../../assets/team-3.jpg";
+import teamImage5 from "../../assets/team-4.jpg";
 
 function TeamMobile() {
     const { translate } = useI18n();
@@ -45,7 +54,26 @@ function TeamMobile() {
                         {/*    </p>*/}
 
                         {/*</div>}*/}
-                        <img src={teamImage1} alt="" className="w-full mt-3 mb-2 object-contain"/>
+                        <div className="w-full h-full relative" style={{ zIndex: 100 }}>
+                            <Swiper
+                                modules={[Navigation]}
+                                spaceBetween={50}
+                                slidesPerView={1}
+                                // navigation={true}
+                                className={`mySwiper`}
+                                loop={true}
+                                navigation={true}
+                                onSlideChange={() => console.log('slide change')}
+                                onSwiper={(swiper) => console.log(swiper)}
+                            >
+                                <SwiperSlide><motion.img whileHover={{ scale: 1.2, transition: { duration: 0.3, type: "tween", ease: "easeInOut" } }} className="w-9/12 object-cover" src={teamImage} alt=""/></SwiperSlide>
+                                <SwiperSlide><motion.img whileHover={{ scale: 1.2, transition: { duration: 0.3, type: "tween", ease: "easeInOut" } }} className="w-9/12 object-cover" src={teamImage1} alt=""/></SwiperSlide>
+                                <SwiperSlide><motion.img whileHover={{ scale: 1.2, transition: { duration: 0.3, type: "tween", ease: "easeInOut" } }} className="w-9/12 object-cover" src={teamImage2} alt=""/></SwiperSlide>
+                                <SwiperSlide><motion.img whileHover={{ scale: 1.2, transition: { duration: 0.3, type: "tween", ease: "easeInOut" } }} className="w-9/12 object-cover" src={teamImage3} alt=""/></SwiperSlide>
+                                <SwiperSlide><motion.img whileHover={{ scale: 1.2, transition: { duration: 0.3, type: "tween", ease: "easeInOut" } }} className="w-9/12 object-cover" src={teamImage4} alt=""/></SwiperSlide>
+                                <SwiperSlide><motion.img whileHover={{ scale: 1.2, transition: { duration: 0.3, type: "tween", ease: "easeInOut" } }} className="w-9/12 object-cover" src={teamImage5} alt=""/></SwiperSlide>
+                            </Swiper>
+                        </div>
                     </div>
                 </div>
             </motion.div>
