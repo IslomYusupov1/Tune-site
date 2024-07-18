@@ -134,4 +134,16 @@ export interface I18nSchema {
   readonly TITLE_CONTACT_PAGE_MAIN_TITLE_7: string,
   readonly TITLE_CONTACT_PAGE_MAIN_TITLE_8: string,
   readonly TITLE_CONTACT_PAGE_MAIN_TITLE_9: string,
+
+  //MENU
+  readonly TITLE_MENU_PAGE_TITLE_1: string
+  readonly TITLE_MENU_PAGE_TITLE_2: string
+  readonly TITLE_MENU_PAGE_TITLE_3: string
+  readonly TITLE_MENU_PAGE_TITLE_4: string
+  readonly TITLE_MENU_PAGE_TITLE_5: string
+  readonly TITLE_MENU_PAGE_TITLE_6: string
+  readonly TITLE_MENU_PAGE_TITLE_7: string
+  readonly TITLE_MENU_PAGE_TITLE_8: string
+  readonly TITLE_MENU_PAGE_TITLE_9: string
+  readonly TITLE_MENU_PAGE_TITLE_10: string
 }

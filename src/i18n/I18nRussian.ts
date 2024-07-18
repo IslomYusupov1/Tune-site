@@ -136,4 +136,16 @@ export const I18nRussian: I18nSchema = {
   TITLE_CONTACT_PAGE_MAIN_TITLE_7: "Фамилия Имя Отчество",
   TITLE_CONTACT_PAGE_MAIN_TITLE_8: "Телефон",
   TITLE_CONTACT_PAGE_MAIN_TITLE_9: "Текст обращении",
+
+  //MENU
+  TITLE_MENU_PAGE_TITLE_1: "Главная",
+  TITLE_MENU_PAGE_TITLE_2: "О нас",
+  TITLE_MENU_PAGE_TITLE_3: "Кредиты и Скоринг",
+  TITLE_MENU_PAGE_TITLE_4: "Цифровой банк",
+  TITLE_MENU_PAGE_TITLE_5: "CRM и автоматизация",
+  TITLE_MENU_PAGE_TITLE_6: "Онлайн эквайринг",
+  TITLE_MENU_PAGE_TITLE_7: "Под ключ",
+  TITLE_MENU_PAGE_TITLE_8: "Наши решения",
+  TITLE_MENU_PAGE_TITLE_9: "Наша команда",
+  TITLE_MENU_PAGE_TITLE_10: "Контакты",
 };

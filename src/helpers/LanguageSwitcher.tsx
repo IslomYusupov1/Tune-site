@@ -52,7 +52,7 @@ const LanguageSwitcher = ({ bgImage }: Props) => {
                         }}
                     >
                         {list?.map((lang, index) => (
-                            <div onClick={() => onSelect(lang)} key={index} className="px-2 first:py-2.5 py-1 font-normal" style={{
+                            <div onClick={() => onSelect(lang)} key={index} className="px-2 first:py-2.5 pt-0 pb-2 font-normal" style={{
                                 color: bgImage === 1 ? 'white' : 'black',
                                 cursor: 'pointer',
                                 textAlign: 'center'

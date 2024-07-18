@@ -134,4 +134,16 @@ export const I18nEnglish: I18nSchema = {
     TITLE_CONTACT_PAGE_MAIN_TITLE_7: "Full Name",
     TITLE_CONTACT_PAGE_MAIN_TITLE_8: "Phone",
     TITLE_CONTACT_PAGE_MAIN_TITLE_9: "Message text",
+
+    //MENU
+    TITLE_MENU_PAGE_TITLE_1: "Main",
+    TITLE_MENU_PAGE_TITLE_2: "About us",
+    TITLE_MENU_PAGE_TITLE_3: "Loans and Scoring",
+    TITLE_MENU_PAGE_TITLE_4: "Digital Banking",
+    TITLE_MENU_PAGE_TITLE_5: "CRM and Automation",
+    TITLE_MENU_PAGE_TITLE_6: "E-commerce",
+    TITLE_MENU_PAGE_TITLE_7: "Ready to use",
+    TITLE_MENU_PAGE_TITLE_8: "Our solutions",
+    TITLE_MENU_PAGE_TITLE_9: "Our team",
+    TITLE_MENU_PAGE_TITLE_10: "Contacts",
 };

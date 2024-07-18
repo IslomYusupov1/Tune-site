@@ -136,4 +136,16 @@ export const I18nUzbek: I18nSchema = {
   TITLE_CONTACT_PAGE_MAIN_TITLE_7: "Ismi Familiya Sharif",
   TITLE_CONTACT_PAGE_MAIN_TITLE_8: "Telefon",
   TITLE_CONTACT_PAGE_MAIN_TITLE_9: "Xabar matni",
+
+  //MENU
+  TITLE_MENU_PAGE_TITLE_1: "Bosh sahifa",
+  TITLE_MENU_PAGE_TITLE_2: "Biz haqimizda",
+  TITLE_MENU_PAGE_TITLE_3: "Kredit va Skoring",
+  TITLE_MENU_PAGE_TITLE_4: "Raqamli bank",
+  TITLE_MENU_PAGE_TITLE_5: "CRM va Avtomatlashtirish",
+  TITLE_MENU_PAGE_TITLE_6: "Onlayn ekvayring",
+  TITLE_MENU_PAGE_TITLE_7: "Tayyor loyiha",
+  TITLE_MENU_PAGE_TITLE_8: "Bizning yechimlar",
+  TITLE_MENU_PAGE_TITLE_9: "Bizning jamoa",
+  TITLE_MENU_PAGE_TITLE_10: "Kontaktlar",
 };
