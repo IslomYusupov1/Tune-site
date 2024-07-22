@@ -14,7 +14,6 @@ const LanguageSwitcher = ({ bgImage, mobile = false }: Props) => {
     const [isOpen, setIsOpen] = useState(false);
     const dispatch = useDispatch();
     const language = useShallowEqualSelector(appLanguageSelector);
-
     const onSelect = (value: AppLanguage) => dispatch(switchLanguage({ language: value }));
     const list = useMemo(() => listLanguages().filter((x) => x !== language), [language]);
     return (

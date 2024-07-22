@@ -32,9 +32,9 @@ function AirQuality({ coords }: Props) {
 
     return (
         <div className="relative flex items-center ">
-            <div className="bg-[#003ABD80] rounded-[12px] gap-3 text-white flex items-center py-[4px] px-[8px]">
-                <img src={ecoImage} alt=""/>
-                <p className="text-[15px]">{translate("TITLE_AQI")} {data?.list?.length > 0 ? data?.list[0]?.main?.aqi : 0}</p>
+            <div className="bg-[#003ABD80] rounded-[12px] gap-1 text-white flex items-center py-[4px] px-[10px]">
+                <img width={25} src={ecoImage} alt=""/>
+                <p className="text-[13px]">{translate("TITLE_AQI")} {data?.list?.length > 0 ? data?.list[0]?.main?.aqi : 0}</p>
             </div>
             {/*<p className="text-white text-[17px]">{weather?.name}</p>*/}
             {/*<img src={weather?.weather?.length > 0 ? `https://openweathermap.org/img/w/${weather?.weather[0]?.icon}.png` : ""} alt=""/>*/}
