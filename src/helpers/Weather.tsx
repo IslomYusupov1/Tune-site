@@ -35,7 +35,7 @@ function Weather({ coords, denied}: Props) {
         <div className="relative flex items-center ">
             <p className="text-white text-[15px]">{weather?.name}</p>
             <img width={40} src={weather?.weather?.length > 0 ? `https://openweathermap.org/img/w/${weather?.weather[0]?.icon}.png` : ""} alt=""/>
-            <p className="text-white text-[20px] font-normal">{weather?.main?.temp}&deg;</p>
+            <p className="text-white text-[18px] font-normal">{weather?.main?.temp}&deg;</p>
         </div>
     );
 }
