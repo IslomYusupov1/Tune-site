@@ -150,4 +150,5 @@ export const I18nEnglish: I18nSchema = {
     //OTHER
     TITLE_OPEN_DIALOG_OPEN_TITLE: "read more",
     TITLE_OPEN_DIALOG_CLOSE_TITLE: "collapse",
+    TITLE_AQI: "AQI",
 };

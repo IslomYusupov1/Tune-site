@@ -4,12 +4,11 @@ import { I18nUzbek } from "./I18nUzbek";
 import { I18nRussian } from "./I18nRussian";
 import { I18nEnglish } from "./I18nEnglish";
 import { I18nCode, I18nSchema } from "./I18nSchema";
-import { DEFAULT_LANGUAGE } from "../constants/AppConstants";
 
 export enum AppLanguage {
-  Uzbek = "Uz",
-  Russian = "Ru",
-  English = "En",
+  Uzbek = "UZ",
+  Russian = "RU",
+  English = "EN",
 }
 
 export interface I18nData {
@@ -17,7 +16,7 @@ export interface I18nData {
 }
 
 export function getDefaultLanguage(): AppLanguage {
-  return DEFAULT_LANGUAGE;
+  return "RU" as AppLanguage;
 }
 
 export type TranslateFunction = (code: I18nCode | string) => string;

@@ -152,4 +152,5 @@ export const I18nUzbek: I18nSchema = {
   //OTHER
   TITLE_OPEN_DIALOG_OPEN_TITLE: "ko'proq o'qish",
   TITLE_OPEN_DIALOG_CLOSE_TITLE: "yopish",
+  TITLE_AQI: "HSI",
 };

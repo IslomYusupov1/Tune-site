@@ -56,7 +56,7 @@ const textFullVariants = {
         opacity: 0,
     },
     visible: {
-        y: 10,
+        y: 0,
         opacity: 1,
         transition: {duration: 0.5, type: "spring", stiffness: 200}
     },

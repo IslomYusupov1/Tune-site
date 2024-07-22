@@ -150,4 +150,5 @@ export interface I18nSchema {
   //OTHER
   readonly TITLE_OPEN_DIALOG_OPEN_TITLE: string;
   readonly TITLE_OPEN_DIALOG_CLOSE_TITLE: string;
+  readonly TITLE_AQI: string;
 }

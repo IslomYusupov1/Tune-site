@@ -10,7 +10,7 @@ export const I18nRussian: I18nSchema = {
   //About
   TITLE_MAIN_PAGE_TEXT: "Прогресс не случайность",
   TITLE_ABOUT_PAGE_ABOUT_TITLE: "О нас",
-  TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE: "Созданы в 2009 году в Ташкенте в качестве «бутика» для комплексных банковских проектов.",
+  TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE: "OOO \"\"TUNE Consulting\"\" основан в 2009 году, как «бутик»  по внедрению комплексных банковских проектов.",
   TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE1: "Начиная с 2017 фокусируемся больше на цифровых решениях.",
   TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE2: "В семье TUNE более 100 сотрудников. Цель на 2024 год удвоить этот показатель.",
   TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE3: "Являемся резидентами ИТ парка и вносим свой вклад в программу «миллионпрограммистов к 2030 году».",
@@ -152,4 +152,5 @@ export const I18nRussian: I18nSchema = {
   //OTHER
   TITLE_OPEN_DIALOG_OPEN_TITLE: "читать дальше",
   TITLE_OPEN_DIALOG_CLOSE_TITLE: "свернуть",
+  TITLE_AQI: "ИКВ",
 };

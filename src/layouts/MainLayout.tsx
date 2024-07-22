@@ -1,4 +1,4 @@
-import {ReactNode, useEffect} from 'react';
+import {ReactNode, useEffect, useState} from 'react';
 import {motion} from "framer-motion";
 import {Link} from "react-router-dom";
 import {RoutesEnum} from "../constants/Routes";
@@ -9,6 +9,8 @@ import {useLocation} from "react-router";
 import bgMain from "../assets/bg-main.jpg";
 import LanguageSwitcher from "../helpers/LanguageSwitcher";
 import {useI18n} from "../i18n/I18nContext";
+import Weather from "../helpers/Weather";
+import AirQuality from "../helpers/AirQuality";
 
 interface Props {
     readonly children: ReactNode;
@@ -19,6 +21,8 @@ interface Props {
 function MainLayout({children, bgVideo = false, bgImage}: Props) {
     const location = useLocation();
     const { translate } = useI18n();
+    const [coords, setCoords] = useState({long: 69.240562, lat: 41.311081});
+    const [denied, setDenied] = useState(true);
 
     useEffect(() => {
         if (location.pathname === RoutesEnum.Main) {
@@ -33,6 +37,20 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
             }
         }
     }, [location])
+    console.log(denied, "dd")
+    useEffect(() => {
+        if (navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(function(position) {
+                setDenied(false);
+                setCoords({lat: position.coords.latitude, long:position.coords.longitude});
+                // выводит координаты местоположения пользователя
+            }, function(error) {
+                if (error.code) {
+                    setDenied(true)
+                }
+            });
+        }
+    }, [navigator.geolocation])
     return (
         <motion.div initial={{opacity: 0}}
                     animate={{opacity: 1}}
@@ -60,7 +78,13 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
                         <img src={bgImage === 1 ? logo : logoBlack} alt=""
                              className="lg:w-[200px] xl:w-[180px] xl:mx-[40px] 2xl:w-[280px] w-[160px] md:w-[180px] mx-6 md:mx-2"/>
                     </motion.div>
-                    <LanguageSwitcher bgImage={bgImage} />
+                    <div className="flex items-center text-center gap-6">
+                        <div className="flex items-center text-center gap-2">
+                            <Weather coords={coords} denied={denied}/>
+                            <AirQuality coords={coords}/>
+                        </div>
+                        <LanguageSwitcher bgImage={bgImage} />
+                    </div>
                 </div>
                 {children}
                 <motion.ul

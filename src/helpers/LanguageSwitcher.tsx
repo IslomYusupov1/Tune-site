@@ -22,7 +22,7 @@ const LanguageSwitcher = ({ bgImage, mobile = false }: Props) => {
             onMouseLeave={() => setIsOpen(false)}
             style={{position: 'relative', display: 'inline-block'}}>
             <div
-                className={`border-2 ${mobile ? "px-2 py-1 text-[13px]" : "px-2 py-2 text-[16px]"} font-normal text-[16px] 2xl:text-[20px] ${bgImage === 1 ? "border-white text-white" : "border-black text-black"} 
+                className={`border-2 ${mobile ? "w-[35px] h-[35px] text-[13px]" : "w-[40px] h-[40px] text-[17px]"} font-normal 2xl:text-[20px] ${bgImage === 1 ? "border-white text-white" : "border-black text-black"} 
                 relative cursor-pointer text-center items-center flex justify-center rounded-xl
                  ${isOpen ? "border-b-0" : ""} `} style={{ borderBottomLeftRadius: isOpen ? 0 : "0.75rem",
                 borderBottomRightRadius: isOpen ? 0 : "0.75rem", }}>
@@ -53,7 +53,7 @@ const LanguageSwitcher = ({ bgImage, mobile = false }: Props) => {
                         }}
                     >
                         {list?.map((lang, index) => (
-                            <div onClick={() => onSelect(lang)} key={index} className={`${mobile ? "px-2 first:py-1.5 pt-0 pb-1" : "px-2 first:py-2.5 pt-0 pb-2"} font-normal`} style={{
+                            <div onClick={() => onSelect(lang)} key={index} className={`${mobile ? "w-[31px] h-[31px] first:py-2 pt-1 text-[13px]" : "w-[36px] h-[36px] first:py-2 pt-0.5 text-[17px]"} font-normal`} style={{
                                 color: bgImage === 1 ? 'white' : 'black',
                                 cursor: 'pointer',
                                 textAlign: 'center'
