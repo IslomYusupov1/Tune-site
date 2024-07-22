@@ -80,7 +80,7 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
                     </motion.div>
                     <div className="flex items-center text-center gap-6">
                         <div className="flex items-center text-center gap-2">
-                            <Weather coords={coords} denied={denied}/>
+                            <Weather coords={coords} denied={denied} bgImage={bgImage}/>
                             <AirQuality coords={coords}/>
                         </div>
                         <LanguageSwitcher bgImage={bgImage} />

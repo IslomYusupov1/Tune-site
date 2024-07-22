@@ -5,9 +5,10 @@ import {appLanguageSelector} from "../reducers/AppReducer";
 interface Props {
     readonly coords: { long: number, lat: number; }
     readonly denied: boolean;
+    readonly bgImage: number;
 }
 
-function Weather({ coords, denied}: Props) {
+function Weather({ coords, denied, bgImage }: Props) {
     const [weather, setWeather] = useState<Record<string, any>>({});
     console.log(weather, "ww")
     const language = useShallowEqualSelector(appLanguageSelector);
@@ -33,9 +34,9 @@ function Weather({ coords, denied}: Props) {
 
     return (
         <div className="relative flex items-center ">
-            <p className="text-white text-[15px]">{weather?.name}</p>
+            <p className={`${bgImage === 1 ? "text-white" : "text-black"} text-[15px]`}>{weather?.name}</p>
             <img width={40} src={weather?.weather?.length > 0 ? `https://openweathermap.org/img/w/${weather?.weather[0]?.icon}.png` : ""} alt=""/>
-            <p className="text-white text-[18px] font-normal">{weather?.main?.temp}&deg;</p>
+            <p className={`${bgImage === 1 ? "text-white" : "text-black"} text-[18px] font-normal`}>{weather?.main?.temp}&deg;</p>
         </div>
     );
 }

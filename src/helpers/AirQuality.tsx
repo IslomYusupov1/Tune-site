@@ -16,10 +16,6 @@ function AirQuality({ coords }: Props) {
     const getData = async () => {
         try {
             const response = await fetch(`https://api.openweathermap.org/data/2.5/air_pollution?lat=${coords.lat}&lon=${coords.long}&appid=e7feb6e31e41d603d5c8f6ede12c8b1a&units=metric&lang=${language.toLowerCase()}`);
-            if (!response.ok) {
-                throw new Error(`Response status: ${response.status}`);
-            }
-
             const json = await response.json();
             setData(json);
         } catch (error: any) {
