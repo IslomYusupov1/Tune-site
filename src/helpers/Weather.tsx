@@ -10,7 +10,6 @@ interface Props {
 
 function Weather({ coords, denied, bgImage }: Props) {
     const [weather, setWeather] = useState<Record<string, any>>({});
-    console.log(weather, "ww")
     const language = useShallowEqualSelector(appLanguageSelector);
     const url = useMemo(() => denied ?
         `https://api.openweathermap.org/data/2.5/weather?q=Tashkent&appid=e7feb6e31e41d603d5c8f6ede12c8b1a&units=metric&lang=${language.toLowerCase()}`

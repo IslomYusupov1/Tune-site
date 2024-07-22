@@ -10,7 +10,6 @@ interface Props {
 
 function AirQuality({ coords }: Props) {
     const [data, setData] = useState<Record<string, any>>({});
-    console.log(data, "air")
     const language = useShallowEqualSelector(appLanguageSelector);
     const {translate} = useI18n();
     const getData = async () => {

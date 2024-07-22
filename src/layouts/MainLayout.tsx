@@ -10,7 +10,7 @@ import bgMain from "../assets/bg-main.jpg";
 import LanguageSwitcher from "../helpers/LanguageSwitcher";
 import {useI18n} from "../i18n/I18nContext";
 import Weather from "../helpers/Weather";
-import AirQuality from "../helpers/AirQuality";
+// import AirQuality from "../helpers/AirQuality";
 
 interface Props {
     readonly children: ReactNode;
@@ -37,7 +37,6 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
             }
         }
     }, [location])
-    console.log(denied, "dd")
     useEffect(() => {
         if (navigator.geolocation){
             navigator.geolocation.getCurrentPosition(function(position) {
@@ -81,7 +80,7 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
                     <div className="flex items-center text-center gap-6">
                         <div className="flex items-center text-center gap-2">
                             <Weather coords={coords} denied={denied} bgImage={bgImage}/>
-                            <AirQuality coords={coords}/>
+                            {/*<AirQuality coords={coords}/>*/}
                         </div>
                         <LanguageSwitcher bgImage={bgImage} />
                     </div>

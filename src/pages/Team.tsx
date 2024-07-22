@@ -67,8 +67,8 @@ function Team() {
                                 className={`mySwiper ${open ? "opacity-30" : ""}`}
                                 loop={true}
                                 navigation={true}
-                                onSlideChange={() => console.log('slide change')}
-                                onSwiper={(swiper) => console.log(swiper)}
+                                // onSlideChange={() => console.log('slide change')}
+                                // onSwiper={(swiper) => console.log(swiper)}
                             >
                                 <SwiperSlide><motion.img whileHover={{ scale: 1.2, transition: { duration: 0.3, type: "tween", ease: "easeInOut" } }} className="w-9/12 object-cover" src={teamImage} alt=""/></SwiperSlide>
                                 <SwiperSlide><motion.img whileHover={{ scale: 1.2, transition: { duration: 0.3, type: "tween", ease: "easeInOut" } }} className="w-9/12 object-cover" src={teamImage1} alt=""/></SwiperSlide>
