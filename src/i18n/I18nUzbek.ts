@@ -45,7 +45,7 @@ export const I18nUzbek: I18nSchema = {
   TITLE_BANK_PAGE_LIST_TITLE5: "ABS-ga minimal bog'liqlik bilan mikro-servis ko'rsatish arxitekturasi",
   TITLE_BANK_PAGE_LIST_TITLE6: "6 ta ABS bilan muvaffaqiyatli integratsiyalar:",
   TITLE_BANK_PAGE_LIST_TITLE6_1: "Temenos",
-  TITLE_BANK_PAGE_LIST_TITLE6_2: "lABS",
+  TITLE_BANK_PAGE_LIST_TITLE6_2: "IABS",
   TITLE_BANK_PAGE_LIST_TITLE6_3: "NCI",
   TITLE_BANK_PAGE_LIST_TITLE6_4: "ASBT",
   TITLE_BANK_PAGE_LIST_TITLE6_5: "Korean system",

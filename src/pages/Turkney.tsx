@@ -119,7 +119,7 @@ function Turkney() {
                                 <li className="mx-14">{translate("TITLE_TURNKEY_PAGE_TITLE5_2")}</li>
                                 <li className="mx-14">{translate("TITLE_TURNKEY_PAGE_TITLE5_3")}</li>
                             </ul>
-                            <p className="max-w-[775px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[28px] leading-25 mb-5">{translate("TITLE_TURNKEY_PAGE_TITLE56")}</p>
+                            <p className="max-w-[775px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[28px] leading-25 mb-5">{translate("TITLE_TURNKEY_PAGE_TITLE6")}</p>
                             <p className="max-w-[775px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[28px] leading-25">{translate("TITLE_TURNKEY_PAGE_TITLE7")}<br/> <b
                                     className="xl:text-[18px] 2xl:text-[20px] 3xl:text-[28px] text-[#007AFF] cursor-pointer"
                                     onClick={() => setOpen(false)}>{translate("TITLE_OPEN_DIALOG_CLOSE_TITLE")}</b></p>

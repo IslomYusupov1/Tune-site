@@ -43,7 +43,7 @@ export const I18nEnglish: I18nSchema = {
     TITLE_BANK_PAGE_LIST_TITLE5: "Micro service architecture with minimal dependence on ABS",
     TITLE_BANK_PAGE_LIST_TITLE6: "Successful integrations with 6 ABS:",
     TITLE_BANK_PAGE_LIST_TITLE6_1: "Temenos",
-    TITLE_BANK_PAGE_LIST_TITLE6_2: "labs",
+    TITLE_BANK_PAGE_LIST_TITLE6_2: "IABS",
     TITLE_BANK_PAGE_LIST_TITLE6_3: "NCI",
     TITLE_BANK_PAGE_LIST_TITLE6_4: "ASBT",
     TITLE_BANK_PAGE_LIST_TITLE6_5: "Korean system",
