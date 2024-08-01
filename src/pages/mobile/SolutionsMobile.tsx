@@ -13,7 +13,7 @@ function SolutionsMobile() {
         smooth: 1,
     })
     return (
-        <motion.div ref={ref} className="md:h-screen bg-[url('../assets/bg-dark.png')] relative p-5 object-cover bg-no-repeat bg-center w-full">
+        <motion.div ref={ref} className="lg:h-screen bg-[url('../assets/bg-dark.png')] relative p-5 object-cover bg-no-repeat bg-center w-full">
             {/*<img src={bgCosmo} alt="" className="absolute bottom-0 right-0"/>*/}
             <div
                 className="h-full custom-container mx-auto w-full flex lg:justify-center flex-col gap-4 xl:mt-10 lg:mt-10 2xl:mt-0 3xl:mt-0 text-white w-full text-start font-light">
@@ -34,7 +34,7 @@ function SolutionsMobile() {
                         </div>
                     </div>
                     <motion.div animate={{width: "100%"}} initial={{width: 0}} transition={{duration: 1, delay: 1.2}}
-                                className="border-b border-white w-full 2xl:my-5 lg:my-2"/>
+                                className="border-b border-white w-full 2xl:my-5 lg:my-2 my-1"/>
                     <div className="flex justify-between gap-16 ">
                         <div className="w-full flex flex-col gap-1">
                             <h3 className="xl:text-[22px] 2xl:text-[32px] lg:text-[14px] font-medium 2xl:mb-3 xl:mb-1">{translate("TITLE_SOLUTIONS_PAGE_LIST_TITLE1_3")}</h3>
@@ -56,7 +56,7 @@ function SolutionsMobile() {
                         </div>
                     </div>
                     <motion.div animate={{width: "100%"}} initial={{width: 0}} transition={{duration: 1, delay: 1.5}}
-                                className="border-b border-white 2xl:my-5 lg:my-2 "/>
+                                className="border-b border-white 2xl:my-5 lg:my-2 my-1"/>
                     <div className="flex justify-between">
                         <div className="w-full flex flex-col gap-1">
                             <h3 className="xl:text-[22px] 2xl:text-[32px] lg:text-[14px] font-medium 2xl:mb-3 xl:mb-1">{translate("TITLE_SOLUTIONS_PAGE_LIST_TITLE1_5")}</h3>

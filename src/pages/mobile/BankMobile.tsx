@@ -14,7 +14,7 @@ function BankMobile() {
     //     smooth: 1,
     // })
     return (
-        <motion.div ref={ref} className="bg-[url('../assets/bg-dark.png')] md:h-screen bg-white relative p-5 object-cover bg-no-repeat bg-center">
+        <motion.div ref={ref} className="bg-[url('../assets/bg-dark.png')] lg:h-screen bg-white relative p-5 object-cover bg-no-repeat bg-center">
             {/*<img src={bgCosmo} alt="" className="absolute bottom-0 right-0"/>*/}
             <div className="flex custom-container mx-auto relative flex-col justify-between lg:justify-center h-full">
                 <h3 className="xl:text-[40px] 2xl:text-[64px] text-[22px] mb-3 mt-3 leading-7 md:leading-normal text-white lg:text-[26px] 2xl:mb-16 2xl:mt-10 xl:mb-6 xl:mt-6 lg:mt-10 lg:mb-4">
@@ -48,7 +48,7 @@ function BankMobile() {
                     </div>
                 </div>
                 <div
-                    className="2xl:mt-3 lg:mt-2 mt-4 z-50 md:absolute right-0 lg:right-[20px] lg:bottom-[-20px]">
+                    className="2xl:mt-3 lg:mt-2 mt-4 z-50 lg:absolute right-0 lg:right-[20px] lg:bottom-[-20px]">
                     <img className="lg:w-[250px] xl:w-full 2xl:w-[600px] w-[280px] aspect-auto mx-auto" src={bankPhoneImage} alt=""/>
                 </div>
             </div>

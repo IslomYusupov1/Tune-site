@@ -59,7 +59,7 @@ function ContactsMobile() {
     }, [alert])
     return (
         <motion.div ref={ref}
-                    className="md:h-screen bg-[url('../assets/bg-dark.png')] relative p-5 object-cover bg-no-repeat bg-center w-full">
+                    className="lg:h-screen bg-[url('../assets/bg-dark.png')] relative p-5 object-cover bg-no-repeat bg-center w-full">
             {/*<img src={bgCosmo} alt="" className="absolute bottom-0 right-0" width={300}/>*/}
             <div className="flex custom-container h-full mx-auto justify-center 2xl:gap-6 xl:gap-3 lg:gap-3 flex-col text-white w-full text-start font-light lg:mx-[100px] xl:mt-[50px] 2xl:mt-[25px] lg:mt-[50px] ">
                 <h3 className="2xl:text-[48px] xl:text-[28px] lg:text-[24px] text-[24px] mt-5">{translate("TITLE_CONTACT_PAGE_MAIN_TITLE")}</h3>
@@ -80,7 +80,7 @@ function ContactsMobile() {
                         onSubmit={(e, formikHelpers) => sendMessage(e, formikHelpers)}>
                     {({handleSubmit, errors, touched, values, setFieldValue}) => (
                         <>
-                            <Form onSubmit={handleSubmit} className="z-50 mt-14 md:mt-10 md:hidden">
+                            <Form onSubmit={handleSubmit} className="z-50 mt-14 lg:mt-10 lg:hidden">
                                 <div className="flex flex-col gap-4 2xl:gap-20 w-full md:w-2/3">
                                     <div>
                                         <Field type="text"
@@ -123,7 +123,7 @@ function ContactsMobile() {
                                     </button>
                                 </div>
                             </Form>
-                            <Form onSubmit={handleSubmit} className="z-50 hidden md:block">
+                            <Form onSubmit={handleSubmit} className="z-50 hidden lg:block">
                                 <div className="flex flex-col 2xl:gap-4 md:gap-3 2xl:mt-10 w-2/4">
                                     <div>
                                         <Field type="text"

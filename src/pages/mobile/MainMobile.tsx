@@ -36,7 +36,7 @@ function MainMobile() {
                 <motion.ul
                     className={`text-white
                          z-40 flex-col
-                         hidden md:flex
+                         hidden lg:flex
                          right-0
                          absolute
                          xl:gap-4 xl:text-[18px]

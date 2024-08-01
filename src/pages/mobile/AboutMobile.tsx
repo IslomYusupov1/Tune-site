@@ -19,10 +19,10 @@ function AboutMobile() {
     // const scale = useTransform(scrollYProgress, [0, 0.5, 0.8, 1], [1, 0.8, 0.5, 0.1])
     return (
         <motion.div ref={ref}
-            className="h-screen bg-[url('../assets/bg-dark.png')] flex flex-col relative justify-center object-cover bg-no-repeat bg-center w-full">
+            className="lg:h-screen bg-[url('../assets/bg-dark.png')] flex flex-col py-10 lg:py-0 relative justify-center object-cover bg-no-repeat bg-center w-full">
             {/*<img src={bgCosmo} alt="" className="absolute bottom-0 right-0"/>*/}
             <div
-                className="md:w-3/4 md:mx-auto md:bg-black md:rounded-2xl md:h-[70vh] custom-container rounded-lg
+                className="lg:w-3/4 lg:mx-auto bg-black rounded-2xl lg:h-[70vh] md:h-[500px]  custom-container rounded-lg
                                mt-10 relative px-2 flex flex-col h-full">
                 <div
                     className={`flex flex-col mx-3 text-white text-start z-50 md:z-0 md:absolute md:bottom-[20px] md:left-[20px]`}>
@@ -56,7 +56,7 @@ function AboutMobile() {
                 <div className="h-full">
                     <div style={{ height: "90%" }}
                         className={`${open ? "opacity-10" : "opacity-30"} flex justify-center lg:justify-end md:bg-transparent bg-white border-none text-center md:h-auto items-end w-full border border-transparent mt-5 rounded-2xl md:rounded-xl`}>
-                        <video className="md:w-8/12 md:aspect-auto md:mx-5 z-10 py-3 h-full rounded-2xl" muted={true} loop={true}
+                        <video className="lg:w-8/12 aspect-auto lg:mx-5 z-10 py-3 h-full rounded-2xl" muted={true} loop={true}
                                autoPlay={false}
                                preload="auto"
                                controls={true}
