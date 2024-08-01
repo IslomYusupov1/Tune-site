@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   mode: 'jit',
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -6,6 +7,10 @@ module.exports = {
     extend: {
       lineHeight: {
         "24": "24px",
+      },
+      customContainer: {
+        width: "calc(100%-7%)",
+        margin: "auto"
       },
       keyframes: {
         wiggle: {

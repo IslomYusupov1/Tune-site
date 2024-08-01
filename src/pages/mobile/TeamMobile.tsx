@@ -6,7 +6,7 @@ import teamImage4 from "../../assets/team-3.jpg";
 import teamImage5 from "../../assets/team-4.jpg";
 import {useRef} from "react";
 import {useScroll, motion} from "framer-motion";
-import bgCosmo from "../../assets/cosmo-mobile.svg";
+// import bgCosmo from "../../assets/cosmo-mobile.svg";
 import {useI18n} from "../../i18n/I18nContext";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
@@ -17,21 +17,23 @@ function TeamMobile() {
     const { translate } = useI18n();
 
     const ref = useRef<HTMLDivElement>(null);
-    const {scrollYProgress} = useScroll({
+    const {} = useScroll({
         target: ref,
         offset: ["0 1", "0.8 1"],
         smooth: 1,
     })
     return (
-        <motion.div ref={ref} style={{ opacity: scrollYProgress }}
-            className="bg-[url('../assets/bg-light.png')] flex flex-col p-4 relative justify-center object-cover bg-no-repeat bg-center w-full">
-            <img src={bgCosmo} alt="" className="absolute bottom-0 right-0"/>
-            <motion.div style={{ scale: scrollYProgress }} className="justify-center flex">
+        <motion.div ref={ref}
+            className="bg-[url('../assets/bg-light.jpg')] md:h-screen flex flex-col p-4 relative justify-center object-cover bg-no-repeat bg-center w-full">
+            {/*<img src={bgCosmo} alt="" className="absolute bottom-0 right-0"/>*/}
+            <div className="justify-center md:w-full md:h-full custom-container md:mx-auto flex">
                 <div className="flex bg-black rounded-[30px] w-full flex-col text-start bank-page my-20 relative">
-                    <div className="flex p-5 text-white flex-col">
-                        <h3 className="text-[40px]">{translate("TITLE_TEAM_PAGE_TEAM_TITLE")}</h3>
-                        <p className="max-w-[775px] text-[17px] leading-24 mb-3">{translate("TITLE_TEAM_PAGE_MAIN_TITLE")}
-                        </p>
+                    <div className="flex p-5 h-full w-full text-white flex-col relative">
+                       <div className="md:absolute md:bottom-10 block 2xl:left-20" style={{ zIndex: 1000 }}>
+                           <h3 className="text-[40px] 2xl:text-[60px]">{translate("TITLE_TEAM_PAGE_TEAM_TITLE")}</h3>
+                           <p className="max-w-[775px] text-[17px] 2xl:text-[32px] 2xl:leading-[40px] leading-24 mb-3">{translate("TITLE_TEAM_PAGE_MAIN_TITLE")}
+                           </p>
+                       </div>
                         {/*{open && <div className=>*/}
                         {/*    <h3 className="text-[40px] xl:text-[32px] 2xl:text-[40px] 3xl:text-[48px]">Наша*/}
                         {/*        команда</h3>*/}
@@ -54,29 +56,32 @@ function TeamMobile() {
                         {/*    </p>*/}
 
                         {/*</div>}*/}
-                        <div className="w-full h-full relative" style={{ zIndex: 100 }}>
-                            <Swiper
-                                modules={[Navigation]}
-                                spaceBetween={50}
-                                slidesPerView={1}
-                                // navigation={true}
-                                className={`mySwiper`}
-                                loop={true}
-                                navigation={true}
-                                onSlideChange={() => console.log('slide change')}
-                                onSwiper={(swiper) => console.log(swiper)}
-                            >
-                                <SwiperSlide><motion.img whileHover={{ scale: 1.2, transition: { duration: 0.3, type: "tween", ease: "easeInOut" } }} className="w-9/12 object-cover" src={teamImage} alt=""/></SwiperSlide>
-                                <SwiperSlide><motion.img whileHover={{ scale: 1.2, transition: { duration: 0.3, type: "tween", ease: "easeInOut" } }} className="w-9/12 object-cover" src={teamImage1} alt=""/></SwiperSlide>
-                                <SwiperSlide><motion.img whileHover={{ scale: 1.2, transition: { duration: 0.3, type: "tween", ease: "easeInOut" } }} className="w-9/12 object-cover" src={teamImage2} alt=""/></SwiperSlide>
-                                <SwiperSlide><motion.img whileHover={{ scale: 1.2, transition: { duration: 0.3, type: "tween", ease: "easeInOut" } }} className="w-9/12 object-cover" src={teamImage3} alt=""/></SwiperSlide>
-                                <SwiperSlide><motion.img whileHover={{ scale: 1.2, transition: { duration: 0.3, type: "tween", ease: "easeInOut" } }} className="w-9/12 object-cover" src={teamImage4} alt=""/></SwiperSlide>
-                                <SwiperSlide><motion.img whileHover={{ scale: 1.2, transition: { duration: 0.3, type: "tween", ease: "easeInOut" } }} className="w-9/12 object-cover" src={teamImage5} alt=""/></SwiperSlide>
-                            </Swiper>
+                            <div className="w-full flex justify-end h-full relative z-50 opacity-80">
+                                <div className="w-full lg:w-10/12">
+                                <Swiper
+                                    modules={[Navigation]}
+                                    spaceBetween={50}
+                                    slidesPerView={1}
+                                    // navigation={true}
+                                    className={`mySwiper md:w-full md:items-end`}
+                                    loop={true}
+                                    navigation={true}
+                                    // onSlideChange={() => console.log('slide change')}
+                                    // onSwiper={(swiper) => console.log(swiper)}
+                                >
+                                    <SwiperSlide><motion.img whileHover={{ scale: 1.2, transition: { duration: 0.3, type: "tween", ease: "easeInOut" } }} className="w-9/12 object-cover" src={teamImage} alt=""/></SwiperSlide>
+                                    <SwiperSlide><motion.img whileHover={{ scale: 1.2, transition: { duration: 0.3, type: "tween", ease: "easeInOut" } }} className="w-9/12 object-cover" src={teamImage1} alt=""/></SwiperSlide>
+                                    <SwiperSlide><motion.img whileHover={{ scale: 1.2, transition: { duration: 0.3, type: "tween", ease: "easeInOut" } }} className="w-9/12 object-cover" src={teamImage2} alt=""/></SwiperSlide>
+                                    <SwiperSlide><motion.img whileHover={{ scale: 1.2, transition: { duration: 0.3, type: "tween", ease: "easeInOut" } }} className="w-9/12 object-cover" src={teamImage3} alt=""/></SwiperSlide>
+                                    <SwiperSlide><motion.img whileHover={{ scale: 1.2, transition: { duration: 0.3, type: "tween", ease: "easeInOut" } }} className="w-9/12 object-cover" src={teamImage4} alt=""/></SwiperSlide>
+                                    <SwiperSlide><motion.img whileHover={{ scale: 1.2, transition: { duration: 0.3, type: "tween", ease: "easeInOut" } }} className="w-9/12 object-cover" src={teamImage5} alt=""/></SwiperSlide>
+                                </Swiper>
+                            </div>
                         </div>
+
                     </div>
                 </div>
-            </motion.div>
+            </div>
         </motion.div>
     );
 }

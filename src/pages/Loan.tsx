@@ -51,7 +51,7 @@ const footerVariants = {
 function Loan() {
     const { translate } = useI18n();
     return (
-        <motion.div className="text-[#353535] w-11/12 mx-auto mx-[100px] lg:mt-5 xl:mt-5">
+        <motion.div className="text-[#353535] md:h-screen w-11/12 md:w-full mx-auto mx-[100px] lg:mt-5 xl:mt-5">
             <motion.img loading="lazy" animate={{opacity: 1}} exit={{ opacity: 0, transition: {ease: "easeInOut"} }} initial={{opacity: 0}} transition={{duration: 0.8, ease: "easeInOut"}}
                         alt="" src={imageBgLight} className="fixed w-full h-full top-0 left-0"
                         style={{zIndex: "-1"}}/>

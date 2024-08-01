@@ -1,7 +1,6 @@
 import {I18nProvider} from "../i18n/I18nContext";
-import {isMobile} from "react-device-detect";
 import MobileContainer from "./MobileContainer";
-import RootContainer from "./RootContainer";
+// import RootContainer from "./RootContainer";
 import {BrowserRouter} from "react-router-dom";
 import {useShallowEqualSelector} from "../helpers/useShallowSelector";
 import {appLanguageSelector} from "../reducers/AppReducer";
@@ -11,7 +10,7 @@ function ResponsiveContainer() {
     return (
         <BrowserRouter>
             <I18nProvider data={{language}}>
-                {isMobile ? <MobileContainer/> : <RootContainer/>}
+                <MobileContainer/>
             </I18nProvider>
         </BrowserRouter>
     );

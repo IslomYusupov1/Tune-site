@@ -5,7 +5,6 @@ import {RoutesEnum} from "../constants/Routes";
 import logo from "../assets/logo.svg";
 import logoBlack from "../assets/logo-black.svg";
 import cosmoImage from "../assets/cosmo-web.svg";
-import {useLocation} from "react-router";
 import bgMain from "../assets/bg-main.jpg";
 import LanguageSwitcher from "../helpers/LanguageSwitcher";
 import {useI18n} from "../i18n/I18nContext";
@@ -19,24 +18,10 @@ interface Props {
 }
 
 function MainLayout({children, bgVideo = false, bgImage}: Props) {
-    const location = useLocation();
     const { translate } = useI18n();
     const [coords, setCoords] = useState({long: 69.240562, lat: 41.311081});
     const [denied, setDenied] = useState(true);
 
-    useEffect(() => {
-        if (location.pathname === RoutesEnum.Main) {
-            const timer = setTimeout(() => {
-                const item = document.querySelector('.play_button') as HTMLButtonElement;
-                if (item) {
-                    item.click()
-                }
-            }, 1300)
-            return () => {
-                clearTimeout(timer)
-            }
-        }
-    }, [location])
     useEffect(() => {
         if (navigator.geolocation){
             navigator.geolocation.getCurrentPosition(function(position) {
@@ -99,7 +84,7 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
                         <motion.li animate={{x: 10, opacity: 1}} initial={{x: 200, opacity: 0}}
                                    transition={{duration: 0.5, delay: 0.1, ease: "easeInOut"}}
                                    className={`${bgImage === 1 ? "hover:text-[#34C924] line-green" : "hover:text-[#003ABC] line-blue"} cursor-pointer 
-                                   ${location.pathname === RoutesEnum.Main ? (bgImage === 1 ? "active text-[#34C924]" : "active-blue text-[#003ABC]") : ""}`}>
+                                  `}>
                             {translate("TITLE_MENU_PAGE_TITLE_1")}
                         </motion.li>
                     </Link>
@@ -107,7 +92,7 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
                         <motion.li animate={{x: 10, opacity: 1}} initial={{x: 200, opacity: 0}}
                                    transition={{duration: 0.5, delay: 0.2, ease: "easeInOut"}}
                                    className={`${bgImage === 1 ? "hover:text-[#34C924] line-green" : "hover:text-[#003ABC] line-blue"} cursor-pointer
-                                    ${location.pathname === RoutesEnum.About ? (bgImage === 1 ? "active text-[#34C924]" : "active-blue text-[#003ABC]") : ""}`}>
+                                   `}>
                             {translate("TITLE_MENU_PAGE_TITLE_2")}
                         </motion.li>
                     </Link>
@@ -115,7 +100,7 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
                         <motion.li animate={{x: 10, opacity: 1}} initial={{x: 200, opacity: 0}}
                                    transition={{duration: 0.5, delay: 0.25, ease: "easeInOut"}}
                                    className={`${bgImage === 1 ? "hover:text-[#34C924] line-green" : "hover:text-[#003ABC] line-blue"} cursor-pointer 
-                                   ${location.pathname === RoutesEnum.Loan ? (bgImage === 1 ? "active text-[#34C924]" : "active-blue text-[#003ABC]") : ""}`}>
+                                  `}>
                             {translate("TITLE_MENU_PAGE_TITLE_3")}
                         </motion.li>
                     </Link>
@@ -123,7 +108,7 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
                         <motion.li animate={{x: 10, opacity: 1}} initial={{x: 200, opacity: 0}}
                                    transition={{duration: 0.5, delay: 0.3, ease: "easeInOut"}}
                                    className={`${bgImage === 1 ? "hover:text-[#34C924] line-green" : "hover:text-[#003ABC] line-blue"} cursor-pointer 
-                                   ${location.pathname === RoutesEnum.Bank ? (bgImage === 1 ? "active text-[#34C924]" : "active-blue text-[#003ABC]") : ""}`}>
+                                  `}>
                             {translate("TITLE_MENU_PAGE_TITLE_4")}
                         </motion.li>
                     </Link>
@@ -131,7 +116,7 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
                         <motion.li animate={{x: 10, opacity: 1}} initial={{x: 200, opacity: 0}}
                                    transition={{duration: 0.5, delay: 0.35, ease: "easeInOut"}}
                                    className={`${bgImage === 1 ? "hover:text-[#34C924] line-green" : "hover:text-[#003ABC] line-blue"} cursor-pointer
-                                    ${location.pathname === RoutesEnum.Crm ? (bgImage === 1 ? "active text-[#34C924]" : "active-blue text-[#003ABC]") : ""}`}>
+                                   `}>
                             {translate("TITLE_MENU_PAGE_TITLE_5")}
                         </motion.li>
                     </Link>
@@ -139,7 +124,7 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
                         <motion.li animate={{x: 10, opacity: 1}} initial={{x: 200, opacity: 0}}
                                    transition={{duration: 0.5, delay: 0.4, ease: "easeInOut"}}
                                    className={`${bgImage === 1 ? "hover:text-[#34C924] line-green" : "hover:text-[#003ABC] line-blue"} cursor-pointer 
-                                   ${location.pathname === RoutesEnum.Equaring ? (bgImage === 1 ? "active text-[#34C924]" : "active-blue text-[#003ABC]") : ""}`}>
+                                  `}>
                             {translate("TITLE_MENU_PAGE_TITLE_6")}
                         </motion.li>
                     </Link>
@@ -154,7 +139,7 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
                         <motion.li animate={{x: 10, opacity: 1}} initial={{x: 200, opacity: 0}}
                                    transition={{duration: 0.5, delay: 0.5, ease: "easeInOut"}}
                                    className={`${bgImage === 1 ? "hover:text-[#34C924] line-green" : "hover:text-[#003ABC] line-blue"} cursor-pointer
-                                    ${location.pathname === RoutesEnum.Turkney ? (bgImage === 1 ? "active text-[#34C924]" : "active-blue text-[#003ABC]") : ""}`}>
+                                   `}>
                             {translate("TITLE_MENU_PAGE_TITLE_7")}
                         </motion.li>
                     </Link>
@@ -162,7 +147,7 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
                         <motion.li animate={{x: 10, opacity: 1}} initial={{x: 200, opacity: 0}}
                                    transition={{duration: 0.5, delay: 0.55, ease: "easeInOut"}}
                                    className={`${bgImage === 1 ? "hover:text-[#34C924] line-green" : "hover:text-[#003ABC] line-blue"} cursor-pointer 
-                                   ${location.pathname === RoutesEnum.Solutions ? (bgImage === 1 ? "active text-[#34C924]" : "active-blue text-[#003ABC]") : ""}`}>
+                                  `}>
                             {translate("TITLE_MENU_PAGE_TITLE_8")}
                         </motion.li>
                     </Link>
@@ -170,7 +155,7 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
                         <motion.li animate={{x: 10, opacity: 1}} initial={{x: 200, opacity: 0}}
                                    transition={{duration: 0.5, delay: 0.6, ease: "easeInOut"}}
                                    className={`${bgImage === 1 ? "hover:text-[#34C924] line-green" : "hover:text-[#003ABC] line-blue"} cursor-pointer
-                                    ${location.pathname === RoutesEnum.Team ? (bgImage === 1 ? "active text-[#34C924]" : "active-blue text-[#003ABC]") : ""}`}>
+                                   `}>
                             {translate("TITLE_MENU_PAGE_TITLE_9")}
                         </motion.li>
                     </Link>
@@ -179,7 +164,7 @@ function MainLayout({children, bgVideo = false, bgImage}: Props) {
                                    transition={{duration: 0.5, delay: 0.65, ease: "easeInOut"}}
                                    className={`${bgImage === 1 ? "hover:text-[#34C924] line-green" : "hover:text-[#003ABC] line-blue"}
                                    cursor-pointer
-                                     ${location.pathname === RoutesEnum.Contact ? (bgImage === 1 ? "active text-[#34C924]" : "active-blue text-[#003ABC]") : ""}`}>{translate("TITLE_MENU_PAGE_TITLE_10")}
+                                    `}>{translate("TITLE_MENU_PAGE_TITLE_10")}
                         </motion.li>
                     </Link>
                 </motion.ul>
