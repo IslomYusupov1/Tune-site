@@ -33,11 +33,11 @@ function MobileContainer() {
     return (
         <div className="flex flex-col relative">
             <div id="header"
-                 className={`fixed header w-full left-0 h-[65px] 2xl:h-[120px] ${scroll ? "hide top-0" : "top-2"} flex`}
+                 className={`fixed header w-full left-0 h-[65px] 2xl:h-[80px] ${scroll ? "hide top-0" : "top-2"} flex`}
                  style={{zIndex: 100}}>
                 <div className="mx-auto custom-container w-full flex justify-between text-center items-center">
                     <img src={logoWhite} alt=""
-                         className="w-[140px] lg:w-[200px] 2xl:w-[300px] items-center text-center mx-6 md:mx-2 top-0"/>
+                         className="w-[140px] lg:w-[200px] 2xl:w-[250px] items-center text-center mx-6 md:mx-2 top-0"/>
                     <div className="mx-4">
                         <LanguageSwitcher bgImage={1} mobile={false}/>
                     </div>

@@ -31,21 +31,21 @@ function LoanMobile() {
             <div className="h-full flex justify-center custom-container mx-auto overflow-hidden flex-col w-full">
                 <div
                     className="flex text-red-black leading-5 xl:gap-2 md:leading-normal flex-col text-start w-full md:w-full">
-                    <h3 className="xl:text-[35px] xl:leading-[100px] lg:text-[26px] 2xl:text-[60px] text-[20px] mb-5 md:[24px] md:mb-0 md:mt-0 font-light">{translate("TITLE_LOAN_PAGE_MAIN_TITLE")}</h3>
-                    <p className="xl:text-[20px] lg:text-[15px] 2xl:text-[28px] md:text-[20px] text-[15px]">1. {translate("TITLE_ABOUT_PAGE_LIST_TITLE1")}</p>
-                    <ul className="list-disc md:mx-10 mx-5 xl:text-[20px] lg:text-[14px] 2xl:text-[28px] md:text-[20px] text-[15px]">
+                    <h3 className="xl:text-[35px] xl:leading-[100px] lg:text-[26px] 2xl:text-[42px] text-[20px] mb-5 md:[24px] md:mb-0 md:mt-0 font-light">{translate("TITLE_LOAN_PAGE_MAIN_TITLE")}</h3>
+                    <p className="xl:text-[20px] lg:text-[15px] 2xl:text-[24px] md:text-[20px] text-[15px]">1. {translate("TITLE_ABOUT_PAGE_LIST_TITLE1")}</p>
+                    <ul className="list-disc md:mx-10 mx-5 xl:text-[20px] lg:text-[14px] 2xl:text-[24px] md:text-[20px] text-[15px]">
                         <li>{translate("TITLE_ABOUT_PAGE_LIST_TITLE1_1")}</li>
                         <li>{translate("TITLE_ABOUT_PAGE_LIST_TITLE1_2")}</li>
                     </ul>
-                    <p className="xl:text-[20px] lg:text-[15px] 2xl:text-[28px] md:text-[20px] text-[15px]">2. {translate("TITLE_ABOUT_PAGE_LIST_TITLE2")}</p>
-                    <p className="xl:text-[20px] lg:text-[15px] 2xl:text-[28px] md:text-[20px] text-[15px]">3. {translate("TITLE_ABOUT_PAGE_LIST_TITLE3")}</p>
-                    <ul className="list-disc md:mx-10 mx-5 xl:text-[20px] lg:text-[15px] 2xl:text-[28px] md:text-[20px] text-[15px]">
+                    <p className="xl:text-[20px] lg:text-[15px] 2xl:text-[24px] md:text-[20px] text-[15px]">2. {translate("TITLE_ABOUT_PAGE_LIST_TITLE2")}</p>
+                    <p className="xl:text-[20px] lg:text-[15px] 2xl:text-[24px] md:text-[20px] text-[15px]">3. {translate("TITLE_ABOUT_PAGE_LIST_TITLE3")}</p>
+                    <ul className="list-disc md:mx-10 mx-5 xl:text-[20px] lg:text-[15px] 2xl:text-[24px] md:text-[20px] text-[15px]">
                         <li>{translate("TITLE_ABOUT_PAGE_LIST_TITLE3_1")}</li>
                         <li>{translate("TITLE_ABOUT_PAGE_LIST_TITLE1_2")}</li>
                     </ul>
-                    <p className="xl:text-[20px] lg:text-[15px] 2xl:text-[28px] md:text-[20px] text-[15px]">4. {translate("TITLE_ABOUT_PAGE_LIST_TITLE4")}</p>
-                    <p className="xl:text-[20px] lg:text-[15px] 2xl:text-[28px] md:text-[20px] text-[15px]">5. {translate("TITLE_ABOUT_PAGE_LIST_TITLE5")}</p>
-                    <ul className="list-disc md:mx-10 mx-5 xl:text-[20px] lg:text-[15px] 2xl:text-[28px] md:text-[20px] text-[15px]">
+                    <p className="xl:text-[20px] lg:text-[15px] 2xl:text-[24px] md:text-[20px] text-[15px]">4. {translate("TITLE_ABOUT_PAGE_LIST_TITLE4")}</p>
+                    <p className="xl:text-[20px] lg:text-[15px] 2xl:text-[24px] md:text-[20px] text-[15px]">5. {translate("TITLE_ABOUT_PAGE_LIST_TITLE5")}</p>
+                    <ul className="list-disc md:mx-10 mx-5 xl:text-[20px] lg:text-[15px] 2xl:text-[24px] md:text-[20px] text-[15px]">
                         <li>{translate("TITLE_ABOUT_PAGE_LIST_TITLE5_1")}</li>
                     </ul>
                 </div>
@@ -56,24 +56,24 @@ function LoanMobile() {
                     <div className="flex gap-x-8 gap-y-4 mt-3 flex-wrap">
                         <img src={mkb} alt="" className="2xl:w-[240px] xl:w-[180px] lg:w-[140px] w-[80px] aspect-auto"/>
                         <img src={davr} alt=""
-                             className="2xl:w-[240px] xl:w-[150px] lg:w-[140px] w-[100px] aspect-auto"/>
+                             className="2xl:w-[200px] xl:w-[150px] lg:w-[140px] w-[100px] aspect-auto"/>
                         <img src={kapital} alt=""
-                             className="2xl:w-[240px] xl:w-[150px] lg:w-[140px] w-[130px] aspect-auto"/>
+                             className="2xl:w-[200px] xl:w-[150px] lg:w-[140px] w-[130px] aspect-auto"/>
                         <img src={anorBank} alt=""
-                             className="2xl:w-[240px] xl:w-[150px] lg:w-[140px] w-[90px] aspect-auto"/>
+                             className="2xl:w-[200px] xl:w-[150px] lg:w-[140px] w-[90px] aspect-auto"/>
                         <img src={joyda} alt="" className="2xl:w-[240px] xl:w-[150px] lg:w-[140px] w-[80px] aspect-auto"/>
                         <img src={asia} alt=""
-                             className="2xl:w-[240px] xl:w-[150px] lg:w-[140px] w-[120px] aspect-auto"/>
+                             className="2xl:w-[200px] xl:w-[150px] lg:w-[140px] w-[120px] aspect-auto"/>
                         <img src={agat} alt=""
-                             className="2xl:w-[240px] xl:w-[150px] lg:w-[140px] w-[100px] aspect-auto"/>
+                             className="2xl:w-[200px] xl:w-[150px] lg:w-[140px] w-[100px] aspect-auto"/>
                         <img src={uzum} alt=""
-                             className="2xl:w-[240px] xl:w-[150px] lg:w-[140px] w-[70px] aspect-auto"/>
+                             className="2xl:w-[200px] xl:w-[150px] lg:w-[140px] w-[70px] aspect-auto"/>
                         <img src={tenge} alt=""
-                             className="2xl:w-[240px] xl:w-[150px] lg:w-[140px] w-[80px] aspect-auto"/>
+                             className="2xl:w-[200px] xl:w-[150px] lg:w-[140px] w-[80px] aspect-auto"/>
                         <img src={orient} alt=""
-                             className="2xl:w-[240px] xl:w-[150px] lg:w-[140px] w-[150px] aspect-auto"/>
+                             className="2xl:w-[200px] xl:w-[150px] lg:w-[140px] w-[150px] aspect-auto"/>
                         <img src={milliy} alt=""
-                             className="2xl:w-[240px] xl:w-[150px] lg:w-[140px] w-[130px] aspect-auto"/>
+                             className="2xl:w-[200px] xl:w-[150px] lg:w-[140px] w-[130px] aspect-auto"/>
                     </div>
                 </div>
             </div>

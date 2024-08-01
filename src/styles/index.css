@@ -17,6 +17,10 @@ body {
     background: black;
 }
 
+html {
+    /*scroll-behavior: smooth;*/
+}
+
 /*.main-container.bg-dark {*/
 /*    background-image: url("./assets/bg-image-back.png");*/
 /*    background-size: cover;*/

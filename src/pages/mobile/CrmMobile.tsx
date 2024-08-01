@@ -29,8 +29,8 @@ function CrmMobile() {
             {/*<img src={bgCosmo} alt="" className="absolute bottom-0 right-0"/>*/}
             <div className="h-full custom-container md:mx-auto md:flex md:flex-col md:justify-center">
                 <div className="flex flex-col text-start">
-                    <h3 className="2xl:text-[50px] xl:text-[30px] lg:text-[25px] text-[22px] lg:leading-10 2xl:leading-[100px] leading-7 font-medium  mb-2">{translate("TITLE_CRM_PAGE_MAIN_TITLE")}</h3>
-                    <ul className="list-disc mx-8 2xl:text-[28px] xl:text-[20px] lg:text-[16px]">
+                    <h3 className="2xl:text-[42px] xl:text-[30px] lg:text-[25px] text-[22px] lg:leading-10 2xl:leading-[50px] leading-7 font-medium  mb-2">{translate("TITLE_CRM_PAGE_MAIN_TITLE")}</h3>
+                    <ul className="list-disc mx-8 2xl:text-[24px] xl:text-[20px] lg:text-[16px]">
                         <li>{translate("TITLE_CRM_PAGE_MAIN_TITLE_1")}</li>
                         <li>{translate("TITLE_CRM_PAGE_MAIN_TITLE_2")}</li>
                         <li>{translate("TITLE_CRM_PAGE_MAIN_TITLE_3")}</li>
@@ -38,7 +38,7 @@ function CrmMobile() {
                 </div>
                 <div className="flex flex-col text-start">
                     <h3 className="2xl:text-[40px] lg:text-[20px] xl:text-[22px] text-[20px] xl:mt-2 2xl:mt-5 lg:mt-2 mt-2">{translate("TITLE_CRM_PAGE_MAIN_TITLE2")}</h3>
-                    <div className="flex flex-col 2xl:text-[28px] xl:text-[20px] lg:text-[14px]">
+                    <div className="flex flex-col 2xl:text-[22px] xl:text-[20px] lg:text-[14px]">
                         <div
                             className="flex justify-between text-center items-center lg:w-full w-full 2xl:py-3 xl:py-1 lg:py-1 ">
                             <p className="opacity-0">{translate("TITLE_CRM_PAGE_TABLE_TITLE1")}</p>
@@ -52,8 +52,8 @@ function CrmMobile() {
                             className="flex justify-between lg:w-full h-[50px] items-center w-full 2xl:py-2 xl:py-1 lg:py-1 ">
                             <p className="w-1/2 leading-5">{translate("TITLE_CRM_PAGE_TABLE_TITLE1")}</p>
                             <div className="flex gap-10">
-                                <span className="md:w-[80px] 2xl:w-[140px]">20 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
-                                <span className="md:w-[80px] 2xl:w-[140px]">3 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                <span className="md:w-[80px] 2xl:w-[120px]">20 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                <span className="md:w-[80px] 2xl:w-[120px]">3 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
                             </div>
                         </div>
                         <div className="border-b border-black"/>
@@ -114,18 +114,18 @@ function CrmMobile() {
                 </div>
                 <div className="2xl:mt-10 xl:mt-8 lg:mt-7 mt-5 w-full">
                     <div className="border-b border-black"/>
-                    <div className="flex gap-x-8 gap-y-4 2xl:mt-2 xl:mt-3 mt-3 flex-wrap">
-                        <img src={mkb} alt="" className="2xl:w-[220px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
-                        <img src={davr} alt="" className="2xl:w-[220px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
-                        <img src={kapital} alt="" className="2xl:w-[220px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
-                        <img src={anorBank} alt="" className="2xl:w-[220px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
-                        <img src={joyda} alt="" className="2xl:w-[220px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
-                        <img src={asia} alt="" className="2xl:w-[220px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
-                        <img src={agat} alt="" className="2xl:w-[220px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
-                        <img src={uzum} alt="" className="2xl:w-[220px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
-                        <img src={tenge} alt="" className="2xl:w-[220px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
-                        <img src={orient} alt="" className="2xl:w-[220px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
-                        <img src={milliy} alt="" className="2xl:w-[220px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
+                    <div className="flex gap-x-8  gap-y-4 2xl:gap-y-8 2xl:mt-4 xl:mt-3 mt-3 flex-wrap">
+                        <img src={mkb} alt="" className="2xl:w-[200px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
+                        <img src={davr} alt="" className="2xl:w-[200px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
+                        <img src={kapital} alt="" className="2xl:w-[200px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
+                        <img src={anorBank} alt="" className="2xl:w-[200px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
+                        <img src={joyda} alt="" className="2xl:w-[200px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
+                        <img src={asia} alt="" className="2xl:w-[200px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
+                        <img src={agat} alt="" className="2xl:w-[200px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
+                        <img src={uzum} alt="" className="2xl:w-[200px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
+                        <img src={tenge} alt="" className="2xl:w-[200px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
+                        <img src={orient} alt="" className="2xl:w-[200px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
+                        <img src={milliy} alt="" className="2xl:w-[200px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
                     </div>
                 </div>
             </div>

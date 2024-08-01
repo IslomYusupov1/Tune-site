@@ -30,8 +30,8 @@ function TeamMobile() {
                 <div className="flex bg-black rounded-[30px] w-full flex-col text-start bank-page my-20 relative">
                     <div className="flex p-5 h-full w-full text-white flex-col relative">
                        <div className="lg:absolute lg:bottom-10 block 2xl:left-20" style={{ zIndex: 1000 }}>
-                           <h3 className="text-[40px] 2xl:text-[60px]">{translate("TITLE_TEAM_PAGE_TEAM_TITLE")}</h3>
-                           <p className="max-w-[775px] text-[17px] 2xl:text-[32px] 2xl:leading-[40px] leading-24 mb-3">{translate("TITLE_TEAM_PAGE_MAIN_TITLE")}
+                           <h3 className="text-[40px] 2xl:text-[44px]">{translate("TITLE_TEAM_PAGE_TEAM_TITLE")}</h3>
+                           <p className="max-w-[775px] text-[17px] 2xl:text-[28px] 2xl:leading-[40px] leading-24 mb-3">{translate("TITLE_TEAM_PAGE_MAIN_TITLE")}
                            </p>
                        </div>
                         {/*{open && <div className=>*/}

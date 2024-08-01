@@ -98,14 +98,14 @@ function MainMobile() {
                     {/*                ${location.pathname === RoutesEnum.Portfolio ? ( bgImage === 1 ? "active text-[#34C924]" : "active-blue text-[#003ABC]") : ""}`}>Портфолию*/}
                     {/*    </motion.li>*/}
                     {/*</Link>*/}
-                    <Link to={RoutesEnum.Turkney}>
+                    <a href="#turnkey">
                         <motion.li animate={{x: 10, opacity: 1}} initial={{x: 200, opacity: 0}}
                                    transition={{duration: 0.5, delay: 0.5, ease: "easeInOut"}}
                                    className={`${bgImage === 1 ? "hover:text-[#34C924] line-green" : "hover:text-[#003ABC] line-blue"} cursor-pointer
                                        `}>
                             {translate("TITLE_MENU_PAGE_TITLE_7")}
                         </motion.li>
-                    </Link>
+                    </a>
                     <Link to={RoutesEnum.Solutions}>
                         <motion.li animate={{x: 10, opacity: 1}} initial={{x: 200, opacity: 0}}
                                    transition={{duration: 0.5, delay: 0.55, ease: "easeInOut"}}
