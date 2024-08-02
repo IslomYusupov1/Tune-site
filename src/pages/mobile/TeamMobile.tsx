@@ -4,7 +4,7 @@ import teamImage2 from "../../assets/team-1.jpg";
 import teamImage3 from "../../assets/team-2.jpg";
 import teamImage4 from "../../assets/team-3.jpg";
 import teamImage5 from "../../assets/team-4.jpg";
-import {useRef} from "react";
+import {useRef, useState} from "react";
 import {useScroll, motion} from "framer-motion";
 import {useI18n} from "../../i18n/I18nContext";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -15,6 +15,7 @@ import bgCosmo from "../../assets/cosmo-web.svg";
 
 function TeamMobile() {
     const { translate } = useI18n();
+    const [open, setOpen] = useState(false);
 
     const ref = useRef<HTMLDivElement>(null);
     const {} = useScroll({
@@ -30,9 +31,18 @@ function TeamMobile() {
                 <div className="flex bg-black rounded-[30px] w-full flex-col text-start bank-page my-20 relative">
                     <div className="flex p-5 h-full w-full text-white flex-col relative">
                        <div className="lg:absolute lg:bottom-10 block 2xl:left-20" style={{ zIndex: 1000 }}>
-                           <h3 className="text-[40px] 2xl:text-[44px]">{translate("TITLE_TEAM_PAGE_TEAM_TITLE")}</h3>
-                           <p className="max-w-[775px] text-[17px] 2xl:text-[28px] 2xl:leading-[40px] leading-24 mb-3">{translate("TITLE_TEAM_PAGE_MAIN_TITLE")}
-                           </p>
+                           {!open && <h3 className="text-[40px] 2xl:text-[44px]">{translate("TITLE_TEAM_PAGE_TEAM_TITLE")}</h3>}
+                           {!open &&
+                               <p className="max-w-[775px] text-[17px] 2xl:text-[28px] 2xl:leading-[40px] leading-24 mb-3">{translate("TITLE_TEAM_PAGE_MAIN_TITLE")} <br/><g
+                                   className="text-[16px] text-[#007AFF] cursor-pointer" onClick={() => setOpen(true)}>{translate("TITLE_OPEN_DIALOG_OPEN_TITLE")}</g>
+                               </p>}
+                           {open && <div>
+                               <h3 className="text-[40px] xl:text-[32px] 2xl:text-[44px] 3xl:text-[48px]">{translate("TITLE_TEAM_PAGE_TEAM_TITLE")}</h3>
+                               <p className="max-w-[775px] xl:text-[18px] 2xl:text-[28px] leading-24 2xl:leading-[40px]">{translate("TITLE_TEAM_PAGE_MAIN_FULL_TITLE")} <br/> <g
+                                   className="text-[16px] xl:text-[18px] 2xl:text-[28px]  text-[#007AFF] cursor-pointer"
+                                   onClick={() => setOpen(false)}>{translate("TITLE_OPEN_DIALOG_CLOSE_TITLE")}</g></p>
+
+                           </div>}
                        </div>
                         {/*{open && <div className=>*/}
                         {/*    <h3 className="text-[40px] xl:text-[32px] 2xl:text-[40px] 3xl:text-[48px]">Наша*/}
