@@ -5,7 +5,7 @@ import teamImage3 from "../../assets/team-2.jpg";
 import teamImage4 from "../../assets/team-3.jpg";
 import teamImage5 from "../../assets/team-4.jpg";
 import {useRef, useState} from "react";
-import {useScroll, motion} from "framer-motion";
+import {motion, useInView} from "framer-motion";
 import {useI18n} from "../../i18n/I18nContext";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
@@ -18,24 +18,26 @@ function TeamMobile() {
     const [open, setOpen] = useState(false);
 
     const ref = useRef<HTMLDivElement>(null);
-    const {} = useScroll({
-        target: ref,
-        offset: ["0 1", "0.8 1"],
-        smooth: 1,
-    })
+    const inView = useInView(ref, { once: true })
+
     return (
-        <motion.div ref={ref} id="team"
+        <motion.div id="team"
             className="bg-[#FFFFFF] lg:h-screen flex flex-col p-4 relative justify-center object-cover bg-no-repeat bg-center w-full">
             <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0"/>
             <div className="justify-center lg:w-full lg:h-full custom-container md:mx-auto flex">
                 <div className="flex bg-black rounded-[30px] w-full flex-col text-start bank-page my-20 relative">
                     <div className="flex p-5 h-full w-full text-white flex-col relative">
-                       <div className="lg:absolute lg:bottom-10 block 2xl:left-20" style={{ zIndex: 1000 }}>
-                           {!open && <h3 className="text-[40px] 2xl:text-[44px]">{translate("TITLE_TEAM_PAGE_TEAM_TITLE")}</h3>}
-                           {!open &&
-                               <p className="max-w-[775px] text-[17px] 2xl:text-[28px] 2xl:leading-[40px] leading-24 mb-3">{translate("TITLE_TEAM_PAGE_MAIN_TITLE")} <br/><g
+                       <div ref={ref} className="lg:absolute lg:bottom-10 block 2xl:left-20" style={{ zIndex: 1000 }}>
+                           {!open && inView && <motion.h3 animate={{ y: 0, opacity: 1 }}
+                                                          initial={{ y: 20, opacity: 0 }}
+                                                          transition={{ duration: 0.3, ease: "easeInOut" }} className="text-[40px] 2xl:text-[44px]">{translate("TITLE_TEAM_PAGE_TEAM_TITLE")}</motion.h3>}
+                           {!open && inView &&
+                               <motion.p animate={{ y: 0, opacity: 1 }}
+                                         initial={{ y: 20, opacity: 0 }}
+                                         transition={{ duration: 0.3, ease: "easeInOut" }}
+                                         className="max-w-[775px] text-[17px] 2xl:text-[28px] 2xl:leading-[40px] leading-24 mb-3">{translate("TITLE_TEAM_PAGE_MAIN_TITLE")} <br/><g
                                    className="text-[16px] text-[#007AFF] cursor-pointer" onClick={() => setOpen(true)}>{translate("TITLE_OPEN_DIALOG_OPEN_TITLE")}</g>
-                               </p>}
+                               </motion.p>}
                            {open && <div>
                                <h3 className="text-[40px] xl:text-[32px] 2xl:text-[44px] 3xl:text-[48px]">{translate("TITLE_TEAM_PAGE_TEAM_TITLE")}</h3>
                                <p className="max-w-[775px] xl:text-[18px] 2xl:text-[28px] leading-24 2xl:leading-[40px]">{translate("TITLE_TEAM_PAGE_MAIN_FULL_TITLE")} <br/> <g
