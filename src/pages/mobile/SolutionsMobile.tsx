@@ -1,6 +1,6 @@
 import {useRef} from "react";
 import {motion, useInView} from "framer-motion";
-// import bgCosmo from "../../assets/cosmo-bg1.svg";
+import bgCosmo from "../../assets/cosmo-web.svg";
 import {useI18n} from "../../i18n/I18nContext";
 
 function SolutionsMobile() {
@@ -11,7 +11,7 @@ function SolutionsMobile() {
 
     return (
         <motion.div id="solution" className="lg:h-screen bg-[url('../assets/bg-dark.png')] relative p-5 object-cover bg-no-repeat bg-center w-full">
-            {/*<img src={bgCosmo} alt="" className="absolute bottom-0 right-0"/>*/}
+            <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0"/>
             <div
                 className="h-full custom-container mx-auto w-full flex lg:justify-center flex-col gap-4 xl:mt-10 lg:mt-10 2xl:mt-5 3xl:mt-0 text-white w-full text-start font-light">
                 <h3 className="2xl:text-[40px] lg:text-[26px] xl:text-[32px] text-[24px] leading-tight xl:mb-4 2xl:mb-10 lg:mb-4">{translate("TITLE_SOLUTIONS_PAGE_MAIN_TITLE")}</h3>

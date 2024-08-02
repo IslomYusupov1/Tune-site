@@ -1,7 +1,7 @@
 import videoFile from "../../assets/video.mp4";
 import {useRef, useState} from "react";
 import {motion, useInView} from "framer-motion";
-// import bgCosmo from "../../assets/cosmo-mobile.svg";
+import bgCosmo from "../../assets/cosmo-web.svg";
 import {useI18n} from "../../i18n/I18nContext";
 
 function AboutMobile() {
@@ -14,7 +14,7 @@ function AboutMobile() {
     return (
         <div id="about"
             className="lg:h-screen bg-[url('../assets/bg-dark.png')] flex flex-col py-10 lg:py-0 relative justify-center object-cover bg-no-repeat bg-center w-full">
-            {/*<img src={bgCosmo} alt="" className="absolute bottom-0 right-0"/>*/}
+            <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0"/>
             <div
                 className="lg:w-3/4 lg:mx-auto bg-black rounded-[20px] lg:h-[70vh] md:h-[500px] custom-container
                                mt-10 relative px-2 flex flex-col h-full">

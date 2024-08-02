@@ -6,12 +6,12 @@ import teamImage4 from "../../assets/team-3.jpg";
 import teamImage5 from "../../assets/team-4.jpg";
 import {useRef} from "react";
 import {useScroll, motion} from "framer-motion";
-// import bgCosmo from "../../assets/cosmo-mobile.svg";
 import {useI18n} from "../../i18n/I18nContext";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import bgCosmo from "../../assets/cosmo-web.svg";
 
 function TeamMobile() {
     const { translate } = useI18n();
@@ -25,7 +25,7 @@ function TeamMobile() {
     return (
         <motion.div ref={ref} id="team"
             className="bg-[url('../assets/bg-light.jpg')] lg:h-screen flex flex-col p-4 relative justify-center object-cover bg-no-repeat bg-center w-full">
-            {/*<img src={bgCosmo} alt="" className="absolute bottom-0 right-0"/>*/}
+            <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0"/>
             <div className="justify-center lg:w-full lg:h-full custom-container md:mx-auto flex">
                 <div className="flex bg-black rounded-[30px] w-full flex-col text-start bank-page my-20 relative">
                     <div className="flex p-5 h-full w-full text-white flex-col relative">

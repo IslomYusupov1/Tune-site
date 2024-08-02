@@ -9,7 +9,7 @@ import humo from "../../assets/humo.svg";
 import visa from "../../assets/visa.svg";
 import sello from "../../assets/sello.svg";
 import masterCard from "../../assets/mastercard.svg";
-// import bgCosmo from "../../assets/cosmo-mobile.svg";
+import bgCosmo from "../../assets/cosmo-web.svg";
 import {useRef} from "react";
 import {motion, useInView} from "framer-motion";
 import {useI18n} from "../../i18n/I18nContext";
@@ -24,7 +24,7 @@ function EquaringMobile() {
 
     return (
         <motion.div id="equaring"  className="lg:h-screen bg-[url('../assets/bg-dark.png')] relative p-5 object-cover bg-no-repeat bg-center w-full">
-            {/*<img src={bgCosmo} alt="" className="absolute bottom-0 right-0" width={300}/>*/}
+            <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0"/>
             <motion.div className="custom-container mx-auto md:justify-center flex flex-col h-full w-full">
                 <div className="flex text-white flex-col text-start">
                     <h3 className="2xl:text-[42px] lg:text-[26px] xl:text-[32px] leading-10 2xl:leading-[100px] text-[22px] font-normal mb-3">{translate("TITLE_EQUARING_PAGE_MAIN_TITLE")}</h3>

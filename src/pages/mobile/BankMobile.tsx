@@ -2,7 +2,7 @@ import bankPhoneImage from "../../assets/phone.png";
 import {useRef} from "react";
 import {motion} from "framer-motion";
 // import bgCosmo from "../../assets/cosmo-mobile.svg";
-// import bgCosmo from "../../assets/cosmo-bg1.svg";
+import bgCosmo from "../../assets/cosmo-web.svg";
 import {useI18n} from "../../i18n/I18nContext";
 
 function BankMobile() {
@@ -14,8 +14,8 @@ function BankMobile() {
     //     smooth: 1,
     // })
     return (
-        <motion.div id="bank" ref={ref} className="bg-[url('../assets/bg-dark.png')] lg:h-screen bg-white relative p-5 object-cover bg-no-repeat bg-center">
-            {/*<img src={bgCosmo} alt="" className="absolute bottom-0 right-0"/>*/}
+        <motion.div id="bank" ref={ref} className="bg-[url('../assets/bg-dark.png')] relative lg:h-screen bg-white relative p-5 object-cover bg-no-repeat bg-center">
+            <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0"/>
             <div className="flex custom-container mx-auto relative flex-col justify-between lg:justify-center h-full">
                 <h3 className="xl:text-[40px] 2xl:text-[42px] text-[22px] mb-3 mt-3 leading-7 md:leading-normal text-white lg:text-[26px] 2xl:mb-16 2xl:mt-10 xl:mb-6 xl:mt-6 lg:mt-10 lg:mb-4">
                     {translate("TITLE_BANK_PAGE_MAIN_TITLE")}

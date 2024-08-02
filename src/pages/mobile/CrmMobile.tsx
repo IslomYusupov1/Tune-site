@@ -11,7 +11,7 @@ import orient from "../../assets/orient.svg";
 import milliy from "../../assets/milliy.svg";
 import {useRef} from "react";
 import {motion, useInView} from "framer-motion";
-// import bgCosmo from "../../assets/cosmo-bg1.svg";
+import bgCosmo from "../../assets/cosmo-web.svg";
 import {useI18n} from "../../i18n/I18nContext";
 
 function CrmMobile() {
@@ -25,7 +25,7 @@ function CrmMobile() {
     return (
         <motion.div id="crm"
                     className="bg-[url('../assets/bg-light.jpg')] lg:h-screen flex relative flex-col p-5 justify-center object-cover bg-no-repeat bg-center w-full">
-            {/*<img src={bgCosmo} alt="" className="absolute bottom-0 right-0"/>*/}
+            <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0"/>
             <div className="h-full custom-container md:mx-auto md:flex md:flex-col md:justify-center">
                 <div className="flex flex-col text-start">
                     <h3 className="2xl:text-[42px] xl:text-[30px] lg:text-[25px] text-[22px] lg:leading-10 2xl:leading-[50px] leading-7 font-medium  mb-2">{translate("TITLE_CRM_PAGE_MAIN_TITLE")}</h3>
@@ -62,7 +62,7 @@ function CrmMobile() {
                             </div>
                         </div>
                         {inView && <motion.div animate={{width: "100%"}} initial={{width: 0}}
-                                               transition={{duration: 1, delay: 0.2}}
+                                               transition={{duration: 1, delay: 0.22}}
                                                className="border-b border-black"/>}
                         <div
                             className="flex justify-between lg:w-full h-[50px] items-center w-full 2xl:py-2 xl:py-1 lg:py-1 ">
@@ -75,7 +75,7 @@ function CrmMobile() {
                             </div>
                         </div>
                         {inView && <motion.div animate={{width: "100%"}} initial={{width: 0}}
-                                               transition={{duration: 1, delay: 0.2}}
+                                               transition={{duration: 1, delay: 0.24}}
                                                className="border-b border-black"/>}
                         <div
                             className="flex justify-between lg:w-full h-[50px] items-center w-full 2xl:py-2 xl:py-1 lg:py-1 ">
@@ -88,7 +88,7 @@ function CrmMobile() {
                             </div>
                         </div>
                         {inView && <motion.div animate={{width: "100%"}} initial={{width: 0}}
-                                               transition={{duration: 1, delay: 0.2}}
+                                               transition={{duration: 1, delay: 0.26}}
                                                className="border-b border-black"/>}
                         <div
                             className="flex justify-between lg:w-full h-[50px] items-center w-full 2xl:py-2 xl:py-1 lg:py-1 ">
@@ -101,7 +101,7 @@ function CrmMobile() {
                             </div>
                         </div>
                         {inView && <motion.div animate={{width: "100%"}} initial={{width: 0}}
-                                               transition={{duration: 1, delay: 0.2}}
+                                               transition={{duration: 1, delay: 0.28}}
                                                className="border-b border-black"/>}
                         <div
                             className="flex justify-between lg:w-full h-[50px] items-center w-full 2xl:py-2 xl:py-1 lg:py-1 ">
@@ -114,7 +114,7 @@ function CrmMobile() {
                             </div>
                         </div>
                         {inView && <motion.div animate={{width: "100%"}} initial={{width: 0}}
-                                               transition={{duration: 1, delay: 0.2}}
+                                               transition={{duration: 1, delay: 0.3}}
                                                className="border-b border-black"/>}
                         <div
                             className="flex justify-between lg:w-full h-[50px] items-center w-full 2xl:py-2 xl:py-1 lg:py-1 ">
@@ -127,7 +127,7 @@ function CrmMobile() {
                             </div>
                         </div>
                         {inView && <motion.div animate={{width: "100%"}} initial={{width: 0}}
-                                               transition={{duration: 1, delay: 0.2}}
+                                               transition={{duration: 1, delay: 0.32}}
                                                className="border-b border-black"/>}
                         <div
                             className="flex justify-between lg:w-full h-[50px] items-center w-full 2xl:py-2 xl:py-1 lg:py-1">

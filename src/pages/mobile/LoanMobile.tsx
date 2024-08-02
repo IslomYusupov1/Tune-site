@@ -11,7 +11,7 @@ import orient from "../../assets/orient.svg";
 import milliy from "../../assets/milliy.svg";
 import {useRef} from "react";
 import { motion, useInView} from "framer-motion";
-// import bgCosmo from "../../assets/cosmo-mobile.svg";
+import bgCosmo from "../../assets/cosmo-web.svg";
 import {useI18n} from "../../i18n/I18nContext";
 
 function LoanMobile() {
@@ -23,8 +23,8 @@ function LoanMobile() {
 
     return (
         <motion.div id="loan"
-                    className="bg-[url('../assets/bg-light.jpg')] lg:h-screen h-full flex flex-col p-5 justify-center object-cover bg-no-repeat bg-center w-full">
-            {/*<img src={bgCosmo} alt="" className="absolute bottom-0 right-0"/>*/}
+                    className="bg-[url('../assets/bg-light.jpg')] relative lg:h-screen h-full flex flex-col p-5 justify-center object-cover bg-no-repeat bg-center w-full">
+            <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0"/>
             <div className="h-full flex justify-center custom-container mx-auto overflow-hidden flex-col w-full">
                 <div
                     className="flex text-red-black leading-5 xl:gap-2 md:leading-normal flex-col text-start w-full md:w-full">

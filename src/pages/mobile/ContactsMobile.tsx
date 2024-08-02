@@ -4,7 +4,7 @@ import {useEffect, useMemo, useRef, useState} from "react";
 import {useScroll, motion} from "framer-motion";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
-// import bgCosmo from "../../assets/cosmo-mobile.svg";
+import bgCosmo from "../../assets/cosmo-web.svg";
 import {useI18n} from "../../i18n/I18nContext";
 
 function ContactsMobile() {
@@ -60,7 +60,7 @@ function ContactsMobile() {
     return (
         <motion.div ref={ref} id="contact"
                     className="lg:h-screen bg-[url('../assets/bg-dark.png')] relative p-5 object-cover bg-no-repeat bg-center w-full">
-            {/*<img src={bgCosmo} alt="" className="absolute bottom-0 right-0" width={300}/>*/}
+            <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0"/>
             <div className="flex custom-container h-full mx-auto justify-center xl:gap-3 lg:gap-3 flex-col text-white w-full text-start font-light lg:mx-[100px] xl:mt-[50px] 2xl:mt-[25px] lg:mt-[50px] ">
                 <h3 className="2xl:text-[36px] xl:text-[28px] lg:text-[24px] text-[24px] mt-5">{translate("TITLE_CONTACT_PAGE_MAIN_TITLE")}</h3>
                 <h2 className="2xl:text-[32px] xl:text-[22px] lg:text-[18px] text-[23px] mt-5 font-medium">{translate("TITLE_CONTACT_PAGE_MAIN_TITLE_1")}</h2>

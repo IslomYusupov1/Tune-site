@@ -1,8 +1,8 @@
 import imageBack from "../../assets/turkey.png";
 import {useRef, useState} from "react";
 import {useScroll, motion} from "framer-motion";
-// import bgCosmo from "../../assets/cosmo-mobile.svg";
 import {useI18n} from "../../i18n/I18nContext";
+import bgCosmo from "../../assets/cosmo-web.svg";
 
 function TurkneyMobile() {
     const { translate } = useI18n();
@@ -17,7 +17,7 @@ function TurkneyMobile() {
     return (
         <motion.div ref={ref} id="turnkey"
             className="lg:h-screen bg-[url('../assets/bg-light.jpg')] flex flex-col relative p-4 justify-center object-cover bg-no-repeat bg-center w-full">
-            {/*<img src={bgCosmo} alt="" className="absolute bottom-0 right-0"/>*/}
+            <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0"/>
             <div className="h-full lg:w-3/4 2xl:w-10/12 md:mx-auto md:bg-black md:rounded-2xl lg:h-[70vh] 2xl:h-[90%] md:custom-container md:justify-center md:mx-auto md:flex">
                 <div
                     className="w-full flex flex-col justify-between h-full z-50 bg-black rounded-2xl md:my-0 my-10 relative md:px-0 px-2">
