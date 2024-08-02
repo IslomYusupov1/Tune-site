@@ -24,7 +24,7 @@ function CrmMobile() {
 
     return (
         <motion.div id="crm"
-                    className="bg-[url('../assets/bg-light.jpg')] lg:h-screen flex relative flex-col p-5 justify-center object-cover bg-no-repeat bg-center w-full">
+                    className="bg-[#FFFFFF] lg:h-screen flex relative flex-col p-5 justify-center object-cover bg-no-repeat bg-center w-full">
             <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0"/>
             <div className="h-full custom-container md:mx-auto md:flex md:flex-col md:justify-center">
                 <div className="flex flex-col text-start">

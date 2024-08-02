@@ -23,7 +23,7 @@ function EquaringMobile() {
     const inView2 = useInView(ref2, { once: true })
 
     return (
-        <motion.div id="equaring"  className="lg:h-screen bg-[url('../assets/bg-dark.png')] relative p-5 object-cover bg-no-repeat bg-center w-full">
+        <motion.div id="equaring"  className="lg:h-screen bg-[#111111] relative p-5 object-cover bg-no-repeat bg-center w-full">
             <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0"/>
             <motion.div className="custom-container mx-auto md:justify-center flex flex-col h-full w-full">
                 <div className="flex text-white flex-col text-start">

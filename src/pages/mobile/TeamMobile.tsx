@@ -24,7 +24,7 @@ function TeamMobile() {
     })
     return (
         <motion.div ref={ref} id="team"
-            className="bg-[url('../assets/bg-light.jpg')] lg:h-screen flex flex-col p-4 relative justify-center object-cover bg-no-repeat bg-center w-full">
+            className="bg-[#FFFFFF] lg:h-screen flex flex-col p-4 relative justify-center object-cover bg-no-repeat bg-center w-full">
             <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0"/>
             <div className="justify-center lg:w-full lg:h-full custom-container md:mx-auto flex">
                 <div className="flex bg-black rounded-[30px] w-full flex-col text-start bank-page my-20 relative">

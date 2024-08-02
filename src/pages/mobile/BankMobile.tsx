@@ -14,7 +14,7 @@ function BankMobile() {
     //     smooth: 1,
     // })
     return (
-        <motion.div id="bank" ref={ref} className="bg-[url('../assets/bg-dark.png')] relative lg:h-screen bg-white relative p-5 object-cover bg-no-repeat bg-center">
+        <motion.div id="bank" ref={ref} className="bg-[#111111] relative lg:h-screen bg-white relative p-5 object-cover bg-no-repeat bg-center">
             <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0"/>
             <div className="flex custom-container mx-auto relative flex-col justify-between lg:justify-center h-full">
                 <h3 className="xl:text-[40px] 2xl:text-[42px] text-[22px] mb-3 mt-3 leading-7 md:leading-normal text-white lg:text-[26px] 2xl:mb-16 2xl:mt-10 xl:mb-6 xl:mt-6 lg:mt-10 lg:mb-4">

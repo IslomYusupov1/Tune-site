@@ -16,7 +16,7 @@ function TurkneyMobile() {
     })
     return (
         <motion.div ref={ref} id="turnkey"
-            className="lg:h-screen bg-[url('../assets/bg-light.jpg')] flex flex-col relative p-4 justify-center object-cover bg-no-repeat bg-center w-full">
+            className="lg:h-screen bg-[#FFFFFF] flex flex-col relative p-4 justify-center object-cover bg-no-repeat bg-center w-full">
             <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0"/>
             <div className="h-full lg:w-3/4 2xl:w-10/12 md:mx-auto md:bg-black md:rounded-2xl lg:h-[70vh] 2xl:h-[90%] md:custom-container md:justify-center md:mx-auto md:flex">
                 <div

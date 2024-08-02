@@ -23,7 +23,7 @@ function LoanMobile() {
 
     return (
         <motion.div id="loan"
-                    className="bg-[url('../assets/bg-light.jpg')] relative lg:h-screen h-full flex flex-col p-5 justify-center object-cover bg-no-repeat bg-center w-full">
+                    className="bg-[#FFFFFF] relative lg:h-screen h-full flex flex-col p-5 justify-center object-cover bg-no-repeat bg-center w-full">
             <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0"/>
             <div className="h-full flex justify-center custom-container mx-auto overflow-hidden flex-col w-full">
                 <div
