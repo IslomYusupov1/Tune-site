@@ -10,22 +10,19 @@ import tenge from "../../assets/tenge.svg";
 import orient from "../../assets/orient.svg";
 import milliy from "../../assets/milliy.svg";
 import {useRef} from "react";
-import {useScroll, motion} from "framer-motion";
+import { motion, useInView} from "framer-motion";
 // import bgCosmo from "../../assets/cosmo-mobile.svg";
 import {useI18n} from "../../i18n/I18nContext";
 
 function LoanMobile() {
     const { translate } = useI18n();
 
-    const ref = useRef<HTMLDivElement>(null);
-    const {} = useScroll({
-        target: ref,
-        offset: ["0 1", "0.6 1"],
-        smooth: 1,
 
-    })
+    const ref = useRef<HTMLDivElement>(null);
+    const inView = useInView(ref, { once: true })
+
     return (
-        <motion.div ref={ref} id="loan"
+        <motion.div id="loan"
                     className="bg-[url('../assets/bg-light.jpg')] lg:h-screen h-full flex flex-col p-5 justify-center object-cover bg-no-repeat bg-center w-full">
             {/*<img src={bgCosmo} alt="" className="absolute bottom-0 right-0"/>*/}
             <div className="h-full flex justify-center custom-container mx-auto overflow-hidden flex-col w-full">
@@ -50,9 +47,9 @@ function LoanMobile() {
                     </ul>
                 </div>
                 <div
-                    className="2xl:mt-16 xl:mt-5 mt-5 lg:mt-8 w-full md:w-full">
-                    <div
-                        className="border-b border-black"/>
+                    className="2xl:mt-16 xl:mt-5 mt-5 lg:mt-8 w-full md:w-full" ref={ref} >
+                    {inView && <motion.div animate={{width: "100%"}} initial={{width: 0}} transition={{duration: 1, delay: 0.3}}
+                                 className="border-b border-black"/>}
                     <div className="flex gap-x-8 gap-y-4 mt-3 flex-wrap">
                         <img src={mkb} alt="" className="2xl:w-[240px] xl:w-[180px] lg:w-[140px] w-[80px] aspect-auto"/>
                         <img src={davr} alt=""

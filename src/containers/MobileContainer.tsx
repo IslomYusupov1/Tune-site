@@ -56,8 +56,8 @@ function MobileContainer() {
                     <a href="#main"><img src={logoWhite} alt=""
                          className="w-[140px] lg:w-[200px] 2xl:w-[250px] items-center text-center mx-6 md:mx-2 top-0"/>
                     </a>
-                    <div className="flex items-center text-center gap-6">
-                        <div className="flex items-center text-center gap-2">
+                    <div className="flex items-center text-center gap-6 mx-4 lg:mx-0">
+                        <div className="hidden lg:flex items-center text-center gap-2">
                             <Weather coords={coords} denied={denied} bgImage={1}/>
                             {/*<AirQuality coords={coords}/>*/}
                         </div>
