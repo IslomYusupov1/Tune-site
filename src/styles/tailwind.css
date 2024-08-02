@@ -1432,7 +1432,7 @@ body {
 }
 
 html {
-  scroll-behavior: smooth;
+  /*scroll-behavior: smooth;*/
 }
 
 /*.main-container.bg-dark {*/
@@ -2380,9 +2380,9 @@ body {
     margin-right: 150px;
   }
 
-  .\32xl\:my-5 {
-    margin-top: 1.25rem;
-    margin-bottom: 1.25rem;
+  .\32xl\:my-3 {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
   }
 
   .\32xl\:mb-10 {
@@ -2417,6 +2417,10 @@ body {
     margin-top: 0.75rem;
   }
 
+  .\32xl\:mt-4 {
+    margin-top: 1rem;
+  }
+
   .\32xl\:mt-5 {
     margin-top: 1.25rem;
   }
@@ -2429,16 +2433,16 @@ body {
     margin-top: 50px;
   }
 
-  .\32xl\:h-\[120px\] {
-    height: 120px;
-  }
-
   .\32xl\:h-\[550px\] {
     height: 550px;
   }
 
   .\32xl\:h-\[600px\] {
     height: 600px;
+  }
+
+  .\32xl\:h-\[80px\] {
+    height: 80px;
   }
 
   .\32xl\:h-\[90\%\] {
@@ -2461,6 +2465,10 @@ body {
     width: 1000px;
   }
 
+  .\32xl\:w-\[100px\] {
+    width: 100px;
+  }
+
   .\32xl\:w-\[120px\] {
     width: 120px;
   }
@@ -2469,20 +2477,20 @@ body {
     width: 140px;
   }
 
-  .\32xl\:w-\[220px\] {
-    width: 220px;
+  .\32xl\:w-\[200px\] {
+    width: 200px;
   }
 
   .\32xl\:w-\[240px\] {
     width: 240px;
   }
 
-  .\32xl\:w-\[280px\] {
-    width: 280px;
+  .\32xl\:w-\[250px\] {
+    width: 250px;
   }
 
-  .\32xl\:w-\[300px\] {
-    width: 300px;
+  .\32xl\:w-\[280px\] {
+    width: 280px;
   }
 
   .\32xl\:w-\[370px\] {
@@ -2493,12 +2501,12 @@ body {
     width: 400px;
   }
 
-  .\32xl\:w-\[50\%\] {
-    width: 50%;
+  .\32xl\:w-\[450px\] {
+    width: 450px;
   }
 
-  .\32xl\:w-\[600px\] {
-    width: 600px;
+  .\32xl\:w-\[50\%\] {
+    width: 50%;
   }
 
   .\32xl\:w-\[800px\] {
@@ -2507,10 +2515,6 @@ body {
 
   .\32xl\:w-\[80px\] {
     width: 80px;
-  }
-
-  .\32xl\:gap-20 {
-    gap: 5rem;
   }
 
   .\32xl\:gap-3 {
@@ -2537,12 +2541,12 @@ body {
     row-gap: 0.75rem;
   }
 
-  .\32xl\:p-7 {
-    padding: 1.75rem;
+  .\32xl\:gap-y-8 {
+    row-gap: 2rem;
   }
 
-  .\32xl\:p-8 {
-    padding: 2rem;
+  .\32xl\:p-5 {
+    padding: 1.25rem;
   }
 
   .\32xl\:py-2 {
@@ -2583,6 +2587,10 @@ body {
     font-size: 25px;
   }
 
+  .\32xl\:text-\[26px\] {
+    font-size: 26px;
+  }
+
   .\32xl\:text-\[28px\] {
     font-size: 28px;
   }
@@ -2619,31 +2627,15 @@ body {
     font-size: 48px;
   }
 
-  .\32xl\:text-\[50px\] {
-    font-size: 50px;
-  }
-
-  .\32xl\:text-\[54px\] {
-    font-size: 54px;
-  }
-
-  .\32xl\:text-\[58px\] {
-    font-size: 58px;
-  }
-
-  .\32xl\:text-\[60px\] {
-    font-size: 60px;
-  }
-
-  .\32xl\:text-\[64px\] {
-    font-size: 64px;
-  }
-
   .\32xl\:leading-\[100px\] {
     line-height: 100px;
   }
 
   .\32xl\:leading-\[40px\] {
     line-height: 40px;
+  }
+
+  .\32xl\:leading-\[50px\] {
+    line-height: 50px;
   }
 }

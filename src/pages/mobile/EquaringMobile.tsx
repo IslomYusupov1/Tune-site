@@ -24,7 +24,7 @@ function EquaringMobile() {
         smooth: 1,
     })
     return (
-        <motion.div ref={ref}  className="lg:h-screen bg-[url('../assets/bg-dark.png')] relative p-5 object-cover bg-no-repeat bg-center w-full">
+        <motion.div ref={ref} id="equaring"  className="lg:h-screen bg-[url('../assets/bg-dark.png')] relative p-5 object-cover bg-no-repeat bg-center w-full">
             {/*<img src={bgCosmo} alt="" className="absolute bottom-0 right-0" width={300}/>*/}
             <motion.div className="custom-container mx-auto md:justify-center flex flex-col h-full w-full">
                 <div className="flex text-white flex-col text-start">

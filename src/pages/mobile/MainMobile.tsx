@@ -3,8 +3,6 @@ import {motion, useScroll} from "framer-motion";
 import person from "../../assets/person.svg";
 import down from "../../assets/down.svg";
 import {useI18n} from "../../i18n/I18nContext";
-import {Link} from "react-router-dom";
-import {RoutesEnum} from "../../constants/Routes";
 
 function MainMobile() {
     const { translate } = useI18n();
@@ -20,7 +18,7 @@ function MainMobile() {
     // const scale = useTransform(scrollYProgress, [0, 1], [1, 0.9])
 
     return (
-        <motion.div ref={ref}
+        <motion.div ref={ref} id="main"
                     className="h-screen bg-[url('../assets/bg-main.jpg')] object-cover bg-no-repeat bg-center w-full">
             <motion.div className="h-full relative custom-container mx-auto relative flex flex-col justify-center">
                 <img
@@ -43,54 +41,54 @@ function MainMobile() {
                            2xl:gap-6 2xl:text-[24px]
                            lg:gap-3 lg:text-[16px]
                              top-1/4 font-light ${bgImage === 2 ? "text-[#353535] font-light" : ""}`}>
-                    <Link to={RoutesEnum.Main}>
+                    <a href="#main">
                         <motion.li animate={{x: 10, opacity: 1}} initial={{x: 200, opacity: 0}}
                                    transition={{duration: 0.5, delay: 0.1, ease: "easeInOut"}}
                                    className={`${bgImage === 1 ? "hover:text-[#34C924] line-green" : "hover:text-[#003ABC] line-blue"} cursor-pointer 
                                       `}>
                             {translate("TITLE_MENU_PAGE_TITLE_1")}
                         </motion.li>
-                    </Link>
-                    <Link to={RoutesEnum.About}>
+                    </a>
+                    <a href="#about">
                         <motion.li animate={{x: 10, opacity: 1}} initial={{x: 200, opacity: 0}}
                                    transition={{duration: 0.5, delay: 0.2, ease: "easeInOut"}}
                                    className={`${bgImage === 1 ? "hover:text-[#34C924] line-green" : "hover:text-[#003ABC] line-blue"} cursor-pointer
                                        `}>
                             {translate("TITLE_MENU_PAGE_TITLE_2")}
                         </motion.li>
-                    </Link>
-                    <Link to={RoutesEnum.Loan}>
+                    </a>
+                    <a href="#loan">
                         <motion.li animate={{x: 10, opacity: 1}} initial={{x: 200, opacity: 0}}
                                    transition={{duration: 0.5, delay: 0.25, ease: "easeInOut"}}
                                    className={`${bgImage === 1 ? "hover:text-[#34C924] line-green" : "hover:text-[#003ABC] line-blue"} cursor-pointer 
                                       `}>
                             {translate("TITLE_MENU_PAGE_TITLE_3")}
                         </motion.li>
-                    </Link>
-                    <Link to={RoutesEnum.Bank}>
+                    </a>
+                    <a href="#bank">
                         <motion.li animate={{x: 10, opacity: 1}} initial={{x: 200, opacity: 0}}
                                    transition={{duration: 0.5, delay: 0.3, ease: "easeInOut"}}
                                    className={`${bgImage === 1 ? "hover:text-[#34C924] line-green" : "hover:text-[#003ABC] line-blue"} cursor-pointer 
                                       `}>
                             {translate("TITLE_MENU_PAGE_TITLE_4")}
                         </motion.li>
-                    </Link>
-                    <Link to={RoutesEnum.Crm}>
+                    </a>
+                    <a href="#crm">
                         <motion.li animate={{x: 10, opacity: 1}} initial={{x: 200, opacity: 0}}
                                    transition={{duration: 0.5, delay: 0.35, ease: "easeInOut"}}
                                    className={`${bgImage === 1 ? "hover:text-[#34C924] line-green" : "hover:text-[#003ABC] line-blue"} cursor-pointer
                                        `}>
                             {translate("TITLE_MENU_PAGE_TITLE_5")}
                         </motion.li>
-                    </Link>
-                    <Link to={RoutesEnum.Equaring}>
+                    </a>
+                    <a href="#equaring">
                         <motion.li animate={{x: 10, opacity: 1}} initial={{x: 200, opacity: 0}}
                                    transition={{duration: 0.5, delay: 0.4, ease: "easeInOut"}}
                                    className={`${bgImage === 1 ? "hover:text-[#34C924] line-green" : "hover:text-[#003ABC] line-blue"} cursor-pointer 
                                       `}>
                             {translate("TITLE_MENU_PAGE_TITLE_6")}
                         </motion.li>
-                    </Link>
+                    </a>
                     {/*<Link to={RoutesEnum.Portfolio}>*/}
                     {/*    <motion.li animate={{x: 10, opacity: 1}} initial={{x: 200, opacity: 0}}*/}
                     {/*               transition={{duration: 0.5, delay: 0.45, ease: "easeInOut"}}*/}
@@ -106,30 +104,30 @@ function MainMobile() {
                             {translate("TITLE_MENU_PAGE_TITLE_7")}
                         </motion.li>
                     </a>
-                    <Link to={RoutesEnum.Solutions}>
+                    <a href="#solution">
                         <motion.li animate={{x: 10, opacity: 1}} initial={{x: 200, opacity: 0}}
                                    transition={{duration: 0.5, delay: 0.55, ease: "easeInOut"}}
                                    className={`${bgImage === 1 ? "hover:text-[#34C924] line-green" : "hover:text-[#003ABC] line-blue"} cursor-pointer 
                                       `}>
                             {translate("TITLE_MENU_PAGE_TITLE_8")}
                         </motion.li>
-                    </Link>
-                    <Link to={RoutesEnum.Team}>
+                    </a>
+                    <a href="#team">
                         <motion.li animate={{x: 10, opacity: 1}} initial={{x: 200, opacity: 0}}
                                    transition={{duration: 0.5, delay: 0.6, ease: "easeInOut"}}
                                    className={`${bgImage === 1 ? "hover:text-[#34C924] line-green" : "hover:text-[#003ABC] line-blue"} cursor-pointer
                                        `}>
                             {translate("TITLE_MENU_PAGE_TITLE_9")}
                         </motion.li>
-                    </Link>
-                    <Link to={RoutesEnum.Contact}>
+                    </a>
+                    <a href="#contact">
                         <motion.li animate={{x: 10, opacity: 1}} initial={{x: 200, opacity: 0}}
                                    transition={{duration: 0.5, delay: 0.65, ease: "easeInOut"}}
                                    className={`${bgImage === 1 ? "hover:text-[#34C924] line-green" : "hover:text-[#003ABC] line-blue"}
                                        cursor-pointer
                                         `}>{translate("TITLE_MENU_PAGE_TITLE_10")}
                         </motion.li>
-                    </Link>
+                    </a>
                 </motion.ul>
             </motion.div>
         </motion.div>

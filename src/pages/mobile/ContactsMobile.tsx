@@ -58,7 +58,7 @@ function ContactsMobile() {
         }
     }, [alert])
     return (
-        <motion.div ref={ref}
+        <motion.div ref={ref} id="contact"
                     className="lg:h-screen bg-[url('../assets/bg-dark.png')] relative p-5 object-cover bg-no-repeat bg-center w-full">
             {/*<img src={bgCosmo} alt="" className="absolute bottom-0 right-0" width={300}/>*/}
             <div className="flex custom-container h-full mx-auto justify-center xl:gap-3 lg:gap-3 flex-col text-white w-full text-start font-light lg:mx-[100px] xl:mt-[50px] 2xl:mt-[25px] lg:mt-[50px] ">

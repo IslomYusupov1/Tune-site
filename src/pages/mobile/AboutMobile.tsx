@@ -18,7 +18,7 @@ function AboutMobile() {
     // const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0.9]);
     // const scale = useTransform(scrollYProgress, [0, 0.5, 0.8, 1], [1, 0.8, 0.5, 0.1])
     return (
-        <motion.div ref={ref}
+        <motion.div ref={ref} id="about"
             className="lg:h-screen bg-[url('../assets/bg-dark.png')] flex flex-col py-10 lg:py-0 relative justify-center object-cover bg-no-repeat bg-center w-full">
             {/*<img src={bgCosmo} alt="" className="absolute bottom-0 right-0"/>*/}
             <div

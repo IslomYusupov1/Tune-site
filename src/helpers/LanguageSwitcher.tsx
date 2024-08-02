@@ -52,7 +52,7 @@ const LanguageSwitcher = ({ bgImage, mobile = false }: Props) => {
                         }}
                     >
                         {list?.map((lang, index) => (
-                            <div onClick={() => onSelect(lang)} key={index} className={`${mobile ? "w-[31px] h-[31px] first:py-2 pt-1 text-[13px]" : "w-[36px] h-[36px] first:py-2 pt-0.5 text-[17px]"} font-normal`} style={{
+                            <div onClick={() => onSelect(lang)} key={index} className={`${mobile ? "w-[31px] h-[31px] first:py-2 pt-1 text-[13px]" : "w-[36px] h-[36px] first:py-2 pt-0.5 text-[18px]"} font-normal`} style={{
                                 color: bgImage === 1 ? 'white' : 'black',
                                 cursor: 'pointer',
                                 textAlign: 'center'
