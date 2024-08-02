@@ -22,7 +22,7 @@ function AboutMobile() {
             className="lg:h-screen bg-[url('../assets/bg-dark.png')] flex flex-col py-10 lg:py-0 relative justify-center object-cover bg-no-repeat bg-center w-full">
             {/*<img src={bgCosmo} alt="" className="absolute bottom-0 right-0"/>*/}
             <div
-                className="lg:w-3/4 lg:mx-auto bg-black rounded-2xl lg:h-[70vh] md:h-[500px]  custom-container rounded-lg
+                className="lg:w-3/4 lg:mx-auto bg-black rounded-[20px] lg:h-[70vh] md:h-[500px] custom-container
                                mt-10 relative px-2 flex flex-col h-full">
                 <div
                     className={`flex flex-col mx-3 text-white text-start z-50 md:z-0 md:absolute md:bottom-[20px] md:left-[20px]`}>

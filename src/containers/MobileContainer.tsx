@@ -11,10 +11,27 @@ import TeamMobile from "../pages/mobile/TeamMobile";
 import ContactsMobile from "../pages/mobile/ContactsMobile";
 import {useEffect, useState} from "react";
 import LanguageSwitcher from "../helpers/LanguageSwitcher";
+import Weather from "../helpers/Weather";
 
 
 function MobileContainer() {
     const [scroll, setScroll] = useState(false);
+    const [coords, setCoords] = useState({long: 69.240562, lat: 41.311081});
+    const [denied, setDenied] = useState(true);
+
+    useEffect(() => {
+        if (navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(function(position) {
+                setDenied(false);
+                setCoords({lat: position.coords.latitude, long:position.coords.longitude});
+                // выводит координаты местоположения пользователя
+            }, function(error) {
+                if (error.code) {
+                    setDenied(true)
+                }
+            });
+        }
+    }, [navigator.geolocation])
 
     const addClass = () => {
         if (window.scrollY === 0) {
@@ -36,10 +53,15 @@ function MobileContainer() {
                  className={`fixed header w-full left-0 h-[65px] 2xl:h-[80px] ${scroll ? "hide top-0" : "top-2"} flex`}
                  style={{zIndex: 100}}>
                 <div className="mx-auto custom-container w-full flex justify-between text-center items-center">
-                    <img src={logoWhite} alt=""
+                    <a href="#main"><img src={logoWhite} alt=""
                          className="w-[140px] lg:w-[200px] 2xl:w-[250px] items-center text-center mx-6 md:mx-2 top-0"/>
-                    <div className="mx-4">
-                        <LanguageSwitcher bgImage={1} mobile={false}/>
+                    </a>
+                    <div className="flex items-center text-center gap-6">
+                        <div className="flex items-center text-center gap-2">
+                            <Weather coords={coords} denied={denied} bgImage={1}/>
+                            {/*<AirQuality coords={coords}/>*/}
+                        </div>
+                        <LanguageSwitcher bgImage={1} />
                     </div>
                 </div>
             </div>

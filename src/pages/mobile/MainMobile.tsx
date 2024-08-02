@@ -19,10 +19,10 @@ function MainMobile() {
 
     return (
         <motion.div ref={ref} id="main"
-                    className="h-screen bg-[url('../assets/bg-main.jpg')] object-cover bg-no-repeat bg-center w-full">
+                    className="h-screen menu-main bg-[url('../assets/bg-main.jpg')] object-cover bg-no-repeat bg-center w-full">
             <motion.div className="h-full relative custom-container mx-auto relative flex flex-col justify-center">
                 <img
-                    className="2xl:w-[800px] xl:w-[600px] mx-auto lg:w-[500px] md:w-[400px] w-full rotate-[35deg] lg:rotate-0"
+                    className="2xl:w-[800px] xl:w-[600px] mx-auto lg:w-[500px] md:w-[80%] w-11/12 rotate-[35deg] lg:rotate-0"
                     src={person} alt=""/>
                 <div
                     className="absolute md:absolute md:bottom-0 bottom-[30px] w-full md:w-auto md:mx-[100px] flex flex-col items-center">
@@ -35,7 +35,9 @@ function MainMobile() {
                     className={`text-white
                          z-40 flex-col
                          hidden lg:flex
-                         right-0
+                         items-end
+                         text-end
+                         right-7
                          absolute
                          xl:gap-4 xl:text-[18px]
                            2xl:gap-6 2xl:text-[24px]
@@ -68,7 +70,7 @@ function MainMobile() {
                     <a href="#bank">
                         <motion.li animate={{x: 10, opacity: 1}} initial={{x: 200, opacity: 0}}
                                    transition={{duration: 0.5, delay: 0.3, ease: "easeInOut"}}
-                                   className={`${bgImage === 1 ? "hover:text-[#34C924] line-green" : "hover:text-[#003ABC] line-blue"} cursor-pointer 
+                                   className={`w-full ${bgImage === 1 ? "hover:text-[#34C924] line-green" : "hover:text-[#003ABC] line-blue"} cursor-pointer 
                                       `}>
                             {translate("TITLE_MENU_PAGE_TITLE_4")}
                         </motion.li>

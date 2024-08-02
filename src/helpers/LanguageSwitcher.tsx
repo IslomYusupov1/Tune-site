@@ -7,10 +7,9 @@ import {useShallowEqualSelector} from "./useShallowSelector";
 
 interface Props {
     readonly bgImage: number
-    readonly mobile?: boolean;
 }
 
-const LanguageSwitcher = ({ bgImage, mobile = false }: Props) => {
+const LanguageSwitcher = ({ bgImage}: Props) => {
     const [isOpen, setIsOpen] = useState(false);
     const dispatch = useDispatch();
     const language = useShallowEqualSelector(appLanguageSelector);
@@ -21,7 +20,7 @@ const LanguageSwitcher = ({ bgImage, mobile = false }: Props) => {
             onMouseLeave={() => setIsOpen(false)}
             style={{position: 'relative', display: 'inline-block'}}>
             <div
-                className={`border-2 ${mobile ? "w-[35px] h-[35px] text-[13px]" : "w-[40px] h-[40px] text-[17px]"} font-normal 2xl:text-[20px] ${bgImage === 1 ? "border-white text-white" : "border-black text-black"} 
+                className={`border-2 w-[35px] h-[35px] text-[13px] md:w-[40px] md:h-[40px] md:text-[17px] font-normal 2xl:text-[20px] ${bgImage === 1 ? "border-white text-white" : "border-black text-black"} 
                 relative cursor-pointer text-center items-center flex justify-center rounded-xl
                  ${isOpen ? "border-b-0" : ""} `} style={{ borderBottomLeftRadius: isOpen ? 0 : "0.75rem",
                 borderBottomRightRadius: isOpen ? 0 : "0.75rem", }}>
@@ -52,7 +51,7 @@ const LanguageSwitcher = ({ bgImage, mobile = false }: Props) => {
                         }}
                     >
                         {list?.map((lang, index) => (
-                            <div onClick={() => onSelect(lang)} key={index} className={`${mobile ? "w-[31px] h-[31px] first:py-2 pt-1 text-[13px]" : "w-[36px] h-[36px] first:py-2 pt-0.5 text-[18px]"} font-normal`} style={{
+                            <div onClick={() => onSelect(lang)} key={index} className={`w-[31px] h-[31px] first:py-2 pt-1 text-[13px] md:w-[36px] md:h-[36px] md:first:py-2 md:pt-0.5 md:text-[18px] font-normal`} style={{
                                 color: bgImage === 1 ? 'white' : 'black',
                                 cursor: 'pointer',
                                 textAlign: 'center'
