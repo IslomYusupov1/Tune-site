@@ -4,19 +4,28 @@ import bgCosmo from "../../assets/cosmo-web.svg";
 import {useI18n} from "../../i18n/I18nContext";
 
 function SolutionsMobile() {
-    const { translate } = useI18n();
+    const {translate} = useI18n();
 
     const ref = useRef<HTMLDivElement>(null);
-    const inView = useInView(ref, { once: true })
+    const refText = useRef<HTMLDivElement>(null);
+    const inView = useInView(ref)
+    const inViewText = useInView(refText)
 
     return (
-        <motion.div id="solution" className="lg:h-screen bg-[#111111] relative p-5 object-cover bg-no-repeat bg-center w-full">
+        <motion.div id="solution"
+                    className="lg:h-screen bg-[#111111] relative p-5 object-cover bg-no-repeat bg-center w-full">
             <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0"/>
-            <div
-                className="h-full custom-container mx-auto w-full flex lg:justify-center flex-col gap-4 xl:mt-10 lg:mt-10 2xl:mt-5 3xl:mt-0 text-white w-full text-start font-light">
-                <h3 className="2xl:text-[40px] lg:text-[26px] xl:text-[32px] text-[24px] leading-tight xl:mb-4 2xl:mb-10 lg:mb-4">{translate("TITLE_SOLUTIONS_PAGE_MAIN_TITLE")}</h3>
+            <div ref={refText}
+                 className="h-full custom-container mx-auto w-full flex lg:justify-center flex-col gap-4 xl:mt-10 lg:mt-10 2xl:mt-5 3xl:mt-0 text-white w-full text-start font-light">
+                {inViewText && <motion.h3 animate={{x: 0, opacity: 1}}
+                                          initial={{x: -30, opacity: 0}}
+                                          transition={{duration: 0.3, ease: "easeInOut", delay: 0.1}}
+                                          className="2xl:text-[40px] lg:text-[26px] xl:text-[32px] text-[24px] leading-tight xl:mb-4 2xl:mb-10 lg:mb-4">{translate("TITLE_SOLUTIONS_PAGE_MAIN_TITLE")}</motion.h3>}
                 <div className="md:block hidden w-full" ref={ref}>
-                    <div className="flex justify-between gap-16">
+                    {inView && <motion.div animate={{x: 0, opacity: 1}}
+                                           initial={{x: -30, opacity: 0}}
+                                           transition={{duration: 0.3, ease: "easeInOut", delay: 0.1}}
+                                           className="flex justify-between gap-16">
                         <div className="w-full flex flex-col gap-1">
                             <h3 className="xl:text-[22px] 2xl:text-[26px] lg:text-[14px] font-medium 2xl:mb-3 xl:mb-1">{translate("TITLE_SOLUTIONS_PAGE_LIST_TITLE1_1")}</h3>
                             <p className="pb-1 2xl:text-[22px] xl:text-[17px] lg:text-[13px]">{translate("TITLE_SOLUTIONS_PAGE_LIST_TITLE1_1_1")}</p>
@@ -29,10 +38,14 @@ function SolutionsMobile() {
                             <p className="pb-1 2xl:text-[22px] xl:text-[17px] lg:text-[13px]">{translate("TITLE_SOLUTIONS_PAGE_LIST_TITLE1_2_2")}</p>
                             <p className="mb-2 2xl:text-[22px] xl:text-[17px] lg:text-[13px]">{translate("TITLE_SOLUTIONS_PAGE_LIST_TITLE1_2_3")}</p>
                         </div>
-                    </div>
-                    {inView && <motion.div animate={{width: "100%"}} initial={{width: 0}} transition={{duration: 1, delay: 0.2}}
-                                 className="border-b border-white w-full 2xl:my-3 lg:my-2 my-1"/>}
-                    <div className="flex justify-between gap-16 ">
+                    </motion.div>}
+                    {inView && <motion.div animate={{width: "100%"}} initial={{width: 0}}
+                                           transition={{duration: 1, delay: 0.2}}
+                                           className="border-b border-white w-full 2xl:my-3 lg:my-2 my-1"/>}
+                    {inView && <motion.div animate={{x: 0, opacity: 1}}
+                                           initial={{x: -30, opacity: 0}}
+                                           transition={{duration: 0.3, ease: "easeInOut", delay: 0.1}}
+                                           className="flex justify-between gap-16 ">
                         <div className="w-full flex flex-col gap-1">
                             <h3 className="xl:text-[22px] 2xl:text-[26px] lg:text-[14px] font-medium 2xl:mb-3 xl:mb-1">{translate("TITLE_SOLUTIONS_PAGE_LIST_TITLE1_3")}</h3>
                             <p className="pb-1 2xl:text-[22px] xl:text-[17px] lg:text-[13px]">{translate("TITLE_SOLUTIONS_PAGE_LIST_TITLE1_3_1")}</p>
@@ -51,10 +64,14 @@ function SolutionsMobile() {
                             <p className="pb-1 2xl:text-[22px] xl:text-[17px] lg:text-[13px]">{translate("TITLE_SOLUTIONS_PAGE_LIST_TITLE1_4_5")}</p>
                             <p className="mb-2 2xl:text-[22px] xl:text-[17px] lg:text-[13px]">{translate("TITLE_SOLUTIONS_PAGE_LIST_TITLE1_4_6")}</p>
                         </div>
-                    </div>
-                    {inView && <motion.div animate={{width: "100%"}} initial={{width: 0}} transition={{duration: 1, delay: 0.3}}
-                                 className="border-b border-white 2xl:my-3 lg:my-2 my-1"/>}
-                    <div className="flex justify-between">
+                    </motion.div>}
+                    {inView && <motion.div animate={{width: "100%"}} initial={{width: 0}}
+                                           transition={{duration: 1, delay: 0.3}}
+                                           className="border-b border-white 2xl:my-3 lg:my-2 my-1"/>}
+                    {inView && <motion.div animate={{x: 0, opacity: 1}}
+                                           initial={{x: -30, opacity: 0}}
+                                           transition={{duration: 0.3, ease: "easeInOut", delay: 0.1}}
+                                           className="flex justify-between">
                         <div className="w-full flex flex-col gap-1">
                             <h3 className="xl:text-[22px] 2xl:text-[26px] lg:text-[14px] font-medium 2xl:mb-3 xl:mb-1">{translate("TITLE_SOLUTIONS_PAGE_LIST_TITLE1_5")}</h3>
                             <p className="pb-1 2xl:text-[22px] xl:text-[18px] lg:text-[13px]">{translate("TITLE_SOLUTIONS_PAGE_LIST_TITLE1_5_1")}</p>
@@ -62,7 +79,7 @@ function SolutionsMobile() {
                             <p className="pb-1 2xl:text-[22px] xl:text-[18px] lg:text-[13px]">{translate("TITLE_SOLUTIONS_PAGE_LIST_TITLE1_5_3")}</p>
                             <p className="pb-1 2xl:text-[22px] xl:text-[18px] lg:text-[13px]">{translate("TITLE_SOLUTIONS_PAGE_LIST_TITLE1_5_4")}</p>
                         </div>
-                    </div>
+                    </motion.div>}
                 </div>
                 <div className="md:hidden">
                     <h3 className="2xl:text-[32px] lg:text-[18px] xl:text-[22px] text-[20px] mb-1">{translate("TITLE_SOLUTIONS_PAGE_LIST_TITLE1")}</h3>

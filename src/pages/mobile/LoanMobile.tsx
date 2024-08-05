@@ -20,7 +20,7 @@ function LoanMobile() {
 
     const ref = useRef<HTMLDivElement>(null);
     // const refImage = useRef<HTMLDivElement>(null);
-    const inView = useInView(ref, {once: true})
+    const inView = useInView(ref)
     // const inViewRef = useInView(refImage, {once: true})
 
     return (

@@ -19,8 +19,8 @@ function CrmMobile() {
 
     const ref = useRef<HTMLDivElement>(null);
     const refBottom = useRef<HTMLDivElement>(null);
-    const inView = useInView(ref, {once: true})
-    const inViewBottom = useInView(refBottom, {once: true})
+    const inView = useInView(ref)
+    const inViewBottom = useInView(refBottom)
 
     return (
         <motion.div id="crm"
