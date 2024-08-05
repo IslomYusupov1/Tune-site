@@ -42,9 +42,9 @@ function TeamMobile() {
                                         className="text-[16px] xl:text-[18px] 2xl:text-[28px] text-[#007AFF] cursor-pointer"
                                         onClick={() => setOpen(true)}>{translate("TITLE_OPEN_DIALOG_OPEN_TITLE")}</g>
                                 </motion.p>}
-                            {open && <div>
+                            {open && <div className="">
                                 <h3 className="text-[40px] xl:text-[32px] 2xl:text-[44px] 3xl:text-[48px]">{translate("TITLE_TEAM_PAGE_TEAM_TITLE")}</h3>
-                                <p className="max-w-[775px] xl:text-[18px] 2xl:text-[28px] leading-24 2xl:leading-[40px]">{translate("TITLE_TEAM_PAGE_MAIN_FULL_TITLE")}
+                                <p className="max-w-[775px] xl:text-[18px] 2xl:text-[28px] leading-[30px] 2xl:leading-[40px]">{translate("TITLE_TEAM_PAGE_MAIN_FULL_TITLE")}
                                     <br/>
                                     <g
                                         className="text-[16px] xl:text-[18px] 2xl:text-[28px]  text-[#007AFF] cursor-pointer"
@@ -75,7 +75,7 @@ function TeamMobile() {
                         {/*    </p>*/}
 
                         {/*</div>}*/}
-                        <div className="w-full flex justify-end h-full relative z-50 opacity-80">
+                        <div className={`w-full flex justify-end h-full relative z-50 ${open ? "opacity-20" : "opacity-90"}`}>
                             <div className="w-full lg:w-10/12">
                                 <Swiper
                                     modules={[Navigation]}
@@ -126,8 +126,8 @@ function TeamMobile() {
                                     </SwiperSlide>
                                 </Swiper>
                             </div>
+                            <a href="mailto:hr@tuneconsulting.net" className="bg-white text-[#007AFF] z-50 rounded-xl absolute p-1  top-[30px] right-[30px] lg:p-3">Отправить резюме</a>
                         </div>
-                        <a href="mailto:hr@tuneconsulting.net" className="bg-white text-[#007AFF] z-50 rounded-xl absolute top-[30px] right-[30px] p-3">Отправить резюме</a>
                     </div>
                 </div>
             </div>
