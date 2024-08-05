@@ -66,7 +66,7 @@ export const I18nUzbek: I18nSchema = {
   TITLE_CRM_PAGE_TABLE_TITLE4: "Jismoniy shaxslar uchun avtokreditlar",
   TITLE_CRM_PAGE_TABLE_TITLE5: "Oflayn depozitlar",
   TITLE_CRM_PAGE_TABLE_TITLE6: "Chiqarilgan kreditlar monitoringi",
-  TITLE_CRM_PAGE_TABLE_TITLE7: "Korp kreditlari uchun ma'lumotlarni yig'ish",
+  TITLE_CRM_PAGE_TABLE_TITLE7: "Korporativ kreditlari uchun ma'lumotlarni yig'ish",
   TITLE_CRM_PAGE_MINUTES: "daq",
 
   //EQUARING
@@ -74,13 +74,13 @@ export const I18nUzbek: I18nSchema = {
   TITLE_EQUARING_PAGE_SUBTITLE_1: "Protsessing markazlari bilan to'g'ridan-to'g'ri ishlaydigan 6 ta loyiha",
   TITLE_EQUARING_PAGE_SUBTITLE_2: "Jarayon bosqichidagi 1ta loyiha",
   TITLE_EQUARING_PAGE_SUBTITLE_3: "QR kodlar orqali onlayn va oflayn sotib olish uchun ekvayring",
-  TITLE_EQUARING_PAGE_SUBTITLE_4: "2 ta loyiha to'lov tashkilotlari va agentlariga uchinchi tomon sotib olish API-larini tarqatadi",
+  TITLE_EQUARING_PAGE_SUBTITLE_4: "To'lov tashkilotlari va agentlariga uchinchi tomon sotib olish API-larini tarqatadigan 2ta loyiha",
   TITLE_EQUARING_PAGE_SUBTITLE_5: "Bank partnerlari va merchantlari o'z shaxsiy kabinetlari orqali ishlaydi",
 
   //TURNKEY
   TITLE_TURNKEY_PAGE_TITLE1: "Buyurtma asosida va tayyor  ishlab chiqish misollari",
   TITLE_TURNKEY_PAGE_TITLE2: "Buyurtma berish punktlari va buyurtmalarni yetkazib berish xizmati bilan O'zbekistondagi birinchi Marketplace:",
-  TITLE_TURNKEY_PAGE_TITLE3: "Marketpleys loyihasini 2021-yil fevral oyida boshlanadi va 2021-yil sentabrida ishga tushiriladi",
+  TITLE_TURNKEY_PAGE_TITLE3: "Sello Market - loyiha, 2021-yil fevral oyida boshlanadi va 2021-yil sentabrida ishga tushiriladi",
   TITLE_TURNKEY_PAGE_TITLE4: "2022-yilda eng yaxshi innovatsion BPM loyihasi",
   TITLE_TURNKEY_PAGE_TITLE5: "O'z ishlanmalari:",
   TITLE_TURNKEY_PAGE_TITLE5_1: "Mahsulot vitrinasi va foydalanuvchi kabineti",
@@ -94,7 +94,7 @@ export const I18nUzbek: I18nSchema = {
   TITLE_SOLUTIONS_PAGE_LIST_TITLE1: "Elma BPM-ga asoslangan noyob platforma",
   TITLE_SOLUTIONS_PAGE_LIST_TITLE1_1: "CRM",
   TITLE_SOLUTIONS_PAGE_LIST_TITLE1_1_1: "Aloqalar va murojaatlar",
-  TITLE_SOLUTIONS_PAGE_LIST_TITLE1_1_2: "Qo'rg'oshinlar",
+  TITLE_SOLUTIONS_PAGE_LIST_TITLE1_1_2: "Lidlar",
   TITLE_SOLUTIONS_PAGE_LIST_TITLE1_1_3: "Mijozlar",
   TITLE_SOLUTIONS_PAGE_LIST_TITLE1_2: "Sozlamalar va xavfsizlik",
   TITLE_SOLUTIONS_PAGE_LIST_TITLE1_2_1: "Foydalanuvchi rollari va huquqlari",
@@ -102,12 +102,12 @@ export const I18nUzbek: I18nSchema = {
   TITLE_SOLUTIONS_PAGE_LIST_TITLE1_2_3: "Foydalanuvchilar guruhlari va qo'mitalar",
   TITLE_SOLUTIONS_PAGE_LIST_TITLE1_3: "Biznes jarayonlari va BPM dvigateli",
   TITLE_SOLUTIONS_PAGE_LIST_TITLE1_3_1: "Mijozning onbordingi",
-  TITLE_SOLUTIONS_PAGE_LIST_TITLE1_3_2: "Kredit quvuri",
+  TITLE_SOLUTIONS_PAGE_LIST_TITLE1_3_2: "Kredit konveyeri",
   TITLE_SOLUTIONS_PAGE_LIST_TITLE1_3_3: "Karta konveyeri",
   TITLE_SOLUTIONS_PAGE_LIST_TITLE1_3_4: "Depozit operatsiyalari",
   TITLE_SOLUTIONS_PAGE_LIST_TITLE1_3_5: "Kiruvchi va chiquvchi o'tkazmalar",
   TITLE_SOLUTIONS_PAGE_LIST_TITLE1_3_6: "Hisob-kitob operatsiyalari",
-  TITLE_SOLUTIONS_PAGE_LIST_TITLE1_4: "Mahsulot vitrini",
+  TITLE_SOLUTIONS_PAGE_LIST_TITLE1_4: "Mahsulot vitrinasi",
   TITLE_SOLUTIONS_PAGE_LIST_TITLE1_4_1: "Kreditlar",
   TITLE_SOLUTIONS_PAGE_LIST_TITLE1_4_2: "Depozitlar",
   TITLE_SOLUTIONS_PAGE_LIST_TITLE1_4_3: "Kartalar",
@@ -115,14 +115,14 @@ export const I18nUzbek: I18nSchema = {
   TITLE_SOLUTIONS_PAGE_LIST_TITLE1_4_5: "Pul o'tkazmalari",
   TITLE_SOLUTIONS_PAGE_LIST_TITLE1_4_6: "Hisobvaraqlardan o'tkazmalar",
   TITLE_SOLUTIONS_PAGE_LIST_TITLE1_5: "Boshqaruvchilar va qo'mitalar",
-  TITLE_SOLUTIONS_PAGE_LIST_TITLE1_5_1: "DBO foydalanuvchilari",
+  TITLE_SOLUTIONS_PAGE_LIST_TITLE1_5_1: "MBX foydalanuvchilari",
   TITLE_SOLUTIONS_PAGE_LIST_TITLE1_5_2: "Sayt foydalanuvchilari",
   TITLE_SOLUTIONS_PAGE_LIST_TITLE1_5_3: "Operatorlar va tahlilchilar",
   TITLE_SOLUTIONS_PAGE_LIST_TITLE1_5_4: "Qo'ng'iroq markazi",
 
   // TEAM
-  TITLE_TEAM_PAGE_MAIN_FULL_TITLE: "Bizning ishlab chiquvchilarimiz ishonchli va yuqori sifatli yechimlarni yaratish bo'yicha chuqur bilim va ko'p yillik tajribaga ega.Loyiha menejerlari o'z biznesining haqiqiy ustalari. Ular loyihaning har bir bosqichini puxta rejalashtiradilar va muvofiqlashtiradilar, uning o'z vaqtida va byudjet doirasida muvaffaqiyatli yakunlanishini ta'minlaydilar. Dizayn jamoasi nafaqat ko'zni quvontiradigan, balki ajoyib foydalanuvchi tajribasini ta'minlaydigan noyob va jozibali interfeyslarni yaratadi. Tahlilchilar va sinovchilar sizning loyihangizning mukammal ishlashini ta'minlash uchun har bir tafsilotni sinchkovlik bilan tekshiradilar. Biz xodimlarimizning kasbiy o'sishiga alohida e'tibor qaratamiz-bu sifatida biz har hafta katta hamkasblarimiz ishtirokida onlayn treninglar tashkil qilamiz. Shunga asoslanib aytishimiz mumkinki, biz nafaqat jamoa, balki kichik oilamiz…",
-  TITLE_TEAM_PAGE_MAIN_TITLE: "Bizning ishlab chiquvchilarimiz ishonchli va yuqori sifatli echimlarni yaratish bo'yicha chuqur bilim va ko'p...",
+  TITLE_TEAM_PAGE_MAIN_FULL_TITLE: "Bizning dasturchilarimiz ishonchli va yuqori sifatli yechimlarni yaratish bo'yicha chuqur bilim va ko'p yillik tajribaga ega.Loyiha menejerlari o'z ishining haqiqiy ustalari. Ular loyihaning har bir bosqichini puxta rejalashtiradilar va muvofiqlashtiradilar, loyihani o'z vaqtida va byudjet doirasida muvaffaqiyatli yakunlanishini ta'minlaydilar. Dizayn jamoasi nafaqat ko'zni quvontiradigan, balki foydalanuvchi qulayligini ta'minlaydigan noyob va jozibali interfeyslarni yaratadi. Tahlilchilar va testerlar sizning loyihangizning mukammal ishlashini ta'minlash uchun har bir funksiyani sinchkovlik bilan tekshiradilar. Biz xodimlarimizning kasbiy o'sishiga alohida e'tibor qaratamiz- biz har hafta tajribasi katta hamkasblarimiz ishtirokida onlayn treninglar tashkil qilamiz. Shunga asoslanib aytishimiz mumkinki, biz nafaqat jamoa, balki kichik bir oilamiz…",
+  TITLE_TEAM_PAGE_MAIN_TITLE: "Bizning dasturchilarimiz ishonchli va yuqori sifatli yechimlarni yaratish bo'yicha chuqur bilim va ko'p...",
   TITLE_TEAM_PAGE_TEAM_TITLE: "Bizning jamoamiz",
 
   //CONTACT
