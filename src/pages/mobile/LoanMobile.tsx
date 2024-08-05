@@ -9,19 +9,27 @@ import uzum from "../../assets/uzum.svg";
 import tenge from "../../assets/tenge.svg";
 import orient from "../../assets/orient.svg";
 import milliy from "../../assets/milliy.svg";
-import {useRef} from "react";
+import {useEffect, useRef} from "react";
 import {motion, useInView} from "framer-motion";
 import bgCosmo from "../../assets/cosmo-web.svg";
 import {useI18n} from "../../i18n/I18nContext";
+import {useDispatch} from "react-redux";
+import {switchBgImage} from "../../reducers/AppReducer";
 
 function LoanMobile() {
     const {translate} = useI18n();
-
+    const dispatch = useDispatch();
 
     const ref = useRef<HTMLDivElement>(null);
-    // const refImage = useRef<HTMLDivElement>(null);
+    const refMain = useRef<HTMLDivElement>(null);
     const inView = useInView(ref, { once: true })
-    // const inViewRef = useInView(refImage, {once: true})
+    const inViewRef = useInView(refMain)
+
+    useEffect(() => {
+        if (inViewRef) {
+            dispatch(switchBgImage({ bgImage: 2 }))
+        }
+    }, [inViewRef])
 
     return (
         <motion.div id="loan"
@@ -89,6 +97,7 @@ function LoanMobile() {
                     </motion.div>}
                 </div>
             </div>
+            <div ref={refMain}/>
         </motion.div>
     );
 }

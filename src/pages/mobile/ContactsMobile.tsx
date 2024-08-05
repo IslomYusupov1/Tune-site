@@ -1,15 +1,20 @@
 import {Field, Form, Formik, FormikHelpers, FormikValues} from "formik";
 import linkedin from "../../assets/linkedin-white.svg";
 import {useEffect, useMemo, useRef, useState} from "react";
-import {useScroll, motion} from "framer-motion";
+import {useScroll, motion, useInView} from "framer-motion";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
 import bgCosmo from "../../assets/cosmo-web.svg";
 import {useI18n} from "../../i18n/I18nContext";
+import {useDispatch} from "react-redux";
+import {switchBgImage} from "../../reducers/AppReducer";
 
 function ContactsMobile() {
     const ref = useRef<HTMLDivElement>(null);
     const {translate} = useI18n();
+    const dispatch = useDispatch();
+    const inView = useInView(ref)
+
     const {} = useScroll({
         target: ref,
         offset: ["0 1", "0.8 1"],
@@ -57,8 +62,14 @@ function ContactsMobile() {
             }
         }
     }, [alert])
+
+    useEffect(() => {
+        if (inView) {
+            dispatch(switchBgImage({ bgImage: 1 }))
+        }
+    }, [inView])
     return (
-        <motion.div ref={ref} id="contact"
+        <motion.div id="contact"
                     className="lg:h-screen bg-[#111111] relative p-5 object-cover bg-no-repeat bg-center w-full">
             <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0"/>
             <div className="flex custom-container h-full mx-auto justify-center xl:gap-3 lg:gap-3 flex-col text-white w-full text-start font-light lg:mx-[100px] xl:mt-[50px] 2xl:mt-[25px] lg:mt-[50px] ">
@@ -173,6 +184,7 @@ function ContactsMobile() {
                     <a href="https://www.linkedin.com/company/tune-consulting/" className="cursor-pointer" target="_blank"><img src={linkedin}  alt=""/></a>
                 </div>
             </div>
+            <div ref={ref}/>
         </motion.div>
     );
 }

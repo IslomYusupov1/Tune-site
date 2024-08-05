@@ -9,19 +9,29 @@ import uzum from "../../assets/uzum.svg";
 import tenge from "../../assets/tenge.svg";
 import orient from "../../assets/orient.svg";
 import milliy from "../../assets/milliy.svg";
-import {useRef} from "react";
+import {useEffect, useRef} from "react";
 import {motion, useInView} from "framer-motion";
 import bgCosmo from "../../assets/cosmo-web.svg";
 import {useI18n} from "../../i18n/I18nContext";
+import {useDispatch} from "react-redux";
+import {switchBgImage} from "../../reducers/AppReducer";
 
 function CrmMobile() {
     const {translate} = useI18n();
 
     const ref = useRef<HTMLDivElement>(null);
     const refBottom = useRef<HTMLDivElement>(null);
+    const refMain = useRef<HTMLDivElement>(null);
     const inView = useInView(ref, { once: true })
     const inViewBottom = useInView(refBottom, { once: true })
+    const inViewMain = useInView(refMain)
+    const dispatch = useDispatch();
 
+    useEffect(() => {
+        if (inViewMain) {
+            dispatch(switchBgImage({ bgImage: 2 }))
+        }
+    }, [inViewMain])
     return (
         <motion.div id="crm"
                     className="bg-[#FFFFFF] lg:h-screen flex relative flex-col p-5 justify-center object-cover bg-no-repeat bg-center w-full">
@@ -43,9 +53,9 @@ function CrmMobile() {
                             <p className="opacity-0">{translate("TITLE_CRM_PAGE_TABLE_TITLE1")}</p>
                             <div className="flex gap-10">
                                 <span
-                                    className="md:w-[80px] 2xl:w-[140px]">{translate("TITLE_CRM_PAGE_TABLE_TITLE_BEFORE")}</span>
+                                    className="xl:w-[120px] w-[50px] text-[13px] md:w-[80px] 2xl:w-[140px]">{translate("TITLE_CRM_PAGE_TABLE_TITLE_BEFORE")}</span>
                                 <span
-                                    className="md:w-[80px] 2xl:w-[140px]">{translate("TITLE_CRM_PAGE_TABLE_TITLE_AFTER")}</span>
+                                    className="xl:w-[120px] w-[50px] text-[13px] md:w-[80px] 2xl:w-[140px]">{translate("TITLE_CRM_PAGE_TABLE_TITLE_AFTER")}</span>
                             </div>
                         </div>
                         {inView && <motion.div animate={{width: "100%"}} initial={{width: 0}}
@@ -53,12 +63,12 @@ function CrmMobile() {
                                                className="border-b border-black"/>}
                         <div
                             className="flex justify-between lg:w-full h-[50px] items-center w-full 2xl:py-2 xl:py-1 lg:py-1 ">
-                            <p className="w-1/2 leading-5">{translate("TITLE_CRM_PAGE_TABLE_TITLE1")}</p>
+                            <p className="w-1/2 text-[14px] leading-5">{translate("TITLE_CRM_PAGE_TABLE_TITLE1")}</p>
                             <div className="flex gap-10">
                                 <span
-                                    className="md:w-[80px] 2xl:w-[120px]">20 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                    className="xl:w-[120px] w-[50px] text-[13px] md:w-[80px] 2xl:w-[120px]">20 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
                                 <span
-                                    className="md:w-[80px] 2xl:w-[120px]">3 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                    className="xl:w-[120px] w-[50px] text-[13px] md:w-[80px] 2xl:w-[120px]">3 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
                             </div>
                         </div>
                         {inView && <motion.div animate={{width: "100%"}} initial={{width: 0}}
@@ -66,12 +76,12 @@ function CrmMobile() {
                                                className="border-b border-black"/>}
                         <div
                             className="flex justify-between lg:w-full h-[50px] items-center w-full 2xl:py-2 xl:py-1 lg:py-1 ">
-                            <p className="w-1/2 leading-5">{translate("TITLE_CRM_PAGE_TABLE_TITLE2")}</p>
+                            <p className="w-1/2 text-[14px] leading-5">{translate("TITLE_CRM_PAGE_TABLE_TITLE2")}</p>
                             <div className="flex gap-10">
                                 <span
-                                    className="md:w-[80px] 2xl:w-[140px]">60 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                    className="xl:w-[120px] w-[50px] text-[13px] md:w-[80px] 2xl:w-[140px]">60 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
                                 <span
-                                    className="md:w-[80px] 2xl:w-[140px]">5 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                    className="xl:w-[120px] w-[50px] text-[13px] md:w-[80px] 2xl:w-[140px]">5 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
                             </div>
                         </div>
                         {inView && <motion.div animate={{width: "100%"}} initial={{width: 0}}
@@ -79,12 +89,12 @@ function CrmMobile() {
                                                className="border-b border-black"/>}
                         <div
                             className="flex justify-between lg:w-full h-[50px] items-center w-full 2xl:py-2 xl:py-1 lg:py-1 ">
-                            <p className="w-1/2 leading-5">{translate("TITLE_CRM_PAGE_TABLE_TITLE3")}</p>
+                            <p className="w-1/2 text-[14px] leading-5">{translate("TITLE_CRM_PAGE_TABLE_TITLE3")}</p>
                             <div className="flex gap-10">
                                 <span
-                                    className="md:w-[80px] 2xl:w-[140px]">90 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                    className="xl:w-[120px] w-[50px] text-[13px] md:w-[80px] 2xl:w-[140px]">90 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
                                 <span
-                                    className="md:w-[80px] 2xl:w-[140px]">20 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                    className="xl:w-[120px] w-[50px] text-[13px] md:w-[80px] 2xl:w-[140px]">20 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
                             </div>
                         </div>
                         {inView && <motion.div animate={{width: "100%"}} initial={{width: 0}}
@@ -92,12 +102,12 @@ function CrmMobile() {
                                                className="border-b border-black"/>}
                         <div
                             className="flex justify-between lg:w-full h-[50px] items-center w-full 2xl:py-2 xl:py-1 lg:py-1 ">
-                            <p className="w-1/2 leading-5">{translate("TITLE_CRM_PAGE_TABLE_TITLE4")}</p>
+                            <p className="w-1/2 text-[14px] leading-5">{translate("TITLE_CRM_PAGE_TABLE_TITLE4")}</p>
                             <div className="flex gap-10">
                                 <span
-                                    className="md:w-[80px] 2xl:w-[140px]">90 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                    className="xl:w-[120px] w-[50px] text-[13px] md:w-[80px] 2xl:w-[140px]">90 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
                                 <span
-                                    className="md:w-[80px] 2xl:w-[140px]">10 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                    className="xl:w-[120px] w-[50px] text-[13px] md:w-[80px] 2xl:w-[140px]">10 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
                             </div>
                         </div>
                         {inView && <motion.div animate={{width: "100%"}} initial={{width: 0}}
@@ -105,12 +115,12 @@ function CrmMobile() {
                                                className="border-b border-black"/>}
                         <div
                             className="flex justify-between lg:w-full h-[50px] items-center w-full 2xl:py-2 xl:py-1 lg:py-1 ">
-                            <p className="w-1/2 leading-5">{translate("TITLE_CRM_PAGE_TABLE_TITLE5")}</p>
+                            <p className="w-1/2 text-[14px] leading-5">{translate("TITLE_CRM_PAGE_TABLE_TITLE5")}</p>
                             <div className="flex gap-10">
                                 <span
-                                    className="md:w-[80px] 2xl:w-[140px]">20 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                    className="xl:w-[120px] w-[50px] text-[13px] md:w-[80px] 2xl:w-[140px]">20 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
                                 <span
-                                    className="md:w-[80px] 2xl:w-[140px]">5 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                    className="xl:w-[120px] w-[50px] text-[13px] md:w-[80px] 2xl:w-[140px]">5 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
                             </div>
                         </div>
                         {inView && <motion.div animate={{width: "100%"}} initial={{width: 0}}
@@ -118,12 +128,12 @@ function CrmMobile() {
                                                className="border-b border-black"/>}
                         <div
                             className="flex justify-between lg:w-full h-[50px] items-center w-full 2xl:py-2 xl:py-1 lg:py-1 ">
-                            <p className="w-1/2 leading-5">{translate("TITLE_CRM_PAGE_TABLE_TITLE6")}</p>
+                            <p className="w-1/2 text-[14px] leading-5">{translate("TITLE_CRM_PAGE_TABLE_TITLE6")}</p>
                             <div className="flex gap-10">
                                 <span
-                                    className="md:w-[80px] 2xl:w-[140px]">120 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                    className="xl:w-[120px] w-[50px] text-[13px] md:w-[80px] 2xl:w-[140px]">120 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
                                 <span
-                                    className="md:w-[80px] 2xl:w-[140px]">5 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                    className="xl:w-[120px] w-[50px] text-[13px] md:w-[80px] 2xl:w-[140px]">5 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
                             </div>
                         </div>
                         {inView && <motion.div animate={{width: "100%"}} initial={{width: 0}}
@@ -131,12 +141,12 @@ function CrmMobile() {
                                                className="border-b border-black"/>}
                         <div
                             className="flex justify-between lg:w-full h-[50px] items-center w-full 2xl:py-2 xl:py-1 lg:py-1">
-                            <p className="w-1/2 mt-5 md:mt-0 leading-5">{translate("TITLE_CRM_PAGE_TABLE_TITLE7")}</p>
+                            <p className="w-1/2 text-[14px] md:mt-0 leading-5">{translate("TITLE_CRM_PAGE_TABLE_TITLE7")}</p>
                             <div className="flex gap-10">
                                 <span
-                                    className="md:w-[80px] 2xl:w-[140px]">60 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                    className="xl:w-[120px] w-[50px] text-[13px] md:w-[80px] 2xl:w-[140px]">60 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
                                 <span
-                                    className="md:w-[80px] 2xl:w-[140px]">2 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                    className="xl:w-[120px] w-[50px] text-[13px] md:w-[80px] 2xl:w-[140px]">2 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
                             </div>
                         </div>
                     </div>
@@ -181,6 +191,7 @@ function CrmMobile() {
                     </motion.div>}
                 </div>
             </div>
+            <div ref={refMain}/>
         </motion.div>
     );
 }

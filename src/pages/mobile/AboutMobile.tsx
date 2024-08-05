@@ -1,20 +1,31 @@
 import videoFile from "../../assets/video.mp4";
-import {useRef, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import {motion, useInView} from "framer-motion";
 import bgCosmo from "../../assets/cosmo-web.svg";
 import {useI18n} from "../../i18n/I18nContext";
+import {switchBgImage} from "../../reducers/AppReducer";
+import {useDispatch} from "react-redux";
 
 function AboutMobile() {
     const { translate } = useI18n();
+    const dispatch = useDispatch();
 
     const [open, setOpen] = useState(false);
     const ref = useRef<HTMLDivElement>(null);
+    const refMain = useRef<HTMLDivElement>(null);
     const inView = useInView(ref, { once: true })
+    const inViewMain = useInView(refMain)
+
+    useEffect(() => {
+        if (inViewMain) {
+            dispatch(switchBgImage({ bgImage: 1 }))
+        }
+    }, [inViewMain])
 
     return (
         <div id="about"
             className="lg:h-screen bg-[#111111] flex flex-col py-10 lg:py-0 relative justify-center object-cover bg-no-repeat bg-center w-full">
-            <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0"/>
+            <img  src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0"/>
             <div
                 className="lg:w-3/4 lg:mx-auto bg-black rounded-[20px] lg:h-[70vh] md:h-[500px] custom-container
                                mt-10 relative px-2 flex flex-col h-full">
@@ -67,8 +78,8 @@ function AboutMobile() {
                         </video>
                     </div>
                 </div>
-
             </div>
+            <div ref={refMain}/>
         </div>
     );
 }

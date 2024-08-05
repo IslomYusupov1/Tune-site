@@ -1,14 +1,24 @@
-import {useRef} from "react";
+import {useEffect, useRef} from "react";
 import {motion, useInView} from "framer-motion";
 import bgCosmo from "../../assets/cosmo-web.svg";
 import {useI18n} from "../../i18n/I18nContext";
+import {useDispatch} from "react-redux";
+import {switchBgImage} from "../../reducers/AppReducer";
 
 function SolutionsMobile() {
     const {translate} = useI18n();
 
     const ref = useRef<HTMLDivElement>(null);
+    const ref1 = useRef<HTMLDivElement>(null);
     const inView = useInView(ref, { once: true })
+    const inViewMain = useInView(ref1)
+    const dispatch = useDispatch();
 
+    useEffect(() => {
+        if (inViewMain) {
+            dispatch(switchBgImage({ bgImage: 1 }))
+        }
+    }, [inViewMain])
     return (
         <motion.div id="solution"
                     className="lg:h-screen bg-[#111111] relative p-5 object-cover bg-no-repeat bg-center w-full">
@@ -117,6 +127,7 @@ function SolutionsMobile() {
                     </div>
                 </div>
             </div>
+            <div ref={ref1}/>
         </motion.div>
     );
 }

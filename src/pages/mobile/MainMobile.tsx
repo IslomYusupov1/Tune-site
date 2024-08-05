@@ -1,24 +1,30 @@
-import {useRef, useState} from 'react';
-import {motion, useScroll} from "framer-motion";
+import {useEffect, useRef, useState} from 'react';
+import {motion, useInView} from "framer-motion";
 import person from "../../assets/person.svg";
 import down from "../../assets/down.svg";
 import {useI18n} from "../../i18n/I18nContext";
+import {useDispatch} from "react-redux";
+import {switchBgImage} from "../../reducers/AppReducer";
 
 function MainMobile() {
     const { translate } = useI18n();
     const [bgImage, _] = useState(1)
+    const dispatch = useDispatch();
 
     const ref = useRef<HTMLDivElement>(null);
-    const { } = useScroll({
-        target: ref,
-        offset: ["end end", "end start"]
-    })
+    const inView = useInView(ref)
+
+    useEffect(() => {
+        if (inView) {
+            dispatch(switchBgImage({ bgImage: 1 }))
+        }
+    }, [inView])
 
     // const opacity = useTransform(scrollYProgress, [0, 1], [1, 0.9]);
     // const scale = useTransform(scrollYProgress, [0, 1], [1, 0.9])
 
     return (
-        <motion.div ref={ref} id="main"
+        <motion.div  id="main"
                     className="h-screen menu-main bg-[url('../assets/bg-main.jpg')] object-cover bg-no-repeat bg-center w-full">
             <motion.div className="h-full relative custom-container mx-auto relative flex flex-col justify-center">
                 <img
@@ -132,6 +138,7 @@ function MainMobile() {
                     </a>
                 </motion.ul>
             </motion.div>
+            <div ref={ref}/>
         </motion.div>
     );
 }

@@ -10,17 +10,29 @@ import visa from "../../assets/visa.svg";
 import sello from "../../assets/sello.svg";
 import masterCard from "../../assets/mastercard.svg";
 import bgCosmo from "../../assets/cosmo-web.svg";
-import {useRef} from "react";
+import {useEffect, useRef} from "react";
 import {motion, useInView} from "framer-motion";
 import {useI18n} from "../../i18n/I18nContext";
+import {useDispatch} from "react-redux";
+import {switchBgImage} from "../../reducers/AppReducer";
 
 function EquaringMobile() {
     const { translate } = useI18n();
 
     const ref = useRef<HTMLDivElement>(null);
     const ref2 = useRef<HTMLDivElement>(null);
+    const refMain = useRef<HTMLDivElement>(null);
     const inView = useInView(ref, { once: true })
     const inView2 = useInView(ref2, { once: true })
+    const inViewMain = useInView(refMain)
+
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        if (inViewMain) {
+            dispatch(switchBgImage({ bgImage: 1 }))
+        }
+    }, [inViewMain])
 
     return (
         <motion.div id="equaring"  className="lg:h-screen bg-[#111111] relative p-5 object-cover bg-no-repeat bg-center w-full">
@@ -93,6 +105,7 @@ function EquaringMobile() {
                     </div>}
                 </div>
             </motion.div>
+            <div ref={refMain}/>
         </motion.div>
     );
 }

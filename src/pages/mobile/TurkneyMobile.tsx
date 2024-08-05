@@ -1,16 +1,26 @@
 import imageBack from "../../assets/turkey.png";
-import {useRef, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import {motion, useInView} from "framer-motion";
 import {useI18n} from "../../i18n/I18nContext";
 import bgCosmo from "../../assets/cosmo-web.svg";
+import {useDispatch} from "react-redux";
+import {switchBgImage} from "../../reducers/AppReducer";
 
 function TurkneyMobile() {
     const {translate} = useI18n();
 
     const [open, setOpen] = useState(false);
     const ref = useRef<HTMLDivElement>(null);
+    const refMain = useRef<HTMLDivElement>(null);
     const inView = useInView(ref, {once: true})
+    const inViewMain = useInView(refMain)
+    const dispatch = useDispatch();
 
+    useEffect(() => {
+        if (inViewMain) {
+            dispatch(switchBgImage({ bgImage: 2 }))
+        }
+    }, [inViewMain])
     return (
         <motion.div id="turnkey"
                     className="lg:h-screen bg-[#FFFFFF] flex flex-col relative p-4 justify-center object-cover bg-no-repeat bg-center w-full">
@@ -74,6 +84,7 @@ function TurkneyMobile() {
                     </div>
                 </div>
             </div>
+            <div ref={refMain}/>
         </motion.div>
     );
 }

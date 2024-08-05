@@ -1,4 +1,4 @@
-import {useRef, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import {motion, useInView} from "framer-motion";
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {useI18n} from "../../i18n/I18nContext";
@@ -12,14 +12,24 @@ import teamImage5 from "../../assets/team-4.jpg";
 import bgCosmo from "../../assets/cosmo-web.svg";
 import 'swiper/css';
 import 'swiper/css/navigation';
+import {useDispatch} from "react-redux";
+import {switchBgImage} from "../../reducers/AppReducer";
 
 function TeamMobile() {
     const {translate} = useI18n();
     const [open, setOpen] = useState(false);
 
     const ref = useRef<HTMLDivElement>(null);
+    const refMain = useRef<HTMLDivElement>(null);
     const inView = useInView(ref, {once: true})
+    const inViewMain = useInView(refMain)
+    const dispatch = useDispatch();
 
+    useEffect(() => {
+        if (inViewMain) {
+            dispatch(switchBgImage({ bgImage: 2 }))
+        }
+    }, [inViewMain])
     return (
         <motion.div id="team"
                     className="bg-[#FFFFFF] lg:h-screen flex flex-col p-4 relative justify-center object-cover bg-no-repeat bg-center w-full">
@@ -31,7 +41,7 @@ function TeamMobile() {
                             {!open && inView && <motion.h3 animate={{y: 0, opacity: 1}}
                                                            initial={{y: 20, opacity: 0}}
                                                            transition={{duration: 0.3, ease: "easeInOut"}}
-                                                           className="text-[40px] 2xl:text-[44px]">{translate("TITLE_TEAM_PAGE_TEAM_TITLE")}</motion.h3>}
+                                                           className="text-[30px] lg:text-[40px] 2xl:text-[44px]">{translate("TITLE_TEAM_PAGE_TEAM_TITLE")}</motion.h3>}
                             {!open && inView &&
                                 <motion.p animate={{y: 0, opacity: 1}}
                                           initial={{y: 20, opacity: 0}}
@@ -131,6 +141,7 @@ function TeamMobile() {
                     </div>
                 </div>
             </div>
+            <div ref={refMain}/>
         </motion.div>
     );
 }

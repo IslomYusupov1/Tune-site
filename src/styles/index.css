@@ -154,9 +154,14 @@ body {
     padding: 3px;
 }
 
-.header.hide {
+.header.black {
     background: rgba(0, 0, 0, 0.5);
-    transition: 0.3s all ease-in-out;
+    transition: 0.2s all ease-out;
+}
+.header.white {
+    box-shadow: -1px 3px 0 0 rgba(0,0,0,0.05);
+    background: white;
+    transition: 0.2s all ease-out;
 }
 
 .custom-container {

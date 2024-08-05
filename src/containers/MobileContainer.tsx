@@ -1,4 +1,5 @@
 import logoWhite from "../assets/logo.svg";
+import logoBlack from "../assets/logo-black.svg";
 import MainMobile from "../pages/mobile/MainMobile";
 import AboutMobile from "../pages/mobile/AboutMobile";
 import LoanMobile from "../pages/mobile/LoanMobile";
@@ -12,13 +13,15 @@ import ContactsMobile from "../pages/mobile/ContactsMobile";
 import {useEffect, useState} from "react";
 import LanguageSwitcher from "../helpers/LanguageSwitcher";
 import Weather from "../helpers/Weather";
+import {useShallowEqualSelector} from "../helpers/useShallowSelector";
+import {appBgImageSelector} from "../reducers/AppReducer";
 
 
 function MobileContainer() {
     const [scroll, setScroll] = useState(false);
     const [coords, setCoords] = useState({long: 69.240562, lat: 41.311081});
     const [denied, setDenied] = useState(true);
-
+    const bgImage = useShallowEqualSelector(appBgImageSelector);
     useEffect(() => {
         if (navigator.geolocation){
             navigator.geolocation.getCurrentPosition(function(position) {
@@ -50,18 +53,18 @@ function MobileContainer() {
     return (
         <div className="flex flex-col relative">
             <div id="header"
-                 className={`fixed header w-full left-0 h-[65px] 2xl:h-[80px] ${scroll ? "hide top-0" : "top-2"} flex`}
+                 className={`fixed header w-full left-0 h-[65px] 2xl:h-[80px] ${scroll ?  (bgImage === 1 ? "black top-0" : "white top-0") : "top-2"} flex`}
                  style={{zIndex: 100}}>
                 <div className="mx-auto custom-container w-full flex justify-between text-center items-center">
-                    <a href="#main"><img src={logoWhite} alt=""
+                    <a href="#main"><img src={bgImage === 1 ? logoWhite : logoBlack} alt=""
                          className="w-[140px] lg:w-[200px] 2xl:w-[250px] items-center text-center mx-6 md:mx-2 top-0"/>
                     </a>
                     <div className="flex items-center text-center gap-6 mx-4 lg:mx-0">
                         <div className="hidden lg:flex items-center text-center gap-2">
-                            <Weather coords={coords} denied={denied} bgImage={1}/>
+                            <Weather coords={coords} denied={denied} bgImage={bgImage}/>
                             {/*<AirQuality coords={coords}/>*/}
                         </div>
-                        <LanguageSwitcher bgImage={1} />
+                        <LanguageSwitcher bgImage={bgImage} />
                     </div>
                 </div>
             </div>
