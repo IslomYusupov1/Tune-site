@@ -11,7 +11,7 @@ export const I18nEnglish: I18nSchema = {
     TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE: "We established in 2009 in Tashkent as a \"boutique\" for multipurpose banking projects.",
     TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE1: "Starting in 2017, we are focusing more on digital solutions.",
     TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE2: "The TUNE family has more than 130 employees.The goal for 2024 is to double this figure.",
-    TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE3: "Являемся резидентами IT-Park и вносим свой вклад в программу «миллион программистов к 2030 году».",
+    TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE3: "We are residents of the IT park and contribute to the program \"million programmers by 2030\".",
     TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE4: "Separate teams by direction.",
     TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE5: "Digital banking solutions and platforms.",
     TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE6: "Projects for the implementation of BPM tools.",

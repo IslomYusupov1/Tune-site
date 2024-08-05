@@ -58,7 +58,7 @@ function TurkneyMobile() {
                             </motion.div>}
                         {open && <div>
                             <h3 className="xl:text-[32px] 2xl:text-[40px] 3xl:text-[48px]">{translate("TITLE_TURNKEY_PAGE_TITLE1")}</h3>
-                            <p className="max-w-[775px] xl:text-[18px] 2xl:text-[24px] 3xl:text-[28px] leading-25">{translate("TITLE_TURNKEY_PAGE_TITLE2")}:</p>
+                            <p className="max-w-[775px] xl:text-[18px] 2xl:text-[24px] 3xl:text-[28px] leading-25">{translate("TITLE_TURNKEY_PAGE_TITLE2")}</p>
                             <ul className="max-w-[775px] xl:text-[16px] 2xl:text-[24px] 3xl:text-[26px] leading-25 mb-5 list-disc">
                                 <li className="mx-14 md:mx-6">{translate("TITLE_TURNKEY_PAGE_TITLE3")}
                                 </li>

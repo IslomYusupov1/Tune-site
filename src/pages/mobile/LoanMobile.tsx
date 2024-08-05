@@ -47,7 +47,7 @@ function LoanMobile() {
                     <p className="xl:text-[20px] lg:text-[15px] 2xl:text-[24px] md:text-[20px] text-[15px]">3. {translate("TITLE_ABOUT_PAGE_LIST_TITLE3")}</p>
                     <ul className="list-disc md:mx-10 mx-5 xl:text-[20px] lg:text-[15px] 2xl:text-[24px] md:text-[20px] text-[15px]">
                         <li>{translate("TITLE_ABOUT_PAGE_LIST_TITLE3_1")}</li>
-                        <li>{translate("TITLE_ABOUT_PAGE_LIST_TITLE1_2")}</li>
+                        <li>{translate("TITLE_ABOUT_PAGE_LIST_TITLE3_2")}</li>
                     </ul>
                     <p className="xl:text-[20px] lg:text-[15px] 2xl:text-[24px] md:text-[20px] text-[15px]">4. {translate("TITLE_ABOUT_PAGE_LIST_TITLE4")}</p>
                     <p className="xl:text-[20px] lg:text-[15px] 2xl:text-[24px] md:text-[20px] text-[15px]">5. {translate("TITLE_ABOUT_PAGE_LIST_TITLE5")}</p>

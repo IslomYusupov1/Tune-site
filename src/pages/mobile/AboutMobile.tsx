@@ -53,11 +53,12 @@ function AboutMobile() {
                         <p className="max-w-[775px] text-[16px] md:text-[18px] 2xl:text-[24px] leading-25 md:mb-2 2xl:mb-3 xl:mb-4">{translate("TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE1")}</p>
                         <p className="max-w-[775px] text-[16px] md:text-[18px] 2xl:text-[24px] leading-25 md:mb-2 2xl:mb-3 xl:mb-4">{translate("TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE2")}</p>
                         <p className="max-w-[775px] text-[16px] md:text-[18px] 2xl:text-[24px] leading-25 md:mb-2 2xl:mb-3 xl:mb-4">{translate("TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE3")}</p>
+                        <p className="max-w-[775px] text-[16px] md:text-[18px] 2xl:text-[24px] leading-25 md:mb-2 2xl:mb-3 xl:mb-4">{translate("TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE4")}</p>
                         <p className="max-w-[775px] text-[16px] md:text-[18px] 2xl:text-[24px] leading-25 md:mb-2 2xl:mb-3 xl:mb-4">
                             {translate("TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE5")}<br/>
                             {translate("TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE6")}<br/>
                             {translate("TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE7")}</p>
-                        <p className="max-w-[775px] text-[16px] md:text-[18px] 2xl:text-[24px] leading-25"><br/>
+                        <p className="max-w-[775px] text-[16px] md:text-[18px] 2xl:text-[24px] leading-25">{translate("TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE8")}<br/>
                             <g
                                 className="text-[16px] xl:text-[18px] 2xl:text-[20px] text-[#007AFF] cursor-pointer"
                                 onClick={() => setOpen(false)}>{translate("TITLE_OPEN_DIALOG_CLOSE_TITLE")}

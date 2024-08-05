@@ -13,7 +13,7 @@ export const I18nRussian: I18nSchema = {
   TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE: "OOO \"TUNE Consulting\" основан в 2009 году, как «бутик»  по внедрению комплексных банковских проектов.",
   TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE1: "Начиная с 2017 года, фокусируемся больше на цифровых решениях.",
   TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE2: "В семье TUNE работают более 130 сотрудников. Цель на 2024 год удвоить этот показатель.",
-  TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE3: "Являемся резидентами ИТ парка и вносим свой вклад в программу «миллион программистов к 2030 году».",
+  TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE3: "Являемся резидентами IT-Park и вносим свой вклад в программу «миллион программистов к 2030 году».",
   TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE4: "Отдельные команды по направлениям.",
   TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE5: "Цифровые банковские решения и платформы.",
   TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE6: "Проекты по внедрению инструментов BPM.",
