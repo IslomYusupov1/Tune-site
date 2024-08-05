@@ -19,8 +19,8 @@ function EquaringMobile() {
 
     const ref = useRef<HTMLDivElement>(null);
     const ref2 = useRef<HTMLDivElement>(null);
-    const inView = useInView(ref)
-    const inView2 = useInView(ref2)
+    const inView = useInView(ref, { once: true })
+    const inView2 = useInView(ref2, { once: true })
 
     return (
         <motion.div id="equaring"  className="lg:h-screen bg-[#111111] relative p-5 object-cover bg-no-repeat bg-center w-full">
