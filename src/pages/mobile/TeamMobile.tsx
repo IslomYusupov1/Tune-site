@@ -1,17 +1,17 @@
+import {useRef, useState} from "react";
+import {motion, useInView} from "framer-motion";
+import {Swiper, SwiperSlide} from 'swiper/react';
+import {useI18n} from "../../i18n/I18nContext";
+import {Navigation} from 'swiper/modules';
 import teamImage from "../../assets/team.svg";
 import teamImage1 from "../../assets/team.jpg";
 import teamImage2 from "../../assets/team-1.jpg";
 import teamImage3 from "../../assets/team-2.jpg";
 import teamImage4 from "../../assets/team-3.jpg";
 import teamImage5 from "../../assets/team-4.jpg";
-import {useRef, useState} from "react";
-import {motion, useInView} from "framer-motion";
-import {useI18n} from "../../i18n/I18nContext";
-import {Swiper, SwiperSlide} from 'swiper/react';
-import {Navigation} from 'swiper/modules';
+import bgCosmo from "../../assets/cosmo-web.svg";
 import 'swiper/css';
 import 'swiper/css/navigation';
-import bgCosmo from "../../assets/cosmo-web.svg";
 
 function TeamMobile() {
     const {translate} = useI18n();

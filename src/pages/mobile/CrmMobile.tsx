@@ -141,32 +141,44 @@ function CrmMobile() {
                         </div>
                     </div>
                 </div>
-                <div className="2xl:mt-10 xl:mt-8 lg:mt-7 mt-5 w-full" ref={refBottom}>
+                <div className="2xl:mt-10 xl:mt-8 lg:mt-7 mt-5 lg:min-h-[150px] min-h-[100px] w-full" ref={refBottom}>
                     {inViewBottom && <motion.div animate={{width: "100%"}} initial={{width: 0}} transition={{duration: 1, delay: 0.2}}
                                  className="border-b border-black"/>}
-                    <div className="flex gap-x-8  gap-y-4 2xl:gap-y-8 2xl:mt-4 xl:mt-3 mt-3 flex-wrap">
-                        <img src={mkb} alt="" className="2xl:w-[200px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
-                        <img src={davr} alt=""
-                             className="2xl:w-[200px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
-                        <img src={kapital} alt=""
-                             className="2xl:w-[200px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
-                        <img src={anorBank} alt=""
-                             className="2xl:w-[200px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
-                        <img src={joyda} alt=""
-                             className="2xl:w-[200px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
-                        <img src={asia} alt=""
-                             className="2xl:w-[200px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
-                        <img src={agat} alt=""
-                             className="2xl:w-[200px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
-                        <img src={uzum} alt=""
-                             className="2xl:w-[200px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
-                        <img src={tenge} alt=""
-                             className="2xl:w-[200px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
-                        <img src={orient} alt=""
-                             className="2xl:w-[200px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
-                        <img src={milliy} alt=""
-                             className="2xl:w-[200px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
-                    </div>
+                    {inViewBottom && <motion.div className="flex gap-x-8 gap-y-4 mt-3 flex-wrap">
+                        <motion.img animate={{x: 0, opacity: 1}} initial={{x: -10, opacity: 0}}
+                                    transition={{duration: .5, delay: 0.1, ease: "easeInOut"}} src={mkb} alt=""
+                                    className="2xl:w-[240px] xl:w-[180px] lg:w-[140px] w-[80px] aspect-auto"/>
+                        <motion.img animate={{x: 0, opacity: 1}} initial={{x: -10, opacity: 0}}
+                                    transition={{duration: .5, delay: 0.15, ease: "easeInOut"}} src={davr} alt=""
+                                    className="2xl:w-[200px] xl:w-[150px] lg:w-[140px] w-[100px] aspect-auto"/>
+                        <motion.img animate={{x: 0, opacity: 1}} initial={{x: -10, opacity: 0}}
+                                    transition={{duration: .5, delay: 0.2, ease: "easeInOut"}} src={kapital} alt=""
+                                    className="2xl:w-[200px] xl:w-[150px] lg:w-[140px] w-[130px] aspect-auto"/>
+                        <motion.img animate={{x: 0, opacity: 1}} initial={{x: -10, opacity: 0}}
+                                    transition={{duration: .5, delay: 0.25, ease: "easeInOut"}} src={anorBank} alt=""
+                                    className="2xl:w-[200px] xl:w-[150px] lg:w-[140px] w-[90px] aspect-auto"/>
+                        <motion.img animate={{x: 0, opacity: 1}} initial={{x: -10, opacity: 0}}
+                                    transition={{duration: .5, delay: 0.3, ease: "easeInOut"}} src={joyda} alt=""
+                                    className="2xl:w-[240px] xl:w-[150px] lg:w-[140px] w-[80px] aspect-auto"/>
+                        <motion.img animate={{x: 0, opacity: 1}} initial={{x: -10, opacity: 0}}
+                                    transition={{duration: .5, delay: 0.35, ease: "easeInOut"}} src={asia} alt=""
+                                    className="2xl:w-[200px] xl:w-[150px] lg:w-[140px] w-[120px] aspect-auto"/>
+                        <motion.img animate={{x: 0, opacity: 1}} initial={{x: -10, opacity: 0}}
+                                    transition={{duration: .5, delay: 0.4, ease: "easeInOut"}} src={agat} alt=""
+                                    className="2xl:w-[200px] xl:w-[150px] lg:w-[140px] w-[100px] aspect-auto"/>
+                        <motion.img animate={{x: 0, opacity: 1}} initial={{x: -10, opacity: 0}}
+                                    transition={{duration: .5, delay: 0.45, ease: "easeInOut"}} src={uzum} alt=""
+                                    className="2xl:w-[200px] xl:w-[150px] lg:w-[140px] w-[70px] aspect-auto"/>
+                        <motion.img animate={{x: 0, opacity: 1}} initial={{x: -10, opacity: 0}}
+                                    transition={{duration: .5, delay: 0.5, ease: "easeInOut"}} src={tenge} alt=""
+                                    className="2xl:w-[200px] xl:w-[150px] lg:w-[140px] w-[80px] aspect-auto"/>
+                        <motion.img animate={{x: 0, opacity: 1}} initial={{x: -10, opacity: 0}}
+                                    transition={{duration: .5, delay: 0.55, ease: "easeInOut"}} src={orient} alt=""
+                                    className="2xl:w-[200px] xl:w-[150px] lg:w-[140px] w-[150px] aspect-auto"/>
+                        <motion.img animate={{x: 0, opacity: 1}} initial={{x: -10, opacity: 0}}
+                                    transition={{duration: .5, delay: 0.67, ease: "easeInOut"}} src={milliy} alt=""
+                                    className="2xl:w-[200px] xl:w-[150px] lg:w-[140px] w-[130px] aspect-auto"/>
+                    </motion.div>}
                 </div>
             </div>
         </motion.div>

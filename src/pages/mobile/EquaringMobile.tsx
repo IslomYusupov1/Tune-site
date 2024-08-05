@@ -36,29 +36,61 @@ function EquaringMobile() {
                         <li>{translate("TITLE_EQUARING_PAGE_SUBTITLE_5")}</li>
                     </ul>
                 </div>
-                <div ref={ref}  className="lg:mt-8 xl:mt-12 2xl:mt-16 mt-10 w-full">
+                <div ref={ref}  className="lg:mt-8 xl:mt-12 2xl:mt-16 min-h-[63px] lg:min-h-[67px] xl:min-h-[72px] 2xl:min-h-[98px] mt-10 w-full">
                     {inView && <motion.div animate={{width: "100%"}} initial={{width: 0}} transition={{duration: 1, delay: 0.2}}
                                            className="border-b border-white"/>}
-                    <div className="flex gap-x-8 2xl:gap-y-10 xl:gap-y-3 mt-5 gap-y-5 flex-wrap">
-                        <img src={sello} alt="" className="2xl:w-[200px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
-                        <img src={asiaLight} alt="" className="2xl:w-[200px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
-                        <img src={uzumLight} alt="" className="2xl:w-[200px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
-                        <img src={tengeLight} alt="" className="2xl:w-[200px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
-                        <img src={orientLight} alt="" className="2xl:w-[200px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
-                        <img src={milliyLight} alt="" className="2xl:w-[200px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
-                    </div>
+                    {inView && <div className="flex gap-x-8 2xl:gap-y-10 xl:gap-y-3 mt-5 gap-y-5 flex-wrap">
+                        <motion.img animate={{x: 0, opacity: 1}} initial={{x: -10, opacity: 0}}
+                                    transition={{duration: .5, delay: 0.1, ease: "easeInOut"}}
+                                    src={sello} alt=""
+                                    className="2xl:w-[200px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
+                        <motion.img animate={{x: 0, opacity: 1}} initial={{x: -10, opacity: 0}}
+                                    transition={{duration: .5, delay: 0.2, ease: "easeInOut"}}
+                                    src={asiaLight} alt=""
+                                    className="2xl:w-[200px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
+                        <motion.img animate={{x: 0, opacity: 1}} initial={{x: -10, opacity: 0}}
+                                    transition={{duration: .5, delay: 0.3, ease: "easeInOut"}}
+                                    src={uzumLight} alt=""
+                                    className="2xl:w-[200px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
+                        <motion.img animate={{x: 0, opacity: 1}} initial={{x: -10, opacity: 0}}
+                                    transition={{duration: .5, delay: 0.4, ease: "easeInOut"}}
+                                    src={tengeLight} alt=""
+                                    className="2xl:w-[200px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
+                        <motion.img animate={{x: 0, opacity: 1}} initial={{x: -10, opacity: 0}}
+                                    transition={{duration: .5, delay: 0.5, ease: "easeInOut"}}
+                                    src={orientLight} alt=""
+                                    className="2xl:w-[200px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
+                        <motion.img animate={{x: 0, opacity: 1}} initial={{x: -10, opacity: 0}}
+                                    transition={{duration: .5, delay: 0.6, ease: "easeInOut"}}
+                                    src={milliyLight} alt=""
+                                    className="2xl:w-[200px] xl:w-[130px] lg:w-[120px] w-[80px] aspect-auto"/>
+                    </div>}
                 </div>
-                <div ref={ref2}  className="lg:mt-8 xl:mt-12 2xl:mt-16 mt-5 w-full">
+                <div ref={ref2}  className="lg:mt-8 xl:mt-12 2xl:mt-16 min-h-[43px] lg:min-h-[81px] xl:min-h-[100px] 2xl:min-h-[140px] mt-5 w-full">
                     {inView2 && <motion.div animate={{width: "100%"}} initial={{width: 0}} transition={{duration: 1, delay: 0.2}}
                                  className="border-b border-white"/>}
-                    <div className="flex gap-x-8 xl:gap-y-4 gap-y-2 mt-5 flex-wrap">
-                        <img src={uzacrd} alt="" className="2xl:w-[100px] xl:w-[80px] lg:w-[60px] w-[40px] aspect-auto"/>
-                        <img src={union} alt="" className="2xl:w-[100px] xl:w-[80px] lg:w-[60px] w-[40px] aspect-auto"/>
-                        <img src={humo} alt="" className="2xl:w-[100px] xl:w-[80px] lg:w-[60px]
+                    {inView2 && <div className="flex gap-x-8 xl:gap-y-4 gap-y-2 mt-5 flex-wrap">
+                        <motion.img animate={{x: 0, opacity: 1}} initial={{x: -10, opacity: 0}}
+                                    transition={{duration: .5, delay: 0.1, ease: "easeInOut"}}
+                                    src={uzacrd} alt=""
+                                    className="2xl:w-[100px] xl:w-[80px] lg:w-[60px] w-[40px] aspect-auto"/>
+                        <motion.img animate={{x: 0, opacity: 1}} initial={{x: -10, opacity: 0}}
+                                    transition={{duration: .5, delay: 0.2, ease: "easeInOut"}}
+                                    src={union} alt=""
+                                    className="2xl:w-[100px] xl:w-[80px] lg:w-[60px] w-[40px] aspect-auto"/>
+                        <motion.img animate={{x: 0, opacity: 1}} initial={{x: -10, opacity: 0}}
+                                    transition={{duration: .5, delay: 0.3, ease: "easeInOut"}}
+                                    src={humo} alt="" className="2xl:w-[100px] xl:w-[80px] lg:w-[60px]
                          w-[40px]  aspect-auto"/>
-                        <img src={visa} alt="" className="2xl:w-[120px] xl:w-[80px] lg:w-[60px] w-[40px]  aspect-auto"/>
-                        <img src={masterCard} alt="" className="2xl:w-[120px] xl:w-[80px] lg:w-[60px] w-[40px] aspect-auto"/>
-                    </div>
+                        <motion.img animate={{x: 0, opacity: 1}} initial={{x: -10, opacity: 0}}
+                                    transition={{duration: .5, delay: 0.4, ease: "easeInOut"}}
+                                    src={visa} alt=""
+                                    className="2xl:w-[120px] xl:w-[80px] lg:w-[60px] w-[40px]  aspect-auto"/>
+                        <motion.img animate={{x: 0, opacity: 1}} initial={{x: -10, opacity: 0}}
+                                    transition={{duration: .5, delay: 0.5, ease: "easeInOut"}}
+                                    src={masterCard} alt=""
+                                    className="2xl:w-[120px] xl:w-[80px] lg:w-[60px] w-[40px] aspect-auto"/>
+                    </div>}
                 </div>
             </motion.div>
         </motion.div>

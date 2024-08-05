@@ -9,7 +9,7 @@ function AboutMobile() {
 
     const [open, setOpen] = useState(false);
     const ref = useRef<HTMLDivElement>(null);
-    const inView = useInView(ref, { once: true })
+    const inView = useInView(ref, { once: false })
 
     return (
         <div id="about"
