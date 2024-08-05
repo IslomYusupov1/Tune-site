@@ -48,7 +48,7 @@ function LoanMobile() {
                     </ul>
                 </motion.div>
                 <div
-                    className="2xl:mt-16 xl:mt-5 mt-5 lg:mt-8 w-full lg:min-h-[150px] min-h-[100px]  md:w-full" ref={ref}>
+                    className="2xl:mt-16 xl:mt-5 mt-5 lg:mt-8 w-full min-h-[171px] lg:min-h-[150px] min-h-[100px]  md:w-full" ref={ref}>
                     {inView && <motion.div animate={{width: "100%"}} initial={{width: 0}}
                                            transition={{duration: 1, delay: 0.3}}
                                            className="border-b border-black"/>}
