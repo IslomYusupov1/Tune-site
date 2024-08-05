@@ -67,7 +67,7 @@ export const I18nUzbek: I18nSchema = {
   TITLE_CRM_PAGE_TABLE_TITLE5: "Oflayn depozitlar",
   TITLE_CRM_PAGE_TABLE_TITLE6: "Chiqarilgan kreditlar monitoringi",
   TITLE_CRM_PAGE_TABLE_TITLE7: "Korp kreditlari uchun ma'lumotlarni yig'ish",
-  TITLE_CRM_PAGE_MINUTES: "daqiqa",
+  TITLE_CRM_PAGE_MINUTES: "daq",
 
   //EQUARING
   TITLE_EQUARING_PAGE_MAIN_TITLE: "Onlayn ekvayring platformasi",
