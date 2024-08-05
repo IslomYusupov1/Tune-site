@@ -126,7 +126,7 @@ function TeamMobile() {
                                     </SwiperSlide>
                                 </Swiper>
                             </div>
-                            <a href="mailto:hr@tuneconsulting.net" className="bg-white text-[#007AFF] z-50 rounded-xl absolute p-1  top-[30px] right-[30px] lg:p-3">Отправить резюме</a>
+                            <a href="mailto:hr@tuneconsulting.net" className="bg-white text-[#007AFF] text-[16px] z-50 rounded-xl absolute p-1.5 top-[10px] right-[10px] md:top-[30px] md:right-[30px] lg:p-3">Отправить резюме</a>
                         </div>
                     </div>
                 </div>
