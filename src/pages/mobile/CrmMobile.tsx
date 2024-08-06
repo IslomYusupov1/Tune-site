@@ -53,9 +53,9 @@ function CrmMobile() {
                             <p className="opacity-0 w-1/2">{translate("TITLE_CRM_PAGE_TABLE_TITLE1")}</p>
                             <div className="flex gap-10">
                                 <span
-                                    className=" w-[50px] text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] lg:text-[20px] md:w-[80px] ">{translate("TITLE_CRM_PAGE_TABLE_TITLE_BEFORE")}</span>
+                                    className=" w-[50px] text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] md:w-[80px] xl:w-[100px] ">{translate("TITLE_CRM_PAGE_TABLE_TITLE_BEFORE")}</span>
                                 <span
-                                    className=" w-[50px] text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] lg:text-[20px] md:w-[80px] ">{translate("TITLE_CRM_PAGE_TABLE_TITLE_AFTER")}</span>
+                                    className=" w-[50px] text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] md:w-[80px] xl:w-[100px] ">{translate("TITLE_CRM_PAGE_TABLE_TITLE_AFTER")}</span>
                             </div>
                         </div>
                         {inView && <motion.div animate={{width: "100%"}} initial={{width: 0}}
@@ -66,9 +66,9 @@ function CrmMobile() {
                             <p className="w-1/2 text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] leading-5">{translate("TITLE_CRM_PAGE_TABLE_TITLE1")}</p>
                             <div className="flex gap-10">
                                 <span
-                                    className=" w-[50px] text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] lg:text-[20px] md:w-[80px] ">20 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                    className=" w-[50px] text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] md:w-[80px] xl:w-[100px] ">20 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
                                 <span
-                                    className=" w-[50px] text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] lg:text-[20px] md:w-[80px] ">3 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                    className=" w-[50px] text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] md:w-[80px] xl:w-[100px] ">3 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
                             </div>
                         </div>
                         {inView && <motion.div animate={{width: "100%"}} initial={{width: 0}}
@@ -79,9 +79,9 @@ function CrmMobile() {
                             <p className="w-1/2 text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] leading-5">{translate("TITLE_CRM_PAGE_TABLE_TITLE2")}</p>
                             <div className="flex gap-10">
                                 <span
-                                    className=" w-[50px] text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] lg:text-[20px] md:w-[80px] ">60 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                    className=" w-[50px] text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] md:w-[80px] xl:w-[100px] ">60 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
                                 <span
-                                    className=" w-[50px] text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] lg:text-[20px] md:w-[80px] ">5 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                    className=" w-[50px] text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] md:w-[80px] xl:w-[100px] ">5 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
                             </div>
                         </div>
                         {inView && <motion.div animate={{width: "100%"}} initial={{width: 0}}
@@ -92,9 +92,9 @@ function CrmMobile() {
                             <p className="w-1/2 text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] leading-5">{translate("TITLE_CRM_PAGE_TABLE_TITLE3")}</p>
                             <div className="flex gap-10">
                                 <span
-                                    className=" w-[50px] text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] lg:text-[20px] md:w-[80px] ">90 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                    className=" w-[50px] text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] md:w-[80px] xl:w-[100px] ">90 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
                                 <span
-                                    className=" w-[50px] text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] lg:text-[20px] md:w-[80px] ">20 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                    className=" w-[50px] text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] md:w-[80px] xl:w-[100px] ">20 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
                             </div>
                         </div>
                         {inView && <motion.div animate={{width: "100%"}} initial={{width: 0}}
@@ -102,12 +102,12 @@ function CrmMobile() {
                                                className="border-b border-black"/>}
                         <div
                             className="flex justify-between lg:w-full h-[50px] items-center w-full 2xl:py-2 xl:py-1 lg:py-1 ">
-                            <p className="w-1/2 text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] lg:text-[20px] leading-5">{translate("TITLE_CRM_PAGE_TABLE_TITLE4")}</p>
+                            <p className="w-1/2 text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] leading-5"> {translate("TITLE_CRM_PAGE_TABLE_TITLE4")}</p>
                             <div className="flex gap-10">
                                 <span
-                                    className=" w-[50px] text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] lg:text-[20px] md:w-[80px] ">90 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                    className=" w-[50px] text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] md:w-[80px] xl:w-[100px] ">90 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
                                 <span
-                                    className=" w-[50px] text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] lg:text-[20px] md:w-[80px] ">10 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                    className=" w-[50px] text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] md:w-[80px] xl:w-[100px] ">10 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
                             </div>
                         </div>
                         {inView && <motion.div animate={{width: "100%"}} initial={{width: 0}}
@@ -118,9 +118,9 @@ function CrmMobile() {
                             <p className="w-1/2 text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] leading-5">{translate("TITLE_CRM_PAGE_TABLE_TITLE5")}</p>
                             <div className="flex gap-10">
                                 <span
-                                    className=" w-[50px] text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] lg:text-[20px] md:w-[80px] ">20 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                    className=" w-[50px] text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] md:w-[80px] xl:w-[100px] ">20 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
                                 <span
-                                    className=" w-[50px] text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] lg:text-[20px] md:w-[80px] ">5 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                    className=" w-[50px] text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] md:w-[80px] xl:w-[100px] ">5 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
                             </div>
                         </div>
                         {inView && <motion.div animate={{width: "100%"}} initial={{width: 0}}
@@ -131,9 +131,9 @@ function CrmMobile() {
                             <p className="w-1/2 text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] leading-5">{translate("TITLE_CRM_PAGE_TABLE_TITLE6")}</p>
                             <div className="flex gap-10">
                                 <span
-                                    className=" w-[50px] text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] lg:text-[20px] md:w-[80px] ">120 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                    className=" w-[50px] text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] md:w-[80px] xl:w-[100px] ">120 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
                                 <span
-                                    className=" w-[50px] text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] lg:text-[20px] md:w-[80px] ">5 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                    className=" w-[50px] text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] md:w-[80px] xl:w-[100px] ">5 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
                             </div>
                         </div>
                         {inView && <motion.div animate={{width: "100%"}} initial={{width: 0}}
@@ -144,9 +144,9 @@ function CrmMobile() {
                             <p className="w-1/2 text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] md:mt-0 leading-5">{translate("TITLE_CRM_PAGE_TABLE_TITLE7")}</p>
                             <div className="flex gap-10">
                                 <span
-                                    className=" w-[50px] text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] lg:text-[20px] md:w-[80px] ">60 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                    className=" w-[50px] text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] md:w-[80px] xl:w-[100px] ">60 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
                                 <span
-                                    className=" w-[50px] text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] lg:text-[20px] md:w-[80px] ">2 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
+                                    className=" w-[50px] text-[14px] 2xl:text-[24px] xl:text-[20px] lg:text-[17px] md:w-[80px] xl:w-[100px] ">2 {translate("TITLE_CRM_PAGE_MINUTES")}</span>
                             </div>
                         </div>
                     </div>
