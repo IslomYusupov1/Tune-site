@@ -19,9 +19,9 @@ function BankMobile() {
         }
     }, [inView])
     return (
-        <motion.div id="bank" className="bg-[#111111] relative lg:h-screen relative p-5 object-cover bg-no-repeat bg-center">
+        <motion.div id="bank" className="bg-[#111111] pt-[50px] py-[80px] relative lg:h-full lg:min-h-[800px] lg:flex lg:items-center p-5">
             <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0"/>
-            <div className="flex custom-container mx-auto relative flex-col justify-between lg:justify-center h-full">
+            <div className="flex custom-container mx-auto flex-col justify-between lg:justify-center h-full">
                 <h3 className="xl:text-[40px] 2xl:text-[42px] text-[22px] mb-3 mt-3 leading-7 md:leading-normal text-white lg:text-[26px] 2xl:mb-16 2xl:mt-10 xl:mb-6 xl:mt-6 lg:mt-10 lg:mb-4">
                     {translate("TITLE_BANK_PAGE_MAIN_TITLE")}
                 </h3>
@@ -53,7 +53,7 @@ function BankMobile() {
                     </div>
                 </div>
                 <div
-                    className="2xl:mt-3 lg:mt-2 mt-4 z-50 lg:absolute right-0 lg:right-[20px] lg:bottom-[-20px]">
+                    className="2xl:mt-3 lg:mt-2 mt-4 z-50 lg:absolute right-0 lg:right-[150px] lg:bottom-0">
                     <img className="lg:w-[250px] xl:w-full 2xl:w-[450px] w-[280px] aspect-auto mx-auto" src={bankPhoneImage} alt=""/>
                 </div>
             </div>

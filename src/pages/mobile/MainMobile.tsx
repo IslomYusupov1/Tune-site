@@ -5,6 +5,7 @@ import down from "../../assets/down.svg";
 import {useI18n} from "../../i18n/I18nContext";
 import {useDispatch} from "react-redux";
 import {switchBgImage} from "../../reducers/AppReducer";
+// import "../../styles/index.css";
 
 function MainMobile() {
     const { translate } = useI18n();
@@ -40,6 +41,7 @@ function MainMobile() {
                 <motion.ul
                     className={`text-white
                          z-40 flex-col
+                         menu-right
                          hidden lg:flex
                          items-end
                          text-end
@@ -47,7 +49,7 @@ function MainMobile() {
                          absolute
                          xl:gap-4 xl:text-[18px]
                            2xl:gap-6 2xl:text-[24px]
-                           lg:gap-3 lg:text-[16px]
+                           lg:gap-2 lg:text-[16px]
                              top-1/4 font-light ${bgImage === 2 ? "text-[#353535] font-light" : ""}`}>
                     <a href="#main">
                         <motion.li animate={{x: 10, opacity: 1}} initial={{x: 200, opacity: 0}}

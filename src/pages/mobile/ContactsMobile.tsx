@@ -70,7 +70,7 @@ function ContactsMobile() {
     }, [inView])
     return (
         <motion.div id="contact"
-                    className="lg:h-screen bg-[#111111] relative p-5 object-cover bg-no-repeat bg-center w-full">
+                    className="lg:h-full lg:min-h-[800px] bg-[#111111] relative p-5 object-cover bg-no-repeat bg-center w-full">
             <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0"/>
             <div className="flex custom-container h-full mx-auto justify-center xl:gap-3 lg:gap-3 flex-col text-white w-full text-start font-light lg:mx-[100px] xl:mt-[50px] 2xl:mt-[25px] lg:mt-[50px] ">
                 <h3 className="2xl:text-[36px] xl:text-[28px] lg:text-[24px] text-[24px] mt-5">{translate("TITLE_CONTACT_PAGE_MAIN_TITLE")}</h3>

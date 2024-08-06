@@ -24,10 +24,10 @@ function AboutMobile() {
 
     return (
         <div id="about"
-            className="lg:h-screen bg-[#111111] flex flex-col py-10 lg:py-0 relative justify-center object-cover bg-no-repeat bg-center w-full">
+            className="lg:h-screen bg-[#111111] flex flex-col relative justify-center w-full">
             <img  src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0"/>
             <div
-                className="lg:w-3/4 lg:mx-auto bg-black rounded-[20px] lg:h-[70vh] md:h-[500px] custom-container
+                className="lg:w-3/4 lg:mx-auto bg-black rounded-[20px] lg:h-[70%] md:h-[500px] custom-container
                                mt-10 relative px-2 flex flex-col h-full">
                 <div ref={ref}
                     className={`flex flex-col mx-3 text-white text-start z-50 md:z-0 md:absolute md:bottom-[20px] md:left-[20px]`}>

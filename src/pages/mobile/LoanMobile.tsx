@@ -33,7 +33,7 @@ function LoanMobile() {
 
     return (
         <motion.div id="loan"
-                    className="bg-[#FFFFFF] relative lg:h-screen h-full flex flex-col p-5 justify-center object-cover bg-no-repeat bg-center w-full">
+                    className="bg-[#FFFFFF] relative lg:h-full py-[100px] lg:min-h-[800px] h-full flex flex-col p-5 justify-center w-full">
             <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0"/>
             <div className="h-full flex justify-center custom-container mx-auto overflow-hidden flex-col w-full">
                 <motion.div transition={{ ease: "easeInOut" }} className="flex text-red-black leading-5 xl:gap-2 md:leading-normal flex-col text-start w-full md:w-full">

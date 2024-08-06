@@ -32,7 +32,7 @@ function TeamMobile() {
     }, [inViewMain])
     return (
         <motion.div id="team"
-                    className="bg-[#FFFFFF] lg:h-screen flex flex-col p-4 relative justify-center object-cover bg-no-repeat bg-center w-full">
+                    className="bg-[#FFFFFF] lg:h-screen flex flex-col p-4 relative justify-center w-full">
             <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0"/>
             <div className="justify-center lg:w-full lg:h-full custom-container md:mx-auto flex">
                 <div className="flex bg-black rounded-[30px] w-full flex-col text-start bank-page my-20 relative">
@@ -53,7 +53,7 @@ function TeamMobile() {
                                         onClick={() => setOpen(true)}>{translate("TITLE_OPEN_DIALOG_OPEN_TITLE")}</g>
                                 </motion.p>}
                             {open && <div className="">
-                                <h3 className="text-[40px] xl:text-[32px] 2xl:text-[44px] 3xl:text-[48px]">{translate("TITLE_TEAM_PAGE_TEAM_TITLE")}</h3>
+                                {/*<h3 className="text-[40px] xl:text-[32px] 2xl:text-[44px] 3xl:text-[48px]">{translate("TITLE_TEAM_PAGE_TEAM_TITLE")}</h3>*/}
                                 <p className="max-w-[775px] xl:text-[18px] 2xl:text-[28px] leading-[30px] 2xl:leading-[40px]">{translate("TITLE_TEAM_PAGE_MAIN_FULL_TITLE")}
                                     <br/>
                                     <g

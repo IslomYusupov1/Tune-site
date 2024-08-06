@@ -21,7 +21,7 @@ function SolutionsMobile() {
     }, [inViewMain])
     return (
         <motion.div id="solution"
-                    className="lg:h-screen bg-[#111111] relative p-5 object-cover bg-no-repeat bg-center w-full">
+                    className="lg:h-full lg:min-h-[800px] bg-[#111111] relative p-5 lg:flex lg:items-center lg:py-[100px] w-full">
             <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0"/>
             <div
                  className="h-full custom-container mx-auto w-full flex lg:justify-center flex-col gap-4 xl:mt-10 lg:mt-10 2xl:mt-5 3xl:mt-0 text-white w-full text-start font-light">

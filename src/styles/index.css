@@ -219,3 +219,8 @@ body {
         overflow-x: hidden !important;
     }
 }
+@media (max-height: 740px) {
+    .menu-right {
+        gap: 13px !important;
+    }
+}
