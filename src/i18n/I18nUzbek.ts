@@ -12,7 +12,7 @@ export const I18nUzbek: I18nSchema = {
   TITLE_ABOUT_PAGE_ABOUT_TITLE: "Biz haqimizda",
   TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE: "TUNE Consulting\" MChJ 2009 yilda murakkab bank loyihalarini amalga oshirish uchun \"butik\" sifatida tashkil etilgan.",
   TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE1: "2017 yildan boshlab biz ko'proq raqamli yechimlarga e'tibor qaratmoqdamiz.",
-  TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE2: "TUNE oilasida 130 dan ortiq xodimlar ishlab kelmoqda. 2024 yilgi maqsadimiz - bu ko'rsatkichni ikki baravarga oshirishdir.",
+  TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE2: "TUNE oilasida 130 dan ortiq xodimlar ishlab kelmoqda. 2025 yilgi maqsadimiz - bu ko'rsatkichni ikki baravarga oshirishdir.",
   TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE3: "Biz IT-Park rezidentlari xisoblanib va \"2030 yilgacha million dasturichi\" dasturiga o'z hissamizni qo'shmoqdamiz.",
   TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE4: "Yo'nalishlar bo'yicha alohida jamoalar.",
   TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE5: "Raqamli bank yechimlari va platformalari",
@@ -124,6 +124,7 @@ export const I18nUzbek: I18nSchema = {
   TITLE_TEAM_PAGE_MAIN_FULL_TITLE: "Bizning dasturchilarimiz ishonchli va yuqori sifatli yechimlarni yaratish bo'yicha chuqur bilim va ko'p yillik tajribaga ega.Loyiha menejerlari o'z ishining haqiqiy ustalari. Ular loyihaning har bir bosqichini puxta rejalashtiradilar va muvofiqlashtiradilar, loyihani o'z vaqtida va byudjet doirasida muvaffaqiyatli yakunlanishini ta'minlaydilar. Dizayn jamoasi nafaqat ko'zni quvontiradigan, balki foydalanuvchi qulayligini ta'minlaydigan noyob va jozibali interfeyslarni yaratadi. Tahlilchilar va testerlar sizning loyihangizning mukammal ishlashini ta'minlash uchun har bir funksiyani sinchkovlik bilan tekshiradilar. Biz xodimlarimizning kasbiy o'sishiga alohida e'tibor qaratamiz- biz har hafta tajribasi katta hamkasblarimiz ishtirokida onlayn treninglar tashkil qilamiz. Shunga asoslanib aytishimiz mumkinki, biz nafaqat jamoa, balki kichik bir oilamiz…",
   TITLE_TEAM_PAGE_MAIN_TITLE: "Bizning dasturchilarimiz ishonchli va yuqori sifatli yechimlarni yaratish bo'yicha chuqur bilim va ko'p...",
   TITLE_TEAM_PAGE_TEAM_TITLE: "Bizning jamoamiz",
+  TITLE_TEAM_PAGE_CONTACT_TITLE: "Rezyumeni yuborish",
 
   //CONTACT
   TITLE_CONTACT_PAGE_MAIN_TITLE: "Biz har doim sizga xursandmiz.",

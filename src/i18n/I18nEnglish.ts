@@ -10,7 +10,7 @@ export const I18nEnglish: I18nSchema = {
     TITLE_ABOUT_PAGE_ABOUT_TITLE: "About us",
     TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE: "We established in 2009 in Tashkent as a \"boutique\" for multipurpose banking projects.",
     TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE1: "Starting in 2017, we are focusing more on digital solutions.",
-    TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE2: "The TUNE family has more than 130 employees.The goal for 2024 is to double this figure.",
+    TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE2: "The TUNE family has more than 130 employees.The goal for 2025 is to double this figure.",
     TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE3: "We are residents of the IT park and contribute to the program \"million programmers by 2030\".",
     TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE4: "Separate teams by direction.",
     TITTLE_ABOUT_PAGE_ABOUT_SUBTITLE5: "Digital banking solutions and platforms.",
@@ -122,6 +122,7 @@ export const I18nEnglish: I18nSchema = {
     TITLE_TEAM_PAGE_MAIN_FULL_TITLE: "Our developers have in-depth knowledge and many years of experience in creating reliable and high-quality solutions. Project managers are masters of their craft. They carefully plan and coordinate every stage of the project, ensuring its successful completion on time and within budget. Designers create unusual and attractive interfaces that are not only pleasing to the eye, but also provide a great user experience. Well, analysts and testers carefully check every detail to guarantee the flawless operation of your project. We pay special attention to the professional growth of our employees, organizing weekly online trainings with the participation of our Senior colleagues. Based on which we can say that we are not only a team, but a small family...",
     TITLE_TEAM_PAGE_MAIN_TITLE: "Our developers have in-depth knowledge and many years of experience in creating reliable and high-quality solutions...",
     TITLE_TEAM_PAGE_TEAM_TITLE: "Our team",
+    TITLE_TEAM_PAGE_CONTACT_TITLE: "Send resume",
 
     //CONTACT
     TITLE_CONTACT_PAGE_MAIN_TITLE: "You are always welcome.",

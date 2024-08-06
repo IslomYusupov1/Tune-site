@@ -122,6 +122,7 @@ export interface I18nSchema {
   readonly TITLE_TEAM_PAGE_MAIN_FULL_TITLE: string;
   readonly TITLE_TEAM_PAGE_MAIN_TITLE: string;
   readonly TITLE_TEAM_PAGE_TEAM_TITLE: string;
+  readonly TITLE_TEAM_PAGE_CONTACT_TITLE: string;
 
   // CONTACT
   readonly TITLE_CONTACT_PAGE_MAIN_TITLE: string;
