@@ -50,7 +50,7 @@ export const I18nRussian: I18nSchema = {
   TITLE_BANK_PAGE_LIST_TITLE6_4: "ASBT",
   TITLE_BANK_PAGE_LIST_TITLE6_5: "Korean system",
   TITLE_BANK_PAGE_LIST_TITLE6_6: "CS",
-  TITLE_BANK_PAGE_LIST_TITLE7: "Используем Kubernetes и Doker оркестраторы",
+  TITLE_BANK_PAGE_LIST_TITLE7: "Используем Kubernetes и Docker оркестраторы",
 
   //CRM
   TITLE_CRM_PAGE_MAIN_TITLE: "CRM и полная автоматизация процессов фронт-офиса",

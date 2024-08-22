@@ -77,7 +77,7 @@ function ContactsMobile() {
                 <h2 className="2xl:text-[32px] xl:text-[22px] lg:text-[18px] text-[23px] mt-5 font-medium">{translate("TITLE_CONTACT_PAGE_MAIN_TITLE_1")}</h2>
                 <div className="flex flex-col mt-3">
                     <p className="2xl:text-[20px] xl:text-[16px] lg:text-[14px] text-[14px]">{translate("TITLE_CONTACT_PAGE_MAIN_TITLE_2")}:</p>
-                    <a className="2xl:text-[28px] xl:text-[22px] lg:text-[20px] text-[18px] font-medium cursor-pointer" href="tel:+998911345326">+998 91 134-53-26</a>
+                    <a className="2xl:text-[28px] xl:text-[22px] lg:text-[20px] text-[18px] font-medium cursor-pointer" href="tel:+998200044770">+998 20 004-47-70</a>
                 </div>
                 <div className="flex flex-col mt-3">
                     <p className="2xl:text-[20px] xl:text-[18px] lg:text-[14px] text-[14px]">{translate("TITLE_CONTACT_PAGE_MAIN_TITLE_3")}:</p>
