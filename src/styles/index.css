@@ -213,6 +213,16 @@ body {
     font-size: 30px !important;
 }
 
+.h-responsive {
+    height: 100vh;
+}
+
+@media (max-height: 850px) {
+    .h-responsive {
+        height: 100%;
+    }
+}
+
 @media (max-width: 728px) {
     body, #root {
         overflow-y: scroll !important;

@@ -24,9 +24,9 @@ function TurkneyMobile() {
     return (
         <motion.div id="turnkey"
                     className="lg:h-full lg:min-h-[800px] bg-[#FFFFFF] flex flex-col relative p-4 justify-center object-cover bg-no-repeat bg-center w-full">
-            <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0"/>
+            <img src={bgCosmo} alt="" className="hidden z-0 lg:block absolute bottom-0 right-0"/>
             <div
-                className="h-full lg:w-3/4 2xl:w-10/12 md:mx-auto md:bg-black md:rounded-2xl lg:h-[70%] 2xl:h-[85%] md:custom-container md:justify-center md:mx-auto md:flex">
+                className="h-full lg:w-3/4 z-50 2xl:w-10/12 md:mx-auto md:bg-black md:rounded-2xl lg:h-[70%] 2xl:h-[85%] md:custom-container md:justify-center md:mx-auto md:flex">
                 <div
                     className="w-full flex flex-col justify-between h-full z-50 bg-black rounded-2xl md:my-0 my-10 relative md:px-0 px-2">
                     <div

@@ -34,8 +34,8 @@ function LoanMobile() {
     return (
         <motion.div id="loan"
                     className="bg-[#FFFFFF] relative lg:h-full py-[100px] lg:min-h-[800px] h-full flex flex-col p-5 justify-center w-full">
-            <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0"/>
-            <div className="h-full flex justify-center custom-container mx-auto overflow-hidden flex-col w-full">
+            <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0 z-0"/>
+            <div className="h-full flex justify-center custom-container mx-auto overflow-hidden flex-col z-50 w-full">
                 <motion.div transition={{ ease: "easeInOut" }} className="flex text-red-black leading-5 xl:gap-2 md:leading-normal flex-col text-start w-full md:w-full">
                     <h3 className="xl:text-[35px] xl:leading-[100px] lg:text-[26px] 2xl:text-[42px] text-[20px] mb-5 md:[24px] md:mb-0 md:mt-0 font-light">{translate("TITLE_LOAN_PAGE_MAIN_TITLE")}</h3>
                     <p className="xl:text-[20px] lg:text-[15px] 2xl:text-[24px] md:text-[20px] text-[15px]">1. {translate("TITLE_ABOUT_PAGE_LIST_TITLE1")}</p>

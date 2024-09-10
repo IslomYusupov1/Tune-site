@@ -33,8 +33,8 @@ function TeamMobile() {
     return (
         <motion.div id="team"
                     className="bg-[#FFFFFF] lg:h-screen flex flex-col p-4 relative justify-center w-full">
-            <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0"/>
-            <div className="justify-center lg:w-full lg:h-full custom-container md:mx-auto flex">
+            <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0 z-0"/>
+            <div className="justify-center lg:w-full lg:h-full custom-container md:mx-auto flex z-50">
                 <div className="flex bg-black rounded-[30px] w-full flex-col text-start bank-page my-20 relative">
                     <div className="flex p-5 h-full w-full text-white flex-col relative">
                         <div ref={ref} className="lg:absolute lg:bottom-10 block 2xl:left-20" style={{zIndex: 1000}}>
@@ -46,18 +46,18 @@ function TeamMobile() {
                                 <motion.p animate={{y: 0, opacity: 1}}
                                           initial={{y: 20, opacity: 0}}
                                           transition={{duration: 0.3, ease: "easeInOut"}}
-                                          className="max-w-[775px] text-[17px] 2xl:text-[28px] 2xl:leading-[40px] leading-24 mb-3">{translate("TITLE_TEAM_PAGE_MAIN_TITLE")}
+                                          className="max-w-[775px] xl:max-w-[800px] 2xl:max-w-[1100px] text-[17px] 2xl:text-[24px] 2xl:leading-[40px] leading-24 mb-3">{translate("TITLE_TEAM_PAGE_MAIN_TITLE")}
                                     <br/>
                                     <g
-                                        className="text-[16px] xl:text-[18px] 2xl:text-[28px] text-[#007AFF] cursor-pointer"
+                                        className="text-[16px] xl:text-[18px] 2xl:text-[24px] text-[#007AFF] cursor-pointer"
                                         onClick={() => setOpen(true)}>{translate("TITLE_OPEN_DIALOG_OPEN_TITLE")}</g>
                                 </motion.p>}
                             {open && <div className="">
                                 {/*<h3 className="text-[40px] xl:text-[32px] 2xl:text-[44px] 3xl:text-[48px]">{translate("TITLE_TEAM_PAGE_TEAM_TITLE")}</h3>*/}
-                                <p className="max-w-[775px] xl:text-[18px] 2xl:text-[28px] leading-[30px] 2xl:leading-[40px]">{translate("TITLE_TEAM_PAGE_MAIN_FULL_TITLE")}
+                                <p className="max-w-[775px] xl:max-w-[800px] 2xl:max-w-[1100px] xl:text-[18px] 2xl:text-[24px] leading-[30px] 2xl:leading-[40px]">{translate("TITLE_TEAM_PAGE_MAIN_FULL_TITLE")}
                                     <br/>
                                     <g
-                                        className="text-[16px] xl:text-[18px] 2xl:text-[28px]  text-[#007AFF] cursor-pointer"
+                                        className="text-[16px] xl:text-[18px] 2xl:text-[24px]  text-[#007AFF] cursor-pointer"
                                         onClick={() => setOpen(false)}>{translate("TITLE_OPEN_DIALOG_CLOSE_TITLE")}</g>
                                 </p>
 

@@ -22,9 +22,9 @@ function SolutionsMobile() {
     return (
         <motion.div id="solution"
                     className="lg:h-full lg:min-h-[800px] bg-[#111111] relative p-5 lg:flex lg:items-center lg:py-[100px] w-full">
-            <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0"/>
+            <img src={bgCosmo} alt="" className="hidden  z-0 lg:block absolute bottom-0 right-0"/>
             <div
-                 className="h-full custom-container mx-auto w-full flex lg:justify-center flex-col gap-4 xl:mt-10 lg:mt-10 2xl:mt-5 3xl:mt-0 text-white w-full text-start font-light">
+                 className="h-full custom-container z-50 mx-auto w-full flex lg:justify-center flex-col gap-4 xl:mt-10 lg:mt-10 2xl:mt-5 3xl:mt-0 text-white w-full text-start font-light">
                 <motion.h3
                     className="2xl:text-[40px] lg:text-[26px] xl:text-[32px] text-[24px] leading-tight xl:mb-4 2xl:mb-10 lg:mb-4">{translate("TITLE_SOLUTIONS_PAGE_MAIN_TITLE")}</motion.h3>
                 <div className="md:block hidden w-full" ref={ref}>

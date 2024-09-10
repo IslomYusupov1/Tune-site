@@ -71,8 +71,8 @@ function ContactsMobile() {
     return (
         <motion.div id="contact"
                     className="lg:h-full lg:min-h-[800px] bg-[#111111] relative p-5 object-cover bg-no-repeat bg-center w-full">
-            <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0"/>
-            <div className="flex custom-container h-full mx-auto justify-center xl:gap-3 lg:gap-3 flex-col text-white w-full text-start font-light lg:mx-[100px] xl:mt-[50px] 2xl:mt-[25px] lg:mt-[50px] ">
+            <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0 z-0"/>
+            <div className="flex custom-container h-full mx-auto justify-center z-50 xl:gap-3 lg:gap-3 flex-col text-white w-full text-start font-light lg:mx-[100px] xl:mt-[50px] 2xl:mt-[25px] lg:mt-[50px] ">
                 <h3 className="2xl:text-[36px] xl:text-[28px] lg:text-[24px] text-[24px] mt-5">{translate("TITLE_CONTACT_PAGE_MAIN_TITLE")}</h3>
                 <h2 className="2xl:text-[32px] xl:text-[22px] lg:text-[18px] text-[23px] mt-5 font-medium">{translate("TITLE_CONTACT_PAGE_MAIN_TITLE_1")}</h2>
                 <div className="flex flex-col mt-3">

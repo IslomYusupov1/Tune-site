@@ -20,8 +20,8 @@ function BankMobile() {
     }, [inView])
     return (
         <motion.div id="bank" className="bg-[#111111] pt-[50px] py-[80px] relative lg:h-full lg:min-h-[800px] lg:flex lg:items-center p-5">
-            <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0"/>
-            <div className="flex custom-container mx-auto flex-col justify-between lg:justify-center h-full">
+            <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0 z-0"/>
+            <div className="flex custom-container mx-auto z-50 flex-col justify-between lg:justify-center h-full">
                 <h3 className="xl:text-[40px] 2xl:text-[42px] text-[22px] mb-3 mt-3 leading-7 md:leading-normal text-white lg:text-[26px] 2xl:mb-16 2xl:mt-10 xl:mb-6 xl:mt-6 lg:mt-10 lg:mb-4">
                     {translate("TITLE_BANK_PAGE_MAIN_TITLE")}
                 </h3>

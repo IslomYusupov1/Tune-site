@@ -35,8 +35,8 @@ function CrmMobile() {
     return (
         <motion.div id="crm"
                     className="bg-[#FFFFFF] lg:h-full lg:py-[100px] lg:min-h-[800px] flex relative flex-col p-5 justify-center w-full">
-            <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0"/>
-            <div className="h-full custom-container md:mx-auto md:flex md:flex-col md:justify-center">
+            <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 z-0 right-0"/>
+            <div className="h-full custom-container z-50 md:mx-auto md:flex md:flex-col md:justify-center">
                 <div className="flex flex-col text-start">
                     <h3 className="2xl:text-[42px] xl:text-[30px] lg:text-[25px] text-[22px] lg:leading-10 2xl:leading-[50px] leading-7 font-medium  mb-2">{translate("TITLE_CRM_PAGE_MAIN_TITLE")}</h3>
                     <ul className="list-disc mx-8 2xl:text-[24px] xl:text-[20px] lg:text-[16px]">

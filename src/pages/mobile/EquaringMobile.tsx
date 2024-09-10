@@ -36,8 +36,8 @@ function EquaringMobile() {
 
     return (
         <motion.div id="equaring"  className="lg:h-full lg:min-h-[800px] lg:py-[100px] bg-[#111111] relative p-5 lg:flex lg:items-center w-full">
-            <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0"/>
-            <motion.div className="custom-container mx-auto md:justify-center flex flex-col h-full w-full">
+            <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 z-0 right-0"/>
+            <motion.div className="custom-container mx-auto z-50 md:justify-center flex flex-col h-full w-full">
                 <div className="flex text-white flex-col text-start">
                     <h3 className="2xl:text-[42px] lg:text-[26px] xl:text-[32px] leading-10 2xl:leading-[100px] text-[22px] font-normal mb-3">{translate("TITLE_EQUARING_PAGE_MAIN_TITLE")}</h3>
                     <ul className="list-disc mx-8 2xl:text-[28px] xl:text-[22px] lg:text-[18px] text-[15px] font-light">
