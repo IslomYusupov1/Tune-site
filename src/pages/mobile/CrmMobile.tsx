@@ -151,7 +151,7 @@ function CrmMobile() {
                         </div>
                     </div>
                 </div>
-                <div className="2xl:mt-10 xl:mt-8 lg:mt-7 mt-5 lg:min-h-[150px] min-h-[100px] w-full" ref={refBottom}>
+                <div className="2xl:mt-10 xl:mt-8 lg:mt-7 mt-5 lg:min-h-[150px] min-h-[130px] w-full" ref={refBottom}>
                     {inViewBottom && <motion.div animate={{width: "100%"}} initial={{width: 0}} transition={{duration: 1, delay: 0.2}}
                                  className="border-b border-black"/>}
                     {inViewBottom && <motion.div className="flex gap-x-8 gap-y-4 mt-3 flex-wrap">
