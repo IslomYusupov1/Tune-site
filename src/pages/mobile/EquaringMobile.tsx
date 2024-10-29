@@ -35,7 +35,7 @@ function EquaringMobile() {
     }, [inViewMain])
 
     return (
-        <motion.div id="equaring"  className="lg:h-full lg:min-h-[800px] lg:py-[100px] bg-[#111111] relative p-5 lg:flex lg:items-center w-full">
+        <motion.div id="equaring"  className="lg:h-full lg:min-h-[800px] lg:py-[100px] py-[30px] bg-[#111111] relative p-5 lg:flex lg:items-center w-full">
             <img src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 z-0 right-0"/>
             <motion.div className="custom-container mx-auto z-50 md:justify-center flex flex-col h-full w-full">
                 <div className="flex text-white flex-col text-start">

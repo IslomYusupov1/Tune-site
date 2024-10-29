@@ -24,13 +24,13 @@ function AboutMobile() {
 
     return (
         <div id="about"
-            className="lg:h-screen bg-[#111111] flex flex-col relative justify-center w-full">
+            className="lg:h-screen flex flex-col relative justify-center w-full">
             <img  src={bgCosmo} alt="" className="hidden lg:block absolute bottom-0 right-0"/>
             <div
-                className="lg:w-3/4 lg:mx-auto bg-black rounded-[20px] lg:h-[70%] md:h-[500px] custom-container
-                               mt-10 relative px-2 flex flex-col h-full">
+                className="lg:w-3/4 lg:mx-auto bg-black rounded-[20px] lg:h-[70%] md:h-[600px] custom-container
+                               mt-20 relative px-2 flex flex-col h-full">
                 <div ref={ref}
-                    className={`flex flex-col mx-3 text-white text-start z-50 md:z-0 md:absolute md:bottom-[20px] md:left-[20px]`}>
+                    className={`flex flex-col mx-3 mt-4 md:mt-auto text-white text-start z-50 md:z-0 md:absolute md:bottom-[20px] md:left-[20px]`}>
                     {!open && inView && <motion.h3
                         animate={{ y: 0, opacity: 1 }}
                         initial={{ y: 20, opacity: 0 }}
@@ -67,10 +67,10 @@ function AboutMobile() {
 
                     </div>}
                 </div>
-                <div className="h-full">
+                <div className="h-full lg:mb-0 mb-8">
                     <div style={{ height: "90%" }}
                         className={`${open ? "opacity-10" : "opacity-30"} flex justify-center lg:justify-end md:bg-transparent bg-white border-none text-center md:h-auto items-end w-full border border-transparent mt-5 rounded-2xl md:rounded-xl`}>
-                        <video className="lg:w-8/12 aspect-auto lg:mx-5 z-10 py-3 h-full rounded-2xl" muted={true} loop={true}
+                        <video className="lg:w-8/12 aspect-auto lg:mx-5 z-10 rounded-2xl" muted={true} loop={true}
                                autoPlay={false}
                                preload="auto"
                                controls={true}
